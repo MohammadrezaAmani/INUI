@@ -49959,3 +49959,571 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Section(BaseElement):
+    """
+Section tag defines the section of documents such as chapters, headers, footers or any other sections. The section tag divides the content into section and subsections. The section tag is used when requirements of two headers or footers or any other section of documents needed. Section tag grouped the generic block of related contents. The main advantage of the section tag is, it is a semantic element, which describes its meaning to both browser and developer.  
+`Syntax:`   
+ 
+
+
+
+<section> Section Contents </section>
+
+Section tag is used to distribute the content i.e, it distributes the sections and subsections.   
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html><body><!-- html section tag is used here --><section><h1>Geeksforgeeek: Section 1</h1>  <p>Content of section 1</p>  </section><section><h1>GeeksforGeeks: Section 2</h1>  <p>Content of section 2</p>  </section><section><h1>GeeksforGeeks: Section 3</h1>  <p>Content of section 3</p>  </section></body></html> |
+
+```
+`Output:`   
+ 
+
+![section tag](https://media.geeksforgeeks.org/wp-content/uploads/section1.png)
+
+`Nested Section tag:` The section tag can be nested. The font size of subsection is smaller than section tag if the text contains the same font property. The subsection tag is used for organizing complex documents. A rule of thumb is that section should logically appear in outline of the document.   
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html><body><!-- html section tag is used here --><section><h1>Geeksforgeeek: Section 1</h1>  <p>Content of section 1</p>  <section><h1>Subsection</h1><h1>Subsection</h1></section></section><section><h1>GeeksforGeeks: Section 2</h1>  <p>Content of section 2</p>  <section><h1>Subsection</h1><h1>Subsection</h1></section></section></body></html> |
+
+```
+`Output:`   
+ 
+
+![nested section tag](https://media.geeksforgeeks.org/wp-content/uploads/section2.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Mozilla 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+ 
+
+  
+Section tag defines the section of documents such as chapters, headers, footers or any other sections. The section tag divides the content into section and subsections. The section tag is used when requirements of two headers or footers or any other section of documents needed. Section tag grouped the generic block of related contents. The main advantage of the section tag is, it is a semantic element, which describes its meaning to both browser and developer.  
+`Syntax:`   
+ 
+
+
+
+<section> Section Contents </section>
+
+Section tag is used to distribute the content i.e, it distributes the sections and subsections.   
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html><body><!-- html section tag is used here --><section><h1>Geeksforgeeek: Section 1</h1>  <p>Content of section 1</p>  </section><section><h1>GeeksforGeeks: Section 2</h1>  <p>Content of section 2</p>  </section><section><h1>GeeksforGeeks: Section 3</h1>  <p>Content of section 3</p>  </section></body></html> |
+
+```
+`Output:`   
+ 
+
+![section tag](https://media.geeksforgeeks.org/wp-content/uploads/section1.png)
+
+`Nested Section tag:` The section tag can be nested. The font size of subsection is smaller than section tag if the text contains the same font property. The subsection tag is used for organizing complex documents. A rule of thumb is that section should logically appear in outline of the document.   
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html><body><!-- html section tag is used here --><section><h1>Geeksforgeeek: Section 1</h1>  <p>Content of section 1</p>  <section><h1>Subsection</h1><h1>Subsection</h1></section></section><section><h1>GeeksforGeeks: Section 2</h1>  <p>Content of section 2</p>  <section><h1>Subsection</h1><h1>Subsection</h1></section></section></body></html> |
+
+```
+`Output:`   
+ 
+
+![nested section tag](https://media.geeksforgeeks.org/wp-content/uploads/section2.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Mozilla 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="section",
+        )
+
+        
+
+
+class Small(BaseElement):
+    """
+The <small> tag in HTML is used to set small font size. It decreases the font size by one size (from medium to small, from x-large to large). It has a [display](https://www.geeksforgeeks.org/css-display-property/https://www.geeksforgeeks.org/css-display-property/) property of inline.  
+`Syntax:`   
+ 
+
+
+
+<small> Contents... </small>
+
+`Example 1:`   
+ 
+
+```html
+<html><body><h1>GeeksforGeeks</h1><h2><small> Tag</h2> <!-- html small tag is used here --><small>Welcome to GeeksforGeeks!</small> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210618172007/small.png)
+
+`There are basically two ways in which you could use this <small> tag.`
+
+`i)` `In a nested form`: When you use the <small> tag in a nested form then the <small> tag will going to change the font size of the text in between it with respect to the parent element’s font size which means changing text with respect to its surroundings.
+
+Example:
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 18px;">Geeks For Geeks <small>krlo ho jayega!</small></p>  </body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602170029/gfgsmalltag2-300x95.jpg)<small> tag in nested form
+
+But when we increase the font size of the parent element, the <small> tag will automatically increase the font size of its text as well.
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 32px">Geeks for Geeks <small>krlo ho jayega</small></p>  </body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602170029/gfgsmalltag2-300x95.jpg)<small> tag in nested form
+
+
+
+It means that the ratio between the font size of the nested <small> tag text and the parent element's text is same.
+
+`ii) In a non-nested form:` If the <small> tag is used as a separate element in the HTML document, then changing the font size of any element will not going to affect the font size of the <small>tag text. 
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 18px">Geeks For Geeks</p>  <small>Krlo ho jayega!</small></body></html> |
+
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602172919/gfgsmalltag3-200x125.jpg)<small> tag in a non-nested form
+
+But if we change the font size of the paragraph, it will not affect the font size of the <small> tag text.
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 32px">Geeks For Geeks</p>  <small>Krlo ho jayega!</small></body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602173336/gfgsmalltag4-200x136.jpg)<small> tag in non-nested form
+
+`Example 2:` Use CSS property to set the font size smaller.   
+ 
+
+```html
+<!DOCTYPE html><html><head><title>small Tag</title><style>body {text-align:center;}h1 {color:green;}.gfg {font-size:smaller;}</style></head><body><h1>GeeksforGeeks</h1><h2>font-size: smaller;</h2><div class = "gfg">Welcome to GeeksforGeeks!</div></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/small2.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+ 
+
+  
+The <small> tag in HTML is used to set small font size. It decreases the font size by one size (from medium to small, from x-large to large). It has a [display](https://www.geeksforgeeks.org/css-display-property/https://www.geeksforgeeks.org/css-display-property/) property of inline.  
+`Syntax:`   
+ 
+
+
+
+<small> Contents... </small>
+
+`Example 1:`   
+ 
+
+```html
+<html><body><h1>GeeksforGeeks</h1><h2><small> Tag</h2> <!-- html small tag is used here --><small>Welcome to GeeksforGeeks!</small> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210618172007/small.png)
+
+`There are basically two ways in which you could use this <small> tag.`
+
+`i)` `In a nested form`: When you use the <small> tag in a nested form then the <small> tag will going to change the font size of the text in between it with respect to the parent element’s font size which means changing text with respect to its surroundings.
+
+Example:
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 18px;">Geeks For Geeks <small>krlo ho jayega!</small></p>  </body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602170029/gfgsmalltag2-300x95.jpg)<small> tag in nested form
+
+But when we increase the font size of the parent element, the <small> tag will automatically increase the font size of its text as well.
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 32px">Geeks for Geeks <small>krlo ho jayega</small></p>  </body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602170029/gfgsmalltag2-300x95.jpg)<small> tag in nested form
+
+
+
+It means that the ratio between the font size of the nested <small> tag text and the parent element's text is same.
+
+`ii) In a non-nested form:` If the <small> tag is used as a separate element in the HTML document, then changing the font size of any element will not going to affect the font size of the <small>tag text. 
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 18px">Geeks For Geeks</p>  <small>Krlo ho jayega!</small></body></html> |
+
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602172919/gfgsmalltag3-200x125.jpg)<small> tag in a non-nested form
+
+But if we change the font size of the paragraph, it will not affect the font size of the <small> tag text.
+
+```html
+<!DOCTYPE html><html><head><title>GeeksForGeeks</title></head><body><h2>Welcome To GFG</h2><p style="font-size: 32px">Geeks For Geeks</p>  <small>Krlo ho jayega!</small></body></html> |
+
+  
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220602173336/gfgsmalltag4-200x136.jpg)<small> tag in non-nested form
+
+`Example 2:` Use CSS property to set the font size smaller.   
+ 
+
+```html
+<!DOCTYPE html><html><head><title>small Tag</title><style>body {text-align:center;}h1 {color:green;}.gfg {font-size:smaller;}</style></head><body><h1>GeeksforGeeks</h1><h2>font-size: smaller;</h2><div class = "gfg">Welcome to GeeksforGeeks!</div></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/small2.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="small",
+        )
+
+        
+
