@@ -37433,3 +37433,363 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Div(BaseElement):
+    """
+ 
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="div",
+        )
+
+        
+
+
+class Dl(BaseElement):
+    """
+The <dl> tag in HTML is used to represent the description list. This tag is used with [<dt>](https://www.geeksforgeeks.org/html-dt-tag/) and [<dd> tag](https://www.geeksforgeeks.org/html-dd-tag/). In HTML4.1, it defines definition list and in HTML5, it defines description list.  
+ 
+
+`Syntax:` 
+
+
+
+<dl> Contents... </dl>
+
+`Example:` 
+
+```html
+<!DOCTYPE html> <html> <body> <h1>GeeksforGeeks</h1><h2>dl Tag</h2><!-- HTML dl tag --><dl><dt>GeeksforGeeks</dt><dd>A Computer Science Portal For Geeks</dd></dl> </body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604133521/dl.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Safari
+* Opera
+
+ 
+
+The <dl> tag in HTML is used to represent the description list. This tag is used with [<dt>](https://www.geeksforgeeks.org/html-dt-tag/) and [<dd> tag](https://www.geeksforgeeks.org/html-dd-tag/). In HTML4.1, it defines definition list and in HTML5, it defines description list.  
+ 
+
+`Syntax:` 
+
+
+
+<dl> Contents... </dl>
+
+`Example:` 
+
+```html
+<!DOCTYPE html> <html> <body> <h1>GeeksforGeeks</h1><h2>dl Tag</h2><!-- HTML dl tag --><dl><dt>GeeksforGeeks</dt><dd>A Computer Science Portal For Geeks</dd></dl> </body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604133521/dl.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Safari
+* Opera
+
+ 
+
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="dl",
+        )
+
+        
+
