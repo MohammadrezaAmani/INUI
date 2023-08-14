@@ -43025,3 +43025,254 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Kbd(BaseElement):
+    """
+It is a phrase tag and used to define the keyboard input. The text enclosed within <kbd> tag is typically display in the browser’s default monospace font.
+
+`Syntax:`
+
+
+
+<kbd> text content ... </kbd>
+
+`List of all phrase tag:`   
+ 
+
+* [`<em>`](https://www.geeksforgeeks.org/html-em-tag/)`:` It is used to emphasize the text.
+* [`<strong>`](https://www.geeksforgeeks.org/html-strong-tag/)`:` It is used to define an important text.
+* [`<code>`](https://www.geeksforgeeks.org/html-code-tag/)`:` It encloses the computer code.
+* [`<samp>`](https://www.geeksforgeeks.org/html-samp-tag/)`:` It defines a sample output text from a computer program.
+* [`<kbd>`](https://www.geeksforgeeks.org/html-kbd-tag/)`:` It defines the text of keyboard input.
+* [`<var>`](https://www.geeksforgeeks.org/html-var-tag/)`:` It defines the variable text.
+
+`Example 1:` This example describe the use of <kbd> tag.
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h3>HTML kbd Tag</h3>  <p>Open a new window using thekeyboard shortcut<kbd>Ctrl</kbd> + <kbd>N</kbd></p> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205120841/kbdTag.PNG)
+
+`Example 2:` This example using <kbd> tag with some CSS styles.
+
+```html
+<!DOCTYPE html><html> <head><style>kbd {border-radius: 2px;padding: 2px;border: 1px solid black;}</style></head> <body><h1>GeeksforGeeks</h1> <h2>HTML kbd Tag</h2>  <p>Open a new window using thekeyboard shortcut<kbd>Ctrl</kbd>+<kbd>N</kbd></p> </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205121208/kbdTag1.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+  
+It is a phrase tag and used to define the keyboard input. The text enclosed within <kbd> tag is typically display in the browser’s default monospace font.
+
+`Syntax:`
+
+
+
+<kbd> text content ... </kbd>
+
+`List of all phrase tag:`   
+ 
+
+* [`<em>`](https://www.geeksforgeeks.org/html-em-tag/)`:` It is used to emphasize the text.
+* [`<strong>`](https://www.geeksforgeeks.org/html-strong-tag/)`:` It is used to define an important text.
+* [`<code>`](https://www.geeksforgeeks.org/html-code-tag/)`:` It encloses the computer code.
+* [`<samp>`](https://www.geeksforgeeks.org/html-samp-tag/)`:` It defines a sample output text from a computer program.
+* [`<kbd>`](https://www.geeksforgeeks.org/html-kbd-tag/)`:` It defines the text of keyboard input.
+* [`<var>`](https://www.geeksforgeeks.org/html-var-tag/)`:` It defines the variable text.
+
+`Example 1:` This example describe the use of <kbd> tag.
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h3>HTML kbd Tag</h3>  <p>Open a new window using thekeyboard shortcut<kbd>Ctrl</kbd> + <kbd>N</kbd></p> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205120841/kbdTag.PNG)
+
+`Example 2:` This example using <kbd> tag with some CSS styles.
+
+```html
+<!DOCTYPE html><html> <head><style>kbd {border-radius: 2px;padding: 2px;border: 1px solid black;}</style></head> <body><h1>GeeksforGeeks</h1> <h2>HTML kbd Tag</h2>  <p>Open a new window using thekeyboard shortcut<kbd>Ctrl</kbd>+<kbd>N</kbd></p> </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205121208/kbdTag1.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="kbd",
+        )
+
+        
+
