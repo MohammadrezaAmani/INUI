@@ -46713,3 +46713,493 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Optgroup(BaseElement):
+    """
+This tag is used to create a group of the same category options in a drop-down list. The <optgroup> tag is required when there is a long list of the item exists.  
+`Syntax:`
+
+
+
+<optgroup>
+      <option>..</option>
+        .
+        .
+</optgroup>
+
+`Attributes:`
+
+* [`label`](https://www.geeksforgeeks.org/html-optgroup-label-attribute/#:~:text=The%20HTML%20optgroup%20label%20Attribute,for%20an%20Element.&text=Attribute%20Values%3A%20It%20contains%20the,description%20for%20a%20optgroup%20Element.)`:` It is used to specify the label for an optgroup.
+* [`disabled`](https://www.geeksforgeeks.org/html-optgroup-disabled-attribute/#:~:text=HTML%20disabled%20Attribute,-Difficulty%20Level%20%3A%20Basic&text=The%20disabled%20attribute%20for%20%3Coptgroup,It%20is%20a%20boolean%20attribute.)`:` It is used to disable the option-group in a list.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML optgroup Tag</h2><select><!-- optgroup tag starts --><optgroup label="Programming Languages"><option value="C">C</option><option value="C++">C++</option><option value="Java">Java</option></optgroup><optgroup label="Scripting Language"><option value="JavaScript">JavaScript</option><option value="PHP">PHP</option><option value="Shell">Shell</option></optgroup><!-- optgroup tag ends     --></select></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115045/opt1.PNG)
+
+`Example 2:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML optgroup Tag</h2><select><!-- optgroup tag starts --><optgroup label="Programming Languages"><option value="C">C</option><option value="C++">C++</option><option value="Java">Java</option></optgroup><optgroup label="Scripting Language" disabled><option value="JavaScript">JavaScript</option><option value="PHP">PHP</option><option value="Shell">Shell</option></optgroup><!-- optgroup tag ends --></select></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115216/opt2.PNG)
+
+`Supported Browser:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer 5.5
+* Firefox 1
+* Opera
+* Safari
+
+  
+This tag is used to create a group of the same category options in a drop-down list. The <optgroup> tag is required when there is a long list of the item exists.  
+`Syntax:`
+
+
+
+<optgroup>
+      <option>..</option>
+        .
+        .
+</optgroup>
+
+`Attributes:`
+
+* [`label`](https://www.geeksforgeeks.org/html-optgroup-label-attribute/#:~:text=The%20HTML%20optgroup%20label%20Attribute,for%20an%20Element.&text=Attribute%20Values%3A%20It%20contains%20the,description%20for%20a%20optgroup%20Element.)`:` It is used to specify the label for an optgroup.
+* [`disabled`](https://www.geeksforgeeks.org/html-optgroup-disabled-attribute/#:~:text=HTML%20disabled%20Attribute,-Difficulty%20Level%20%3A%20Basic&text=The%20disabled%20attribute%20for%20%3Coptgroup,It%20is%20a%20boolean%20attribute.)`:` It is used to disable the option-group in a list.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML optgroup Tag</h2><select><!-- optgroup tag starts --><optgroup label="Programming Languages"><option value="C">C</option><option value="C++">C++</option><option value="Java">Java</option></optgroup><optgroup label="Scripting Language"><option value="JavaScript">JavaScript</option><option value="PHP">PHP</option><option value="Shell">Shell</option></optgroup><!-- optgroup tag ends     --></select></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115045/opt1.PNG)
+
+`Example 2:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML optgroup Tag</h2><select><!-- optgroup tag starts --><optgroup label="Programming Languages"><option value="C">C</option><option value="C++">C++</option><option value="Java">Java</option></optgroup><optgroup label="Scripting Language" disabled><option value="JavaScript">JavaScript</option><option value="PHP">PHP</option><option value="Shell">Shell</option></optgroup><!-- optgroup tag ends --></select></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115216/opt2.PNG)
+
+`Supported Browser:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer 5.5
+* Firefox 1
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="optgroup",
+        )
+
+        
+
+
+class Option(BaseElement):
+    """
+The <option> tag in HTML is used to choose an option from a Drop-Down menu. This tag can be used with or without any attributes and needed value can be sent to the server. The group of options can be created using [<optgroup> Tag](https://www.geeksforgeeks.org/html-optgroup-tag/). It creates a group of related menu items.
+
+`Syntax:` 
+
+
+
+<option> Contents... </option>
+
+`Attributes:` The <option> tag contains four attributes which are listed below: 
+
+* [`disabled`](https://www.w3schools.com/tags/att_option_disabled.asp#:~:text=The%20disabled%20attribute%20is%20a,a%20checkbox%2C%20etc.).)`:` This attribute contains the value disabled which represents the option is disabled.
+* [`label`](https://www.geeksforgeeks.org/html-option-label-attribute/#:~:text=The%20HTML%20option%20label%20Attribute,in%20the%20drop%2Ddown%20list.&text=Attribute%20Values%3A%20It%20contains%20single,shorter%20version%20for%20an%20option.)`:` This attribute contains the text value which represents the shorted label for the option.
+* [`selected`](https://www.w3schools.com/tags/att_option_selected.asp)`:` This attribute contains the value selected which represents the item that is pre-selected when the browser loaded.
+* [`value`](https://www.w3schools.com/tags/att_option_value.asp)`:` This attribute contains the value text sent to the server.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML option Tag</h2><select><!-- option tag starts --><option>Choose an option</option><option value="html">HTML</option><option value="java">JAVA</option><option value="C++">C++</option><option value="php">PHP</option><option value="perl">PERL</option><!-- option tag ends --></select></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122714/option1.PNG)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML option Tag</h2><strong>Select City<br></strong><select><!-- option tag starts --><option>Allahabad</option><option>Pryagraj</option><option>Jaipur</option><option>Noida</option><!-- option tag ends     --></select></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212123648/opt2.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome 1+
+* Edge 12+
+* Firefox 1+
+* Safari
+* Opera
+
+  
+The <option> tag in HTML is used to choose an option from a Drop-Down menu. This tag can be used with or without any attributes and needed value can be sent to the server. The group of options can be created using [<optgroup> Tag](https://www.geeksforgeeks.org/html-optgroup-tag/). It creates a group of related menu items.
+
+`Syntax:` 
+
+
+
+<option> Contents... </option>
+
+`Attributes:` The <option> tag contains four attributes which are listed below: 
+
+* [`disabled`](https://www.w3schools.com/tags/att_option_disabled.asp#:~:text=The%20disabled%20attribute%20is%20a,a%20checkbox%2C%20etc.).)`:` This attribute contains the value disabled which represents the option is disabled.
+* [`label`](https://www.geeksforgeeks.org/html-option-label-attribute/#:~:text=The%20HTML%20option%20label%20Attribute,in%20the%20drop%2Ddown%20list.&text=Attribute%20Values%3A%20It%20contains%20single,shorter%20version%20for%20an%20option.)`:` This attribute contains the text value which represents the shorted label for the option.
+* [`selected`](https://www.w3schools.com/tags/att_option_selected.asp)`:` This attribute contains the value selected which represents the item that is pre-selected when the browser loaded.
+* [`value`](https://www.w3schools.com/tags/att_option_value.asp)`:` This attribute contains the value text sent to the server.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML option Tag</h2><select><!-- option tag starts --><option>Choose an option</option><option value="html">HTML</option><option value="java">JAVA</option><option value="C++">C++</option><option value="php">PHP</option><option value="perl">PERL</option><!-- option tag ends --></select></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122714/option1.PNG)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML option Tag</h2><strong>Select City<br></strong><select><!-- option tag starts --><option>Allahabad</option><option>Pryagraj</option><option>Jaipur</option><option>Noida</option><!-- option tag ends     --></select></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212123648/opt2.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome 1+
+* Edge 12+
+* Firefox 1+
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="option",
+        )
+
+        
+
