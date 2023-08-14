@@ -36479,3 +36479,244 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Del(BaseElement):
+    """
+The <del> tag in HTML stands for delete and is used to mark a portion of text which has been deleted from the document. The deleted text is rendered as strike-through text by the web browsers although this property can be changed using [CSS text-decoration property](https://www.geeksforgeeks.org/css-text-decoration-property/). The <del> tag requires a starting and ending tag.
+
+`Attributes:` The <del> tag contains two attributes which are listed below: 
+
+* [`cite`](https://www.geeksforgeeks.org/html-cite-attribute/)`:` It is used to specify the URL of the document or message which denotes the reason for deleting the text.
+* [`datetime`](https://www.geeksforgeeks.org/html-datetime-attribute/)`:` It is used to specify the date and time of the deleted text.
+
+`Syntax:`
+
+
+
+<del> Contents... </del>
+
+`Example 1:` Below example illustrate the <del> element in HTML:
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML del Tag</h2><!-- HTML del tag is used in paragraph Tag -->   <p>GeeksforGeeks is a <del>mathematical</del>science portal</p>   </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219172506/del.png)
+
+`Example 2:` This example use the <del> tag with the datetime attribute.  
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML del Tag</h2><!-- HTML del tag is used in paragraph Tag -->   <p>GeeksforGeeks is a <del>mathematical</del>science portal</p>   </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219172557/del.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+* Edge 12 and above
+
+  
+The <del> tag in HTML stands for delete and is used to mark a portion of text which has been deleted from the document. The deleted text is rendered as strike-through text by the web browsers although this property can be changed using [CSS text-decoration property](https://www.geeksforgeeks.org/css-text-decoration-property/). The <del> tag requires a starting and ending tag.
+
+`Attributes:` The <del> tag contains two attributes which are listed below: 
+
+* [`cite`](https://www.geeksforgeeks.org/html-cite-attribute/)`:` It is used to specify the URL of the document or message which denotes the reason for deleting the text.
+* [`datetime`](https://www.geeksforgeeks.org/html-datetime-attribute/)`:` It is used to specify the date and time of the deleted text.
+
+`Syntax:`
+
+
+
+<del> Contents... </del>
+
+`Example 1:` Below example illustrate the <del> element in HTML:
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML del Tag</h2><!-- HTML del tag is used in paragraph Tag -->   <p>GeeksforGeeks is a <del>mathematical</del>science portal</p>   </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219172506/del.png)
+
+`Example 2:` This example use the <del> tag with the datetime attribute.  
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML del Tag</h2><!-- HTML del tag is used in paragraph Tag -->   <p>GeeksforGeeks is a <del>mathematical</del>science portal</p>   </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219172557/del.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+* Edge 12 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="del",
+        )
+
+        
+
