@@ -734,7 +734,7 @@ class Doctype(BaseVoidElement):
             tagName="!DOCTYPE html",
         )
 
-class Acronym():
+class Acronym(BaseElement):
     """
 The <acronym> tag in HTML is used to define the acronym. The <acronym> tag is used to spell out another word. It is used to give useful information to browsers, translation systems, and search-engines. This tag is not supported in HTML 5 otherwise use [<abbr>](https://geeksforgeeks.org/html-abbr-tag/#:~:text=The%20tag(Abbreviation,systems%2C%20and%20search-engines.) Tag.
 
