@@ -43671,3 +43671,517 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Legend(BaseElement):
+    """
+The legend tag is used to define the title for the child contents. The legend elements are the parent element. This tag is used to define the caption for the [<fieldset>](https://www.geeksforgeeks.org/html5-fieldset-tag/) element.
+
+`Syntax`
+
+
+
+<legend> Text </legend>
+
+`Attribute :`
+
+* `align:` It sets the alignment of the legend element.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html><head></head><body><h1>GeeksforGeeks</h1><strong>HTML Legend Tag</strong><form><fieldset><!-- Legend tag using --><legend>STUDENT::</legend><label>Name:</label><input type="text"><br><br><label>Email:</label><input type="text"><br><br><label>Date of birth:</label><input type="text"><br><br><label>Address:</label><input type="text"><br><br><label>Enroll No:</label><input type="text"></fieldset></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181030/Screenshot20210215180947.png)
+
+`Example 2:` Styling the legend tag using CSS properties.   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><style>form{width: 50%;}legend {display: block;padding-left: 10px;padding-right: 10px;border: 3px solid green;background-color:tomato;color:white;;}label {display: inline-block;float: left;clear: left;width: 90px;margin:5px;text-align: left;}input[type="text"] {width:250px;margin:5px 0px;}.gfg {font-size:40px;color:green;font-weight:bold;}</style></head><body><div class = "gfg">GeeksforGeeks</div><h2>HTML Legend Tag</h2><form><fieldset><!-- Legend tag using --><legend>STUDENT:</legend><label>Name:</label><input type="text"><br><label>Email:</label><input type="text"><br><label>Date of birth:</label><input type="text"><br><label>Address:</label><input type="text"><br><label>Enroll No:</label><input type="text"></fieldset></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181213/Screenshot20210215181156.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer 6 and above
+* Firefox 1 and above
+* Opera 12.1 and above
+* Safari 3 and above
+
+  
+The legend tag is used to define the title for the child contents. The legend elements are the parent element. This tag is used to define the caption for the [<fieldset>](https://www.geeksforgeeks.org/html5-fieldset-tag/) element.
+
+`Syntax`
+
+
+
+<legend> Text </legend>
+
+`Attribute :`
+
+* `align:` It sets the alignment of the legend element.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html><head></head><body><h1>GeeksforGeeks</h1><strong>HTML Legend Tag</strong><form><fieldset><!-- Legend tag using --><legend>STUDENT::</legend><label>Name:</label><input type="text"><br><br><label>Email:</label><input type="text"><br><br><label>Date of birth:</label><input type="text"><br><br><label>Address:</label><input type="text"><br><br><label>Enroll No:</label><input type="text"></fieldset></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181030/Screenshot20210215180947.png)
+
+`Example 2:` Styling the legend tag using CSS properties.   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><style>form{width: 50%;}legend {display: block;padding-left: 10px;padding-right: 10px;border: 3px solid green;background-color:tomato;color:white;;}label {display: inline-block;float: left;clear: left;width: 90px;margin:5px;text-align: left;}input[type="text"] {width:250px;margin:5px 0px;}.gfg {font-size:40px;color:green;font-weight:bold;}</style></head><body><div class = "gfg">GeeksforGeeks</div><h2>HTML Legend Tag</h2><form><fieldset><!-- Legend tag using --><legend>STUDENT:</legend><label>Name:</label><input type="text"><br><label>Email:</label><input type="text"><br><label>Date of birth:</label><input type="text"><br><label>Address:</label><input type="text"><br><label>Enroll No:</label><input type="text"></fieldset></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181213/Screenshot20210215181156.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer 6 and above
+* Firefox 1 and above
+* Opera 12.1 and above
+* Safari 3 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="legend",
+        )
+
+        
+
+
+class Li(BaseElement):
+    """
+The <li> tag in HTML is used to define the list item in an HTML document. It is used within an [Ordered List <ol>](https://www.geeksforgeeks.org/html-ol-tag/) or [Unordered List <ul>](https://www.geeksforgeeks.org/html-ul-tag/). The <li> tag requires a starting and end tag.  
+`Note:` The end tag can be omitted if the list item is immediately followed by another <li> element, or if there is no more content in its parent element.  
+ 
+
+`Syntax:` 
+
+
+
+<li> List Items </li>
+
+`Attribute Value:`
+
+[`value:`](https://www.geeksforgeeks.org/html-li-value-attribute/) The value attribute is used to specify the starting number of the list item. The list item starts from this number and increments its value with every addition of items to it. The value attribute only works for the ordered lists i.e. <ol> tag.
+
+`Example 1:` This example using <li> tag inside Ordered Lists. 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ol><li>Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ol></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220448/li1.PNG)
+
+`Example 2:` This example using <li> tag with Unordered Lists.  
+ 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ul><li>Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ul></body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220653/li2.PNG)
+
+`Example 3:` This example using <li> tag with value attribute to create lists.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ol><li value="5">Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ol></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220853/li3.PNG)
+
+`Applying Styles to <li> Tag:` Some CSS properties can also be used to style the <li> elements that are: [list-style](https://www.geeksforgeeks.org/css-list-style-property/), [list-style-image](https://www.geeksforgeeks.org/css-list-style-image-property/), [list-style-position](https://www.geeksforgeeks.org/css-list-style-position-property/), and [list-style-type](https://www.geeksforgeeks.org/css-list-style-type-property/). These properties can be directly applied to the <li> element although, they are usually applied to the parent element.
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer 5.5
+* Firefox 1
+* Opera 12.1
+* Safari 3
+
+  
+The <li> tag in HTML is used to define the list item in an HTML document. It is used within an [Ordered List <ol>](https://www.geeksforgeeks.org/html-ol-tag/) or [Unordered List <ul>](https://www.geeksforgeeks.org/html-ul-tag/). The <li> tag requires a starting and end tag.  
+`Note:` The end tag can be omitted if the list item is immediately followed by another <li> element, or if there is no more content in its parent element.  
+ 
+
+`Syntax:` 
+
+
+
+<li> List Items </li>
+
+`Attribute Value:`
+
+[`value:`](https://www.geeksforgeeks.org/html-li-value-attribute/) The value attribute is used to specify the starting number of the list item. The list item starts from this number and increments its value with every addition of items to it. The value attribute only works for the ordered lists i.e. <ol> tag.
+
+`Example 1:` This example using <li> tag inside Ordered Lists. 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ol><li>Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ol></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220448/li1.PNG)
+
+`Example 2:` This example using <li> tag with Unordered Lists.  
+ 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ul><li>Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ul></body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220653/li2.PNG)
+
+`Example 3:` This example using <li> tag with value attribute to create lists.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2>HTML li Tag</h2> <ol><li value="5">Geeks</li><li>Sudo</li><li>Gfg</li><li>Gate</li><li>Placement</li></ol></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205220853/li3.PNG)
+
+`Applying Styles to <li> Tag:` Some CSS properties can also be used to style the <li> elements that are: [list-style](https://www.geeksforgeeks.org/css-list-style-property/), [list-style-image](https://www.geeksforgeeks.org/css-list-style-image-property/), [list-style-position](https://www.geeksforgeeks.org/css-list-style-position-property/), and [list-style-type](https://www.geeksforgeeks.org/css-list-style-type-property/). These properties can be directly applied to the <li> element although, they are usually applied to the parent element.
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer 5.5
+* Firefox 1
+* Opera 12.1
+* Safari 3
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="li",
+        )
+
+        
+
