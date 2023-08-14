@@ -30764,3 +30764,392 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Area(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="area",
+        )
+
+
+class Article(BaseElement):
+    """
+The `<article>` tag is independent of the other content of the page (even though it can be related).
+
+In other words, The article element represents a component of a page that consists of self-contained composition in a document, page, or site. For Ex. in syndication.
+
+`A potential source for Article Element is:`
+
+* A magazine/newspaper article
+* A blog entry
+* A forum post
+* A user-submitted a comment
+
+`This tag is most often used in two contexts:`
+
+* On a page with a single piece of content, a single <article> element can be used to contain the main content and set it off from the rest of the page.
+* On a page with multiple pieces of content (a blog index page, a search results page, a category page, news feed), multiple <article> elements can be used to contain each individual piece of content.
+
+Either way, it is similar to the <div> element and displays the stylish work the same. However, using the <article> element instead of <div> provides more semantic information to screen readers, search engines, and third-party applications.
+
+`Note:` This tag does not render as anything special in a browser, you have to use CSS for that.
+
+`Default CSS setting:` Most browsers will display the Article element with the following values.
+
+
+
+<article> { 
+    display:block; 
+} 
+
+`Example:` Using inline styling in an article element
+
+```html
+<!DOCTYPE html><html> <body><articlestyle="width: 300px;border: 2px solid gray;padding: 10px;border-radius: 10px;margin: 5px;"><imgsrc="<https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png>"alt=""width="300"height="250"class="alignnone size-medium wp-image-560930" /> <h1>GeeksforGeeks</h1><p>Sandeep Jain(FOUNDER) An IIT Roorkee alumnus andfounder of GeeksforGeeks. Apart from GeeksforGeeks,he has worked with DE Shaw and Co. as a softwaredeveloper and JIIT Noida as an assistant professor.</p></article></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190717121605/Screenshot-from-2019-07-17-12-12-55.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+  
+The `<article>` tag is independent of the other content of the page (even though it can be related).
+
+In other words, The article element represents a component of a page that consists of self-contained composition in a document, page, or site. For Ex. in syndication.
+
+`A potential source for Article Element is:`
+
+* A magazine/newspaper article
+* A blog entry
+* A forum post
+* A user-submitted a comment
+
+`This tag is most often used in two contexts:`
+
+* On a page with a single piece of content, a single <article> element can be used to contain the main content and set it off from the rest of the page.
+* On a page with multiple pieces of content (a blog index page, a search results page, a category page, news feed), multiple <article> elements can be used to contain each individual piece of content.
+
+Either way, it is similar to the <div> element and displays the stylish work the same. However, using the <article> element instead of <div> provides more semantic information to screen readers, search engines, and third-party applications.
+
+`Note:` This tag does not render as anything special in a browser, you have to use CSS for that.
+
+`Default CSS setting:` Most browsers will display the Article element with the following values.
+
+
+
+<article> { 
+    display:block; 
+} 
+
+`Example:` Using inline styling in an article element
+
+```html
+<!DOCTYPE html><html> <body><articlestyle="width: 300px;border: 2px solid gray;padding: 10px;border-radius: 10px;margin: 5px;"><imgsrc="<https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png>"alt=""width="300"height="250"class="alignnone size-medium wp-image-560930" /> <h1>GeeksforGeeks</h1><p>Sandeep Jain(FOUNDER) An IIT Roorkee alumnus andfounder of GeeksforGeeks. Apart from GeeksforGeeks,he has worked with DE Shaw and Co. as a softwaredeveloper and JIIT Noida as an assistant professor.</p></article></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190717121605/Screenshot-from-2019-07-17-12-12-55.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="article",
+        )
+
+        
+
