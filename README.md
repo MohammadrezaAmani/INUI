@@ -40,6 +40,9 @@
   - [Requirements](#requirements)
     - [**Python Compatibility**](#python-compatibility)
     - [**Dependencies**](#dependencies)
+  - [In A Nutshell](#in-a-nutshell)
+  - [How to Use?](#how-to-use)
+  - [LICENSE](#license)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -60,3 +63,80 @@ should not cause any problem, we recommend using the latest version of `python3`
 This package requires the following packages:
 
 * [BeautifulSoup](https://pypi.org/project/beautifulsoup4/ "BeautifulSoup4") - for Prettifing Code
+
+## In A Nutshell
+
+> you can find more examples in [examples](./examples) directory
+
+```python3
+from inui.elements import (
+    Body,
+    Head,
+    Html,
+    Title,
+    H1,
+    Div,
+    Button,
+    Link,
+    Meta,
+    Span,
+    Form,
+    Input,
+    Script,
+    Comment,
+)
+
+h = Html(data=(
+    Comment("this is black door =`) "),
+    Head(
+        (
+            Title("Wiki Clone"),
+            Meta(charset="utf-8"),
+            Meta(
+                name="viewport",
+                content="width=device-width, initial-scale=1.0",
+            ),
+            Link(rel="stylesheet", href="./style.css"),
+        )
+    ),
+    Body(
+        (
+
+            Div(
+                (
+                    Div(
+                        (
+                            H1("search wiki"),
+                            Span("light", id="theme-toggler"),
+                        ),
+                        classs="header-container",
+                    )
+                ),
+                classs="container",
+            ),
+            Form(
+                (
+                    Input(
+                        typee="text", placeholder="search wiki", id="search-input"
+                    ),
+                    Button(typee="submit", text="search",
+                           id="search-button"),
+                ),
+                id="search-form",
+            ),
+            Div(id="search-results"),
+            Script(src="./script.js"),
+        ),
+    ),
+),)
+
+```
+
+
+## How to Use?
+
+> read the [documentation](https://inui.readthedocs.io/en/latest/) for more information
+
+
+## LICENSE 
+Distributed under the MIT License. See `LICENSE` for more information.
