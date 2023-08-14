@@ -207,7 +207,6 @@ class BaseElement:
 class BaseVoidElement:
     def __init__(
         self,
-        data=(),
         attributes={},
         classs=None,
         id=None,
