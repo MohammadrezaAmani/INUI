@@ -30,7 +30,7 @@
 
 **INUI** is a powerful and highly customizable Python language library for **UI**, which supports all the components and elements of the html markup language in [Python](https://python.org/), as well as the ability to use libraries such as [Bootstrap](https://getbootstrap.com/), etc. And it brings a new experience of easier work with frontend in Python.
 
-## `<a name='Contents'></a>`Contents
+## Contents
 
 <!-- vscode-markdown-toc -->
 
