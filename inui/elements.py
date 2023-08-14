@@ -44185,3 +44185,226 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Main(BaseElement):
+    """
+The `HTML <main> Tag` is used to given the main information of a document. The content inside the `<main>` element should be unique for the document. Which includes the sidebars, navigation links, copyright information, site logos, and search forms.   
+`Note:` The document must not contained more than one `<main>` element . The `<main>` element should not be a child elements of an `<article>`, `<aside>`, `<footer>`, `<header>`, or `<nav>` element.   
+`Syntax:`  
+ 
+
+
+
+<main>
+    //contents of main Element 
+</main> 
+
+`Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html> <head> <style>.class {color: green;}</style></head> <body><h1 class="class">&lt;Main&gt; Tag</h1><main><h1>Programming Languages</h1><p>c programming, C++Programming, Java Programming</p> <article><h1>C Programming</h1><p>C is a Procedural language</p></article> <article><h1>C++ Programming</h1><p>C++ programming is aObject oriented Programming.</p></article> <article><h1>Java Programming</h1><p>Java is a pure Objectoriented Programming.</p></article></main> </body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190618220949/main-tag.png)
+
+`Supported Browsers:` The browsers supported by `<main> Tag` are listed below:   
+ 
+
+* Google Chrome 26
+* Edge 12
+* Firefox 21
+* Apple Safari 7
+* Opera 16
+
+ 
+
+  
+The `HTML <main> Tag` is used to given the main information of a document. The content inside the `<main>` element should be unique for the document. Which includes the sidebars, navigation links, copyright information, site logos, and search forms.   
+`Note:` The document must not contained more than one `<main>` element . The `<main>` element should not be a child elements of an `<article>`, `<aside>`, `<footer>`, `<header>`, or `<nav>` element.   
+`Syntax:`  
+ 
+
+
+
+<main>
+    //contents of main Element 
+</main> 
+
+`Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html> <head> <style>.class {color: green;}</style></head> <body><h1 class="class">&lt;Main&gt; Tag</h1><main><h1>Programming Languages</h1><p>c programming, C++Programming, Java Programming</p> <article><h1>C Programming</h1><p>C is a Procedural language</p></article> <article><h1>C++ Programming</h1><p>C++ programming is aObject oriented Programming.</p></article> <article><h1>Java Programming</h1><p>Java is a pure Objectoriented Programming.</p></article></main> </body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190618220949/main-tag.png)
+
+`Supported Browsers:` The browsers supported by `<main> Tag` are listed below:   
+ 
+
+* Google Chrome 26
+* Edge 12
+* Firefox 21
+* Apple Safari 7
+* Opera 16
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="main",
+        )
+
+        
+
