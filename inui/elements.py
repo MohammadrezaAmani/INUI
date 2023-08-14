@@ -35953,3 +35953,529 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Dd(BaseElement):
+    """
+The <dd> tag in HTML stands for definition description and is used to denote the description or definition of an item in a description list. Paragraphs, line breaks, images, links, lists can be inserted inside a <dd> tag. The <dd> tag in HTML is used along with [<dl>](https://www.geeksforgeeks.org/html-dl-tag/) tag which defines the description list and [<dt>](https://www.geeksforgeeks.org/html-dt-tag/) tag which defines the terms in the description list. The <dd> tag requires a starting, but the end tag is optional.
+
+`Syntax:` 
+
+
+
+<dd> Contents... </dd>
+
+`Example 1:` Below programs illustrate the <dd> element in HTML.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML dd Tag</h2><dl><dt>Geeks Classes</dt><dd>It is an extensive classroom programmefor enhancing DS and Algo concepts.</dd><br><dt>Fork Python</dt><dd>It is a course designed for beginnersin python.</dd><br><dt>Interview Preparation</dt><dd>It is a course designed for preparationof interviews in top product based companies.</dd></dl></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219183445/dd.png)
+
+`Example 2:` This example uses the <dd> tag with display property.   
+ 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML dd Tag</h2><dl><dt>Geeks Classes</dt><dd style="display: inline; margin-left: 60px">It is an extensive classroom programmefor enhancing DS and Algo concepts.</dd></dl></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219184635/dd2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+  
+The <dd> tag in HTML stands for definition description and is used to denote the description or definition of an item in a description list. Paragraphs, line breaks, images, links, lists can be inserted inside a <dd> tag. The <dd> tag in HTML is used along with [<dl>](https://www.geeksforgeeks.org/html-dl-tag/) tag which defines the description list and [<dt>](https://www.geeksforgeeks.org/html-dt-tag/) tag which defines the terms in the description list. The <dd> tag requires a starting, but the end tag is optional.
+
+`Syntax:` 
+
+
+
+<dd> Contents... </dd>
+
+`Example 1:` Below programs illustrate the <dd> element in HTML.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML dd Tag</h2><dl><dt>Geeks Classes</dt><dd>It is an extensive classroom programmefor enhancing DS and Algo concepts.</dd><br><dt>Fork Python</dt><dd>It is a course designed for beginnersin python.</dd><br><dt>Interview Preparation</dt><dd>It is a course designed for preparationof interviews in top product based companies.</dd></dl></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219183445/dd.png)
+
+`Example 2:` This example uses the <dd> tag with display property.   
+ 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML dd Tag</h2><dl><dt>Geeks Classes</dt><dd style="display: inline; margin-left: 60px">It is an extensive classroom programmefor enhancing DS and Algo concepts.</dd></dl></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219184635/dd2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="dd",
+        )
+
+        
+
+
+class Dfn(BaseElement):
+    """
+The <dfn> tag in HTML represents definition element and is used to representing a defining instance in HTML. Generally, the defining instance is the first use of a term in a document. The <dfn> tag requires a starting as well as an ending tag.  
+ 
+
+`Syntax:` 
+
+
+
+<dfn>.....</dfn>
+
+Below examples illustrate the <dfn> tag in HTML:
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag-->  <p><dfn>Geeksforgeeks</dfn> is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.45.19-PM-300x47.png)
+
+`Example 2:` Using [title attribute](https://www.geeksforgeeks.org/html-title-attribute/) of the <dfn> tag.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with title attribute-->  <p><dfn title="Geeksforgeeks">GFG</dfn>is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.49.13-PM-300x59.png)
+
+`Example 3:` Using [title attribute](https://www.geeksforgeeks.org/html-title-attribute/) of the [<abbr> tag](https://www.geeksforgeeks.org/html-abbr-tag/) inside the <dfn> element.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with title attribute and abbr tag-->  <p><dfn><abbr title="Geeksforgeeks">GFG</abbr></dfn> is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604131913/dfnex3.png)
+
+`Example 4:` Using [id attribute](https://www.geeksforgeeks.org/html-id-attributes/) along with the <dfn> tag.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with id attribute-->  <p><dfn id="Geeksforgeeks">GFG</dfn> is aportal for geeks.</p>    <p>Practice questions for crackingtechnical interviews.</p>    <p>Prepare for GATE CSE – 2019</p>    <p>Visit <a href="#Geeksforgeeks">GFG</a>.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.57.46-PM-300x110.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+The <dfn> tag in HTML represents definition element and is used to representing a defining instance in HTML. Generally, the defining instance is the first use of a term in a document. The <dfn> tag requires a starting as well as an ending tag.  
+ 
+
+`Syntax:` 
+
+
+
+<dfn>.....</dfn>
+
+Below examples illustrate the <dfn> tag in HTML:
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag-->  <p><dfn>Geeksforgeeks</dfn> is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.45.19-PM-300x47.png)
+
+`Example 2:` Using [title attribute](https://www.geeksforgeeks.org/html-title-attribute/) of the <dfn> tag.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with title attribute-->  <p><dfn title="Geeksforgeeks">GFG</dfn>is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.49.13-PM-300x59.png)
+
+`Example 3:` Using [title attribute](https://www.geeksforgeeks.org/html-title-attribute/) of the [<abbr> tag](https://www.geeksforgeeks.org/html-abbr-tag/) inside the <dfn> element.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with title attribute and abbr tag-->  <p><dfn><abbr title="Geeksforgeeks">GFG</abbr></dfn> is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604131913/dfnex3.png)
+
+`Example 4:` Using [id attribute](https://www.geeksforgeeks.org/html-id-attributes/) along with the <dfn> tag.   
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <!--HTML dfn tag with id attribute-->  <p><dfn id="Geeksforgeeks">GFG</dfn> is aportal for geeks.</p>    <p>Practice questions for crackingtechnical interviews.</p>    <p>Prepare for GATE CSE – 2019</p>    <p>Visit <a href="#Geeksforgeeks">GFG</a>.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-2.57.46-PM-300x110.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="dfn",
+        )
+
+        
+
