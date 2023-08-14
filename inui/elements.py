@@ -46261,3 +46261,455 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Noscript(BaseElement):
+    """
+The <noscript> tag in HTML is used to display the text for those browsers which does not support script tag or the browsers disable the script by the user. This tag is used in both [<head>](https://www.geeksforgeeks.org/html-head-tag/) and [<body>](https://www.geeksforgeeks.org/html-body-tag/) tag.
+
+`Note:` This tag is used in those browsers only which does not support scripts.
+
+`Syntax:`  
+
+
+
+<noscript> Contents... </noscript>
+
+Below example illustrates the <noscript> tag in HTML:
+
+`Example:` 
+
+```html
+<html> <body><h1>GeeksforGeeks</h1><h2>HTML noscript Tag</h2><script>document.write("GeeksforGeeks!")</script><!-- noscript tag starts --><noscript>A computer science portal</noscript><!-- noscript tag ends --> </body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122035/noscript.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+The <noscript> tag in HTML is used to display the text for those browsers which does not support script tag or the browsers disable the script by the user. This tag is used in both [<head>](https://www.geeksforgeeks.org/html-head-tag/) and [<body>](https://www.geeksforgeeks.org/html-body-tag/) tag.
+
+`Note:` This tag is used in those browsers only which does not support scripts.
+
+`Syntax:`  
+
+
+
+<noscript> Contents... </noscript>
+
+Below example illustrates the <noscript> tag in HTML:
+
+`Example:` 
+
+```html
+<html> <body><h1>GeeksforGeeks</h1><h2>HTML noscript Tag</h2><script>document.write("GeeksforGeeks!")</script><!-- noscript tag starts --><noscript>A computer science portal</noscript><!-- noscript tag ends --> </body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122035/noscript.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="noscript",
+        )
+
+        
+
+
+class Object(BaseElement):
+    """
+The <object> tag is an HTML tag and used to display multimedia like audios, videos, images, PDFs, and Flash in web pages. It can also be used for displaying another webpage inside the HTML page.   
+The <param> tag is also used along with this tag to define various parameters. Any text that is written within <object> and </object> tags are considered as an alternative text that appears when the data specified is not supported by the browser.   
+This tag supports all Global and Event attributes of HTML.   
+`Example:` 
+
+```html
+<!DOCTYPE html> <html> <body><h1>HTML Object Tag</h1><!--HTML object tag starts here--><object data="<https://media.geeksforgeeks.org/wp-content/cdn-uploads/Geek_logi_-low_res.png>"width="550px" height="150px">GeeksforGeeks<!--HTML object tag ends here--></object></body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210611142250/object.png)
+
+The <object> tag has the following attributes:   
+ 
+
+
+
+| Attribute | Value | Description |
+| --- | --- ```html
+[data](https://www.geeksforgeeks.org/html-object-data-attribute/) | URL | It specifies the URL of data in the object. |
+| [type](https://www.geeksforgeeks.org/html-object-type-attribute/) | media\_type | It specifies the media type of data specified in the data attribute. |
+| typemustmatch | boolean | It indicates that the resource should be embedded only if the value of the type attribute matches with the type of the resource provided on the data attribute. |
+| [align](https://www.geeksforgeeks.org/html-object-align-attribute/) | left, right, top, bottom | It defines the alignment of the objects. |
+| [border](https://www.geeksforgeeks.org/html-object-border-attribute/) | pixels | It specifies the border around the object. |
+| [height](https://www.geeksforgeeks.org/html-height-attribute/) | pixels | It specifies the height of the object. |
+| [hspace](https://www.geeksforgeeks.org/html-object-hspace-attribute/) | pixels | It specifies the whitespace on the left and right side of the object. |
+| [vspace](https://www.geeksforgeeks.org/html-object-vspace-attribute/) | pixels | It specifies the whitespace on the top and bottom of the object. |
+| [height](https://www.geeksforgeeks.org/html-object-height-attribute/) | pixels | It specifies the height of the object. |
+| [width](https://www.geeksforgeeks.org/html-object-width-attribute/) | pixels | It specifies the width of the object. |
+| [name](https://www.geeksforgeeks.org/html-object-name-attribute/) | name | It specifies the name for an object. |
+| [form](https://www.geeksforgeeks.org/html-object-form-attribute/) | form\_id | It specifies the form id to which the object element belongs to. |
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+ 
+
+The <object> tag is an HTML tag and used to display multimedia like audios, videos, images, PDFs, and Flash in web pages. It can also be used for displaying another webpage inside the HTML page.   
+The <param> tag is also used along with this tag to define various parameters. Any text that is written within <object> and </object> tags are considered as an alternative text that appears when the data specified is not supported by the browser.   
+This tag supports all Global and Event attributes of HTML.   
+`Example:` 
+
+```html
+<!DOCTYPE html> <html> <body><h1>HTML Object Tag</h1><!--HTML object tag starts here--><object data="<https://media.geeksforgeeks.org/wp-content/cdn-uploads/Geek_logi_-low_res.png>"width="550px" height="150px">GeeksforGeeks<!--HTML object tag ends here--></object></body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210611142250/object.png)
+
+The <object> tag has the following attributes:   
+ 
+
+
+
+| Attribute | Value | Description |
+| --- | --- ```html
+[data](https://www.geeksforgeeks.org/html-object-data-attribute/) | URL | It specifies the URL of data in the object. |
+| [type](https://www.geeksforgeeks.org/html-object-type-attribute/) | media\_type | It specifies the media type of data specified in the data attribute. |
+| typemustmatch | boolean | It indicates that the resource should be embedded only if the value of the type attribute matches with the type of the resource provided on the data attribute. |
+| [align](https://www.geeksforgeeks.org/html-object-align-attribute/) | left, right, top, bottom | It defines the alignment of the objects. |
+| [border](https://www.geeksforgeeks.org/html-object-border-attribute/) | pixels | It specifies the border around the object. |
+| [height](https://www.geeksforgeeks.org/html-height-attribute/) | pixels | It specifies the height of the object. |
+| [hspace](https://www.geeksforgeeks.org/html-object-hspace-attribute/) | pixels | It specifies the whitespace on the left and right side of the object. |
+| [vspace](https://www.geeksforgeeks.org/html-object-vspace-attribute/) | pixels | It specifies the whitespace on the top and bottom of the object. |
+| [height](https://www.geeksforgeeks.org/html-object-height-attribute/) | pixels | It specifies the height of the object. |
+| [width](https://www.geeksforgeeks.org/html-object-width-attribute/) | pixels | It specifies the width of the object. |
+| [name](https://www.geeksforgeeks.org/html-object-name-attribute/) | name | It specifies the name for an object. |
+| [form](https://www.geeksforgeeks.org/html-object-form-attribute/) | form\_id | It specifies the form id to which the object element belongs to. |
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+ 
+
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="object",
+        )
+
+        
+
