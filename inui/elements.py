@@ -274,7 +274,6 @@ class BaseVoidElement:
         alt=None,
         tagName=None,
     ):
-        self.data = data
         self.attributes = attributes
         self.classs = classs
         self.id = id
