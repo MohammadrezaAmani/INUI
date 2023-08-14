@@ -32646,3 +32646,236 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Blockquote(BaseElement):
+    """
+The <blockquote> tag in [`HTML`](https://www.geeksforgeeks.org/html/) is used to display long quotations (a section that is quoted from another source). It changes the alignment to make it unique from others. It contains both opening and closing tags. In blockquote tags, we can use elements like headings, lists, paragraphs, etc.
+
+`Note:` The <blockquote> tag in HTML4.1 defines the long quotation i.e. quotations that span multiple lines. But in HTML5, the <blockquote> tag specifies the section that is quoted from other sources.  
+ `Syntax:` 
+
+
+
+<blockquote> Contents... </blockquote>
+
+`Attribute:` It contains a single attribute *cite* which is used to specify the source of the quotation.
+
+`Example 1:` This example illustrates the blockquote tag
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2><blockquote> Tag</h2><!--blockquote Tag starts here --><blockquote cite="<https://www.geeksforgeeks.org/html-tutorials/>"> <p>HTML stands for HyperText Markup Language. Itis used to design web pages using a markup language.HTML is the combination of Hypertext and Markup language.Hypertext defines the link between the web pages. Amarkup language is used to define the text document withintag which defines the structure of web pages.</p> </blockquote><!--blockquote Tag ends here --></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205163700/updatebq.png)
+
+`Example 2:` This example illustrates the blockquote tag
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2> <blockquote> Tag</h2> <p>This is blockquote Tag text with attribute cite</p> <!--blockquote Tag starts here --><blockquote cite="www.geeksforgeeks.org">GeeksforGeeks:A computer science portal for geeks</blockquote><!--blockquote Tag ends here --></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205160240/bq.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+  
+The <blockquote> tag in [`HTML`](https://www.geeksforgeeks.org/html/) is used to display long quotations (a section that is quoted from another source). It changes the alignment to make it unique from others. It contains both opening and closing tags. In blockquote tags, we can use elements like headings, lists, paragraphs, etc.
+
+`Note:` The <blockquote> tag in HTML4.1 defines the long quotation i.e. quotations that span multiple lines. But in HTML5, the <blockquote> tag specifies the section that is quoted from other sources.  
+ `Syntax:` 
+
+
+
+<blockquote> Contents... </blockquote>
+
+`Attribute:` It contains a single attribute *cite* which is used to specify the source of the quotation.
+
+`Example 1:` This example illustrates the blockquote tag
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2><blockquote> Tag</h2><!--blockquote Tag starts here --><blockquote cite="<https://www.geeksforgeeks.org/html-tutorials/>"> <p>HTML stands for HyperText Markup Language. Itis used to design web pages using a markup language.HTML is the combination of Hypertext and Markup language.Hypertext defines the link between the web pages. Amarkup language is used to define the text document withintag which defines the structure of web pages.</p> </blockquote><!--blockquote Tag ends here --></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205163700/updatebq.png)
+
+`Example 2:` This example illustrates the blockquote tag
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2> <blockquote> Tag</h2> <p>This is blockquote Tag text with attribute cite</p> <!--blockquote Tag starts here --><blockquote cite="www.geeksforgeeks.org">GeeksforGeeks:A computer science portal for geeks</blockquote><!--blockquote Tag ends here --></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205160240/bq.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="blockquote",
+        )
+
+        
+
