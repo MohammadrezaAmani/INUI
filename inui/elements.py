@@ -31153,3 +31153,254 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Aside(BaseElement):
+    """
+The `<aside>` tag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. The <aside> tag contains mainly author information, links, related content, and so on.
+
+`<aside> vs <div>:` Both tags have the same behavior with a different meanings. 
+
+* [`<div>`](https://www.geeksforgeeks.org/div-tag-html/)`:` It defines or creates a division or section in the web page.
+* `<aside>:` It does the same job by creating a section or division but it contains only the content that is related to the main web page.
+
+The <aside> tag makes it easy to design the page and it enhances the clarity of the HTML document. It let us easily recognize the main text and subordinate text. In both the time <div> and <aside> need CSS for specific design. The <aside> tag supports `Global attributes` and `Event attributes` in HTML.
+
+`Note:` The <aside> tag is new in HTML5. This tag does not render anything special in a browser you have to use CSS for that.
+
+`Syntax:`
+
+
+
+<aside>
+      <h1>Contents...</h1>
+      <p>Contents...</p>
+</aside>
+
+`Example:` HTML aside Tag
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML aside Tag</h2><h1>This is normal heading Tag</h1><p>This is normal paragraph text</p><aside><h1>This is heading text in aside Tag</h1><p>This is paragraph text in aside Tag</p></aside></body> </html> |
+
+```
+`Output:`
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
+
+`Example:` Using Style in HTML aside Tag:
+
+```html
+<!DOCTYPE html><html> <head><style>article {width: 50%;padding: 10px;float: left;}aside {width: 40%;float: right;background-color: green;color: white;padding: 5px;margin: 10px;height: 100px;}</style></head> <body><h1>GeeksforGeeks</h1><article><h1>Heading . . .</h1> <p>Aside tag is use to display importantinformation about the primary page.</p> </article><aside><h1>Aside tag example</h1> <p>Aside tag content. . .</p> </aside></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210204152328/Screenshot-2021-02-04-152259.png)
+
+`Supported Browser:` 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+  
+The `<aside>` tag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. The <aside> tag contains mainly author information, links, related content, and so on.
+
+`<aside> vs <div>:` Both tags have the same behavior with a different meanings. 
+
+* [`<div>`](https://www.geeksforgeeks.org/div-tag-html/)`:` It defines or creates a division or section in the web page.
+* `<aside>:` It does the same job by creating a section or division but it contains only the content that is related to the main web page.
+
+The <aside> tag makes it easy to design the page and it enhances the clarity of the HTML document. It let us easily recognize the main text and subordinate text. In both the time <div> and <aside> need CSS for specific design. The <aside> tag supports `Global attributes` and `Event attributes` in HTML.
+
+`Note:` The <aside> tag is new in HTML5. This tag does not render anything special in a browser you have to use CSS for that.
+
+`Syntax:`
+
+
+
+<aside>
+      <h1>Contents...</h1>
+      <p>Contents...</p>
+</aside>
+
+`Example:` HTML aside Tag
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML aside Tag</h2><h1>This is normal heading Tag</h1><p>This is normal paragraph text</p><aside><h1>This is heading text in aside Tag</h1><p>This is paragraph text in aside Tag</p></aside></body> </html> |
+
+```
+`Output:`
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
+
+`Example:` Using Style in HTML aside Tag:
+
+```html
+<!DOCTYPE html><html> <head><style>article {width: 50%;padding: 10px;float: left;}aside {width: 40%;float: right;background-color: green;color: white;padding: 5px;margin: 10px;height: 100px;}</style></head> <body><h1>GeeksforGeeks</h1><article><h1>Heading . . .</h1> <p>Aside tag is use to display importantinformation about the primary page.</p> </article><aside><h1>Aside tag example</h1> <p>Aside tag content. . .</p> </aside></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210204152328/Screenshot-2021-02-04-152259.png)
+
+`Supported Browser:` 
+
+* Google Chrome 5.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.1 and above
+* Safari 5.0 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="aside",
+        )
+
+        
+
