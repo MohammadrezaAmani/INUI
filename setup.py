@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 # This gets deployed when a new release is made by github actions
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 
 # CHANGEME VARS
 PACKAGE_NAME = "inui"
