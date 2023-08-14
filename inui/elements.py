@@ -53191,3 +53191,256 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Template(BaseElement):
+    """
+The `<template> tag` in HTML is used to store the HTML code fragments, which can be cloned and inserted in an HTML document. The content of the tag is hidden from clients being stored on the client-side. It is inserted until activated using JavaScript. Use JavaScript to get the content from a template, and add it to the web page.
+
+`Syntax:`
+
+
+
+<template> Contents </template>
+
+`Note:` The <template> tag is new in HTML 5.
+
+`Attributes:` This tag supports the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) in HTML.
+
+`Example 1:` In this example, we have an unordered list of the courses that we have hidden to display using the <template> tag in HTML.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tag willbe hidden from the client.</p>    <!-- Html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><h4>GeeksforGeeks Offline Courses</h4><ul><li>DSA</li><li>Placement & Interview Preparation</li><li>Web Development</li><li>Algorithms & basic programming</li></ul></template><!-- Html template tag ends here --> <p>End of the example of template tag</p> </body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922103742/1.jpg)HTML template tag
+
+`Example 2:` This example uses a template tag, and it hides the content within the template tag.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tagis hidden from the client.</p>    <!-- html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><img src="<https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png>">Content Writer:<input type="text"placeholder="author name"></template><!-- html template tag ends here -->  <p>End of the example of template tag</p>   </body></html> |
+
+```
+`Output:`
+
+![template1](https://media.geeksforgeeks.org/wp-content/uploads/20190311164616/template11.png)HTML template tag
+
+`Example 3:` This example illustrates the uses of JavaScript to display the template tag content.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Click the button to get the content from a template,and display it in the web page.</p>   <button onclick="myGeeks()"> Show content </button> <!-- Html template tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><img src="<https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png>"><br>Content Writer:<input type="text"placeholder="author name"></template><!-- Html template tag ends here --> <!-- Script to display the content of template tag --><script>function myGeeks() {var t = document.getElementsByTagName("template")[0];var clone = t.content.cloneNode(true);document.body.appendChild(clone);}</script></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922101615/20210922101437.gif)HTML template tag
+
+`Supported Browsers:` 
+
+* Google Chrome 26.0 & above
+* Microsoft Edge 13.0 & above
+* Firefox 22.0 & above
+* Safari 8.0 & above
+* Opera 15.0 & above
+
+  
+The `<template> tag` in HTML is used to store the HTML code fragments, which can be cloned and inserted in an HTML document. The content of the tag is hidden from clients being stored on the client-side. It is inserted until activated using JavaScript. Use JavaScript to get the content from a template, and add it to the web page.
+
+`Syntax:`
+
+
+
+<template> Contents </template>
+
+`Note:` The <template> tag is new in HTML 5.
+
+`Attributes:` This tag supports the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) in HTML.
+
+`Example 1:` In this example, we have an unordered list of the courses that we have hidden to display using the <template> tag in HTML.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tag willbe hidden from the client.</p>    <!-- Html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><h4>GeeksforGeeks Offline Courses</h4><ul><li>DSA</li><li>Placement & Interview Preparation</li><li>Web Development</li><li>Algorithms & basic programming</li></ul></template><!-- Html template tag ends here --> <p>End of the example of template tag</p> </body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922103742/1.jpg)HTML template tag
+
+`Example 2:` This example uses a template tag, and it hides the content within the template tag.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tagis hidden from the client.</p>    <!-- html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><img src="<https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png>">Content Writer:<input type="text"placeholder="author name"></template><!-- html template tag ends here -->  <p>End of the example of template tag</p>   </body></html> |
+
+```
+`Output:`
+
+![template1](https://media.geeksforgeeks.org/wp-content/uploads/20190311164616/template11.png)HTML template tag
+
+`Example 3:` This example illustrates the uses of JavaScript to display the template tag content.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Click the button to get the content from a template,and display it in the web page.</p>   <button onclick="myGeeks()"> Show content </button> <!-- Html template tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><img src="<https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png>"><br>Content Writer:<input type="text"placeholder="author name"></template><!-- Html template tag ends here --> <!-- Script to display the content of template tag --><script>function myGeeks() {var t = document.getElementsByTagName("template")[0];var clone = t.content.cloneNode(true);document.body.appendChild(clone);}</script></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922101615/20210922101437.gif)HTML template tag
+
+`Supported Browsers:` 
+
+* Google Chrome 26.0 & above
+* Microsoft Edge 13.0 & above
+* Firefox 22.0 & above
+* Safari 8.0 & above
+* Opera 15.0 & above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="template",
+        )
+
+        
+
