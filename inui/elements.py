@@ -32879,3 +32879,511 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Body(BaseElement):
+    """
+ The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.  
+ 
+
+`Syntax:` 
+
+
+
+<body> Body Contents... </body>
+
+`Attributes:` There are many attributes in the <body> tag which are depreciated from HTML5 are listed below: 
+
+* [`background`](https://www.geeksforgeeks.org/html-body-background-attribute/)`:` It contains the URL of the background image. It is used to set the background image.
+* [`bgcolor`](https://www.geeksforgeeks.org/html-bgcolor-attribute/)`:` It is used to specify the background color of an image.
+* [`alink`](https://www.geeksforgeeks.org/html-body-alink-attribute/)`:` It is used to specify the color of the active link.
+* [`link`](https://www.geeksforgeeks.org/html-links/)`:` It is used to specify the color of visited links.
+* [`text`](https://www.geeksforgeeks.org/html-body-text-attribute/)`:` It specifies the color of the text in a document.
+* [`vlink`](https://www.geeksforgeeks.org/html-body-vlink-attribute/)`:` It specifies the color of visited links.
+
+`Example :` Using HTML body tag. All then content placed inside the body tag.
+
+```html
+<!DOCTYPE html><html> <!-- body tag starts here --><body><h1>GeeksforGeeks</h1><h2>body Tag</h2>  <p>This is paragraph text</p>   </body><!-- body tag ends here --> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205145207/bdy.png)
+
+`Example 2:` Example to show the functioning of a Body tag along with its CSS implementation.
+
+```html
+<!DOCTYPE html><html> <!-- style on the body tag --><!-- body tag starts here --><body style="background-color:seagreen"><h1>GeeksforGeeks</h1><h2>HTML body Tag</h2>  <p>This is paragraph Tag</p>  </body><!-- body tag ends here --></html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205145419/para.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+ The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.  
+ 
+
+`Syntax:` 
+
+
+
+<body> Body Contents... </body>
+
+`Attributes:` There are many attributes in the <body> tag which are depreciated from HTML5 are listed below: 
+
+* [`background`](https://www.geeksforgeeks.org/html-body-background-attribute/)`:` It contains the URL of the background image. It is used to set the background image.
+* [`bgcolor`](https://www.geeksforgeeks.org/html-bgcolor-attribute/)`:` It is used to specify the background color of an image.
+* [`alink`](https://www.geeksforgeeks.org/html-body-alink-attribute/)`:` It is used to specify the color of the active link.
+* [`link`](https://www.geeksforgeeks.org/html-links/)`:` It is used to specify the color of visited links.
+* [`text`](https://www.geeksforgeeks.org/html-body-text-attribute/)`:` It specifies the color of the text in a document.
+* [`vlink`](https://www.geeksforgeeks.org/html-body-vlink-attribute/)`:` It specifies the color of visited links.
+
+`Example :` Using HTML body tag. All then content placed inside the body tag.
+
+```html
+<!DOCTYPE html><html> <!-- body tag starts here --><body><h1>GeeksforGeeks</h1><h2>body Tag</h2>  <p>This is paragraph text</p>   </body><!-- body tag ends here --> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205145207/bdy.png)
+
+`Example 2:` Example to show the functioning of a Body tag along with its CSS implementation.
+
+```html
+<!DOCTYPE html><html> <!-- style on the body tag --><!-- body tag starts here --><body style="background-color:seagreen"><h1>GeeksforGeeks</h1><h2>HTML body Tag</h2>  <p>This is paragraph Tag</p>  </body><!-- body tag ends here --></html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210205145419/para.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="body",
+        )
+
+        
+
+
+class B(BaseElement):
+    """
+The <b> tag in HTML is used to specify the bold text without any extra importance. The text is written within <b> tag display in bold size. You can do that by using *font-weight: bold;* property in CSS. It is a container tag that contains an opening tag, content & closing tag. There is a similar tag, [<strong>](https://www.geeksforgeeks.org/html-strong-tag/#:~:text=The%20tag%20in%20HTML,Make%20that%20text%20bold.) tag that is the parsed tag and used to show the importance of the text & has a similar effect on content. 
+
+As per the HTML5 specification, the <b> tag should be used as a last option to resort when no other tag is more appropriate. The HTML5 specification states that for headings, it should be depicted by the [<h1> to <h6>](https://www.geeksforgeeks.org/html-heading/) tags, for emphasized text, it must be depicted by the [<em>](https://www.geeksforgeeks.org/html-em-tag/) tag & similar wise, the important text by the [<strong>](https://www.geeksforgeeks.org/html-strong-tag/#:~:text=The%20tag%20in%20HTML,Make%20that%20text%20bold.) tag, & for marked/highlighted text, it should be denoted with the [<mark>](https://www.geeksforgeeks.org/html-mark-tag/#:~:text=The%20tag%20in%20HTML,the%20text%20in%20a%20paragraph.&text=Example%201%3A%20This%20example%20uses,text%20content%20in%20yellow%20color.) tag.
+
+`Syntax:`
+
+
+
+<b> Contents... </b>
+
+`Accepted Attributes:` This is a [Global attribute](https://www.geeksforgeeks.org/html-global-attributes/), and can be used on any HTML element.
+
+`Example 1:` This simple code example illustrates highlighting the text by making it as bold text in HTML.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3><p>A <b>Computer Science portal</b> for geeks.It contains well written, well thought andwell explained <b>computer science andprogramming articles.</b></p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921171114/8.jpg)
+
+`Example 2:` In this example, we have used the <b> tag & <p> tag to illustrates the difference in the text appearance & their sizes.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3> <!--paragraph Tag --><p>This is normal paragraph Tag text</p> <!--bold Tag --><b>This is bold Tag text</b></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921165842/6.jpg)
+
+`Example 3:` In this example, we have used the [CSS font-weight property](https://www.geeksforgeeks.org/css-font-weight-property/) whose value is set to bold to make the text bold.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3> <!--paragraph Tag --><p>This is normal paragraph Tag text</p> <!--Using CSS in paragraph Tag for making text bold  --><p style="font-weight: bold">This is bold text using CSS</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921170143/7.jpg)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Microsoft Edge
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+The <b> tag in HTML is used to specify the bold text without any extra importance. The text is written within <b> tag display in bold size. You can do that by using *font-weight: bold;* property in CSS. It is a container tag that contains an opening tag, content & closing tag. There is a similar tag, [<strong>](https://www.geeksforgeeks.org/html-strong-tag/#:~:text=The%20tag%20in%20HTML,Make%20that%20text%20bold.) tag that is the parsed tag and used to show the importance of the text & has a similar effect on content. 
+
+As per the HTML5 specification, the <b> tag should be used as a last option to resort when no other tag is more appropriate. The HTML5 specification states that for headings, it should be depicted by the [<h1> to <h6>](https://www.geeksforgeeks.org/html-heading/) tags, for emphasized text, it must be depicted by the [<em>](https://www.geeksforgeeks.org/html-em-tag/) tag & similar wise, the important text by the [<strong>](https://www.geeksforgeeks.org/html-strong-tag/#:~:text=The%20tag%20in%20HTML,Make%20that%20text%20bold.) tag, & for marked/highlighted text, it should be denoted with the [<mark>](https://www.geeksforgeeks.org/html-mark-tag/#:~:text=The%20tag%20in%20HTML,the%20text%20in%20a%20paragraph.&text=Example%201%3A%20This%20example%20uses,text%20content%20in%20yellow%20color.) tag.
+
+`Syntax:`
+
+
+
+<b> Contents... </b>
+
+`Accepted Attributes:` This is a [Global attribute](https://www.geeksforgeeks.org/html-global-attributes/), and can be used on any HTML element.
+
+`Example 1:` This simple code example illustrates highlighting the text by making it as bold text in HTML.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3><p>A <b>Computer Science portal</b> for geeks.It contains well written, well thought andwell explained <b>computer science andprogramming articles.</b></p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921171114/8.jpg)
+
+`Example 2:` In this example, we have used the <b> tag & <p> tag to illustrates the difference in the text appearance & their sizes.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3> <!--paragraph Tag --><p>This is normal paragraph Tag text</p> <!--bold Tag --><b>This is bold Tag text</b></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921165842/6.jpg)
+
+`Example 3:` In this example, we have used the [CSS font-weight property](https://www.geeksforgeeks.org/css-font-weight-property/) whose value is set to bold to make the text bold.
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h3>HTML b tag</h3> <!--paragraph Tag --><p>This is normal paragraph Tag text</p> <!--Using CSS in paragraph Tag for making text bold  --><p style="font-weight: bold">This is bold text using CSS</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921170143/7.jpg)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Microsoft Edge
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="b",
+        )
+
+        
+
