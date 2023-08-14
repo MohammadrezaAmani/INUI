@@ -43276,3 +43276,398 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Keygen(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="keygen",
+        )
+
+
+class Label(BaseElement):
+    """
+The <label> tag in HTML is used to provide a usability improvement for mouse users i.e, if a user clicks on the text within the <label> element, it toggles the control. The <label> tag defines the label for <button>, <input>, <meter>, <output>, <progress>, <select>, or <textarea> element.
+
+`The <label> tag can be used in two ways:`
+
+* Firstly, use <label> tag by providing the <input> and id attribute. The <label> tag needs a *for* attribute whose value is the same as input id.
+* Alternatively, <input> tag use directly inside the <label> tag. In this case, the *for* and id attributes are not needed because the association is implicit.
+
+`Syntax:`  
+
+
+
+<label> form content... </label>
+
+`Attribute Value:` 
+
+* [`for`](https://www.geeksforgeeks.org/html-label-for-attribute)`:` It refers to the input control that this label is for. Its value must be the same as the value of the input control’s “id” attribute.
+* [`form`](https://www.geeksforgeeks.org/html-label-form-attribute/)`:` It refers to the form to which the label belongs to.
+
+`Example 1:` Here we will use the input tag outside the label tag.  
+ 
+
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><strong>HTML label Tag</strong> <form> <!-- Starts label tags from here --><label for="student">Student</label><input type="radio" name="Occupation"id="student" value="student"><br> <label for="business">Business</label><input type="radio" name="Occupation"id="business" value="business"><br> <label for="other">Other</label><!-- Ends label tags here --> <input type="radio" name="Occupation"id="other" value="other"></form></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181659/Screenshot20210215181636.png)
+
+`Example 2:` Here we will use the input tag inside the label tag.
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1> <strong>HTML label Tag </strong> <form><!-- label tag starts from here --><label>Male<input type="radio" name="gender"id="male" value="male" /></label><br/> <label>Female<input type="radio" name="gender"id="female" value="female" /></label><br/> <label>Other<input type="radio" name="gender"id="other" value="other" /></label><!-- label tag ends from here --></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215182532/Screenshot20210215182511.png)
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+The <label> tag in HTML is used to provide a usability improvement for mouse users i.e, if a user clicks on the text within the <label> element, it toggles the control. The <label> tag defines the label for <button>, <input>, <meter>, <output>, <progress>, <select>, or <textarea> element.
+
+`The <label> tag can be used in two ways:`
+
+* Firstly, use <label> tag by providing the <input> and id attribute. The <label> tag needs a *for* attribute whose value is the same as input id.
+* Alternatively, <input> tag use directly inside the <label> tag. In this case, the *for* and id attributes are not needed because the association is implicit.
+
+`Syntax:`  
+
+
+
+<label> form content... </label>
+
+`Attribute Value:` 
+
+* [`for`](https://www.geeksforgeeks.org/html-label-for-attribute)`:` It refers to the input control that this label is for. Its value must be the same as the value of the input control’s “id” attribute.
+* [`form`](https://www.geeksforgeeks.org/html-label-form-attribute/)`:` It refers to the form to which the label belongs to.
+
+`Example 1:` Here we will use the input tag outside the label tag.  
+ 
+
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><strong>HTML label Tag</strong> <form> <!-- Starts label tags from here --><label for="student">Student</label><input type="radio" name="Occupation"id="student" value="student"><br> <label for="business">Business</label><input type="radio" name="Occupation"id="business" value="business"><br> <label for="other">Other</label><!-- Ends label tags here --> <input type="radio" name="Occupation"id="other" value="other"></form></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215181659/Screenshot20210215181636.png)
+
+`Example 2:` Here we will use the input tag inside the label tag.
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1> <strong>HTML label Tag </strong> <form><!-- label tag starts from here --><label>Male<input type="radio" name="gender"id="male" value="male" /></label><br/> <label>Female<input type="radio" name="gender"id="female" value="female" /></label><br/> <label>Other<input type="radio" name="gender"id="other" value="other" /></label><!-- label tag ends from here --></form></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210215182532/Screenshot20210215182511.png)
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="label",
+        )
+
+        
+
