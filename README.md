@@ -132,11 +132,16 @@ h = Html(data=(
 
 ```
 
-
 ## How to Use?
 
 > read the [documentation](https://inui.readthedocs.io/en/latest/) for more information
 
 
-## LICENSE 
+
+```bash
+pip install inui --upgrade
+```
+
+## LICENSE
+
 Distributed under the MIT License. See `LICENSE` for more information.
