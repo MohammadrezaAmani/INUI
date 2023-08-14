@@ -30,11 +30,10 @@
 
 **INUI** is a powerful and highly customizable Python language library for **UI**, which supports all the components and elements of the html markup language in [Python](https://python.org/), as well as the ability to use libraries such as [Bootstrap](https://getbootstrap.com/), etc. And it brings a new experience of easier work with frontend in Python.
 
+## `<a name='Contents'></a>`Contents
 
-
-
-## <a name='Contents'></a>Contents
 <!-- vscode-markdown-toc -->
+
 - [INUI](#inui)
 - [Py INUI](#py-inui)
   - [Contents](#contents)
@@ -46,14 +45,18 @@
 	numbering=false
 	autoSave=true
 	/vscode-markdown-toc-config -->
+
 <!-- /vscode-markdown-toc -->
 
+## `<a name='Requirements'></a>`Requirements
 
-## <a name='Requirements'></a>Requirements
-### <a name='Python-Compatibility'></a>**Python Compatibility**
-This bot is written entirely in python. tested versions are `python 3.11, 3.10, 3.9, 3.8, 3.7` while older versions
+### `<a name='Python-Compatibility'></a>`**Python Compatibility**
+
+This Library is written entirely in python. tested versions are `python 3.11, 3.10, 3.9, 3.8, 3.7` while older versions
 should not cause any problem, we recommend using the latest version of `python3`.
 
-### <a name='Dependencies'></a>**Dependencies**
+### `<a name='Dependencies'></a>`**Dependencies**
+
 This package requires the following packages:
+
 * [BeautifulSoup](https://pypi.org/project/beautifulsoup4/ "BeautifulSoup4") - for Prettifing Code
