@@ -1,5 +1,5 @@
-from .config.replaces import replace
-from .prettify import Pretiffy
+from inui.config.replaces import replace
+from inui.prettify import Pretiffy
 
 
 class BaseElement:
