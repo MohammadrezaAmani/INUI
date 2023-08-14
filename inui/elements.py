@@ -42606,3 +42606,422 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Isindex(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="isindex",
+        )
+
+
+class I(BaseElement):
+    """
+The `<i> tag` in HTML is used to display the content in italic style. This tag is generally used to display the technical term, phrase, the important word in a different language. The *<i> tag* is a container tag that contains the opening tag, content & closing tag.
+
+`Syntax:`
+
+
+
+<i> Contents</i>
+
+`Accepted Attributes``:` This is a [Global attribute](https://www.geeksforgeeks.org/html-global-attributes/), and can be used on any HTML element.
+
+Below code examples illustrate the use of *<i> tag* in HTML.
+
+`Example 1:` This is a simple example illustrating the *<i> tag* to make the italic text in HTML.
+
+```html
+<!DOCTYPE html><html><head><title>HTML i Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3><div>  <p><i>A Computer Science portal for geeks.</i>It contains well written, well thought and wellexplained computer science and programming articles</p>   </div></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921163431/2.jpg)HTML <i> Tag
+
+`Example 2:` In this example, we have used *<i> tag* & *<p> tag* to illustrate the difference in the text appearance while rendering it.
+
+```html
+<!DOCTYPE html><html><head><title>HTML Italic Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3>  <p>This is normal text written inside p tag</p>    <!--HTML <i>(italic) tag is used here--><i>This text is in italic font style</i></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921163829/3.jpg)Italic font-style using HTML <i> Tag
+
+`Example 3:` A text can be written in italics using CSS also. When the [CSS font-style property](https://www.geeksforgeeks.org/css-font-style-property/) is set to italic, then the text can be seen as follows:
+
+```html
+<!DOCTYPE html><html><head><title>HTML Italic Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3> <!--Example for font-style: italic --><p style="font-style: italic;">This text content is in italic font.</p>   <h5>Note:This example is only possible when thefont-style property is kept "italic" in CSS</h5></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921164202/4.jpg)Setting font-style to italic using font-style Property
+
+`Usage:`
+
+* Use the *<i> tag* for words that you want to show differently from the normal phrase for readability purposes
+* The tags like *<i>* and *<b>* now define semantics rather than typographic appearance. So to display text in italic type, users can use the CSS font-style property.
+* Use *<i> tag* only when it is not marked up with these elements:
+	+ [<em>](https://www.geeksforgeeks.org/html-em-tag/)
+	+ [<strong>](https://www.geeksforgeeks.org/html-strong-tag/)
+	+ [<mark>](https://www.geeksforgeeks.org/html5-mark-tag/)
+	+ [<cite>](https://www.geeksforgeeks.org/html-cite-tag/)
+	+ [<dfn>](https://www.geeksforgeeks.org/html-dfn-tag/)
+
+`Supported Browsers:`
+
+* Google Chrome 1 and above
+* Internet Explorer
+* Microsoft Edge 12 and above
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+The `<i> tag` in HTML is used to display the content in italic style. This tag is generally used to display the technical term, phrase, the important word in a different language. The *<i> tag* is a container tag that contains the opening tag, content & closing tag.
+
+`Syntax:`
+
+
+
+<i> Contents</i>
+
+`Accepted Attributes``:` This is a [Global attribute](https://www.geeksforgeeks.org/html-global-attributes/), and can be used on any HTML element.
+
+Below code examples illustrate the use of *<i> tag* in HTML.
+
+`Example 1:` This is a simple example illustrating the *<i> tag* to make the italic text in HTML.
+
+```html
+<!DOCTYPE html><html><head><title>HTML i Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3><div>  <p><i>A Computer Science portal for geeks.</i>It contains well written, well thought and wellexplained computer science and programming articles</p>   </div></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921163431/2.jpg)HTML <i> Tag
+
+`Example 2:` In this example, we have used *<i> tag* & *<p> tag* to illustrate the difference in the text appearance while rendering it.
+
+```html
+<!DOCTYPE html><html><head><title>HTML Italic Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3>  <p>This is normal text written inside p tag</p>    <!--HTML <i>(italic) tag is used here--><i>This text is in italic font style</i></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921163829/3.jpg)Italic font-style using HTML <i> Tag
+
+`Example 3:` A text can be written in italics using CSS also. When the [CSS font-style property](https://www.geeksforgeeks.org/css-font-style-property/) is set to italic, then the text can be seen as follows:
+
+```html
+<!DOCTYPE html><html><head><title>HTML Italic Tag</title></head> <body><h1>GeeksforGeeks</h1><h3>HTML i tag</h3> <!--Example for font-style: italic --><p style="font-style: italic;">This text content is in italic font.</p>   <h5>Note:This example is only possible when thefont-style property is kept "italic" in CSS</h5></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921164202/4.jpg)Setting font-style to italic using font-style Property
+
+`Usage:`
+
+* Use the *<i> tag* for words that you want to show differently from the normal phrase for readability purposes
+* The tags like *<i>* and *<b>* now define semantics rather than typographic appearance. So to display text in italic type, users can use the CSS font-style property.
+* Use *<i> tag* only when it is not marked up with these elements:
+	+ [<em>](https://www.geeksforgeeks.org/html-em-tag/)
+	+ [<strong>](https://www.geeksforgeeks.org/html-strong-tag/)
+	+ [<mark>](https://www.geeksforgeeks.org/html5-mark-tag/)
+	+ [<cite>](https://www.geeksforgeeks.org/html-cite-tag/)
+	+ [<dfn>](https://www.geeksforgeeks.org/html-dfn-tag/)
+
+`Supported Browsers:`
+
+* Google Chrome 1 and above
+* Internet Explorer
+* Microsoft Edge 12 and above
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="i",
+        )
+
+        
+
