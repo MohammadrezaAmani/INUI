@@ -38978,3 +38978,475 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Footer(BaseElement):
+    """
+The <footer> tag in HTML is used to define a footer of HTML document. This section contains the footer information (author information, copyright information, carriers, etc). The footer tag is used within the body tag. The <footer> tag is new in the HTML5. The footer elements require a start tag as well as an end tag.  
+ 
+
+`Syntax :` 
+
+
+
+<footer> ... </footer>
+
+A footer element typically contains authorship information, copyright information, contact information, sitemap, back-to-top links, related documents, etc.
+
+Below examples illustrate the <footer> Tag in HTML elements:  
+ 
+
+`Example 1:`  
+ 
+
+```html
+<!DOCTYPE html> <html> <body><!--HTML footer tag starts here--><footer> <a href="<https://www.geeksforgeeks.org/about/>">About Us</a>|<a href="<https://www.geeksforgeeks.org/privacy-policy/>">Privacy Policy</a>|<a href="<https://www.geeksforgeeks.org/careers/>">Careers</a>   <p>@geeksforgeeks, Some rights reserved</p>   </footer><!--HTML figcaption tag ends here--></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604164327/footerex1.png)
+
+`Example 2:` Using CSS in footer Tag  
+ 
+
+```html
+<!DOCTYPE html><html><head><title>footer tag</title><style>.column {float: left;width: 27%;height: 300px;}p {font-size:20px;font-weight:bold;}</style></head><body><!--HTML footer tag starts here--><footer><div class="column">  <p>Company</p>  <ul style="list-style-type:disc"><li>About Us</li><li>Careers</li><li>Privacy Policy</li><li>Contact Us</li></ul></div> <div class="column">  <p>Learn</p>  <ul><li>Algorithms</li><li>Data Structures</li><li>Languages</li><li>CS Subjects</li><li>Video Tutorials</li></ul></div> <div class="column">  <p>Practice</p>  <ul><li>Company-wise</li><li>Topic-wise</li><li>Contests</li><li>Subjective Questions</li></ul></div></footer><!--HTML figcaption tag ends here--></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-01-at-8.24.49-AM.png)
+
+`Browsers Supported:`   
+ 
+
+* Google Chrome 5
+* Edge 12
+* Internet Explorer 9.0
+* Firefox 4.0
+* Opera 11.1
+* Safari 5.0
+
+ 
+
+  
+The <footer> tag in HTML is used to define a footer of HTML document. This section contains the footer information (author information, copyright information, carriers, etc). The footer tag is used within the body tag. The <footer> tag is new in the HTML5. The footer elements require a start tag as well as an end tag.  
+ 
+
+`Syntax :` 
+
+
+
+<footer> ... </footer>
+
+A footer element typically contains authorship information, copyright information, contact information, sitemap, back-to-top links, related documents, etc.
+
+Below examples illustrate the <footer> Tag in HTML elements:  
+ 
+
+`Example 1:`  
+ 
+
+```html
+<!DOCTYPE html> <html> <body><!--HTML footer tag starts here--><footer> <a href="<https://www.geeksforgeeks.org/about/>">About Us</a>|<a href="<https://www.geeksforgeeks.org/privacy-policy/>">Privacy Policy</a>|<a href="<https://www.geeksforgeeks.org/careers/>">Careers</a>   <p>@geeksforgeeks, Some rights reserved</p>   </footer><!--HTML figcaption tag ends here--></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604164327/footerex1.png)
+
+`Example 2:` Using CSS in footer Tag  
+ 
+
+```html
+<!DOCTYPE html><html><head><title>footer tag</title><style>.column {float: left;width: 27%;height: 300px;}p {font-size:20px;font-weight:bold;}</style></head><body><!--HTML footer tag starts here--><footer><div class="column">  <p>Company</p>  <ul style="list-style-type:disc"><li>About Us</li><li>Careers</li><li>Privacy Policy</li><li>Contact Us</li></ul></div> <div class="column">  <p>Learn</p>  <ul><li>Algorithms</li><li>Data Structures</li><li>Languages</li><li>CS Subjects</li><li>Video Tutorials</li></ul></div> <div class="column">  <p>Practice</p>  <ul><li>Company-wise</li><li>Topic-wise</li><li>Contests</li><li>Subjective Questions</li></ul></div></footer><!--HTML figcaption tag ends here--></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-01-at-8.24.49-AM.png)
+
+`Browsers Supported:`   
+ 
+
+* Google Chrome 5
+* Edge 12
+* Internet Explorer 9.0
+* Firefox 4.0
+* Opera 11.1
+* Safari 5.0
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="footer",
+        )
+
+        
+
+
+class Form(BaseElement):
+    """
+`Form Tag`
+
+Forms are required to take input from the user who visits the website. This form is used basically for the registration process, logging into your profile on a website or to create your profile on a website, etc … The information that is collected from the form is -1. Name 2.Email Addresses etc. Now the form will take input from the form and post that data in backend applications (like PHP). So the backend application will process the data which is received by them. There are various form elements that we can use like text fields, text area, drop-down list, select, checkboxes, radio, etc.
+
+`Syntax:` 
+
+
+
+<form> Form Content... </form>
+
+`Attributes:` There are many attributes that are associated with the <form> tag. Some of them are listed below: 
+
+* [`Action Attribute`](https://www.geeksforgeeks.org/html-formaction-attribute/)`:` -This is used to send the data to the server after the submission of the form.
+* [`Method`](https://www.geeksforgeeks.org/html-form-method-attribute/)`:` -This is used to upload the data by using two methods that are Get and Post. Get Method: -It has a limited length of characters of URL. -we should not use get to send some sensitive data. -This method is better for non-secure data. Post Method: -1. It has no size limitations 2. The submission of the form with the method post, can not be bookmarked.
+* [`Enctype attribute`](https://www.geeksforgeeks.org/html-form-enctype-attribute/): -This attribute is used to specify that how a browser decodes the data before it sends it to the server .so the values of this attribute are: -1.application/x-www-form-urlencoded − It is the standard method most forms used 2.multipart/form-data -it is used when you have something to upload like files of images, word files, etc.
+
+`Example of the` `form tag:-`
+
+```html
+<!DOCTYPE html> <html> <body> <h1>form tag </h1> <!--Here we have not used the action attributeas we are not submitting the data to the server--> <form> <label for="fname">FirstName</label><!-- Here i have used label todefine the label for input --> <input type="text" name="fname" placeholder="enter your name" required><!--Itdefines a text field by using input tag  --> <label for="lname">LastName</label> <input type="text" name="lname" placeholder="enter your name" required> </form> </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210323111427/Capture-300x58.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+`Form Tag`
+
+Forms are required to take input from the user who visits the website. This form is used basically for the registration process, logging into your profile on a website or to create your profile on a website, etc … The information that is collected from the form is -1. Name 2.Email Addresses etc. Now the form will take input from the form and post that data in backend applications (like PHP). So the backend application will process the data which is received by them. There are various form elements that we can use like text fields, text area, drop-down list, select, checkboxes, radio, etc.
+
+`Syntax:` 
+
+
+
+<form> Form Content... </form>
+
+`Attributes:` There are many attributes that are associated with the <form> tag. Some of them are listed below: 
+
+* [`Action Attribute`](https://www.geeksforgeeks.org/html-formaction-attribute/)`:` -This is used to send the data to the server after the submission of the form.
+* [`Method`](https://www.geeksforgeeks.org/html-form-method-attribute/)`:` -This is used to upload the data by using two methods that are Get and Post. Get Method: -It has a limited length of characters of URL. -we should not use get to send some sensitive data. -This method is better for non-secure data. Post Method: -1. It has no size limitations 2. The submission of the form with the method post, can not be bookmarked.
+* [`Enctype attribute`](https://www.geeksforgeeks.org/html-form-enctype-attribute/): -This attribute is used to specify that how a browser decodes the data before it sends it to the server .so the values of this attribute are: -1.application/x-www-form-urlencoded − It is the standard method most forms used 2.multipart/form-data -it is used when you have something to upload like files of images, word files, etc.
+
+`Example of the` `form tag:-`
+
+```html
+<!DOCTYPE html> <html> <body> <h1>form tag </h1> <!--Here we have not used the action attributeas we are not submitting the data to the server--> <form> <label for="fname">FirstName</label><!-- Here i have used label todefine the label for input --> <input type="text" name="fname" placeholder="enter your name" required><!--Itdefines a text field by using input tag  --> <label for="lname">LastName</label> <input type="text" name="lname" placeholder="enter your name" required> </form> </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210323111427/Capture-300x58.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="form",
+        )
+
+        
+
