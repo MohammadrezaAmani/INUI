@@ -39855,3 +39855,543 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Head(BaseElement):
+    """
+The <head> tag in HTML is used to define the head portion of the document which contains information related to the document.   
+The <head> tag contains other head elements such as <title>, <meta>, <link>, <style> <link> etc.   
+In HTML 4.01 the <head> element was mandatory but in HTML5, the <head> element can be omitted.  
+`Tag Specific Attributes`:  
+The below-mentioned layout-attributes of the <hr> tag have been removed from HTML5. 
+
+`Attribute:` 
+
+* `profile:` It is used to specify the URL to a document that contains one or more metadata profiles for browsers to clearly understand the information.
+
+`Syntax :` 
+
+
+
+<head>
+<title>Title of the document</title>
+</head>
+
+Below program illustrates the <head> element:
+
+`Program 1:`
+
+```html
+<!DOCTYPE html><html lang="en"> <head><title>HTML Head Tag </title></head> <body>  <p>GeeksforGeeks is a portal for geeks.</p>  <hr></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.21.57-AM-300x63.png)
+
+`Program 2(Using style tag inside head tag)`
+
+```html
+<!DOCTYPE html> <html> <head><style>body {background: skyblue;} h1 {color: red;} p {color: blue;}</style></head> <body> <h1>GeeksforGeeks</h1>  <p>It is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.25.44-AM-300x111.png)
+
+`Program 3(Using link tag inside head tag):`
+
+```html
+<!DOCTYPE html> <html> <head><link rel="stylesheet" type="text/css" href="mystyle.css"></head> <body> <h1>GeeksforGeeks</h1>  <p>It is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.28.28-AM-300x121.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+The <head> tag in HTML is used to define the head portion of the document which contains information related to the document.   
+The <head> tag contains other head elements such as <title>, <meta>, <link>, <style> <link> etc.   
+In HTML 4.01 the <head> element was mandatory but in HTML5, the <head> element can be omitted.  
+`Tag Specific Attributes`:  
+The below-mentioned layout-attributes of the <hr> tag have been removed from HTML5. 
+
+`Attribute:` 
+
+* `profile:` It is used to specify the URL to a document that contains one or more metadata profiles for browsers to clearly understand the information.
+
+`Syntax :` 
+
+
+
+<head>
+<title>Title of the document</title>
+</head>
+
+Below program illustrates the <head> element:
+
+`Program 1:`
+
+```html
+<!DOCTYPE html><html lang="en"> <head><title>HTML Head Tag </title></head> <body>  <p>GeeksforGeeks is a portal for geeks.</p>  <hr></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.21.57-AM-300x63.png)
+
+`Program 2(Using style tag inside head tag)`
+
+```html
+<!DOCTYPE html> <html> <head><style>body {background: skyblue;} h1 {color: red;} p {color: blue;}</style></head> <body> <h1>GeeksforGeeks</h1>  <p>It is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.25.44-AM-300x111.png)
+
+`Program 3(Using link tag inside head tag):`
+
+```html
+<!DOCTYPE html> <html> <head><link rel="stylesheet" type="text/css" href="mystyle.css"></head> <body> <h1>GeeksforGeeks</h1>  <p>It is a portal for geeks.</p>   </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/Screen-Shot-2018-10-04-at-8.28.28-AM-300x121.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="head",
+        )
+
+        
+
+
+class Header(BaseElement):
+    """
+The `<header> tag` in HTML is used to define the header for a document or a section as it contains the information related to the title and heading of the related content. The <header> element is intended to usually contain the section’s heading (an h1-h6 element or an <hgroup> element), but this is not required. It can also be used to wrap a section’s table of contents, a search form, or any relevant logos. The <header> tag is a new tag in HTML5 and it is a container tag ie., it contains a starting tag, content & the end tag. There can be several <header> elements in one document. This tag cannot be placed within a <footer>, <address> or another <header> element.
+
+`Syntax:`
+
+
+
+<header> ...</header>
+
+`Attributes`: This tag supports all the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) in HTML.
+
+The below examples illustrate the <header> element in HTML.
+
+`Example 1:` This example illustrates the use of the <header> tag that makes the container for the head section of the document.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3><hr><article><header><h3>GeeksforGeeks Learning</h3> <p>Posted by GFG</p>   <p>A Computer Science portal for geeks.It contains well written, well thoughtand well explained computer science andprogramming articles.</p>   </header></article></body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921233939/1.jpg)HTML <header> Tag
+
+`Example 2:` In this example, we have used the <header> tag to contain the surrounding section’s heading, but not required every time.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3> <!--HTML header tag starts here--><header><h1>This is the heading.</h1><h4>This is the sub-heading.</h4> <p>This is the metadata.</p>   </header><!--HTML header tag ends here--></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921235434/2.jpg)HTML <header> Tag
+
+`Example 3:` In this example, we have represented navigational aids by using the <header> tag.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3> <!--HTML header tag starts here--><header><a href="<https://www.geeksforgeeks.org/fundamentals-of-algorithms/>">Algo</a> |<a href="<https://www.geeksforgeeks.org/data-structures/>">DS</a> |<a href="<https://www.geeksforgeeks.org/category/program-output/>">Languages</a> |<a href="<https://www.geeksforgeeks.org/company-interview-corner/>">Interview</a> |<a href="<https://www.geeksforgeeks.org/student-corner/>">Students</a> |<a href="<https://www.geeksforgeeks.org/gate-cs-notes-gq/>">Gate</a> |<a href="<https://www.geeksforgeeks.org/articles-on-computer-science-subjects-gq/>">CS Subjects</a> |<a href="<https://www.geeksforgeeks.org/quiz-corner-gq/>">Quizzes</a></header><!--HTML header tag ends here--></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922000359/3.jpg)HTML <header> Tag
+
+`Supported Browsers:`
+
+* Google Chrome 5 and above
+* Internet Explorer 9 and above
+* Microsoft Edge 12 and above
+* Firefox 4 and above
+* Opera 11.1 and above
+* Safari 5 and above
+
+HTML is the foundation of web pages, is used for webpage development by structuring websites and web apps. You can learn HTML from the ground up by following this [HTML Tutorial](https://www.geeksforgeeks.org/html-tutorials/) and [HTML Examples](https://www.geeksforgeeks.org/html-examples/).
+
+  
+The `<header> tag` in HTML is used to define the header for a document or a section as it contains the information related to the title and heading of the related content. The <header> element is intended to usually contain the section’s heading (an h1-h6 element or an <hgroup> element), but this is not required. It can also be used to wrap a section’s table of contents, a search form, or any relevant logos. The <header> tag is a new tag in HTML5 and it is a container tag ie., it contains a starting tag, content & the end tag. There can be several <header> elements in one document. This tag cannot be placed within a <footer>, <address> or another <header> element.
+
+`Syntax:`
+
+
+
+<header> ...</header>
+
+`Attributes`: This tag supports all the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) in HTML.
+
+The below examples illustrate the <header> element in HTML.
+
+`Example 1:` This example illustrates the use of the <header> tag that makes the container for the head section of the document.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3><hr><article><header><h3>GeeksforGeeks Learning</h3> <p>Posted by GFG</p>   <p>A Computer Science portal for geeks.It contains well written, well thoughtand well explained computer science andprogramming articles.</p>   </header></article></body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921233939/1.jpg)HTML <header> Tag
+
+`Example 2:` In this example, we have used the <header> tag to contain the surrounding section’s heading, but not required every time.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3> <!--HTML header tag starts here--><header><h1>This is the heading.</h1><h4>This is the sub-heading.</h4> <p>This is the metadata.</p>   </header><!--HTML header tag ends here--></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921235434/2.jpg)HTML <header> Tag
+
+`Example 3:` In this example, we have represented navigational aids by using the <header> tag.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3> <!--HTML header tag starts here--><header><a href="<https://www.geeksforgeeks.org/fundamentals-of-algorithms/>">Algo</a> |<a href="<https://www.geeksforgeeks.org/data-structures/>">DS</a> |<a href="<https://www.geeksforgeeks.org/category/program-output/>">Languages</a> |<a href="<https://www.geeksforgeeks.org/company-interview-corner/>">Interview</a> |<a href="<https://www.geeksforgeeks.org/student-corner/>">Students</a> |<a href="<https://www.geeksforgeeks.org/gate-cs-notes-gq/>">Gate</a> |<a href="<https://www.geeksforgeeks.org/articles-on-computer-science-subjects-gq/>">CS Subjects</a> |<a href="<https://www.geeksforgeeks.org/quiz-corner-gq/>">Quizzes</a></header><!--HTML header tag ends here--></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210922000359/3.jpg)HTML <header> Tag
+
+`Supported Browsers:`
+
+* Google Chrome 5 and above
+* Internet Explorer 9 and above
+* Microsoft Edge 12 and above
+* Firefox 4 and above
+* Opera 11.1 and above
+* Safari 5 and above
+
+HTML is the foundation of web pages, is used for webpage development by structuring websites and web apps. You can learn HTML from the ground up by following this [HTML Tutorial](https://www.geeksforgeeks.org/html-tutorials/) and [HTML Examples](https://www.geeksforgeeks.org/html-examples/).
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="header",
+        )
+
+        
+
