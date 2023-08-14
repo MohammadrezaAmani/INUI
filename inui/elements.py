@@ -33387,3 +33387,374 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Br(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="br",
+        )
+
+
+class Button(BaseElement):
+    """
+The <button> tag in HTML is used to define the clickable button. <button> tag is used to submit the content. The images and text content can use inside <button> tag.Different browsers use different default types for <button>. Buttons can be styled using CSS.
+
+ `Syntax:` 
+
+
+
+<button type = "button">
+
+`Attributes:` The various attributes that can be used with the “button” tag are listed below:
+
+* [autofocus](https://www.geeksforgeeks.org/html-button-autofocus-attribute/): It is used to specify that the button should get automatically get focus or not when the page loads
+* [disabled](https://www.geeksforgeeks.org/html-disabled-attribute/): It is used indicates whether the element is disabled or not. If this attribute is set, the element is disabled.
+* [form](https://www.geeksforgeeks.org/html-form-tag/): It is used to create a form for user input. There are many elements that> are used within the >form tag.
+* [formaction](https://www.geeksforgeeks.org/html-button-formaction-attribute/): It is used to specify where to send the data of the form.
+* [formnovalidate](https://www.geeksforgeeks.org/html-input-formnovalidate-attribute/): It is used to specify that the Input Element should not be validated when submitting the form.
+* [formenctype](https://www.geeksforgeeks.org/html-button-formenctype-attribute/): It is used to specify that the form data should be encoded when submitting to the server.
+* [formmethod](https://www.geeksforgeeks.org/html-button-formmethod-attribute/): It is used to specify the HTTP method used to send data while submitting the form.
+* [formtarget](https://www.geeksforgeeks.org/html-input-formtarget-attribute/): It is used to specify the name or a keyword which indicates where to display the response after submitting the form.
+* [type](https://www.geeksforgeeks.org/html-type-attribute/): It is used to specify the type of button for button elements. It is also used in <input> element to specify the type of input to display.
+* [value](https://www.geeksforgeeks.org/html-value-attribute/): It is used to specify the value of the element with which it is used. It has different meaning for different HTML elements.
+
+`Example:` The below example explain the HTML button Tag.
+
+```html
+<!DOCTYPE html><html><body><h3>HTML button Tag</h3> <!-- button tag starts from here --><button type = "button" onclick ="alert('Welcome to GeeksforGeeks')">Click Here</button><!-- button tag ends here --> </body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210223181040/Screenshot-2021-02-23-180946.png)
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox
+* Safari
+* Opera
+The <button> tag in HTML is used to define the clickable button. <button> tag is used to submit the content. The images and text content can use inside <button> tag.Different browsers use different default types for <button>. Buttons can be styled using CSS.
+
+ `Syntax:` 
+
+
+
+<button type = "button">
+
+`Attributes:` The various attributes that can be used with the “button” tag are listed below:
+
+* [autofocus](https://www.geeksforgeeks.org/html-button-autofocus-attribute/): It is used to specify that the button should get automatically get focus or not when the page loads
+* [disabled](https://www.geeksforgeeks.org/html-disabled-attribute/): It is used indicates whether the element is disabled or not. If this attribute is set, the element is disabled.
+* [form](https://www.geeksforgeeks.org/html-form-tag/): It is used to create a form for user input. There are many elements that> are used within the >form tag.
+* [formaction](https://www.geeksforgeeks.org/html-button-formaction-attribute/): It is used to specify where to send the data of the form.
+* [formnovalidate](https://www.geeksforgeeks.org/html-input-formnovalidate-attribute/): It is used to specify that the Input Element should not be validated when submitting the form.
+* [formenctype](https://www.geeksforgeeks.org/html-button-formenctype-attribute/): It is used to specify that the form data should be encoded when submitting to the server.
+* [formmethod](https://www.geeksforgeeks.org/html-button-formmethod-attribute/): It is used to specify the HTTP method used to send data while submitting the form.
+* [formtarget](https://www.geeksforgeeks.org/html-input-formtarget-attribute/): It is used to specify the name or a keyword which indicates where to display the response after submitting the form.
+* [type](https://www.geeksforgeeks.org/html-type-attribute/): It is used to specify the type of button for button elements. It is also used in <input> element to specify the type of input to display.
+* [value](https://www.geeksforgeeks.org/html-value-attribute/): It is used to specify the value of the element with which it is used. It has different meaning for different HTML elements.
+
+`Example:` The below example explain the HTML button Tag.
+
+```html
+<!DOCTYPE html><html><body><h3>HTML button Tag</h3> <!-- button tag starts from here --><button type = "button" onclick ="alert('Welcome to GeeksforGeeks')">Click Here</button><!-- button tag ends here --> </body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210223181040/Screenshot-2021-02-23-180946.png)
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox
+* Safari
+* Opera
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="button",
+        )
+
+        
+
