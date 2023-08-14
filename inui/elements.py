@@ -49702,3 +49702,260 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Script(BaseElement):
+    """
+The <script> tag in HTML is used to define the client-side script. The <script> tag contains the scripting statements, or it points to an external script file. The JavaScript is mainly used in form validation, dynamic changes of content, image manipulation, etc.  
+`Syntax:`   
+ 
+
+
+
+<script> Script Contents... </script>
+
+`Attributes:` Many attribute associated with script tag.   
+ 
+
+* [`async`](https://www.geeksforgeeks.org/html-script-async-attribute/)`:` It is used to specify the script is executed asynchronously.
+* [`charset`](https://www.geeksforgeeks.org/html-script-charset-attribute/)`:` It is used to specify the character encoding used in an external script file.
+* [`defer`](https://www.geeksforgeeks.org/html-script-defer-attribute/)`:` It is used to specify that the script is executed when the page has finished parsing.
+* [`src`](https://www.geeksforgeeks.org/html-script-src-attribute/)`:` It is used to specify the URL of an external script file.
+* [`type`](https://www.geeksforgeeks.org/html-script-type-attribute/)`:` It is used to specify the media type of the script.
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><script> Tag</h2><p id="Geeks"></p>  <!-- html script tag starts here --><script>document.getElementById("Geeks").innerHTML ="Hello GeeksforGeeks!";</script><!-- html script tag ends here --> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210615133553/script1.png)
+
+`Example 2(script outside body tag):` 
+
+```html
+<!DOCTYPE html><html><head><title>script tag</title><style>body {text-align:center;}h1 {color:green;}</style><script>function Geeks() {alert('Welcome to GeeksforGeeks!');}</script></head><body><h1>GeeksforGeeks</h1><h2><script> Tag</h2><button type="button" onclick="Geeks()">Hello GeeksforGeeks</button></body></html> |
+
+```
+`Output:`   
+ 
+
+![script tag](https://media.geeksforgeeks.org/wp-content/uploads/script.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+The <script> tag in HTML is used to define the client-side script. The <script> tag contains the scripting statements, or it points to an external script file. The JavaScript is mainly used in form validation, dynamic changes of content, image manipulation, etc.  
+`Syntax:`   
+ 
+
+
+
+<script> Script Contents... </script>
+
+`Attributes:` Many attribute associated with script tag.   
+ 
+
+* [`async`](https://www.geeksforgeeks.org/html-script-async-attribute/)`:` It is used to specify the script is executed asynchronously.
+* [`charset`](https://www.geeksforgeeks.org/html-script-charset-attribute/)`:` It is used to specify the character encoding used in an external script file.
+* [`defer`](https://www.geeksforgeeks.org/html-script-defer-attribute/)`:` It is used to specify that the script is executed when the page has finished parsing.
+* [`src`](https://www.geeksforgeeks.org/html-script-src-attribute/)`:` It is used to specify the URL of an external script file.
+* [`type`](https://www.geeksforgeeks.org/html-script-type-attribute/)`:` It is used to specify the media type of the script.
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><script> Tag</h2><p id="Geeks"></p>  <!-- html script tag starts here --><script>document.getElementById("Geeks").innerHTML ="Hello GeeksforGeeks!";</script><!-- html script tag ends here --> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210615133553/script1.png)
+
+`Example 2(script outside body tag):` 
+
+```html
+<!DOCTYPE html><html><head><title>script tag</title><style>body {text-align:center;}h1 {color:green;}</style><script>function Geeks() {alert('Welcome to GeeksforGeeks!');}</script></head><body><h1>GeeksforGeeks</h1><h2><script> Tag</h2><button type="button" onclick="Geeks()">Hello GeeksforGeeks</button></body></html> |
+
+```
+`Output:`   
+ 
+
+![script tag](https://media.geeksforgeeks.org/wp-content/uploads/script.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="script",
+        )
+
+        
+
