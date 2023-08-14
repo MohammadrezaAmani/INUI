@@ -30088,3 +30088,679 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Link(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="link",
+        )
+
+
+class Script(BaseElement):
+    """
+The <script> tag in HTML is used to define the client-side script. The <script> tag contains the scripting statements, or it points to an external script file. The JavaScript is mainly used in form validation, dynamic changes of content, image manipulation, etc.  
+`Syntax:`   
+ 
+
+
+
+<script> Script Contents... </script>
+
+`Attributes:` Many attribute associated with script tag.   
+ 
+
+* [`async`](https://www.geeksforgeeks.org/html-script-async-attribute/)`:` It is used to specify the script is executed asynchronously.
+* [`charset`](https://www.geeksforgeeks.org/html-script-charset-attribute/)`:` It is used to specify the character encoding used in an external script file.
+* [`defer`](https://www.geeksforgeeks.org/html-script-defer-attribute/)`:` It is used to specify that the script is executed when the page has finished parsing.
+* [`src`](https://www.geeksforgeeks.org/html-script-src-attribute/)`:` It is used to specify the URL of an external script file.
+* [`type`](https://www.geeksforgeeks.org/html-script-type-attribute/)`:` It is used to specify the media type of the script.
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><script> Tag</h2><p id="Geeks"></p>  <!-- html script tag starts here --><script>document.getElementById("Geeks").innerHTML ="Hello GeeksforGeeks!";</script><!-- html script tag ends here --> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210615133553/script1.png)
+
+`Example 2(script outside body tag):` 
+
+```html
+<!DOCTYPE html><html><head><title>script tag</title><style>body {text-align:center;}h1 {color:green;}</style><script>function Geeks() {alert('Welcome to GeeksforGeeks!');}</script></head><body><h1>GeeksforGeeks</h1><h2><script> Tag</h2><button type="button" onclick="Geeks()">Hello GeeksforGeeks</button></body></html> |
+
+```
+`Output:`   
+ 
+
+![script tag](https://media.geeksforgeeks.org/wp-content/uploads/script.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+The <script> tag in HTML is used to define the client-side script. The <script> tag contains the scripting statements, or it points to an external script file. The JavaScript is mainly used in form validation, dynamic changes of content, image manipulation, etc.  
+`Syntax:`   
+ 
+
+
+
+<script> Script Contents... </script>
+
+`Attributes:` Many attribute associated with script tag.   
+ 
+
+* [`async`](https://www.geeksforgeeks.org/html-script-async-attribute/)`:` It is used to specify the script is executed asynchronously.
+* [`charset`](https://www.geeksforgeeks.org/html-script-charset-attribute/)`:` It is used to specify the character encoding used in an external script file.
+* [`defer`](https://www.geeksforgeeks.org/html-script-defer-attribute/)`:` It is used to specify that the script is executed when the page has finished parsing.
+* [`src`](https://www.geeksforgeeks.org/html-script-src-attribute/)`:` It is used to specify the URL of an external script file.
+* [`type`](https://www.geeksforgeeks.org/html-script-type-attribute/)`:` It is used to specify the media type of the script.
+
+`Example 1:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><script> Tag</h2><p id="Geeks"></p>  <!-- html script tag starts here --><script>document.getElementById("Geeks").innerHTML ="Hello GeeksforGeeks!";</script><!-- html script tag ends here --> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210615133553/script1.png)
+
+`Example 2(script outside body tag):` 
+
+```html
+<!DOCTYPE html><html><head><title>script tag</title><style>body {text-align:center;}h1 {color:green;}</style><script>function Geeks() {alert('Welcome to GeeksforGeeks!');}</script></head><body><h1>GeeksforGeeks</h1><h2><script> Tag</h2><button type="button" onclick="Geeks()">Hello GeeksforGeeks</button></body></html> |
+
+```
+`Output:`   
+ 
+
+![script tag](https://media.geeksforgeeks.org/wp-content/uploads/script.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="script",
+        )
+
+        
+
+
+class Applet(BaseElement):
+    """
+The `<applet>` tag in HTML was used to *embed Java applets into any HTML document*. The `<applet>` tag was deprecated in HTML 4.01, and it’s support has been completely discontinued starting from HTML 5. Alternatives available in HTML 5 are the [`<embed>`](https://www.geeksforgeeks.org/html-embed-tag/) and the [`<object>`](https://www.geeksforgeeks.org/html-object-tag/) tags. There are still some browsers that support the <applet> tag with the help of some additional plug-ins/installations to work. Internet Explorer 11 and earlier versions with the help of plug-ins.  
+Applet Tag is not supported in HTML5. The <applet> tag takes a number of attributes, with one of the most important being the `code` attribute. This `code` attribute is used to link a Java applet to the concerned HTML document. It specifies the file name of the Java applet.
+
+`Attributes:` This tag accepts the following attributes:
+
+* [align](https://www.geeksforgeeks.org/html-align-attribute/): Specifies the alignment of an applet.
+* [alt](https://www.geeksforgeeks.org/html-alt-attribute/): Specifies an alternate text for an applet.
+* archive: Specifies the location of an archive file.
+* [border](https://www.geeksforgeeks.org/html-border-attribute/): Specifies the border around the applet panel.
+* codebase: Specifies a relative base URL for applets specified in the code attribute.
+* [height](https://www.geeksforgeeks.org/html-height-attribute/): Specifies the height of an applet.
+* [hspace](https://www.geeksforgeeks.org/html-applet-hspace-attribute/): Defines the horizontal spacing around an applet.
+* mayscript: Indicates whether the Java applet is allowed to access the scripting objects of the web page.
+* [name](https://www.geeksforgeeks.org/html-name-attribute/): Defines the name for an applet (to use in scripts)
+* [vspace:](https://www.geeksforgeeks.org/html-img-vspace-attribute/) Defines the vertical spacing around an applet.
+* [width:](https://www.geeksforgeeks.org/html-img-width-attribute/) Specifies the width of an applet.
+
+`Syntax:`   
+ 
+
+
+
+<applet *attribute1 attribute2....*>
+   <param *parameter1*>
+   <param *parameter2*>
+   ....
+</applet>
+
+The following Examples explain the applet tag:  
+ 
+
+`Example 1:` Here, `HelloWorld` is the class file, which contains the applet. The `width` and `height` attributes determine the width and height of the applet in pixels when it is opened in the browser.   
+Attributes available to be used in conjunction with the `<applet>` tag are as follows:
+
+```html
+<!DOCTYPE html><html><!-- applet code starts here --><applet code="HelloWorld"><!-- applet code ends here --></applet></html> |
+
+`Parameters:` Parameters are quite similar to command-line arguments in the sense that they provide a way to pass information to the applet after it has started. All the information available to the applet before it starts is said to be hard-coded i.e. embedded within it. Parameters make it possible to generate and use data during run-time of the applet.  
+ 
+
+`Syntax:`   
+ 
+
+
+
+<param name=*parameter\_name* value=*parameter\_value*>
+
+The name assigned to the `name` attribute of the `param` tag is used by the applet code as a variable to access the parameter value specified in the `value` attribute. In this way, the applet is able to interact with the HTML page where it is embedded, and can work on values provided to it by the page during run-time.  
+ 
+
+`Example 2:` In this piece of code, the applet file HelloWorld can use the variable named `message` to access the value stored in it, which is `“HelloWorld”`.
+
+```html
+<!DOCTYPE html><html><!-- applet code starts here --><applet code="HelloWorld"><param name="message" value="HelloWorld"><!-- applet code ends here --></applet> </html> |
+
+ 
+
+`Supported Browsers:` 
+
+* Firefox
+* Safari
+
+  
+The `<applet>` tag in HTML was used to *embed Java applets into any HTML document*. The `<applet>` tag was deprecated in HTML 4.01, and it’s support has been completely discontinued starting from HTML 5. Alternatives available in HTML 5 are the [`<embed>`](https://www.geeksforgeeks.org/html-embed-tag/) and the [`<object>`](https://www.geeksforgeeks.org/html-object-tag/) tags. There are still some browsers that support the <applet> tag with the help of some additional plug-ins/installations to work. Internet Explorer 11 and earlier versions with the help of plug-ins.  
+Applet Tag is not supported in HTML5. The <applet> tag takes a number of attributes, with one of the most important being the `code` attribute. This `code` attribute is used to link a Java applet to the concerned HTML document. It specifies the file name of the Java applet.
+
+`Attributes:` This tag accepts the following attributes:
+
+* [align](https://www.geeksforgeeks.org/html-align-attribute/): Specifies the alignment of an applet.
+* [alt](https://www.geeksforgeeks.org/html-alt-attribute/): Specifies an alternate text for an applet.
+* archive: Specifies the location of an archive file.
+* [border](https://www.geeksforgeeks.org/html-border-attribute/): Specifies the border around the applet panel.
+* codebase: Specifies a relative base URL for applets specified in the code attribute.
+* [height](https://www.geeksforgeeks.org/html-height-attribute/): Specifies the height of an applet.
+* [hspace](https://www.geeksforgeeks.org/html-applet-hspace-attribute/): Defines the horizontal spacing around an applet.
+* mayscript: Indicates whether the Java applet is allowed to access the scripting objects of the web page.
+* [name](https://www.geeksforgeeks.org/html-name-attribute/): Defines the name for an applet (to use in scripts)
+* [vspace:](https://www.geeksforgeeks.org/html-img-vspace-attribute/) Defines the vertical spacing around an applet.
+* [width:](https://www.geeksforgeeks.org/html-img-width-attribute/) Specifies the width of an applet.
+
+`Syntax:`   
+ 
+
+
+
+<applet *attribute1 attribute2....*>
+   <param *parameter1*>
+   <param *parameter2*>
+   ....
+</applet>
+
+The following Examples explain the applet tag:  
+ 
+
+`Example 1:` Here, `HelloWorld` is the class file, which contains the applet. The `width` and `height` attributes determine the width and height of the applet in pixels when it is opened in the browser.   
+Attributes available to be used in conjunction with the `<applet>` tag are as follows:
+
+```html
+<!DOCTYPE html><html><!-- applet code starts here --><applet code="HelloWorld"><!-- applet code ends here --></applet></html> |
+
+`Parameters:` Parameters are quite similar to command-line arguments in the sense that they provide a way to pass information to the applet after it has started. All the information available to the applet before it starts is said to be hard-coded i.e. embedded within it. Parameters make it possible to generate and use data during run-time of the applet.  
+ 
+
+`Syntax:`   
+ 
+
+
+
+<param name=*parameter\_name* value=*parameter\_value*>
+
+The name assigned to the `name` attribute of the `param` tag is used by the applet code as a variable to access the parameter value specified in the `value` attribute. In this way, the applet is able to interact with the HTML page where it is embedded, and can work on values provided to it by the page during run-time.  
+ 
+
+`Example 2:` In this piece of code, the applet file HelloWorld can use the variable named `message` to access the value stored in it, which is `“HelloWorld”`.
+
+```html
+<!DOCTYPE html><html><!-- applet code starts here --><applet code="HelloWorld"><param name="message" value="HelloWorld"><!-- applet code ends here --></applet> </html> |
+
+ 
+
+`Supported Browsers:` 
+
+* Firefox
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="applet",
+        )
+
+        
+
