@@ -37793,3 +37793,393 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Ulembed(BaseElement):
+    """
+ 
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="ulembed",
+        )
+
+        
+
+
+class Fieldset(BaseElement):
+    """
+The `<fieldset> tag` in HTML5 is used to make a group of related elements in the form, and it creates the box over the elements. The <fieldset> tag is new in HTML5. The [<legend> tag](https://www.geeksforgeeks.org/html-legend-tag/#:~:text=The%20legend%20tag%20is%20used,for%20the%20element.) is used to define the title for the child’s contents. The legend elements are the parent element. This tag is used to define the caption for the <fieldset> element.
+
+`Syntax:`
+
+
+
+<fieldset>Contents</fieldset>
+
+`Attribute:`
+
+* [`disabled`](https://www.geeksforgeeks.org/html-fieldset-disabled-attribute/)`:` It is used to specify that the group of related form elements is disabled. A disabled fieldset is un-clickable and unusable.
+* [`form`](https://www.geeksforgeeks.org/html-fieldset-form-attribute/)`:` It is used to specify the one or more forms that the <fieldset> element belongs to.
+* [`name`](https://www.geeksforgeeks.org/html-fieldset-name-attribute/)`:` It is used to specify the name for the Fieldset element.
+* [`autocomplete`](https://www.geeksforgeeks.org/html-fieldset-autocomplete-attribute/#:~:text=The%20HTML%20autocomplete%20attribute,which%20the%20user%20entered%20before.)`:` It is used to specify that the fieldset has autocompleted on or off value.
+
+`Example:` This simple example illustrates the use of the <fieldset> tag in order to make a group of related elements in the HTML Form.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Employee Personal Details:</div> <!--HTML fieldset tag starts here--><fieldset><legend>Details:</legend>Name:<input type="text">Emp_Id:<input type="text">Designation:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921114948/Screenshot20210921114929.png)HTML <fieldset> tag
+
+`Example:` In this example, we will know the use of <fieldset> tag to make the group of related elements.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Suggest article for video:</div> <!--HTML fieldset tag starts here--><fieldset><legend>JAVA:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--> <br> <!--HTML fieldset tag starts here--><fieldset><legend>PHP:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921111740/Screenshot20210921111714.png)<fieldset> tag to group the related element 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Internet Explorer
+* Microsoft Edge 12.0 and above
+* Firefox
+* Safari
+* Opera
+
+  
+The `<fieldset> tag` in HTML5 is used to make a group of related elements in the form, and it creates the box over the elements. The <fieldset> tag is new in HTML5. The [<legend> tag](https://www.geeksforgeeks.org/html-legend-tag/#:~:text=The%20legend%20tag%20is%20used,for%20the%20element.) is used to define the title for the child’s contents. The legend elements are the parent element. This tag is used to define the caption for the <fieldset> element.
+
+`Syntax:`
+
+
+
+<fieldset>Contents</fieldset>
+
+`Attribute:`
+
+* [`disabled`](https://www.geeksforgeeks.org/html-fieldset-disabled-attribute/)`:` It is used to specify that the group of related form elements is disabled. A disabled fieldset is un-clickable and unusable.
+* [`form`](https://www.geeksforgeeks.org/html-fieldset-form-attribute/)`:` It is used to specify the one or more forms that the <fieldset> element belongs to.
+* [`name`](https://www.geeksforgeeks.org/html-fieldset-name-attribute/)`:` It is used to specify the name for the Fieldset element.
+* [`autocomplete`](https://www.geeksforgeeks.org/html-fieldset-autocomplete-attribute/#:~:text=The%20HTML%20autocomplete%20attribute,which%20the%20user%20entered%20before.)`:` It is used to specify that the fieldset has autocompleted on or off value.
+
+`Example:` This simple example illustrates the use of the <fieldset> tag in order to make a group of related elements in the HTML Form.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Employee Personal Details:</div> <!--HTML fieldset tag starts here--><fieldset><legend>Details:</legend>Name:<input type="text">Emp_Id:<input type="text">Designation:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921114948/Screenshot20210921114929.png)HTML <fieldset> tag
+
+`Example:` In this example, we will know the use of <fieldset> tag to make the group of related elements.
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Suggest article for video:</div> <!--HTML fieldset tag starts here--><fieldset><legend>JAVA:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--> <br> <!--HTML fieldset tag starts here--><fieldset><legend>PHP:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
+
+ ```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210921111740/Screenshot20210921111714.png)<fieldset> tag to group the related element 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Internet Explorer
+* Microsoft Edge 12.0 and above
+* Firefox
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="fieldset",
+        )
+
+        
+
