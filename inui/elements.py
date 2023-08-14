@@ -47203,3 +47203,252 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Output(BaseElement):
+    """
+The <output> tag in HTML is used to represent the result of a calculation performed by the client-side script such as JavaScript. The <output> tag is a new tag in HTML 5, and it requires a starting and ends tag.  
+ 
+
+`Syntax:` 
+
+
+
+<output> Results... </output>
+
+`Attributes:` The output tag accepts three attributes which are listed below: 
+
+* [`for`](https://www.geeksforgeeks.org/html-output-for-attribute/#:~:text=The%20HTML%20for%20Attribute,the%20result%20and%20the%20calculation.&text=Attribute%20Values%3A%20It%20contains%20a,the%20result%20and%20the%20calculation.)`:` This attribute contains an attribute value *element\_id* which is used to specify the relation between result and calculations.
+* [`form`](https://www.geeksforgeeks.org/html-output-form-attribute/)`:` This attribute contains an attribute value *form\_id* which is used to specify one or more forms of output elements.
+* [`name`](https://www.geeksforgeeks.org/html-output-name-attribute/)`:` This attribute contains an attribute value *name* that is used to specify the name of the output element.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML output Tag</h2><form oninput="sumresult.value = parseInt(A.value)+ parseInt(B.value) + parseInt(C.value)"><input type="number" name="A" value="50" /> +<input type="range" name="B" value="0" /> +<input type="number" name="C" value="30" /><br><!-- output tag -->Result: <output name="sumresult"></output></form></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115934/output1.PNG)
+
+`Example 2:` In this example, <output> tag is used with for and form attribute. 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML output Tag</h2><form oninput="sumresult.value = parseInt(A.value)+ parseInt(B.value) + parseInt(C.value)"><input type="number" name="A" value="50" /> +<input type="range" name="B" value="0" /> +<input type="number" name="C" value="50" /><br /> Submit Result:<!-- output tag --><output name="sumresult" for="A B C"></output><br><input type="submit"></form></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212120119/output2.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome 10.0 and above
+* Edge 18 and above
+* Firefox 4.0 and above
+* Opera 11.0 and above
+* Apple Safari 7 and above
+* Internet Explorer not supported
+
+  
+The <output> tag in HTML is used to represent the result of a calculation performed by the client-side script such as JavaScript. The <output> tag is a new tag in HTML 5, and it requires a starting and ends tag.  
+ 
+
+`Syntax:` 
+
+
+
+<output> Results... </output>
+
+`Attributes:` The output tag accepts three attributes which are listed below: 
+
+* [`for`](https://www.geeksforgeeks.org/html-output-for-attribute/#:~:text=The%20HTML%20for%20Attribute,the%20result%20and%20the%20calculation.&text=Attribute%20Values%3A%20It%20contains%20a,the%20result%20and%20the%20calculation.)`:` This attribute contains an attribute value *element\_id* which is used to specify the relation between result and calculations.
+* [`form`](https://www.geeksforgeeks.org/html-output-form-attribute/)`:` This attribute contains an attribute value *form\_id* which is used to specify one or more forms of output elements.
+* [`name`](https://www.geeksforgeeks.org/html-output-name-attribute/)`:` This attribute contains an attribute value *name* that is used to specify the name of the output element.
+
+`Example 1:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML output Tag</h2><form oninput="sumresult.value = parseInt(A.value)+ parseInt(B.value) + parseInt(C.value)"><input type="number" name="A" value="50" /> +<input type="range" name="B" value="0" /> +<input type="number" name="C" value="30" /><br><!-- output tag -->Result: <output name="sumresult"></output></form></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212115934/output1.PNG)
+
+`Example 2:` In this example, <output> tag is used with for and form attribute. 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2>HTML output Tag</h2><form oninput="sumresult.value = parseInt(A.value)+ parseInt(B.value) + parseInt(C.value)"><input type="number" name="A" value="50" /> +<input type="range" name="B" value="0" /> +<input type="number" name="C" value="50" /><br /> Submit Result:<!-- output tag --><output name="sumresult" for="A B C"></output><br><input type="submit"></form></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212120119/output2.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome 10.0 and above
+* Edge 18 and above
+* Firefox 4.0 and above
+* Opera 11.0 and above
+* Apple Safari 7 and above
+* Internet Explorer not supported
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="output",
+        )
+
+        
+
