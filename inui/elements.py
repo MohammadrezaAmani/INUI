@@ -51304,3 +51304,589 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Strong(BaseElement):
+    """
+The <strong> tag in HTML is the parsed tag and used to show the importance of the text. Make that text bold.
+
+This tag also supports the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) and [event attributes](https://www.geeksforgeeks.org/html-event-attributes-complete-reference/) in HTML.  
+`Syntax:` 
+
+
+
+<strong> Contents... </strong>
+
+`Example:` 
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2><strong> Tag</h2><!-- html strong tag used here --><strong>Welcome to geeksforGeeks!</strong></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210625183309/strong.png)
+
+`Example 2:` Use CSS property to set bold font weight. 
+
+```html
+<!DOCTYPE html><html><head><title>strong Tag</title><style>body {text-align:center;}h1 {color:green;}.gfg {font-weight:bold;}</style></head><body><h1>GeeksforGeeks</h1><h2>font-weight: bold;</h2><div class = "gfg">Welcome to geeksforGeeks!</div></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/strong2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+The <strong> tag in HTML is the parsed tag and used to show the importance of the text. Make that text bold.
+
+This tag also supports the [global attributes](https://www.geeksforgeeks.org/html-global-attributes/) and [event attributes](https://www.geeksforgeeks.org/html-event-attributes-complete-reference/) in HTML.  
+`Syntax:` 
+
+
+
+<strong> Contents... </strong>
+
+`Example:` 
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2><strong> Tag</h2><!-- html strong tag used here --><strong>Welcome to geeksforGeeks!</strong></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210625183309/strong.png)
+
+`Example 2:` Use CSS property to set bold font weight. 
+
+```html
+<!DOCTYPE html><html><head><title>strong Tag</title><style>body {text-align:center;}h1 {color:green;}.gfg {font-weight:bold;}</style></head><body><h1>GeeksforGeeks</h1><h2>font-weight: bold;</h2><div class = "gfg">Welcome to geeksforGeeks!</div></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/strong2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="strong",
+        )
+
+        
+
+
+class Style(BaseElement):
+    """
+The <style> tag in HTML helps us to modify our text, viewed in the page. This modification includes changing font size, font family, font color etc. Not only the texts but also we can change the style of a body or part of a page. Now let’s look at various attributes of style and what else the tag supports. 
+
+`Syntax:`
+
+
+
+<tagname style="property:value;">
+
+* The tagname includes [<p>](https://www.geeksforgeeks.org/html-paragraph/), [<body>](https://www.geeksforgeeks.org/html-body-tag/), from [<h1>](https://www.geeksforgeeks.org/html-heading/) to [<h6>](https://www.geeksforgeeks.org/html-heading/) etc.
+* The property is borrowed from CSS like color, font-size, font-family etc.
+* The value is also borrowed from CSS.
+
+`1. HTML Font Family:` The [font family](https://www.geeksforgeeks.org/css-font-family-property/) changes the font style of a text and can be used in any text writing tag like <p> or heading tag. These font families include all the names that you find in Microsoft Office or any other writing-based software. 
+
+ 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Family</title></head> <body><h1 style="font-family:commanders;">Hello GeeksforGeeks.</h1><h2 style="font-family:Chaparral Pro Light;">Hello GeeksforGeeks.</h2><h3 style="font-family:algerian;">Hello GeeksforGeeks.</h3><p style="font-family:Castellar;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/ff.jpg)
+
+`2. HTML Font Size:` The [font size](https://www.geeksforgeeks.org/css-font-size-property/) changes the size of a text and this can also be used in any text writing tag like <p> or heading tag. The units can be given in “%” or pixels or other units can also be included. 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Size</title></head> <body><h1 style="font-size:80%;">Hello GeeksforGeeks.</h1><h2 style="font-size:150%;">Hello GeeksforGeeks.</h2><h3 style="font-size:20px;">Hello GeeksforGeeks.</h3><p style="font-size:30px;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/fs.jpg)
+
+`3. HTML Font Color:` The font color tag changes the color of a text and can be used in any text writing tag like <p> or heading tag. We can use both name of the colors or also the color codes that is mainly used in Photoshop. For various color codes or to pick from various color ranges refer [HTML Color Codes](http://htmlcolorcodes.com/). 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Color</title></head> <body><h1 style="color:red;">Hello GeeksforGeeks.</h1><h2 style="color:#8CCEF9;">Hello GeeksforGeeks.</h2><h3 style="color:green;">Hello GeeksforGeeks.</h3><p style="color:#810CA6;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/fc.jpg)
+
+`4. HTML Text Align:` The [text alignment](https://www.geeksforgeeks.org/how-to-align-text-in-html/) tag is used to change the alignment of a text including centre, left or right alignment. 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Text Align</title></head> <body><h1 style="text-align:left;">Hello GeeksforGeeks.</h1><h2 style="text-align:center;">Hello GeeksforGeeks.</h2><p style="text-align:right;">Hello GeeksforGeeks.</h2></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/ta.jpg)
+
+`5. HTML Background Color:` Using this attribute we can change the color of the background page or web page. This attribute is used along with the body tag to change the whole color of the body. It can also be used along with the text tags to change the text block’s color.
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set background color</title></head> <body style="background-color:#616A6B;"><h1 style="font-family:commanders;background-color:yellow;">Hello GeeksforGeeks.</h1><h2 style="font-family:algerian;background-color:cyan;">Hello GeeksforGeeks.</h2><p style="font-family:Castellar;background-color:green;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/bc.jpg)
+
+Now we also learn a new thing that within a single <style> tag we can add various attributes by using a semicolon as shown in the previous example.
+
+`Application of Style Tag:`
+
+Since we have learned how to use the style attribute in providing the CSS properties to HTML elements, let’s see how to use them in CSS. CSS properties can be mentioned inside style tags which are inside the head tag. Each element can be provided unique properties by mentioning there unique tags like h1 or p and if there are more than one elements, we can assign each element with an unique id or class, to differentiate them from the rest.
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>CSS</title> <!--CSS properties applied insidethis style tag--><style>body {background-color: #616A6B;} h1 {font-family: commanders;background-color: yellow;} h2 {font-family: algerian;background-color: cyan;} #first {font-family: Castellar;background-color: green;color: blue;} .second {text-align: right;background-color: white;font-size: 30px;color: red;}</style></head> <body><h1>Hello GeeksforGeeks.</h1><h2>Hello GeeksforGeeks.</h2><p id="first">Hello GeeksforGeeks.</p><p class="second">Welcome Geeks</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20221103160922/22.jpg) 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+The <style> tag in HTML helps us to modify our text, viewed in the page. This modification includes changing font size, font family, font color etc. Not only the texts but also we can change the style of a body or part of a page. Now let’s look at various attributes of style and what else the tag supports. 
+
+`Syntax:`
+
+
+
+<tagname style="property:value;">
+
+* The tagname includes [<p>](https://www.geeksforgeeks.org/html-paragraph/), [<body>](https://www.geeksforgeeks.org/html-body-tag/), from [<h1>](https://www.geeksforgeeks.org/html-heading/) to [<h6>](https://www.geeksforgeeks.org/html-heading/) etc.
+* The property is borrowed from CSS like color, font-size, font-family etc.
+* The value is also borrowed from CSS.
+
+`1. HTML Font Family:` The [font family](https://www.geeksforgeeks.org/css-font-family-property/) changes the font style of a text and can be used in any text writing tag like <p> or heading tag. These font families include all the names that you find in Microsoft Office or any other writing-based software. 
+
+ 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Family</title></head> <body><h1 style="font-family:commanders;">Hello GeeksforGeeks.</h1><h2 style="font-family:Chaparral Pro Light;">Hello GeeksforGeeks.</h2><h3 style="font-family:algerian;">Hello GeeksforGeeks.</h3><p style="font-family:Castellar;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/ff.jpg)
+
+`2. HTML Font Size:` The [font size](https://www.geeksforgeeks.org/css-font-size-property/) changes the size of a text and this can also be used in any text writing tag like <p> or heading tag. The units can be given in “%” or pixels or other units can also be included. 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Size</title></head> <body><h1 style="font-size:80%;">Hello GeeksforGeeks.</h1><h2 style="font-size:150%;">Hello GeeksforGeeks.</h2><h3 style="font-size:20px;">Hello GeeksforGeeks.</h3><p style="font-size:30px;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/fs.jpg)
+
+`3. HTML Font Color:` The font color tag changes the color of a text and can be used in any text writing tag like <p> or heading tag. We can use both name of the colors or also the color codes that is mainly used in Photoshop. For various color codes or to pick from various color ranges refer [HTML Color Codes](http://htmlcolorcodes.com/). 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Font Color</title></head> <body><h1 style="color:red;">Hello GeeksforGeeks.</h1><h2 style="color:#8CCEF9;">Hello GeeksforGeeks.</h2><h3 style="color:green;">Hello GeeksforGeeks.</h3><p style="color:#810CA6;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/fc.jpg)
+
+`4. HTML Text Align:` The [text alignment](https://www.geeksforgeeks.org/how-to-align-text-in-html/) tag is used to change the alignment of a text including centre, left or right alignment. 
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set Text Align</title></head> <body><h1 style="text-align:left;">Hello GeeksforGeeks.</h1><h2 style="text-align:center;">Hello GeeksforGeeks.</h2><p style="text-align:right;">Hello GeeksforGeeks.</h2></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/ta.jpg)
+
+`5. HTML Background Color:` Using this attribute we can change the color of the background page or web page. This attribute is used along with the body tag to change the whole color of the body. It can also be used along with the text tags to change the text block’s color.
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>HTML Style Tag | Set background color</title></head> <body style="background-color:#616A6B;"><h1 style="font-family:commanders;background-color:yellow;">Hello GeeksforGeeks.</h1><h2 style="font-family:algerian;background-color:cyan;">Hello GeeksforGeeks.</h2><p style="font-family:Castellar;background-color:green;">Hello GeeksforGeeks.</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/bc.jpg)
+
+Now we also learn a new thing that within a single <style> tag we can add various attributes by using a semicolon as shown in the previous example.
+
+`Application of Style Tag:`
+
+Since we have learned how to use the style attribute in providing the CSS properties to HTML elements, let’s see how to use them in CSS. CSS properties can be mentioned inside style tags which are inside the head tag. Each element can be provided unique properties by mentioning there unique tags like h1 or p and if there are more than one elements, we can assign each element with an unique id or class, to differentiate them from the rest.
+
+`Example:`
+
+```html
+<!DOCTYPE html><html> <head><title>CSS</title> <!--CSS properties applied insidethis style tag--><style>body {background-color: #616A6B;} h1 {font-family: commanders;background-color: yellow;} h2 {font-family: algerian;background-color: cyan;} #first {font-family: Castellar;background-color: green;color: blue;} .second {text-align: right;background-color: white;font-size: 30px;color: red;}</style></head> <body><h1>Hello GeeksforGeeks.</h1><h2>Hello GeeksforGeeks.</h2><p id="first">Hello GeeksforGeeks.</p><p class="second">Welcome Geeks</p></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20221103160922/22.jpg) 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="style",
+        )
+
+        
+
