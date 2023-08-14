@@ -44990,3 +44990,242 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Menuitem(BaseElement):
+    """
+The `HTML <menuitem> tag` is used to define command or menu that the user can utilize from the popup item. this tag is not supported in HTML5. This tag is support Global Attributes in HTML and Event Attributes in HTML.
+
+`Syntax:`  
+
+
+
+<menuitem label="" icon="" type> </menuitem>
+
+`Attribute:`  
+
+* `checked:` this attribute defines that the menu item is checked when the page load, works on radio and checkbox type.
+* `default:` This attribute marks the menu item as a default command.
+* `disabled:` This attribute disabled the menu or command.
+* `icon:` This attribute define the menu icon by using url.
+* `label:` This attribute is must required which defines the name of command or menu.
+* `radiogroup:` This attribute defines the group of command.
+* `type:` This attribute defines the type of command or menu is it radio, checkbox or anything else.
+
+Below example illustrate the `HTML <menuitem> tag:` 
+
+`Example:`  
+
+```html
+<!DOCTYPE html><html> <head><title>HTML <menuitem> Tag</title><style>h1 {color: green;}</style></head> <body><center><h1>GeeksforGeeks</h1><h2>HTML <menuitem> tag</h2><div style="background:green;border:2px solid#black;padding: 10px;" contextmenu="geeks">  <p>A Computer Science Portal for Geeks</p>   <menu type="context" id="geeks"><menu label="Share on..."><menuitem label="Twitter"onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem><menuitem label="Pinterest"onclick="window.open('<http://pinterest.com/pin/create/button/?url=>' + window.location.href);"></menuitem></menu><menuitem label="Email This Page"onclick="window.location='mailto:?body='+window.location.href;"></menuitem></menu> </div>   <p>A Computer Science Portal for Geeks</p>  <hr>  <p>Right click on green div and see the menuitem</center></body> </html> |
+
+```
+`Output:`   
+`Before:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190826193945/Screenshot-from-2019-08-26-19-38-34.png)
+
+`After:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827121508/menuitem2.png)
+
+`Supported Browsers:` The browsers supported by `<menuitem> tag` are listed below: 
+
+* Mozilla Firefox
+
+ 
+
+  
+The `HTML <menuitem> tag` is used to define command or menu that the user can utilize from the popup item. this tag is not supported in HTML5. This tag is support Global Attributes in HTML and Event Attributes in HTML.
+
+`Syntax:`  
+
+
+
+<menuitem label="" icon="" type> </menuitem>
+
+`Attribute:`  
+
+* `checked:` this attribute defines that the menu item is checked when the page load, works on radio and checkbox type.
+* `default:` This attribute marks the menu item as a default command.
+* `disabled:` This attribute disabled the menu or command.
+* `icon:` This attribute define the menu icon by using url.
+* `label:` This attribute is must required which defines the name of command or menu.
+* `radiogroup:` This attribute defines the group of command.
+* `type:` This attribute defines the type of command or menu is it radio, checkbox or anything else.
+
+Below example illustrate the `HTML <menuitem> tag:` 
+
+`Example:`  
+
+```html
+<!DOCTYPE html><html> <head><title>HTML <menuitem> Tag</title><style>h1 {color: green;}</style></head> <body><center><h1>GeeksforGeeks</h1><h2>HTML <menuitem> tag</h2><div style="background:green;border:2px solid#black;padding: 10px;" contextmenu="geeks">  <p>A Computer Science Portal for Geeks</p>   <menu type="context" id="geeks"><menu label="Share on..."><menuitem label="Twitter"onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem><menuitem label="Pinterest"onclick="window.open('<http://pinterest.com/pin/create/button/?url=>' + window.location.href);"></menuitem></menu><menuitem label="Email This Page"onclick="window.location='mailto:?body='+window.location.href;"></menuitem></menu> </div>   <p>A Computer Science Portal for Geeks</p>  <hr>  <p>Right click on green div and see the menuitem</center></body> </html> |
+
+```
+`Output:`   
+`Before:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190826193945/Screenshot-from-2019-08-26-19-38-34.png)
+
+`After:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827121508/menuitem2.png)
+
+`Supported Browsers:` The browsers supported by `<menuitem> tag` are listed below: 
+
+* Mozilla Firefox
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="menuitem",
+        )
+
+        
+
