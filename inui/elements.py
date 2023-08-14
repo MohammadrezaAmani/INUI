@@ -53920,3 +53920,228 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Thead(BaseElement):
+    """
+The <thead> tag in HTML is used to give a header to the group of content of the body. This tag is used in HTML tables as head and body which is known as `thead` and `tbody`.
+
+`Syntax:` 
+
+
+
+<thead>
+// Table head Contents...
+</thead>
+
+`Attributes:`
+
+* [`align`](https://www.geeksforgeeks.org/html-thead-align-attribute/)`:` Set the alignment of the text content.
+* [`valign`](https://www.geeksforgeeks.org/html-thead-valign-attribute/)`:` Set the vertical alignment of the text content.
+* [`char`](https://www.geeksforgeeks.org/html-thead-char-attribute/)`:` Set the alignment of content inside the <thead> element to a character.
+* [`charoff`](https://www.geeksforgeeks.org/html-thead-charoff-attribute/)`:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes is in numeric form.
+
+`Example:` 
+
+```html
+<!DOCTYPE html><html><body><center><h1>GeeksforGeeks</h1><h2>thead Tag</h2><table> <!-- thead tag starts from here --><thead><tr><th>Name</th><th>User Id</th></tr></thead><!-- thead tag ends here --> <tbody><tr><td>Ram</td><td>@ram_b</td></tr><tr><td>Shashank</td><td>@shashankla</td></tr></tbody></table></center></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210701164945/thead.png)
+
+`Supported Browsers:`
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Firefox 1 and above
+* Internet Explorer
+* Safari
+* Opera
+
+  
+The <thead> tag in HTML is used to give a header to the group of content of the body. This tag is used in HTML tables as head and body which is known as `thead` and `tbody`.
+
+`Syntax:` 
+
+
+
+<thead>
+// Table head Contents...
+</thead>
+
+`Attributes:`
+
+* [`align`](https://www.geeksforgeeks.org/html-thead-align-attribute/)`:` Set the alignment of the text content.
+* [`valign`](https://www.geeksforgeeks.org/html-thead-valign-attribute/)`:` Set the vertical alignment of the text content.
+* [`char`](https://www.geeksforgeeks.org/html-thead-char-attribute/)`:` Set the alignment of content inside the <thead> element to a character.
+* [`charoff`](https://www.geeksforgeeks.org/html-thead-charoff-attribute/)`:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes is in numeric form.
+
+`Example:` 
+
+```html
+<!DOCTYPE html><html><body><center><h1>GeeksforGeeks</h1><h2>thead Tag</h2><table> <!-- thead tag starts from here --><thead><tr><th>Name</th><th>User Id</th></tr></thead><!-- thead tag ends here --> <tbody><tr><td>Ram</td><td>@ram_b</td></tr><tr><td>Shashank</td><td>@shashankla</td></tr></tbody></table></center></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210701164945/thead.png)
+
+`Supported Browsers:`
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Firefox 1 and above
+* Internet Explorer
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="thead",
+        )
+
+        
+
