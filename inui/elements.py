@@ -45229,3 +45229,615 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Meta(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="meta",
+        )
+
+
+class Meter(BaseElement):
+    """
+It is used to define the scale for measurement in a well-defined range and also supports a fractional value. It is also known as a gauge. It is used in Disk use, relevance query result, etc.   
+ 
+
+`Syntax:` 
+
+
+
+<meter attributes...> </meter>
+
+`Attributes:` This tag contains many attributes which are listed below: 
+
+* [`form`](https://www.geeksforgeeks.org/html-meter-form-attribute/#:~:text=The%20HTML%20form%20Attribute,contain%20one%20or%20more%20forms.&text=Attribute%20Values%3A%20It%20contains%20single,to%20the%20element.)`:` It defines one or more forms that meter tag belongs too.
+* [`max`](https://www.geeksforgeeks.org/html-meter-max-attribute/)`:` It is used to specify the maximum value of a range.
+* [`min`](https://www.geeksforgeeks.org/html-meter-min-attribute/)`:` It is used to specify the minimum value of a range.
+* [`high`](https://www.geeksforgeeks.org/html-meter-high-attribute/)`:` It is used to specify the range considered to be a high value.
+* [`low`](https://www.geeksforgeeks.org/html-meter-low-attribute/)`:` It is used to specify the range value that is considered to be low.
+* [`Optimum`](https://www.geeksforgeeks.org/html-meter-optimum-attribute/#:~:text=HTML%20%7C%20optimum%20Attribute,-Last%20Updated%20%3A%2019&text=The%20HTML%20optimum%20Attribute,the%20range%20is%20considered%20preferable.)`:` It is used to specify the optimum value for the range.
+* [`value`](https://www.geeksforgeeks.org/html-meter-value-attribute/)`:` It is used to specify the required or actual value of the range.
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1>  <p>Meter Tag:</p>   Sachin's score:<meter value="5" min="0" max="10">5 out of 10</meter><br>Laxma sxore:<meter value="0.5">50% from 100%</meter></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/meter-tag.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 6
+* Edge 18
+* Firefox 16
+* Opera 11
+* Safari 6
+
+`Important Note :` The meter tag should not be used to indicate progress (as in a progress bar). For progress bars, use the [progress](https://www.geeksforgeeks.org/html-5-progress-tag/) tag.
+
+It is used to define the scale for measurement in a well-defined range and also supports a fractional value. It is also known as a gauge. It is used in Disk use, relevance query result, etc.   
+ 
+
+`Syntax:` 
+
+
+
+<meter attributes...> </meter>
+
+`Attributes:` This tag contains many attributes which are listed below: 
+
+* [`form`](https://www.geeksforgeeks.org/html-meter-form-attribute/#:~:text=The%20HTML%20form%20Attribute,contain%20one%20or%20more%20forms.&text=Attribute%20Values%3A%20It%20contains%20single,to%20the%20element.)`:` It defines one or more forms that meter tag belongs too.
+* [`max`](https://www.geeksforgeeks.org/html-meter-max-attribute/)`:` It is used to specify the maximum value of a range.
+* [`min`](https://www.geeksforgeeks.org/html-meter-min-attribute/)`:` It is used to specify the minimum value of a range.
+* [`high`](https://www.geeksforgeeks.org/html-meter-high-attribute/)`:` It is used to specify the range considered to be a high value.
+* [`low`](https://www.geeksforgeeks.org/html-meter-low-attribute/)`:` It is used to specify the range value that is considered to be low.
+* [`Optimum`](https://www.geeksforgeeks.org/html-meter-optimum-attribute/#:~:text=HTML%20%7C%20optimum%20Attribute,-Last%20Updated%20%3A%2019&text=The%20HTML%20optimum%20Attribute,the%20range%20is%20considered%20preferable.)`:` It is used to specify the optimum value for the range.
+* [`value`](https://www.geeksforgeeks.org/html-meter-value-attribute/)`:` It is used to specify the required or actual value of the range.
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1>  <p>Meter Tag:</p>   Sachin's score:<meter value="5" min="0" max="10">5 out of 10</meter><br>Laxma sxore:<meter value="0.5">50% from 100%</meter></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/meter-tag.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 6
+* Edge 18
+* Firefox 16
+* Opera 11
+* Safari 6
+
+`Important Note :` The meter tag should not be used to indicate progress (as in a progress bar). For progress bars, use the [progress](https://www.geeksforgeeks.org/html-5-progress-tag/) tag.
+
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="meter",
+        )
+
+        
+
+
+class Nav(BaseElement):
+    """
+The <nav> tag is used for declaring the navigational section in HTML documents. Websites typically have sections dedicated to navigational links, which enables users to navigate the site. These links can be placed inside a nav tag. In other words, the nav element represents a section of the page whose purpose is to provide navigational links, either in the current document or to another document. The links in the nav element may point to other webpages or to different sections of the same webpage. It is a semantic element. Common examples of the nav elements are menus, tables, contents, and indexes. 
+
+The nav tag is reserved for primary navigation areas, like the main menu across the top of the page or section. A document may have several nav elements, for example, site navigation and one for intra-page navigation. Links within nav tag can be codes within a ul list or simply coded as separate links, without ul element. This element makes it much easier to create a navigation menu, creates a neat horizontal menu of text links, and helps screen reading software to correctly identify primary navigation areas in the document.  
+ `Syntax:` 
+
+
+
+<nav> Links... </nav>
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2> HTML nav Tag</h2><!-- nav tag starts --><nav><a href="#">Home</a> |<a href="#">Interview</a> |<a href="#">Languages</a> |<a href="#">Data Structure</a> |<a href="#">Algorithm</a></nav><!-- nav tag ends --></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122253/nav1.PNG)
+
+`Example:` Styling nav using CSS.
+
+
+```html
+<!DOCTYPE html><html> <head><style>nav {border: 1px;background-color: green;color: white;padding: 6px;} a {text-decoration: none;color: white;font-size: 20px;}</style></head> <body><h1>GeeksforGeeks</h1><h2>HTML nav Tag</h2><!-- nav tag starts --><nav><a href="<https://www.geeksforgeeks.org/>">Home</a> |<a href="<https://www.geeksforgeeks.org/company-interview-corner/>">Interview</a> |<a href="<https://www.geeksforgeeks.org/gate-cs-notes-gq/>">Gate</a> |<a href="<https://www.geeksforgeeks.org/data-structures/>">Data Structure</a> |<a href="<https://www.geeksforgeeks.org/fundamentals-of-algorithms/>">Algorithm</a></nav><!-- nav tag ends --></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212124030/nav2.PNG)
+
+ `Supported Browser:` 
+
+* Google Chrome 5.0 and above
+* Edge 12 and above
+* Internet Explorer 9.0 and above
+* Mozilla 4.0 and above
+* Safari 5.0 and above
+* Opera 11.1 and above
+
+  
+The <nav> tag is used for declaring the navigational section in HTML documents. Websites typically have sections dedicated to navigational links, which enables users to navigate the site. These links can be placed inside a nav tag. In other words, the nav element represents a section of the page whose purpose is to provide navigational links, either in the current document or to another document. The links in the nav element may point to other webpages or to different sections of the same webpage. It is a semantic element. Common examples of the nav elements are menus, tables, contents, and indexes. 
+
+The nav tag is reserved for primary navigation areas, like the main menu across the top of the page or section. A document may have several nav elements, for example, site navigation and one for intra-page navigation. Links within nav tag can be codes within a ul list or simply coded as separate links, without ul element. This element makes it much easier to create a navigation menu, creates a neat horizontal menu of text links, and helps screen reading software to correctly identify primary navigation areas in the document.  
+ `Syntax:` 
+
+
+
+<nav> Links... </nav>
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1><h2> HTML nav Tag</h2><!-- nav tag starts --><nav><a href="#">Home</a> |<a href="#">Interview</a> |<a href="#">Languages</a> |<a href="#">Data Structure</a> |<a href="#">Algorithm</a></nav><!-- nav tag ends --></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212122253/nav1.PNG)
+
+`Example:` Styling nav using CSS.
+
+
+```html
+<!DOCTYPE html><html> <head><style>nav {border: 1px;background-color: green;color: white;padding: 6px;} a {text-decoration: none;color: white;font-size: 20px;}</style></head> <body><h1>GeeksforGeeks</h1><h2>HTML nav Tag</h2><!-- nav tag starts --><nav><a href="<https://www.geeksforgeeks.org/>">Home</a> |<a href="<https://www.geeksforgeeks.org/company-interview-corner/>">Interview</a> |<a href="<https://www.geeksforgeeks.org/gate-cs-notes-gq/>">Gate</a> |<a href="<https://www.geeksforgeeks.org/data-structures/>">Data Structure</a> |<a href="<https://www.geeksforgeeks.org/fundamentals-of-algorithms/>">Algorithm</a></nav><!-- nav tag ends --></body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210212124030/nav2.PNG)
+
+ `Supported Browser:` 
+
+* Google Chrome 5.0 and above
+* Edge 12 and above
+* Internet Explorer 9.0 and above
+* Mozilla 4.0 and above
+* Safari 5.0 and above
+* Opera 11.1 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="nav",
+        )
+
+        
+
