@@ -147,8 +147,8 @@ class BaseElement:
         self.tagname = tagName
 
     def toHtml(self, prettify: bool = True):
-        starttag = ''
-        endtag = ''
+        starttag = ""
+        endtag = ""
         if self.tagname != None:
             starttag = self.tagname
             endtag = self.tagname
@@ -159,7 +159,6 @@ class BaseElement:
                 endtag = self.endTagName
         html = f"""\n<{starttag} {self.attributesToHtml()}>\n{self.dataToHtml()}\n</{endtag}>"""
         if prettify:
-
             return str(Pretiffy(html))
 
     def dataToHtml(self):
@@ -174,7 +173,13 @@ class BaseElement:
     def attributesToHtml(self):
         text = ""
         for i in self.__dict__:
-            if self.__dict__[i] != None and i not in ["data", "attributes", "startTagName", "tagname", 'endTagName']:
+            if self.__dict__[i] != None and i not in [
+                "data",
+                "attributes",
+                "startTagName",
+                "tagname",
+                "endTagName",
+            ]:
                 self.attributes[i] = self.__dict__[i]
         for attribute in self.attributes:
             name = attribute
@@ -184,12 +189,11 @@ class BaseElement:
                 text += '%s="%s" ' % (name, self.attributes[attribute])
 
             if type(self.attributes[attribute]) in [list, set, tuple]:
-                text += '%s="%s" ' % (name,
-                                      " ".join(self.attributes[attribute]))
+                text += '%s="%s" ' % (name, " ".join(self.attributes[attribute]))
         return text
 
-    def save(self, filePath: str = './out.html', prettify: bool = True):
-        with open(filePath, 'w', encoding='utf-8') as f:
+    def save(self, filePath: str = "./out.html", prettify: bool = True):
+        with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.toHtml(prettify=prettify))
 
     def __str__(self):
