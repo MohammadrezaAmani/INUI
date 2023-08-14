@@ -39450,3 +39450,408 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Frame(BaseVoidElement):
+    """
+ 
+"""
+    def __init__(
+        self,
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            tagName="frame",
+        )
+
+
+class Frameset(BaseElement):
+    """
+The <frameset> tag in HTML is used to define the frameset. The <frameset> element contains one or more frame elements. It is used to specify the number of rows and columns in frameset with their pixel of spaces. Each element can hold a separate document. 
+
+`Note:` The <frameset> tag is not supported in HTML5.
+
+`Syntax:` 
+
+
+
+<frameset cols = "pixels|%|*">
+
+`Attributes:` The list of frameset attributes are given below:   
+ 
+
+* [`cols`](https://www.geeksforgeeks.org/html-cols-attribute/)`:` The cols attribute is used to create vertical frames in a web browser. This attribute is basically used to define the no. of columns and their size inside the frameset tag.
+* [`rows`](https://www.geeksforgeeks.org/html-rows-attribute/)`:` The rows attribute is used to create horizontal frames in the web browser. This attribute is used to define the no. of rows and their size inside the frameset tag.
+* [`border`](https://www.geeksforgeeks.org/html-border-attribute/)`:` This attribute of frameset tag defines the width of the border of each frame in pixels. Zero value is used for no border.
+* [`frameborder`](https://www.geeksforgeeks.org/html-frame-frameborder-attribute/)`:` This attribute of frameset tag is used to specify whether a three-dimensional border should be displayed between the frames or not for this use two values 0 and 1, where 0 defines no border and value 1 signifies for yes there will be a border.
+* [`framespacing`](https://www.geeksforgeeks.org/html5-mathml-framespacing-attribute/)`:` This attribute of frameset tag is used to specify the amount of spacing between the frames in a frameset. This can take any integer value as a parameter which basically denotes the value in pixel.
+
+Below examples illustrate the <frameset> element in HTML:  
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><head><title>frameset attribute</title></head> <!-- frameset attribute starts here -->   <frameset rows = "20%, 60%, 20%"><frame name = "top" src = "attr1.png" /><frame name = "main" src = "gradient3.png" /><frame name = "bottom" src = "col_last.png" /><noframes><body>The browser you are working does notsupport frames.</body></noframes></frameset><!-- frameset attribute ends here --></html> |
+
+```
+`Output:`   
+The above example basically used to create three horizontal frames: top, middle, and bottom using row attribute of frameset tag, and the noframe tag is used for that browser that doesn’t support noframe.   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/frame-1-2.png)
+
+`Example 2:`   
+ 
+
+```html
+<!DOCTYPE html><html><head><title>frameset attribute</title></head> <frameset cols = "30%, 40%, 30%"><frame name = "top" src = "attr1.png" /><frame name = "main" src = "gradient3.png" /><frame name = "bottom" src = "col_last.png" /><noframes><body>The browser you are working doesnot support frames.</body></noframes></frameset></html> |
+
+```
+`Output:`   
+The above example basically used to create three vertical frames: left, center, and right using col attribute of frameset tag.   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/frame-2-2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+ 
+
+  
+The <frameset> tag in HTML is used to define the frameset. The <frameset> element contains one or more frame elements. It is used to specify the number of rows and columns in frameset with their pixel of spaces. Each element can hold a separate document. 
+
+`Note:` The <frameset> tag is not supported in HTML5.
+
+`Syntax:` 
+
+
+
+<frameset cols = "pixels|%|*">
+
+`Attributes:` The list of frameset attributes are given below:   
+ 
+
+* [`cols`](https://www.geeksforgeeks.org/html-cols-attribute/)`:` The cols attribute is used to create vertical frames in a web browser. This attribute is basically used to define the no. of columns and their size inside the frameset tag.
+* [`rows`](https://www.geeksforgeeks.org/html-rows-attribute/)`:` The rows attribute is used to create horizontal frames in the web browser. This attribute is used to define the no. of rows and their size inside the frameset tag.
+* [`border`](https://www.geeksforgeeks.org/html-border-attribute/)`:` This attribute of frameset tag defines the width of the border of each frame in pixels. Zero value is used for no border.
+* [`frameborder`](https://www.geeksforgeeks.org/html-frame-frameborder-attribute/)`:` This attribute of frameset tag is used to specify whether a three-dimensional border should be displayed between the frames or not for this use two values 0 and 1, where 0 defines no border and value 1 signifies for yes there will be a border.
+* [`framespacing`](https://www.geeksforgeeks.org/html5-mathml-framespacing-attribute/)`:` This attribute of frameset tag is used to specify the amount of spacing between the frames in a frameset. This can take any integer value as a parameter which basically denotes the value in pixel.
+
+Below examples illustrate the <frameset> element in HTML:  
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><head><title>frameset attribute</title></head> <!-- frameset attribute starts here -->   <frameset rows = "20%, 60%, 20%"><frame name = "top" src = "attr1.png" /><frame name = "main" src = "gradient3.png" /><frame name = "bottom" src = "col_last.png" /><noframes><body>The browser you are working does notsupport frames.</body></noframes></frameset><!-- frameset attribute ends here --></html> |
+
+```
+`Output:`   
+The above example basically used to create three horizontal frames: top, middle, and bottom using row attribute of frameset tag, and the noframe tag is used for that browser that doesn’t support noframe.   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/frame-1-2.png)
+
+`Example 2:`   
+ 
+
+```html
+<!DOCTYPE html><html><head><title>frameset attribute</title></head> <frameset cols = "30%, 40%, 30%"><frame name = "top" src = "attr1.png" /><frame name = "main" src = "gradient3.png" /><frame name = "bottom" src = "col_last.png" /><noframes><body>The browser you are working doesnot support frames.</body></noframes></frameset></html> |
+
+```
+`Output:`   
+The above example basically used to create three vertical frames: left, center, and right using col attribute of frameset tag.   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/frame-2-2.png)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="frameset",
+        )
+
+        
+
