@@ -34726,3 +34726,489 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Code(BaseElement):
+    """
+The <code> tag in HTML is used to define the piece of computer code. During the creation of web pages sometimes there is a need to display computer programming code. It could be done by any basic heading tag of HTML but HTML provides a separated tag which is <code>. 
+
+The code tag is a specific type of text which represents computer output. HTML provides many methods for text-formatting but <code> tag is displayed with fixed letter size, font, and spacing.
+
+`Some points about <code> tag:` 
+
+* It is mainly used to display the code snippet into the web browser.
+* This tag styles its element to match the computer’s default text format.
+* The web browsers by default use a monospace font family for displaying <code< tags element content.
+
+`Syntax:` 
+
+
+
+<code> Contents... </code>
+
+The below examples illustrates the HTML code Tag.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html> <body><pre><!--code Tag starts here --><code>#include<stdio.h>int main() {printf("Hello Geeks");}<!--code Tag starts here --></code></pre></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/code1-1.png)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html> <body><pre><!--code Tag starts here --><code>class GFG{// Program begins with a call to main()// Print "Hello, World" to the terminal windowpublic static void main(String args[]){System.out.println("Hello, World");}}<!--code Tag ends here --></code></pre> </body> </html> |
+
+```
+`Output:` The program which is written inside the <code> tag has some different font size and font type to the basic heading tag and paragraph tag.
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/code2-2.png)
+
+`Note:` <pre> tag is used to display code snippets because it always keeps the text formatting as it.
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+  
+The <code> tag in HTML is used to define the piece of computer code. During the creation of web pages sometimes there is a need to display computer programming code. It could be done by any basic heading tag of HTML but HTML provides a separated tag which is <code>. 
+
+The code tag is a specific type of text which represents computer output. HTML provides many methods for text-formatting but <code> tag is displayed with fixed letter size, font, and spacing.
+
+`Some points about <code> tag:` 
+
+* It is mainly used to display the code snippet into the web browser.
+* This tag styles its element to match the computer’s default text format.
+* The web browsers by default use a monospace font family for displaying <code< tags element content.
+
+`Syntax:` 
+
+
+
+<code> Contents... </code>
+
+The below examples illustrates the HTML code Tag.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html> <body><pre><!--code Tag starts here --><code>#include<stdio.h>int main() {printf("Hello Geeks");}<!--code Tag starts here --></code></pre></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/code1-1.png)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html> <body><pre><!--code Tag starts here --><code>class GFG{// Program begins with a call to main()// Print "Hello, World" to the terminal windowpublic static void main(String args[]){System.out.println("Hello, World");}}<!--code Tag ends here --></code></pre> </body> </html> |
+
+```
+`Output:` The program which is written inside the <code> tag has some different font size and font type to the basic heading tag and paragraph tag.
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/code2-2.png)
+
+`Note:` <pre> tag is used to display code snippets because it always keeps the text formatting as it.
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="code",
+        )
+
+        
+
+
+class Colgroup(BaseElement):
+    """
+ This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
+
+`Syntax:` 
+
+
+
+<colgroup> Column lists... </colgroup>
+
+`Attributes:` 
+
+* [`align:`](https://www.geeksforgeeks.org/html-align-attribute/) It is used to align the text or content in the group of columns. The value of the aligned property is left, right, center, justify, char.
+* [`char`](https://www.geeksforgeeks.org/html-col-char-attribute/)`:` It is used to align the character in a column group and the value of these attributes is the character.
+* [`charoff`](https://www.geeksforgeeks.org/html-tr-charoff-attribute/)`:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes is in numeric form.
+* [`span`](https://www.geeksforgeeks.org/span-tag-html/)`:` It is used to specify the number of columns that have colgroup tag. The values are in numeric form.
+* [`valign`](https://www.geeksforgeeks.org/html-td-valign-attribute/)`:` It specifies the vertical alignment of content in a colgroup. It’s values are the top, middle, bottom, baseline.
+* [`width`](https://www.geeksforgeeks.org/html-table-width-attribute/)`:` It defines the width of a column group. It’s values are pixels, %, relative\_length.
+
+`Example:` The below example explains the HTML colgroup tag.  
+ 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML colgroup tag</h2><table><!-- colgroup tag starts here--><colgroup><col span="2" style="background-color: green; color: white" /><col style="background-color: tomato" /><!-- colgroup tag ends here--> </colgroup><tr><th>STUDENT</th><th>COURSE</th><th>AGE</th></tr><tr><td>Manas Chhabra</td><td>BCA</td><td>19</td></tr><tr><td>Anurag Gupta</td><td>B.TECH</td><td>23</td></tr></table></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219163541/colgr.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+ 
+
+  
+ This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
+
+`Syntax:` 
+
+
+
+<colgroup> Column lists... </colgroup>
+
+`Attributes:` 
+
+* [`align:`](https://www.geeksforgeeks.org/html-align-attribute/) It is used to align the text or content in the group of columns. The value of the aligned property is left, right, center, justify, char.
+* [`char`](https://www.geeksforgeeks.org/html-col-char-attribute/)`:` It is used to align the character in a column group and the value of these attributes is the character.
+* [`charoff`](https://www.geeksforgeeks.org/html-tr-charoff-attribute/)`:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes is in numeric form.
+* [`span`](https://www.geeksforgeeks.org/span-tag-html/)`:` It is used to specify the number of columns that have colgroup tag. The values are in numeric form.
+* [`valign`](https://www.geeksforgeeks.org/html-td-valign-attribute/)`:` It specifies the vertical alignment of content in a colgroup. It’s values are the top, middle, bottom, baseline.
+* [`width`](https://www.geeksforgeeks.org/html-table-width-attribute/)`:` It defines the width of a column group. It’s values are pixels, %, relative\_length.
+
+`Example:` The below example explains the HTML colgroup tag.  
+ 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML colgroup tag</h2><table><!-- colgroup tag starts here--><colgroup><col span="2" style="background-color: green; color: white" /><col style="background-color: tomato" /><!-- colgroup tag ends here--> </colgroup><tr><th>STUDENT</th><th>COURSE</th><th>AGE</th></tr><tr><td>Manas Chhabra</td><td>BCA</td><td>19</td></tr><tr><td>Anurag Gupta</td><td>B.TECH</td><td>23</td></tr></table></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210219163541/colgr.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1
+* Edge 12
+* Internet Explorer
+* Firefox 1
+* Opera
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="colgroup",
+        )
+
+        
+
