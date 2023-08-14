@@ -146,7 +146,7 @@ class BaseElement:
         self.endTagName = endTagName
         self.tagname = tagName
 
-    def toHtml(self, prettify:bool=True):
+    def toHtml(self, prettify: bool = True):
         starttag = ''
         endtag = ''
         if self.tagname != None:
@@ -188,7 +188,7 @@ class BaseElement:
                                       " ".join(self.attributes[attribute]))
         return text
 
-    def save(self, filePath:str='./out.html', prettify:bool=True):
+    def save(self, filePath: str = './out.html', prettify: bool = True):
         with open(filePath, 'w', encoding='utf-8') as f:
             f.write(self.toHtml(prettify=prettify))
 
