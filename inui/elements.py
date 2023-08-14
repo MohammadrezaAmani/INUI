@@ -52709,3 +52709,485 @@ class Table(BaseElement):
 
         
 
+
+class Tbody(BaseElement):
+    """
+The <tbody> tag in HTML is used to make a group of the same type of content of body element. This tag is used in HTML table with header and footer which is known as “thead” and “tfoot”. <tbody> tag is child tag of table tag and parent tag of <tr> and <td> tags.
+
+`Syntax:`  
+
+
+
+<tbody> // Table contents   </tbody>
+
+`Attributes:` Some attributes are supported by <tbody> tag in HTML4.1 but not supported in HTML5. The list of attributes is given below:  
+
+* [`align`](https://www.geeksforgeeks.org/html-tbody-align-attribute/)`:` Set the alignment of the content.
+* [`valign`](https://www.geeksforgeeks.org/html-tbody-valign-attribute/)`:` Set the vertical alignment of the content.
+* [`char`](https://www.geeksforgeeks.org/html-tbody-char-attribute/)`:` Set the alignment of content inside <thead> tag to a character.
+* [`charoff`](https://www.geeksforgeeks.org/html-tbody-charoff-attribute/)`:` It is used to set the characters the content inside the <thead> tag aligned from the character specified by the char attribute.
+
+`Example:`  
+
+```html
+<!DOCTYPE html><html><body><center><h1>GeeksforGeeks</h1><h2>tbody Tag</h2><table><thead><tr><th>Name</th><th>User Id</th></tr></thead> <!-- tbody tag starts from here --><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody><!-- tbody tag ends here --></table></center></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210625185357/tbo.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1+
+* Internet Explorer
+* Firefox 1+
+* Opera
+* Safari
+* Edge 12+
+
+  
+The <tbody> tag in HTML is used to make a group of the same type of content of body element. This tag is used in HTML table with header and footer which is known as “thead” and “tfoot”. <tbody> tag is child tag of table tag and parent tag of <tr> and <td> tags.
+
+`Syntax:`  
+
+
+
+<tbody> // Table contents   </tbody>
+
+`Attributes:` Some attributes are supported by <tbody> tag in HTML4.1 but not supported in HTML5. The list of attributes is given below:  
+
+* [`align`](https://www.geeksforgeeks.org/html-tbody-align-attribute/)`:` Set the alignment of the content.
+* [`valign`](https://www.geeksforgeeks.org/html-tbody-valign-attribute/)`:` Set the vertical alignment of the content.
+* [`char`](https://www.geeksforgeeks.org/html-tbody-char-attribute/)`:` Set the alignment of content inside <thead> tag to a character.
+* [`charoff`](https://www.geeksforgeeks.org/html-tbody-charoff-attribute/)`:` It is used to set the characters the content inside the <thead> tag aligned from the character specified by the char attribute.
+
+`Example:`  
+
+```html
+<!DOCTYPE html><html><body><center><h1>GeeksforGeeks</h1><h2>tbody Tag</h2><table><thead><tr><th>Name</th><th>User Id</th></tr></thead> <!-- tbody tag starts from here --><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody><!-- tbody tag ends here --></table></center></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210625185357/tbo.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 1+
+* Internet Explorer
+* Firefox 1+
+* Opera
+* Safari
+* Edge 12+
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="tbody",
+        )
+
+        
+
+
+class Td(BaseElement):
+    """
+The `<td> tag` is used to define a standard cell in an HTML table. 
+
+`Syntax:`
+
+
+
+<td>........</td>
+
+`Types of cells:`
+
+* `Header cells`: contains header information(<th>)
+* `Standard cells:` contains data(<td>)
+
+The text in `<th>` elements are bold and centered for heading by default.   
+The text in `<td>` elements are regular and left-aligned for data by default. 
+
+`Attributes:` There are many attributes supported by HTML4.1 but removed from HTML5 are listed below:
+
+* `abbr:` This attribute is used as abbreviated version of the text content in a header cell.
+* `align:` Set the alignment the text content.
+* `axis:` Categorizes header cells.
+* `bgcolor:` Set the background color of a header cell.
+* `char:` Aligns the content in a header cell to a character.
+* `charoff:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes are in numeric form.
+* `colspan:` Number of columns a header cell should span.
+* `headers:` Specifies multiple header cells a cell is related to.
+* `height:` Set the height of a header cell.
+* `nowrap:` It specifies that the content inside a header cell should not wrap.
+* `rowspan:` Set the number of rows a header cell should span.
+* `scope:` It is used to specify the score of header content.
+* `sorted:` It is used to sort the direction of a column.
+* `valign:` It is used to set the vertical alignment of text content.
+* `width:` It is used to set the width of a header cell
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html><head><title>td tag</title><style>body {text-align:center;}h1 {color:green;}th {color:blue;}table, tbody, td {border: 1px solid black;border-collapse: collapse;}</style></head><body><center><h1>GeeksforGeeks</h1><h2>td Tag</h2><table><thead><tr><th>Name</th><th>User Id</th></tr></thead><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody></table></center></body></html> |
+
+```
+`Output:`
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png) 
+
+`Supported Browsers:` The browser supported by `td tag` are listed below
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Firefox 1 and above
+* Internet Explorer
+* Safari
+* Opera
+
+  
+The `<td> tag` is used to define a standard cell in an HTML table. 
+
+`Syntax:`
+
+
+
+<td>........</td>
+
+`Types of cells:`
+
+* `Header cells`: contains header information(<th>)
+* `Standard cells:` contains data(<td>)
+
+The text in `<th>` elements are bold and centered for heading by default.   
+The text in `<td>` elements are regular and left-aligned for data by default. 
+
+`Attributes:` There are many attributes supported by HTML4.1 but removed from HTML5 are listed below:
+
+* `abbr:` This attribute is used as abbreviated version of the text content in a header cell.
+* `align:` Set the alignment the text content.
+* `axis:` Categorizes header cells.
+* `bgcolor:` Set the background color of a header cell.
+* `char:` Aligns the content in a header cell to a character.
+* `charoff:` It is used to sets the number of characters that will be aligned from the character specified by the char attribute. The value of these attributes are in numeric form.
+* `colspan:` Number of columns a header cell should span.
+* `headers:` Specifies multiple header cells a cell is related to.
+* `height:` Set the height of a header cell.
+* `nowrap:` It specifies that the content inside a header cell should not wrap.
+* `rowspan:` Set the number of rows a header cell should span.
+* `scope:` It is used to specify the score of header content.
+* `sorted:` It is used to sort the direction of a column.
+* `valign:` It is used to set the vertical alignment of text content.
+* `width:` It is used to set the width of a header cell
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html><head><title>td tag</title><style>body {text-align:center;}h1 {color:green;}th {color:blue;}table, tbody, td {border: 1px solid black;border-collapse: collapse;}</style></head><body><center><h1>GeeksforGeeks</h1><h2>td Tag</h2><table><thead><tr><th>Name</th><th>User Id</th></tr></thead><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody></table></center></body></html> |
+
+```
+`Output:`
+
+ ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png) 
+
+`Supported Browsers:` The browser supported by `td tag` are listed below
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Firefox 1 and above
+* Internet Explorer
+* Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="td",
+        )
+
+        
+
