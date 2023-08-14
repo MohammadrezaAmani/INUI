@@ -35503,3 +35503,224 @@ class Comment(BaseElement):
 
         
 
+
+class Data(BaseElement):
+    """
+The <data> element gives an address to a given content with a machine-readable translator. This element provides a machine-readable value for the processors and a human-readable value that rendered in the browser.  
+ 
+
+`Syntax:` 
+
+
+
+<data value=""> Contents... </data>
+
+`Attributes:` This tag accepts a single attribute as mentioned above and described below.
+
+* [`value:`](https://www.geeksforgeeks.org/html-value-attribute/) It contains a single machine-readable translation of the content.
+
+`Note:` If the content is a date or time-related content, then use <time> element instead of the data element.  
+`Example:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2><data> Tag</h2>   <p>GeeksforGeeks Subject List:</p>   <ul><!-- data Tag starts here --><li><data value="009">Data Structure</data></li><li><data value="010">Algorithm</data></li><li><data value="011">HTML</data></li><li><data value="019">Operating System</data></li><li><data value="110">Computer Network</data></li><li><data value="111">DBMS</data></li><!-- data Tag ends here --></ul></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208130437/datatag.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 62.0 and above
+* Edge 18.0 and above
+* Internet Explorer not supported
+* Apple Safari 10 and above
+* Firefox 22.0 and above
+* Opera 49.0 and above
+
+  
+The <data> element gives an address to a given content with a machine-readable translator. This element provides a machine-readable value for the processors and a human-readable value that rendered in the browser.  
+ 
+
+`Syntax:` 
+
+
+
+<data value=""> Contents... </data>
+
+`Attributes:` This tag accepts a single attribute as mentioned above and described below.
+
+* [`value:`](https://www.geeksforgeeks.org/html-value-attribute/) It contains a single machine-readable translation of the content.
+
+`Note:` If the content is a date or time-related content, then use <time> element instead of the data element.  
+`Example:` 
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2><data> Tag</h2>   <p>GeeksforGeeks Subject List:</p>   <ul><!-- data Tag starts here --><li><data value="009">Data Structure</data></li><li><data value="010">Algorithm</data></li><li><data value="011">HTML</data></li><li><data value="019">Operating System</data></li><li><data value="110">Computer Network</data></li><li><data value="111">DBMS</data></li><!-- data Tag ends here --></ul></body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208130437/datatag.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 62.0 and above
+* Edge 18.0 and above
+* Internet Explorer not supported
+* Apple Safari 10 and above
+* Firefox 22.0 and above
+* Opera 49.0 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="data",
+        )
+
+        
+
