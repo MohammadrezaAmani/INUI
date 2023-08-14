@@ -34007,3 +34007,266 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Canvas(BaseElement):
+    """
+The <canvas> tag in HTML is used to draw graphics on a web page using JavaScript. It can be used to draw paths, boxes, texts, gradients, and adding images. By default, it does not contain borders and text. 
+
+`Note:` The <canvas> tag is new in HTML5.
+
+`Syntax:` 
+
+
+
+<canvas id = "script"> Contents... </canvas>
+
+`Attributes:` The tag accepts two attributes as mentioned above and described below.
+
+* [`height`](https://www.geeksforgeeks.org/html-dom-style-height-property/)`:` This attribute is used to set the height of the canvas.
+* [`width`](https://www.geeksforgeeks.org/html-object-width-attribute/)`:` This attribute is used to set the width of the canvas.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><body> <!-- canvas Tag starts here --><canvas id = "GeeksforGeeks" width = "200"height = "100" style = "border:1px solid black"></canvas><!-- canvas Tag ends here --> </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas1.png)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html> <body><!-- HTML code to illustrate canvas tag --><canvas id = "geeks" height = "200" width = "200"style = "border:1px solid black"></canvas> <script>var c = document.getElementById("geeks");var cx = c.getContext("2d");cx.beginPath();cx.arc(100, 100, 90, 0, 2 * Math.PI);cx.stroke();</script> </body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas2.png)
+
+`Example 3:` 
+
+```html
+<!DOCTYPE html><html><body> <!-- canvas tag starts here --><canvas id = "geeks" width = "200" height = "200"style = "border:1px solid black"></canvas><!-- canvas tag ends here --> <script>var c=document.getElementById("geeks");var cx = c.getContext("2d");var grd = cx.createRadialGradient(100,100, 5, 100, 100, 100);grd.addColorStop(0, "red");grd.addColorStop(1, "green");cx.fillStyle = grd;cx.fillRect(0, 0, 200, 200);</script> </body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas3.png)
+
+`Supported Browsers:`  
+
+* Google Chrome 1.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 1.5 and above
+* Opera 9.0 and above
+* Safari 2.0 and above
+
+  
+The <canvas> tag in HTML is used to draw graphics on a web page using JavaScript. It can be used to draw paths, boxes, texts, gradients, and adding images. By default, it does not contain borders and text. 
+
+`Note:` The <canvas> tag is new in HTML5.
+
+`Syntax:` 
+
+
+
+<canvas id = "script"> Contents... </canvas>
+
+`Attributes:` The tag accepts two attributes as mentioned above and described below.
+
+* [`height`](https://www.geeksforgeeks.org/html-dom-style-height-property/)`:` This attribute is used to set the height of the canvas.
+* [`width`](https://www.geeksforgeeks.org/html-object-width-attribute/)`:` This attribute is used to set the width of the canvas.
+
+`Example 1:` 
+
+```html
+<!DOCTYPE html><html><body> <!-- canvas Tag starts here --><canvas id = "GeeksforGeeks" width = "200"height = "100" style = "border:1px solid black"></canvas><!-- canvas Tag ends here --> </body></html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas1.png)
+
+`Example 2:` 
+
+```html
+<!DOCTYPE html><html> <body><!-- HTML code to illustrate canvas tag --><canvas id = "geeks" height = "200" width = "200"style = "border:1px solid black"></canvas> <script>var c = document.getElementById("geeks");var cx = c.getContext("2d");cx.beginPath();cx.arc(100, 100, 90, 0, 2 * Math.PI);cx.stroke();</script> </body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas2.png)
+
+`Example 3:` 
+
+```html
+<!DOCTYPE html><html><body> <!-- canvas tag starts here --><canvas id = "geeks" width = "200" height = "200"style = "border:1px solid black"></canvas><!-- canvas tag ends here --> <script>var c=document.getElementById("geeks");var cx = c.getContext("2d");var grd = cx.createRadialGradient(100,100, 5, 100, 100, 100);grd.addColorStop(0, "red");grd.addColorStop(1, "green");cx.fillStyle = grd;cx.fillRect(0, 0, 200, 200);</script> </body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/canvas3.png)
+
+`Supported Browsers:`  
+
+* Google Chrome 1.0 and above
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 1.5 and above
+* Opera 9.0 and above
+* Safari 2.0 and above
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="canvas",
+        )
+
+        
+
