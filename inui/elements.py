@@ -33758,3 +33758,252 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Caption(BaseElement):
+    """
+The `caption` tagis used to specify the caption of a table. This tag will be inserted just after the <table> tag. Only one caption can be specified for one table. It is by default aligned to the center.  
+ 
+
+`Syntax:`
+
+
+
+<caption align = "value" ></caption>
+
+`Attributes:` This tag accepts a single attribute as mentioned above and described below.
+
+* [`align`](https://www.geeksforgeeks.org/html-align-attribute/)`:` This attribute is used to specify the alignment of text content.
+
+Below examples illustrate the <caption> tag in HTML:
+
+`Example 1:` Adding a caption to the table i.e. by default aligned to the center. 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksForGeeks</h1><h2>HTML <Caption> Tag</h2> <table><!-- Adding caption to the table --><caption>Students</caption><tr><th>Firstname</th><th>Lastname</th><th>Age</th></tr><tr><td>Priya</td><td>Sharma</td><td>24</td></tr><tr><td>Arun</td><td>Singh</td><td>32</td></tr><tr><td>Sam</td><td>Watson</td><td>41</td></tr></table></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208120049/caption.png)
+
+`Example 2:` Adding a caption to the table and adding align attribute to it to align the caption to the left.
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <Caption> Tag</h2> <table><!-- Adding a caption to the tableand aligning it to the left--><caption style="text-align: left">Students</caption><tr><th>Firstname</th><th>Lastname</th><th>Age</th></tr><tr><td>Priya</td><td>Sharma</td><td>24</td></tr><tr><td>Arun</td><td>Singh</td><td>32</td></tr><tr><td>Sam</td><td>Watson</td><td>41</td></tr></table></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208120113/caption2.png)
+
+ 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+The `caption` tagis used to specify the caption of a table. This tag will be inserted just after the <table> tag. Only one caption can be specified for one table. It is by default aligned to the center.  
+ 
+
+`Syntax:`
+
+
+
+<caption align = "value" ></caption>
+
+`Attributes:` This tag accepts a single attribute as mentioned above and described below.
+
+* [`align`](https://www.geeksforgeeks.org/html-align-attribute/)`:` This attribute is used to specify the alignment of text content.
+
+Below examples illustrate the <caption> tag in HTML:
+
+`Example 1:` Adding a caption to the table i.e. by default aligned to the center. 
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksForGeeks</h1><h2>HTML <Caption> Tag</h2> <table><!-- Adding caption to the table --><caption>Students</caption><tr><th>Firstname</th><th>Lastname</th><th>Age</th></tr><tr><td>Priya</td><td>Sharma</td><td>24</td></tr><tr><td>Arun</td><td>Singh</td><td>32</td></tr><tr><td>Sam</td><td>Watson</td><td>41</td></tr></table></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208120049/caption.png)
+
+`Example 2:` Adding a caption to the table and adding align attribute to it to align the caption to the left.
+
+
+```html
+<!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <Caption> Tag</h2> <table><!-- Adding a caption to the tableand aligning it to the left--><caption style="text-align: left">Students</caption><tr><th>Firstname</th><th>Lastname</th><th>Age</th></tr><tr><td>Priya</td><td>Sharma</td><td>24</td></tr><tr><td>Arun</td><td>Singh</td><td>32</td></tr><tr><td>Sam</td><td>Watson</td><td>41</td></tr></table></body></html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210208120113/caption2.png)
+
+ 
+
+`Supported Browsers:`
+
+* Google Chrome
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="caption",
+        )
+
+        
+
