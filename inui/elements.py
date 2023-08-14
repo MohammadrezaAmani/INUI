@@ -54563,3 +54563,228 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Tr(BaseElement):
+    """
+The `<tr> tag` is used to define a row in an HTML table. The `<tr>` element contains multiple <th> or <td> elements. 
+
+`Syntax:`
+
+
+
+<tr>.....</tr>
+
+`Attributes:`
+
+* `align:` Align the content.
+* `bgcolor:` Specify background of row
+* `char:` Align the content to a character
+* `charoff:` Set the number of character
+* `valign:` Vertical align the content
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html> <head><title>tr tag</title><style>body {text-align: center;} h1 {color: green;} th {color: blue;} table,tbody,td {border: 1px solid black;border-collapse: collapse;}</style></head> <body><center><h1>GeeksforGeeks</h1><h2>tr Tag</h2><table><thead><!-- tr tag starts here --><tr><th>Name</th><th>User Id</th></tr><!-- tr tag end here --></thead><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody></table></center></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190913121025/tr7.png) 
+
+`Supported Browsers:` The browsers supported by `HTML <tr> Tag` are listed below:
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Apple Safari
+* Opera
+
+  
+The `<tr> tag` is used to define a row in an HTML table. The `<tr>` element contains multiple <th> or <td> elements. 
+
+`Syntax:`
+
+
+
+<tr>.....</tr>
+
+`Attributes:`
+
+* `align:` Align the content.
+* `bgcolor:` Specify background of row
+* `char:` Align the content to a character
+* `charoff:` Set the number of character
+* `valign:` Vertical align the content
+
+`Example:` 
+
+
+```html
+<!DOCTYPE html><html> <head><title>tr tag</title><style>body {text-align: center;} h1 {color: green;} th {color: blue;} table,tbody,td {border: 1px solid black;border-collapse: collapse;}</style></head> <body><center><h1>GeeksforGeeks</h1><h2>tr Tag</h2><table><thead><!-- tr tag starts here --><tr><th>Name</th><th>User Id</th></tr><!-- tr tag end here --></thead><tbody><tr><td>Shashank</td><td>@shashankla</td></tr><tr><td>GeeksforGeeks</td><td>@geeks</td></tr></tbody></table></center></body> </html> |
+
+```
+`Output:` 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190913121025/tr7.png) 
+
+`Supported Browsers:` The browsers supported by `HTML <tr> Tag` are listed below:
+
+* Google Chrome 1 and above
+* Edge 12 and above
+* Internet Explorer
+* Firefox 1 and above
+* Apple Safari
+* Opera
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="tr",
+        )
+
+        
+
