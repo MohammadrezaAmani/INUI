@@ -49045,3 +49045,230 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Ruby(BaseElement):
+    """
+The <ruby> tag in HTML is used to specify the ruby annotation which is a small text, attached with the main text to specify the meaning of the main text. This kind of annotation is used in Japanese publications.  
+`Syntax:`   
+ 
+
+
+
+<ruby attributes> Contents... </ruby>
+
+`Note:` <ruby> tag contains two other tags which are listed below:   
+ 
+
+* [`<rt> tag`](https://www.geeksforgeeks.org/html5-rt-tag/)`:` It is used to describe the explanation of main text on top of the main text.
+* [`<rp> tag`](https://www.geeksforgeeks.org/html5-rp-tag/)`:` It is optional which is used to specify the information which need to show when browsers are not supported ruby annotations.
+
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><ruby> Tag</h2><!-- html ruby tag is used here --><ruby>GFG<rt>GeeksforGeeks</rt></ruby> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210611154803/ruby.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 5.0
+* Edge 12.0
+* Internet Explorer 5.0
+* Firefox 38.0
+* Opera 15.0
+* Safari 5.0
+
+ 
+
+The <ruby> tag in HTML is used to specify the ruby annotation which is a small text, attached with the main text to specify the meaning of the main text. This kind of annotation is used in Japanese publications.  
+`Syntax:`   
+ 
+
+
+
+<ruby attributes> Contents... </ruby>
+
+`Note:` <ruby> tag contains two other tags which are listed below:   
+ 
+
+* [`<rt> tag`](https://www.geeksforgeeks.org/html5-rt-tag/)`:` It is used to describe the explanation of main text on top of the main text.
+* [`<rp> tag`](https://www.geeksforgeeks.org/html5-rp-tag/)`:` It is optional which is used to specify the information which need to show when browsers are not supported ruby annotations.
+
+`Example:`   
+ 
+
+```html
+<!DOCTYPE html><html> <body> <h1>GeeksforGeeks</h1><h2><ruby> Tag</h2><!-- html ruby tag is used here --><ruby>GFG<rt>GeeksforGeeks</rt></ruby> </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210611154803/ruby.png)
+
+`Supported Browsers:`   
+ 
+
+* Google Chrome 5.0
+* Edge 12.0
+* Internet Explorer 5.0
+* Firefox 38.0
+* Opera 15.0
+* Safari 5.0
+
+ 
+
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="ruby",
+        )
+
+        
+
