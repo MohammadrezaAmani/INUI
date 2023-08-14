@@ -35160,9 +35160,8 @@ class Comment(BaseElement):
             aria_describedby=aria_describedby,
             aria_label=aria_label,
             alt=alt,
-            startTagName=None,
-            endTagName=None,
-            tagName="comment",
+            startTagName="!-- ",
+            endTagName="--",
         )
 
 
