@@ -44408,3 +44408,585 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Mark(BaseElement):
+    """
+The <mark> tag in HTML is used to define the marked text. It is used to highlight the part of the text in a paragraph. The <mark> tag is new in HTML 5.  
+ 
+
+`Syntax:` 
+
+
+
+<mark> Contents... </mark>
+
+`Example 1:` This example uses <mark> tag to highlight the text. By default, <mark> tag highlight the text content in yellow color.
+
+
+```html
+<!DOCTYPE html><html> <body><h1 style="color: green;">GeeksforGeeks</h1> <h2>HTML mark Tag</h2>   <p><mark>GeeksforGeeks:</mark> It is a<mark>computer science</mark> portal for geeks</p>  </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210204180536/mark.PNG)
+
+`Example 2:` This example uses <mark> tag with CSS property to change the marked content color and other property.   
+ 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2> HTML mark Tag</h2>   <p><mark>GeeksforGeeks:</mark> It is a<mark style="background-color: green; color: white;">computer science</mark> portal for geeks</p>  </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210204180815/markcss.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.0 and above
+* Safari
+
+ 
+
+  
+The <mark> tag in HTML is used to define the marked text. It is used to highlight the part of the text in a paragraph. The <mark> tag is new in HTML 5.  
+ 
+
+`Syntax:` 
+
+
+
+<mark> Contents... </mark>
+
+`Example 1:` This example uses <mark> tag to highlight the text. By default, <mark> tag highlight the text content in yellow color.
+
+
+```html
+<!DOCTYPE html><html> <body><h1 style="color: green;">GeeksforGeeks</h1> <h2>HTML mark Tag</h2>   <p><mark>GeeksforGeeks:</mark> It is a<mark>computer science</mark> portal for geeks</p>  </body> </html> |
+
+```
+`Output:`   
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210204180536/mark.PNG)
+
+`Example 2:` This example uses <mark> tag with CSS property to change the marked content color and other property.   
+ 
+
+
+```html
+<!DOCTYPE html><html> <body><h1>GeeksforGeeks</h1> <h2> HTML mark Tag</h2>   <p><mark>GeeksforGeeks:</mark> It is a<mark style="background-color: green; color: white;">computer science</mark> portal for geeks</p>  </body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210204180815/markcss.PNG)
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Edge 12.0 and above
+* Internet Explorer 9.0 and above
+* Firefox 4.0 and above
+* Opera 11.0 and above
+* Safari
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="mark",
+        )
+
+        
+
+
+class Marquee(BaseElement):
+    """
+The <marquee> tag in HTML is used to create scrolling text or image in a webpages. It scrolls either from horizontally left to right or right to left, or vertically top to bottom or bottom to top. 
+
+`Syntax :` 
+
+The marquee element comes in pairs. It means that the tag has opening and closing elements. 
+
+
+
+`<marquee>`
+ `<--- contents --->`
+`</marquee>` 
+
+`Attributes`
+
+
+
+| ATTRIBUTES | VALUES | DESCRIPTION |
+| --- | --- ```html
+bgcolor | Color Name | Define the background color of the marquee. |
+| direction | Top, Down, Left, Right | Define the direction of scrolling the content |
+| loop | Number | Specifies how many times content moves. The default value is infinite. |
+| height | px or % | Define the height of marquee |
+| width | px or % | Define the width of marquee |
+| hspace | px | Specify horizontal space around marquee |
+| vspace | px | Specify vertical space around marquee |
+
+`Methods`
+
+* `start ():` This method is used to start the scrolling of the Marquee Tag.
+* `stop ():` This method is used to stop the scrolling of the Marquee Tag.
+
+`Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;padding-bottom:10px;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "left" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; padding-bottom:10px; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;font-family:"Times New Roman";}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;text-align:center;}.geek2 {text-align:center;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "up" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; text-align:center; } .geek2 { text-align:center; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;font-family:"Times New Roman";}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;text-align:center;}.geek2 {text-align:center;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "down" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; text-align:center; } .geek2 { text-align:center; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Supported Browsers`
+
+* Google Chrome 1.0
+* Edge 12.0
+* Firefox 65.0
+* Internet Explorer 2.0
+* Opera 7.2
+* Safari 1.2
+
+  
+The <marquee> tag in HTML is used to create scrolling text or image in a webpages. It scrolls either from horizontally left to right or right to left, or vertically top to bottom or bottom to top. 
+
+`Syntax :` 
+
+The marquee element comes in pairs. It means that the tag has opening and closing elements. 
+
+
+
+`<marquee>`
+ `<--- contents --->`
+`</marquee>` 
+
+`Attributes`
+
+
+
+| ATTRIBUTES | VALUES | DESCRIPTION |
+| --- | --- ```html
+bgcolor | Color Name | Define the background color of the marquee. |
+| direction | Top, Down, Left, Right | Define the direction of scrolling the content |
+| loop | Number | Specifies how many times content moves. The default value is infinite. |
+| height | px or % | Define the height of marquee |
+| width | px or % | Define the width of marquee |
+| hspace | px | Specify horizontal space around marquee |
+| vspace | px | Specify vertical space around marquee |
+
+`Methods`
+
+* `start ():` This method is used to start the scrolling of the Marquee Tag.
+* `stop ():` This method is used to stop the scrolling of the Marquee Tag.
+
+`Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;padding-bottom:10px;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "left" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; padding-bottom:10px; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;font-family:"Times New Roman";}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;text-align:center;}.geek2 {text-align:center;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "up" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; text-align:center; } .geek2 { text-align:center; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Example:`   
+ 
+
+
+```html
+<!DOCTYPE html><html><head><title>Marquee Tag</title><style>.main {text-align:center;font-family:"Times New Roman";}.marq {padding-top:30px;padding-bottom:30px;}.geek1 {font-size:36px;font-weight:bold;color:white;text-align:center;}.geek2 {text-align:center;}</style></head> <body><div class = "main"><marquee class="marq" bgcolor = "Green" direction = "down" loop="" ><div class="geek1">GeeksforGeeks</div><div class="geek2">A computer science portal for geeks</div></marquee></div></body></html> |
+
+```
+`Output:`   
+Marquee Tag   
+ 
+
+.main { text-align:center; font-family:”Times New Roman”; } .marq { padding-top:30px; padding-bottom:30px; } .geek1 { font-size:36px; font-weight:bold; color:white; text-align:center; } .geek2 { text-align:center; }      
+
+ 
+
+GeeksforGeeks  
+A computer science portal for geeks  
+ `Supported Browsers`
+
+* Google Chrome 1.0
+* Edge 12.0
+* Firefox 65.0
+* Internet Explorer 2.0
+* Opera 7.2
+* Safari 1.2
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="marquee",
+        )
+
+        
+
