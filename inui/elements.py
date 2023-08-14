@@ -160,6 +160,7 @@ class BaseElement:
         html = f"""\n<{starttag} {self.attributesToHtml()}>\n{self.dataToHtml()}\n</{endtag}>"""
         if prettify:
             return str(Pretiffy(html))
+        return str(html)
 
     def dataToHtml(self):
         if type(self.data) in [list, set, tuple]:
@@ -347,6 +348,7 @@ class BaseVoidElement:
         html = f"""\n<{self.tagname} {self.attributesToHtml()}>"""
         if prettify:
             return str(Pretiffy(html))
+        return str(html)
 
     def attributesToHtml(self):
         text = ""
