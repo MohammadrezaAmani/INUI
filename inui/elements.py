@@ -38414,3 +38414,567 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Figure(BaseElement):
+    """
+The <figure> tag in HTML is used to add self-contained content like illustrations, diagrams, photos, or codes listing in a document. It is related to main flow, but it can be used in any position of a document and the figure goes with the flow of the document and if remove it then it should not affect the flow of the document. This tag is new in HTML5.  
+ 
+
+`Syntax:`
+
+
+
+<figure> Image content... </figure>
+
+`Attributes:` It contains mostly two tags which are listed below:   
+ 
+
+* [`img src`](https://www.geeksforgeeks.org/html-img-src-attribute/)`:` This tag is used to add an image source in the document.
+* [`figcaption`](https://www.geeksforgeeks.org/html5-figcaption-tag/)`:` This tag is used to set the caption to the image.
+
+`Example:`  
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <h1>GeeksforGeeks</h1><h2><figure> Tag</h2><!--HTML figure tag starts here--><figure><img src="<https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png>"alt="The Pulpit Rock" width="304" height="228"><figcaption>Geeks logo</figcaption></figure><!--HTML figure tag ends here--> </body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604150233/figure.png)
+
+`Supported Browsers:`  
+ 
+
+* Google Chrome 8
+* Edge 12
+* Firefox 4
+* Internet Explorer 9
+* Safari 5.1
+* Opera 11
+
+ 
+
+The <figure> tag in HTML is used to add self-contained content like illustrations, diagrams, photos, or codes listing in a document. It is related to main flow, but it can be used in any position of a document and the figure goes with the flow of the document and if remove it then it should not affect the flow of the document. This tag is new in HTML5.  
+ 
+
+`Syntax:`
+
+
+
+<figure> Image content... </figure>
+
+`Attributes:` It contains mostly two tags which are listed below:   
+ 
+
+* [`img src`](https://www.geeksforgeeks.org/html-img-src-attribute/)`:` This tag is used to add an image source in the document.
+* [`figcaption`](https://www.geeksforgeeks.org/html5-figcaption-tag/)`:` This tag is used to set the caption to the image.
+
+`Example:`  
+ 
+
+```html
+<!DOCTYPE html> <html> <body> <h1>GeeksforGeeks</h1><h2><figure> Tag</h2><!--HTML figure tag starts here--><figure><img src="<https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png>"alt="The Pulpit Rock" width="304" height="228"><figcaption>Geeks logo</figcaption></figure><!--HTML figure tag ends here--> </body> </html> |
+
+```
+`Output:`  
+ 
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604150233/figure.png)
+
+`Supported Browsers:`  
+ 
+
+* Google Chrome 8
+* Edge 12
+* Firefox 4
+* Internet Explorer 9
+* Safari 5.1
+* Opera 11
+
+ 
+
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="figure",
+        )
+
+        
+
+
+class Font(BaseElement):
+    """
+The `<font> tag` in HTML plays an important role in the web page to create an attractive and readable web page. The font tag is used to change the color, size, and style of a text. The base font tag is used to set all the text to the same size, color and face.
+
+`Syntax:`
+
+
+
+<font attribute = "value"> Content </font>
+
+`Example:` In this example, we have used the <font> tag with a font size as 5.
+
+```html
+<!DOCTYPE html><html> <body><h2>GeeksforGeeks</h2> <!--Normal paragraph tag--> <p>Hello Geeks!.</p>  <!--font tag--><font size="5"> Welcome to GeeksforGeeks </font></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210916180011/164.png)HTML <font> tag
+
+The font tag has basically three attributes which are given below: 
+
+* [Font Size attribute](https://www.geeksforgeeks.org/html-font-size-attribute/)
+* [Face/Type attribute](https://www.geeksforgeeks.org/html-font-face-attribute/)
+* [Color attribute](https://www.geeksforgeeks.org/html-font-color-attribute/)
+
+`Note:` Font tag is not supported in HTML5. 
+
+We will discuss all these attributes & understand them through the examples.
+
+[`font Size:`](https://www.geeksforgeeks.org/html-font-size-attribute/) This attribute is used to adjust the size of the text in the HTML document using a font tag with the size attribute. The range of size of the font in HTML is from 1 to 7 and the default size is 3.
+
+`Syntax:`
+
+
+
+<font size="number">
+
+`Example:` This example uses the <font> tag where different font sizes are specified.
+
+```html
+<!DOCTYPE html><html> <body><!--HTML font size tag starts here--><font size="1">GeeksforGeeks!</font><br /><font size="2">GeeksforGeeks!</font><br /><font size="3">GeeksforGeeks!</font><br /><font size="4">GeeksforGeeks!</font><br /><font size="5">GeeksforGeeks!</font><br /><font size="6">GeeksforGeeks!</font><br /><font size="7">GeeksforGeeks!</font><!--HTML font size tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604165350/font1.png)font size attribute
+
+[`Font Type`](https://www.geeksforgeeks.org/html-font-face-attribute/)`:` Font type can be set by using face attribute with font tag in HTML document. But the fonts used by the user need to be installed in the system first.
+
+`Syntax:`
+
+
+
+<font face="font_family">
+
+`Example:` This example describes the <font> tag with different font type & font size.
+
+```html
+<!DOCTYPE html><html> <body><!--HTML font face tag starts here--><font face="Times New Roman" size="6">GeeksforGeeks!!</font>    <br /><font face="Verdana" size="6">GeeksforGeeks!!</font><br /><font face="Comic sans MS" size=" 6">GeeksforGeeks!!</font><br /><font face="WildWest" size="6">GeeksforGeeks!!</font><br /><font face="Bedrock" size="6">GeeksforGeeks!!</font><br /><!--HTML font face tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20211215073008/1.png)font type attribute
+
+[`Font Color:`](https://www.geeksforgeeks.org/html-font-color-attribute/) Font color is used to set the text color using a font tag with the color attribute in an HTML document. Color can be specified either with its name or with its hex code.
+
+`Syntax:`
+
+
+
+<font color="color_name|hex_number|rgb_number">
+
+`Example:` This example describes the <font> tag with different font colors.
+
+```html
+<!DOCTYPE html><html> <body> <!--HTML font color tag starts here--><font color="#009900">GeeksforGeeks</font><br /><font color="green">GeeksforGeeks</font><!--HTML font color tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604170736/fontlast.png)font color attribute
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Microsoft Edge 12 and above
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+The `<font> tag` in HTML plays an important role in the web page to create an attractive and readable web page. The font tag is used to change the color, size, and style of a text. The base font tag is used to set all the text to the same size, color and face.
+
+`Syntax:`
+
+
+
+<font attribute = "value"> Content </font>
+
+`Example:` In this example, we have used the <font> tag with a font size as 5.
+
+```html
+<!DOCTYPE html><html> <body><h2>GeeksforGeeks</h2> <!--Normal paragraph tag--> <p>Hello Geeks!.</p>  <!--font tag--><font size="5"> Welcome to GeeksforGeeks </font></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210916180011/164.png)HTML <font> tag
+
+The font tag has basically three attributes which are given below: 
+
+* [Font Size attribute](https://www.geeksforgeeks.org/html-font-size-attribute/)
+* [Face/Type attribute](https://www.geeksforgeeks.org/html-font-face-attribute/)
+* [Color attribute](https://www.geeksforgeeks.org/html-font-color-attribute/)
+
+`Note:` Font tag is not supported in HTML5. 
+
+We will discuss all these attributes & understand them through the examples.
+
+[`font Size:`](https://www.geeksforgeeks.org/html-font-size-attribute/) This attribute is used to adjust the size of the text in the HTML document using a font tag with the size attribute. The range of size of the font in HTML is from 1 to 7 and the default size is 3.
+
+`Syntax:`
+
+
+
+<font size="number">
+
+`Example:` This example uses the <font> tag where different font sizes are specified.
+
+```html
+<!DOCTYPE html><html> <body><!--HTML font size tag starts here--><font size="1">GeeksforGeeks!</font><br /><font size="2">GeeksforGeeks!</font><br /><font size="3">GeeksforGeeks!</font><br /><font size="4">GeeksforGeeks!</font><br /><font size="5">GeeksforGeeks!</font><br /><font size="6">GeeksforGeeks!</font><br /><font size="7">GeeksforGeeks!</font><!--HTML font size tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604165350/font1.png)font size attribute
+
+[`Font Type`](https://www.geeksforgeeks.org/html-font-face-attribute/)`:` Font type can be set by using face attribute with font tag in HTML document. But the fonts used by the user need to be installed in the system first.
+
+`Syntax:`
+
+
+
+<font face="font_family">
+
+`Example:` This example describes the <font> tag with different font type & font size.
+
+```html
+<!DOCTYPE html><html> <body><!--HTML font face tag starts here--><font face="Times New Roman" size="6">GeeksforGeeks!!</font>    <br /><font face="Verdana" size="6">GeeksforGeeks!!</font><br /><font face="Comic sans MS" size=" 6">GeeksforGeeks!!</font><br /><font face="WildWest" size="6">GeeksforGeeks!!</font><br /><font face="Bedrock" size="6">GeeksforGeeks!!</font><br /><!--HTML font face tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20211215073008/1.png)font type attribute
+
+[`Font Color:`](https://www.geeksforgeeks.org/html-font-color-attribute/) Font color is used to set the text color using a font tag with the color attribute in an HTML document. Color can be specified either with its name or with its hex code.
+
+`Syntax:`
+
+
+
+<font color="color_name|hex_number|rgb_number">
+
+`Example:` This example describes the <font> tag with different font colors.
+
+```html
+<!DOCTYPE html><html> <body> <!--HTML font color tag starts here--><font color="#009900">GeeksforGeeks</font><br /><font color="green">GeeksforGeeks</font><!--HTML font color tag ends here--></body> </html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210604170736/fontlast.png)font color attribute
+
+`Supported Browsers:` 
+
+* Google Chrome
+* Microsoft Edge 12 and above
+* Internet Explorer
+* Firefox
+* Opera
+* Safari
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="font",
+        )
+
+        
+
