@@ -35724,3 +35724,232 @@ ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksfo
 
         
 
+
+class Datalist(BaseElement):
+    """
+The <datalist> tag is used to provide autocomplete feature in the HTML files. It can be used with an input tag so that users can easily fill the data in the forms using select the data.  
+`Syntax:`
+
+
+
+<datalist> ... </datalist>
+
+`Example 1:` The below code explains datalist Tag.
+
+```html
+<!DOCTYPE html><html><body><form action=""><label>Your Cars Name: </label><input list="cars"> <!--datalist Tag starts here --><datalist id="cars"><option value="BMW"/><option value="Bentley"/><option value="Mercedes"/><option value="Audi"/><option value="Volkswagen"/></datalist><!--datalist Tag ends here --> </form></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210302190750/Screenshot20210302190735.png)
+
+`Example 2:` The <datalist> tag object can be easily accessed by an input attribute type.
+
+```html
+<!DOCTYPE html><html><body><form action=""><label>Your Cars Name: </label><input list="cars" id="carsInput" /> <!--datalist Tag starts here --><datalist id="cars"><option value="BMW" /><option value="Bentley" /><option value="Mercedes" /><option value="Audi" /><option value="Volkswagen" /></datalist><!--datalist Tag ends here --> <button onclick="datalistcall()" type="button">Click Here</button></form><p id="output"></p>   <!-- Will display the select option --><script type="text/javascript">function datalistcall() {var o1 = document.getElementById("carsInput").value;document.getElementById("output").innerHTML ="You select " + o1 + " option";}</script></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210302190852/Screenshot20210302190837.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 20.0 and above
+* Edge 12.0 and above
+* Internet Explorer 10.0 and above
+* Firefox 4.0 and above
+* Opera 9.5 and above
+* Safari 12.1 and above
+
+ 
+
+  
+The <datalist> tag is used to provide autocomplete feature in the HTML files. It can be used with an input tag so that users can easily fill the data in the forms using select the data.  
+`Syntax:`
+
+
+
+<datalist> ... </datalist>
+
+`Example 1:` The below code explains datalist Tag.
+
+```html
+<!DOCTYPE html><html><body><form action=""><label>Your Cars Name: </label><input list="cars"> <!--datalist Tag starts here --><datalist id="cars"><option value="BMW"/><option value="Bentley"/><option value="Mercedes"/><option value="Audi"/><option value="Volkswagen"/></datalist><!--datalist Tag ends here --> </form></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210302190750/Screenshot20210302190735.png)
+
+`Example 2:` The <datalist> tag object can be easily accessed by an input attribute type.
+
+```html
+<!DOCTYPE html><html><body><form action=""><label>Your Cars Name: </label><input list="cars" id="carsInput" /> <!--datalist Tag starts here --><datalist id="cars"><option value="BMW" /><option value="Bentley" /><option value="Mercedes" /><option value="Audi" /><option value="Volkswagen" /></datalist><!--datalist Tag ends here --> <button onclick="datalistcall()" type="button">Click Here</button></form><p id="output"></p>   <!-- Will display the select option --><script type="text/javascript">function datalistcall() {var o1 = document.getElementById("carsInput").value;document.getElementById("output").innerHTML ="You select " + o1 + " option";}</script></body></html> |
+
+```
+`Output:`
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20210302190852/Screenshot20210302190837.png)
+
+`Supported Browsers:` 
+
+* Google Chrome 20.0 and above
+* Edge 12.0 and above
+* Internet Explorer 10.0 and above
+* Firefox 4.0 and above
+* Opera 9.5 and above
+* Safari 12.1 and above
+
+ 
+
+  
+
+
+ref = [https://www.geeksforgeeks.org/html-tags-a-to-z-list/](https://www.geeksforgeeks.org/html-tags-a-to-z-list/)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        classs=None,
+        id=None,
+        src=None,
+        name=None,
+        content=None,
+        charset=None,
+        style=None,
+        href=None,
+        autocapitalize=None,
+        accesskey=None,
+        accessskey=None,
+        autofocus=None,
+        contenteditable=None,
+        dir=None,
+        draggable=None,
+        enterkeyhint=None,
+        exportparts=None,
+        hidden=None,
+        inert=None,
+        inputmode=None,
+        iss=None,
+        itemid=None,
+        itemprop=None,
+        itemref=None,
+        itemscope=None,
+        itemtype=None,
+        lang=None,
+        nonce=None,
+        part=None,
+        popover=None,
+        slot=None,
+        spellcheck=None,
+        tabindex=None,
+        title=None,
+        translate=None,
+        virtualkeyboardpolicy=None,
+        accept=None,
+        autocomplete=None,
+        capture=None,
+        crossorigin=None,
+        selected=None,
+        dirname=None,
+        disabled=None,
+        elementtiming=None,
+        forr=None,
+        max=None,
+        maxlength=None,
+        min=None,
+        minlength=None,
+        multiple=None,
+        pattern=None,
+        readonly=None,
+        rel=None,
+        required=None,
+        size=None,
+        step=None,
+        typee=None,
+        placeholder=None,
+        text=None,
+        scope=None,
+        colspan=None,
+        aria_describedby=None,
+        aria_label=None,
+        alt=None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            classs=classs,
+            id=id,
+            src=src,
+            name=name,
+            content=content,
+            charset=charset,
+            style=style,
+            href=href,
+            autocapitalize=autocapitalize,
+            accesskey=accesskey,
+            accessskey=accessskey,
+            autofocus=autofocus,
+            contenteditable=contenteditable,
+            dir=dir,
+            draggable=draggable,
+            enterkeyhint=enterkeyhint,
+            exportparts=exportparts,
+            hidden=hidden,
+            inert=inert,
+            inputmode=inputmode,
+            iss=iss,
+            itemid=itemid,
+            itemprop=itemprop,
+            itemref=itemref,
+            itemscope=itemscope,
+            itemtype=itemtype,
+            lang=lang,
+            nonce=nonce,
+            part=part,
+            popover=popover,
+            slot=slot,
+            spellcheck=spellcheck,
+            tabindex=tabindex,
+            title=title,
+            translate=translate,
+            virtualkeyboardpolicy=virtualkeyboardpolicy,
+            accept=accept,
+            autocomplete=autocomplete,
+            capture=capture,
+            crossorigin=crossorigin,
+            selected=selected,
+            dirname=dirname,
+            disabled=disabled,
+            elementtiming=elementtiming,
+            forr=forr,
+            max=max,
+            maxlength=maxlength,
+            min=min,
+            minlength=minlength,
+            multiple=multiple,
+            pattern=pattern,
+            readonly=readonly,
+            rel=rel,
+            required=required,
+            size=size,
+            step=step,
+            typee=typee,
+            placeholder=placeholder,
+            text=text,
+            scope=scope,
+            colspan=colspan,
+            aria_describedby=aria_describedby,
+            aria_label=aria_label,
+            alt=alt,
+            startTagName=None,
+            endTagName=None,
+            tagName="datalist",
+        )
+
+        
+
