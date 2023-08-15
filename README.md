@@ -43,6 +43,7 @@
   - [In A Nutshell](#in-a-nutshell)
   - [How to Use?](#how-to-use)
   - [Supported Elements](#supported-elements)
+  - [Supported Attributes](#supported-attributes)
   - [LICENSE](#license)
 
 <!-- vscode-markdown-toc-config
@@ -192,6 +193,32 @@ pip install inui --upgrade
 | 43|fieldset | Fieldset| 87|output | Output|
 | 44|figcaption | Figcaption| 88|p | P|
 
+
+## Supported Attributes
+
+| id | HTML | INUI | id | HTML | INUI | id | HTML | INUI |
+| --|-- | --------- | --|-- | --------- |--|-- | --------- |
+| 1| class | classs |  22| itemid | itemid | 89| elementtiming | elementtiming | 
+| 2| id | id |  23| itemprop | itemprop | 90| for | forr | 
+| 3| src | src |  24| itemref | itemref | 91| max | max | 
+| 4| name | name |  25| itemscope | itemscope | 92| maxlength | maxlength | 
+| 5| content | content |  26| itemtype | itemtype | 93| min | min | 
+| 6| charset | charset |  27| lang | lang | 94| minlength | minlength | 
+| 7| style | style |  28| nonce | nonce | 95| multiple | multiple | 
+| 8| href | href |  29| part | part | 96| pattern | pattern | 
+| 9| autocapitalize | autocapitalize |  30| popover | popover | 97| readonly | readonly | 
+| 10| accesskey | accesskey |  31| slot | slot | 98| rel | rel | 
+| 11| accessskey | accessskey |  32| spellcheck | spellcheck | 99| required | required | 
+| 12| autofocus | autofocus |  33| tabindex | tabindex | 100| size | size | 
+| 13| contenteditable | contenteditable |  34| title | title | 101| step | step | 
+| 14| dir | dir |  35| translate | translate | 102| typee | typee | 
+| 15| draggable | draggable |  36| virtualkeyboardpolicy | virtualkeyboardpolicy | 103| placeholder | placeholder | 
+| 16| enterkeyhint | enterkeyhint |  37| accept | accept | 104| text | text |
+| 17| exportparts | exportparts |  38| autocomplete | autocomplete | 105| scope | scope|
+| 18| hidden | hidden |  39| capture | capture | 106| colspan | colspan |
+| 19| inert | inert |  40| crossorigin | crossorigin | 107|aria-describedby|aria_describedby|
+| 20| inputmode | inputmode |  41| dirname | dirname | 108|aria-label|aria_label|
+| 21| is | iss |  42| disabled | disabled | 109|selected|selected|
 ## LICENSE
 
 Distributed under the MIT License. See `LICENSE` for more information.
