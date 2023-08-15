@@ -42,6 +42,7 @@
     - [**Dependencies**](#dependencies)
   - [In A Nutshell](#in-a-nutshell)
   - [How to Use?](#how-to-use)
+    - [Installation](#installation)
   - [Supported Elements](#supported-elements)
   - [Supported Attributes for each Element](#supported-attributes-for-each-element)
   - [LICENSE](#license)
@@ -140,6 +141,9 @@ h = Html(data=(
 
 
 
+### Installation 
+
+Just run following command in the Terminal or CMD
 ```bash
 pip install inui --upgrade
 ```
