@@ -1,5 +1,6 @@
 from inui.config.replaces import replace
 from inui.prettify import Pretiffy
+from inui.hotreload import HotReload
 
 
 class BaseElement:
@@ -286,6 +287,7 @@ class BaseElement:
         self.startTagName = startTagName
         self.endTagName = endTagName
         self.tagname = tagName
+        # self.laststate = None
 
     def toHtml(self, prettify: bool = True):
         starttag = ""
@@ -321,6 +323,7 @@ class BaseElement:
                 "startTagName",
                 "tagname",
                 "endTagName",
+                "laststate",
             ]:
                 self.attributes[i] = self.__dict__[i]
         for attribute in self.attributes:
@@ -338,6 +341,39 @@ class BaseElement:
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.toHtml(prettify=prettify))
+
+    # def __hotsave(self, delay, path, name, hotreloader: HotReload):
+    #     import os
+    #     import time
+    #     while True:
+    #         time.sleep(delay)
+    #         try:
+    #             html = self.toHtml()
+    #             if self.laststate != html:
+    #                 if self.laststate != None:
+    #                     print(self.toHtml())
+    #                     print(self.laststate)
+    #                     break
+    #                 hotreloader.text = html
+    #                 hotreloader.createTempFile()
+    #                 self.laststate = html
+    #         except Exception as e:
+    #             hotreloader.text = H1('error :'+str(e), style='color:red;')
+
+    # def hotreload(self, path='.', delay=1, recurse=True, name='index.html',
+    #               include='', exclude='', pattern='*', port=1904, ip='127.0.0.1', debug=False, webbrowser=True):
+    #     try:
+    #         import threading
+    #         server = HotReload( text = self.toHtml(), path=path, delay=delay, recurse=recurse,
+    #                            include=include, exclude=exclude, pattern=pattern, port=port, ip=ip, debug=debug)
+    #         t = threading.Thread(target=self.__hotsave,
+    #                              args=(delay, path, name, server))
+    #         t.start()
+    #         server.start_server(webbrowseropen=webbrowser)
+    #         return True
+    #     except Exception as e:
+    #         print(e)
+    #         return False
 
     def __str__(self):
         return self.toHtml()
@@ -607,7 +643,6 @@ class BaseVoidElement:
         self.ondurationchange = ondurationchange
         self.onemptied = onemptied
         self.onended = onended
-        self.onerror = onerror
         self.onloadeddata = onloadeddata
         self.onloadedmetadata = onloadedmetadata
         self.onloadstart = onloadstart
@@ -657,6 +692,17 @@ class BaseVoidElement:
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.toHtml(prettify=prettify))
+
+    def hotreload(self, path='.', delay=None, recurse=True,
+                  include='', exclude='', pattern='*', port=1904, ip='127.0.0.1', debug=False, webbrowser=True):
+        try:
+            server = HotReload(text=self, path=path, delay=delay, recurse=recurse,
+                               include=include, exclude=exclude, pattern=pattern, port=port, ip=ip, debug=debug)
+            server.start_server(webbrowseropen=webbrowser)
+            return True
+        except Exception as e:
+            print(e)
+            return False
 
     def __str__(self):
         return self.toHtml()
@@ -995,7 +1041,6 @@ class Abbr(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -1279,7 +1324,6 @@ class Doctype(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -1627,7 +1671,6 @@ class Acronym(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -1973,7 +2016,6 @@ class Address(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -2437,7 +2479,6 @@ class A(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -2721,7 +2762,6 @@ class Link(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -3003,7 +3043,6 @@ class Doctype(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -3353,7 +3392,6 @@ class Abbr(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -3703,7 +3741,6 @@ class Acronym(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -4049,7 +4086,6 @@ class Address(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -4513,7 +4549,6 @@ class A(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -4797,7 +4832,6 @@ class Link(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -5191,7 +5225,6 @@ class Script(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -5607,7 +5640,6 @@ class Applet(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -5891,7 +5923,6 @@ class Area(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -6275,7 +6306,6 @@ class Article(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -6327,7 +6357,7 @@ class Aside(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
 
     `Example:` Using Style in HTML aside Tag:
 
@@ -6377,7 +6407,7 @@ class Aside(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20210204133431/aside.png)
 
     `Example:` Using Style in HTML aside Tag:
 
@@ -6665,7 +6695,6 @@ class Aside(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -6951,7 +6980,6 @@ class Audio(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -7235,7 +7263,6 @@ class Base(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -7517,7 +7544,6 @@ class Basefont(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -7863,7 +7889,6 @@ class Bdi(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -8223,7 +8248,6 @@ class Bdo(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -8507,7 +8531,6 @@ class Bgsound(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -8881,7 +8904,6 @@ class Big(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -8908,7 +8930,7 @@ class Blockquote(BaseElement):
     The <blockquote> tag in [`HTML`](https://www.geeksforgeeks.org/html/) is used to display long quotations (a section that is quoted from another source). It changes the alignment to make it unique from others. It contains both opening and closing tags. In blockquote tags, we can use elements like headings, lists, paragraphs, etc.
 
     `Note:` The <blockquote> tag in HTML4.1 defines the long quotation i.e. quotations that span multiple lines. But in HTML5, the <blockquote> tag specifies the section that is quoted from other sources.
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -8949,7 +8971,7 @@ class Blockquote(BaseElement):
     The <blockquote> tag in [`HTML`](https://www.geeksforgeeks.org/html/) is used to display long quotations (a section that is quoted from another source). It changes the alignment to make it unique from others. It contains both opening and closing tags. In blockquote tags, we can use elements like headings, lists, paragraphs, etc.
 
     `Note:` The <blockquote> tag in HTML4.1 defines the long quotation i.e. quotations that span multiple lines. But in HTML5, the <blockquote> tag specifies the section that is quoted from other sources.
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -9253,7 +9275,6 @@ class Blockquote(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -9277,7 +9298,7 @@ class Blockquote(BaseElement):
 
 class Body(BaseElement):
     """
-      The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.
+        The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.
 
 
     `Syntax:`
@@ -9327,7 +9348,7 @@ class Body(BaseElement):
     * Safari
 
 
-      The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.
+        The <body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within <html>tag. The <body> tag is the last child of <html> tag. A body tag contains starting as well as an ending tag.
 
 
     `Syntax:`
@@ -9643,7 +9664,6 @@ class Body(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -10039,7 +10059,6 @@ class B(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -10323,7 +10342,6 @@ class Br(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -10347,7 +10365,7 @@ class Button(BaseElement):
     """
     The <button> tag in HTML is used to define the clickable button. <button> tag is used to submit the content. The images and text content can use inside <button> tag.Different browsers use different default types for <button>. Buttons can be styled using CSS.
 
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -10386,7 +10404,7 @@ class Button(BaseElement):
     * Opera
     The <button> tag in HTML is used to define the clickable button. <button> tag is used to submit the content. The images and text content can use inside <button> tag.Different browsers use different default types for <button>. Buttons can be styled using CSS.
 
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -10689,7 +10707,6 @@ class Button(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -11077,7 +11094,6 @@ class Caption(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -11097,6 +11113,8 @@ class Caption(BaseElement):
             endTagName=None,
             tagName="caption",
         )
+
+
 class Canvas(BaseElement):
     """
     The <canvas> tag in HTML is used to draw graphics on a web page using JavaScript. It can be used to draw paths, boxes, texts, gradients, and adding images. By default, it does not contain borders and text.
@@ -11477,7 +11495,6 @@ class Canvas(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -11867,7 +11884,6 @@ class Center(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -12211,7 +12227,6 @@ class Cite(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -12601,7 +12616,6 @@ class Code(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -12625,7 +12639,7 @@ class Code(BaseElement):
 
 class Colgroup(BaseElement):
     """
-      This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
+        This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
 
     `Syntax:`
 
@@ -12667,7 +12681,7 @@ class Colgroup(BaseElement):
 
 
 
-      This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
+        This tag is used to specify the group of one or more columns in a table for formatting. It is useful for applying styles to entire columns, instead of repeating the styles for each column, and for each row. Use the [<col>](https://www.geeksforgeeks.org/html-col-tag/) tag within the <colgroup> tag to define different properties to a column within a <colgroup>. Most of the attributes in HTML 4.01 <colgroup> are not supported in HTML5.
 
     `Syntax:`
 
@@ -12975,7 +12989,6 @@ class Colgroup(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -13259,7 +13272,6 @@ class Col(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -13543,7 +13555,6 @@ class Comment(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -13563,8 +13574,9 @@ class Comment(BaseElement):
             endTagName='--',
             tagName=None,
         )
+
     def toHtml(self, prettify: bool = True):
-        
+
         html = f"""\n<!-- {self.attributesToHtml()}>\n{self.dataToHtml()}\n -->"""
         if prettify:
             return str(Pretiffy(html))
@@ -13909,7 +13921,6 @@ class Data(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -14277,7 +14288,6 @@ class Datalist(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -14649,7 +14659,6 @@ class Dd(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -15081,7 +15090,6 @@ class Dfn(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -15461,7 +15469,6 @@ class Del(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -15869,7 +15876,6 @@ class Details(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -16215,7 +16221,6 @@ class Dialog(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -16591,7 +16596,6 @@ class Dir(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -16877,7 +16881,6 @@ class Div(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -17227,7 +17230,6 @@ class Dl(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -17513,7 +17515,6 @@ class Ulembed(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -17567,7 +17568,7 @@ class Fieldset(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Suggest article for video:</div> <!--HTML fieldset tag starts here--><fieldset><legend>JAVA:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--> <br> <!--HTML fieldset tag starts here--><fieldset><legend>PHP:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210921111740/Screenshot20210921111714.png)<fieldset> tag to group the related element
@@ -17612,7 +17613,7 @@ class Fieldset(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h2>HTML <fieldset> Tag</h2><form><div class="title">Suggest article for video:</div> <!--HTML fieldset tag starts here--><fieldset><legend>JAVA:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--> <br> <!--HTML fieldset tag starts here--><fieldset><legend>PHP:</legend>Title:<input type="text"><br>Link:<input type="text"><br>User ID:<input type="text"></fieldset><!--HTML fieldset tag ends here--></form></body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210921111740/Screenshot20210921111714.png)<fieldset> tag to group the related element
@@ -17893,7 +17894,6 @@ class Fieldset(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -18263,7 +18263,6 @@ class Figcaption(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -18631,7 +18630,6 @@ class Figure(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -19105,7 +19103,6 @@ class Font(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -19497,7 +19494,6 @@ class Footer(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -19855,7 +19851,6 @@ class Form(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -20139,7 +20134,6 @@ class Frame(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -20539,7 +20533,6 @@ class Frameset(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -20959,7 +20952,6 @@ class Head(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -21000,7 +20992,7 @@ class Header(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3><hr><article><header><h3>GeeksforGeeks Learning</h3> <p>Posted by GFG</p>   <p>A Computer Science portal for geeks.It contains well written, well thoughtand well explained computer science andprogramming articles.</p>   </header></article></body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210921233939/1.jpg)HTML <header> Tag
@@ -21054,7 +21046,7 @@ class Header(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML Header Tag</h3><hr><article><header><h3>GeeksforGeeks Learning</h3> <p>Posted by GFG</p>   <p>A Computer Science portal for geeks.It contains well written, well thoughtand well explained computer science andprogramming articles.</p>   </header></article></body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210921233939/1.jpg)HTML <header> Tag
@@ -21357,7 +21349,6 @@ class Header(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -21643,7 +21634,6 @@ class H1(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -21929,7 +21919,6 @@ class H2(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -22215,7 +22204,6 @@ class H3(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -22501,7 +22489,6 @@ class H4(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -22787,7 +22774,6 @@ class H5(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -23073,7 +23059,6 @@ class H6(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -23455,7 +23440,6 @@ class Hgroup(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -23739,7 +23723,6 @@ class Hr(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -24119,7 +24102,6 @@ class Html(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -24405,7 +24387,6 @@ class Iframe(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -24691,7 +24672,6 @@ class Img(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -24975,7 +24955,6 @@ class Input(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -25361,7 +25340,6 @@ class Ins(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -25645,7 +25623,6 @@ class Isindex(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -26059,7 +26036,6 @@ class I(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -26449,7 +26425,6 @@ class Kbd(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -26733,7 +26708,6 @@ class Keygen(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -27123,7 +27097,6 @@ class Label(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -27503,7 +27476,6 @@ class Legend(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -27915,7 +27887,6 @@ class Li(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -28277,7 +28248,6 @@ class Main(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -28657,7 +28627,6 @@ class Mark(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -28730,7 +28699,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Example:`
+        `Example:`
 
 
 
@@ -28748,7 +28717,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Example:`
+        `Example:`
 
 
 
@@ -28766,7 +28735,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Supported Browsers`
+        `Supported Browsers`
 
     * Google Chrome 1.0
     * Edge 12.0
@@ -28825,7 +28794,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Example:`
+        `Example:`
 
 
 
@@ -28843,7 +28812,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Example:`
+        `Example:`
 
 
 
@@ -28861,7 +28830,7 @@ class Marquee(BaseElement):
 
     GeeksforGeeks
     A computer science portal for geeks
-      `Supported Browsers`
+        `Supported Browsers`
 
     * Google Chrome 1.0
     * Edge 12.0
@@ -29137,7 +29106,6 @@ class Marquee(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -29515,7 +29483,6 @@ class Menuitem(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -29799,7 +29766,6 @@ class Meta(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -30169,7 +30135,6 @@ class Meter(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -30196,7 +30161,7 @@ class Nav(BaseElement):
     The <nav> tag is used for declaring the navigational section in HTML documents. Websites typically have sections dedicated to navigational links, which enables users to navigate the site. These links can be placed inside a nav tag. In other words, the nav element represents a section of the page whose purpose is to provide navigational links, either in the current document or to another document. The links in the nav element may point to other webpages or to different sections of the same webpage. It is a semantic element. Common examples of the nav elements are menus, tables, contents, and indexes.
 
     The nav tag is reserved for primary navigation areas, like the main menu across the top of the page or section. A document may have several nav elements, for example, site navigation and one for intra-page navigation. Links within nav tag can be codes within a ul list or simply coded as separate links, without ul element. This element makes it much easier to create a navigation menu, creates a neat horizontal menu of text links, and helps screen reading software to correctly identify primary navigation areas in the document.
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -30226,7 +30191,7 @@ class Nav(BaseElement):
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210212124030/nav2.PNG)
 
-      `Supported Browser:`
+        `Supported Browser:`
 
     * Google Chrome 5.0 and above
     * Edge 12 and above
@@ -30239,7 +30204,7 @@ class Nav(BaseElement):
     The <nav> tag is used for declaring the navigational section in HTML documents. Websites typically have sections dedicated to navigational links, which enables users to navigate the site. These links can be placed inside a nav tag. In other words, the nav element represents a section of the page whose purpose is to provide navigational links, either in the current document or to another document. The links in the nav element may point to other webpages or to different sections of the same webpage. It is a semantic element. Common examples of the nav elements are menus, tables, contents, and indexes.
 
     The nav tag is reserved for primary navigation areas, like the main menu across the top of the page or section. A document may have several nav elements, for example, site navigation and one for intra-page navigation. Links within nav tag can be codes within a ul list or simply coded as separate links, without ul element. This element makes it much easier to create a navigation menu, creates a neat horizontal menu of text links, and helps screen reading software to correctly identify primary navigation areas in the document.
-      `Syntax:`
+        `Syntax:`
 
 
 
@@ -30269,7 +30234,7 @@ class Nav(BaseElement):
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210212124030/nav2.PNG)
 
-      `Supported Browser:`
+        `Supported Browser:`
 
     * Google Chrome 5.0 and above
     * Edge 12 and above
@@ -30545,7 +30510,6 @@ class Nav(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -30590,7 +30554,7 @@ class Nobr(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827102845/Kazam_screencast_00000-1.gif)
+        ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827102845/Kazam_screencast_00000-1.gif)
 
     `Supported Browsers:` The browsers supported by `HTML <nobr>` tag are listed below:
 
@@ -30620,7 +30584,7 @@ class Nobr(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827102845/Kazam_screencast_00000-1.gif)
+        ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190827102845/Kazam_screencast_00000-1.gif)
 
     `Supported Browsers:` The browsers supported by `HTML <nobr>` tag are listed below:
 
@@ -30895,7 +30859,6 @@ class Nobr(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -31243,7 +31206,6 @@ class Noembed(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -31593,7 +31555,6 @@ class Noscript(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -31973,7 +31934,6 @@ class Object(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -32363,7 +32323,6 @@ class Optgroup(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -32741,7 +32700,6 @@ class Option(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -33129,7 +33087,6 @@ class Output(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -33415,7 +33372,6 @@ class P(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -33699,7 +33655,6 @@ class Param(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -33983,7 +33938,6 @@ class Em(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -34365,7 +34319,6 @@ class Pre(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -34723,7 +34676,6 @@ class Progress(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -35097,7 +35049,6 @@ class Q(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -35451,7 +35402,6 @@ class Rp(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -35831,7 +35781,6 @@ class Rt(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -36197,7 +36146,6 @@ class Ruby(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -36551,7 +36499,6 @@ class S(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -36905,7 +36852,6 @@ class Samp(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -37301,7 +37247,6 @@ class Script(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -37685,7 +37630,6 @@ class Section(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -38147,7 +38091,6 @@ class Small(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -38200,7 +38143,7 @@ class Source(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121240/source11.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121240/source11.png)
 
     `Example 2:` This example uses <source> tag with the audio media files.
 
@@ -38211,7 +38154,7 @@ class Source(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121242/source21.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121242/source21.png)
 
     `Supported Browsers:` The browsers supported by `HTML <source> Tag` are listed below:
 
@@ -38252,7 +38195,7 @@ class Source(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121240/source11.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121240/source11.png)
 
     `Example 2:` This example uses <source> tag with the audio media files.
 
@@ -38263,7 +38206,7 @@ class Source(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121242/source21.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190821121242/source21.png)
 
     `Supported Browsers:` The browsers supported by `HTML <source> Tag` are listed below:
 
@@ -38541,7 +38484,6 @@ class Source(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -38825,7 +38767,6 @@ class Spacer(BaseVoidElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -39109,7 +39050,6 @@ class Span(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -39479,7 +39419,6 @@ class Strike(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -39855,7 +39794,6 @@ class Strong(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -40343,7 +40281,6 @@ class Style(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -40629,7 +40566,6 @@ class Sub(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -40915,7 +40851,6 @@ class Sup(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -41277,7 +41212,6 @@ class Summary(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -41563,7 +41497,6 @@ class Svg(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -41849,7 +41782,6 @@ class Table(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -42209,7 +42141,6 @@ class Tbody(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -42276,7 +42207,7 @@ class Td(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png)
 
     `Supported Browsers:` The browser supported by `td tag` are listed below
 
@@ -42331,7 +42262,7 @@ class Td(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190913124521/td.png)
 
     `Supported Browsers:` The browser supported by `td tag` are listed below
 
@@ -42609,7 +42540,6 @@ class Td(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -42650,7 +42580,7 @@ class Template(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tag willbe hidden from the client.</p>    <!-- Html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><h4>GeeksforGeeks Offline Courses</h4><ul><li>DSA</li><li>Placement & Interview Preparation</li><li>Web Development</li><li>Algorithms & basic programming</li></ul></template><!-- Html template tag ends here --> <p>End of the example of template tag</p> </body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210922103742/1.jpg)HTML template tag
@@ -42701,7 +42631,7 @@ class Template(BaseElement):
     ```html
     <!DOCTYPE html><html><body><h1>GeeksforGeeks</h1><h3>HTML template tag</h3> <p>Content inside a template tag willbe hidden from the client.</p>    <!-- Html script tag starts here --><template><h2>GeeksforGeeks: A computer science portal</h2><h4>GeeksforGeeks Offline Courses</h4><ul><li>DSA</li><li>Placement & Interview Preparation</li><li>Web Development</li><li>Algorithms & basic programming</li></ul></template><!-- Html template tag ends here --> <p>End of the example of template tag</p> </body></html> |
 
-      ```
+        ```
     `Output:`
 
     ![](https://media.geeksforgeeks.org/wp-content/uploads/20210922103742/1.jpg)HTML template tag
@@ -43001,7 +42931,6 @@ class Template(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -43025,7 +42954,7 @@ class Template(BaseElement):
 
 class Tfoot(BaseElement):
     """
-      The <tfoot> tag in HTML is used to give footer group of content. This tag is used in HTML table with header and body which is known as “thead” and “tbody”. <tfoot> tag is child tag of table and parent tag of <tr> and <td>.
+        The <tfoot> tag in HTML is used to give footer group of content. This tag is used in HTML table with header and body which is known as “thead” and “tbody”. <tfoot> tag is child tag of table and parent tag of <tr> and <td>.
 
     `Syntax:`
 
@@ -43060,7 +42989,7 @@ class Tfoot(BaseElement):
     * Opera
 
 
-      The <tfoot> tag in HTML is used to give footer group of content. This tag is used in HTML table with header and body which is known as “thead” and “tbody”. <tfoot> tag is child tag of table and parent tag of <tr> and <td>.
+        The <tfoot> tag in HTML is used to give footer group of content. This tag is used in HTML table with header and body which is known as “thead” and “tbody”. <tfoot> tag is child tag of table and parent tag of <tr> and <td>.
 
     `Syntax:`
 
@@ -43361,7 +43290,6 @@ class Tfoot(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -43755,7 +43683,6 @@ class Th(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -44119,7 +44046,6 @@ class Thead(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -44469,7 +44395,6 @@ class Time(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -44815,7 +44740,6 @@ class Title(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -45179,7 +45103,6 @@ class Tr(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -45228,7 +45151,7 @@ class Track(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190610143516/track-srclang.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190610143516/track-srclang.png)
 
     `Supported Browsers:` The browsers supported by `HTML <track> tag` are listed below:
 
@@ -45263,7 +45186,7 @@ class Track(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190610143516/track-srclang.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190610143516/track-srclang.png)
 
     `Supported Browsers:` The browsers supported by `HTML <track> tag` are listed below:
 
@@ -45539,7 +45462,6 @@ class Track(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -45877,7 +45799,6 @@ class Tt(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -46255,7 +46176,6 @@ class U(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -46599,7 +46519,6 @@ class Var(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -46885,7 +46804,6 @@ class Video(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -47235,7 +47153,6 @@ class Wbr(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -47280,7 +47197,7 @@ class Xmp(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190827123607/xmp1.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190827123607/xmp1.png)
 
     `Supported Browsers:` The browsers supported by `HTML <xmp> tag` are listed below:
 
@@ -47310,7 +47227,7 @@ class Xmp(BaseElement):
     ```
     `Output:`
 
-      ![](https://media.geeksforgeeks.org/wp-content/uploads/20190827123607/xmp1.png)
+        ![](https://media.geeksforgeeks.org/wp-content/uploads/20190827123607/xmp1.png)
 
     `Supported Browsers:` The browsers supported by `HTML <xmp> tag` are listed below:
 
@@ -47585,7 +47502,6 @@ class Xmp(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
@@ -47871,7 +47787,6 @@ class Ol(BaseElement):
             ondurationchange=ondurationchange,
             onemptied=onemptied,
             onended=onended,
-            onerror=onerror,
             onloadeddata=onloadeddata,
             onloadedmetadata=onloadedmetadata,
             onloadstart=onloadstart,
