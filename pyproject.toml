@@ -16,7 +16,7 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["framework", "ui", "frontend","engine"]
+keywords = ['ui', 'python', 'html', 'framework','frontend','bootstrap']
 dependencies = [
     "beautifulsoup4","livereload"
 ]
