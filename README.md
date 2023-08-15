@@ -40,7 +40,6 @@
   - [Requirements](#requirements)
     - [**Python Compatibility**](#python-compatibility)
     - [**Dependencies**](#dependencies)
-  - [In A Nutshell](#in-a-nutshell)
   - [How to Use?](#how-to-use)
     - [Installation](#installation)
     - [Syntax](#syntax)
@@ -67,10 +66,6 @@ should not cause any problem, we recommend using the latest version of `python3`
 This package requires the following packages:
 
 * [BeautifulSoup](https://pypi.org/project/beautifulsoup4/ "BeautifulSoup4") - for Prettifing Code
-
-## In A Nutshell
-
-> you can find more examples in [examples](./examples) directory
 
 
 ## How to Use?
