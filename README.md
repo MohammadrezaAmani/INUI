@@ -43,6 +43,7 @@
   - [In A Nutshell](#in-a-nutshell)
   - [How to Use?](#how-to-use)
     - [Installation](#installation)
+    - [Syntax](#syntax)
   - [Supported Elements](#supported-elements)
   - [Supported Attributes for each Element](#supported-attributes-for-each-element)
   - [LICENSE](#license)
@@ -71,25 +72,46 @@ This package requires the following packages:
 
 > you can find more examples in [examples](./examples) directory
 
-```python3
-from inui.elements import (
-    Body,
-    Head,
-    Html,
-    Title,
-    H1,
-    Div,
-    Button,
-    Link,
-    Meta,
-    Span,
-    Form,
-    Input,
-    Script,
-    Comment,
-)
 
-h = Html(data=(
+## How to Use?
+
+> read the [documentation](https://inui.readthedocs.io/en/latest/) for more information
+
+
+
+### Installation 
+
+Just run following command in the Terminal or CMD
+```bash
+pip install inui --upgrade
+```
+
+### Syntax 
+
+The syntax of `INUI` package is very easy, you have some building blocks like HTML tags and you have to
+order them to create a new bigger block and in the last, you have your full project.
+
+Supppose that the you want to create `Hello World!` project. your buildin block is:
+
+```python
+H1("Hello World!")
+```
+Now you want to create application that contains `N` times `Hello World!`, in here we just put it in the 
+Body tag and use our python code to create our goal. See here:
+
+```python
+n = 10
+listOfH1 = [H1("Hello World!"+str(i)) for i in range(1,n+1) ]
+Body(listOfH1)
+
+```
+
+In the big picture we have some classes that take some values, first one is data that couldbe peice of text, or HTML code or another Elements
+(if the lentgh of giving data is bigger than one, we have to put them in the list,tuple or set and after use them) and second one is attribues,
+like this:
+
+```python
+output = Html(data=(
     Comment("this is black door =`) "),
     Head(
         (
@@ -133,19 +155,7 @@ h = Html(data=(
     ),
 ),)
 
-```
-
-## How to Use?
-
-> read the [documentation](https://inui.readthedocs.io/en/latest/) for more information
-
-
-
-### Installation 
-
-Just run following command in the Terminal or CMD
-```bash
-pip install inui --upgrade
+print(output)
 ```
 
 ## Supported Elements
