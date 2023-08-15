@@ -1,4 +1,17 @@
 class Colors:
+    """
+    Color Names Supported by All Browsers
+All modern browsers support the following 140 color names
+(click on a color name, or a hex value, to view the color as the background-color along with different text colors):
+
+    Returns:
+        str: Color Hex Code
+        
+    functions:
+        rgb_to_hex((r,g,b))  --> #RRGGBB
+        hex_to_rgb(hex) --> (r,g,b)
+        
+    """
     AliceBlue = "#F0F8FF"
     AntiqueWhite = "#FAEBD7"
     Aqua = "#00FFFF"
