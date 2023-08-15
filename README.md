@@ -43,7 +43,7 @@
   - [In A Nutshell](#in-a-nutshell)
   - [How to Use?](#how-to-use)
   - [Supported Elements](#supported-elements)
-  - [Supported Attributes](#supported-attributes)
+  - [Supported Attributes for each Element](#supported-attributes-for-each-element)
   - [LICENSE](#license)
 
 <!-- vscode-markdown-toc-config
@@ -194,7 +194,7 @@ pip install inui --upgrade
 | 44|figcaption | Figcaption| 88|p | P|
 
 
-## Supported Attributes
+## Supported Attributes for each Element
 
 | id | HTML | INUI | id | HTML | INUI | id | HTML | INUI |
 | --|-- | --------- | --|-- | --------- |--|-- | --------- |
