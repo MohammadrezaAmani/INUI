@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inui"
-version = "0.1.8"
+version = "0.2.0"
 description = "Powerful and Highly Customizable Python Library for UI"
 readme = "README.md"
 authors = [{ name = "Mohammadreza Amani", email = "more.amani@yahoo.com" }]
@@ -18,7 +18,7 @@ classifiers = [
 ]
 keywords = ["framework", "ui", "frontend","engine"]
 dependencies = [
-    "beautifulsoup4"
+    "beautifulsoup4","livereload"
 ]
 requires-python = ">=3.5"
 
