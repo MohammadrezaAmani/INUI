@@ -34738,3 +34738,757 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
+class Metadata(SVG):
+    """
+
+
+
+In this article
+---------------
+
+* [Usage context](#usage_context)
+* [Attributes](#attributes)
+* [DOM Interface](#dom_interface)
+* [Example](#example)
+* [Specifications](#specifications)
+* [Browser compatibility](#browser_compatibility)
+<metadata>
+==========
+
+The **`<metadata>`** [SVG](https://developer.mozilla.org//en-US/docs/Web/SVG) element adds metadata to SVG content. Metadata is structured information about data. The contents of `<metadata>` should be elements from other [XML](https://developer.mozilla.org//en-US/docs/Glossary/XML) [namespaces](https://developer.mozilla.org//en-US/docs/Glossary/Namespace) such as [RDF](https://developer.mozilla.org//en-US/docs/Glossary/RDF), [FOAF](https://en.wikipedia.org/wiki/FOAF_(ontology)), etc.
+
+[Usage context](#usage_context)
+-------------------------------
+
+
+
+|  |  |
+| --- | --- |
+| Categories | Descriptive element |
+| Permitted content | Any elements or character data |
+
+[Attributes](#attributes)
+-------------------------
+
+### [Global attributes](#global_attributes)
+
+* [Core attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute#core_attributes)
+* [Global event attributes](https://developer.mozilla.org//en-US/docs/Web/HTML/Global_attributes)
+### [Specific attributes](#specific_attributes)
+
+None.
+
+[DOM Interface](#dom_interface)
+-------------------------------
+
+This element implements the [`SVGMetadataElement`](https://developer.mozilla.org//en-US/docs/Web/API/SVGMetadataElement) interface.
+
+[Example](#example)
+-------------------
+
+html
+
+
+```
+<svg
+ width="400"
+ viewBox="0 0 400 300"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+  <metadata>
+    <rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:connect="http://www.w3.org/1999/08/29-svg-connections-in-RDF#">
+      <rdf:Description about="#CableA">
+        <connect:ends rdf:resource="#socket1" />
+        <connect:ends rdf:resource="#ComputerA" />
+      </rdf:Description>
+      <rdf:Description about="#CableB">
+        <connect:ends rdf:resource="#socket2" />
+        <connect:ends rdf:resource="#ComputerB" />
+      </rdf:Description>
+      <rdf:Description about="#CableN">
+        <connect:ends rdf:resource="#socket5" />
+        <connect:ends>Everything</connect:ends>
+      </rdf:Description>
+      <rdf:Description about="#Hub">
+        <connect:ends rdf:resource="#socket1" />
+        <connect:ends rdf:resource="#socket2" />
+        <connect:ends rdf:resource="#socket3" />
+        <connect:ends rdf:resource="#socket4" />
+        <connect:ends rdf:resource="#socket5" />
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <title>Network</title>
+  <desc>An example of a computer network based on a hub.</desc>
+
+  <style>
+ svg {
+ /\* Default styles to be inherited \*/
+ fill: white;
+ stroke: black;
+ }
+ text {
+ fill: black;
+ stroke: none;
+ }
+ path {
+ fill: none;
+ }
+ </style>
+
+  <!-- Define symbols used in the SVG -->
+  <defs>
+    <!-- hubPlug symbol. Used by hub symbol -->
+    <symbol id="hubPlug">
+      <desc>A 10BaseT/100baseTX socket</desc>
+      <path d="M0,10 h5 v-9 h12 v9 h5 v16 h-22 z" />
+    </symbol>
+
+    <!-- hub symbol -->
+    <symbol id="hub">
+      <desc>A typical 10BaseT/100BaseTX network hub</desc>
+      <text x="0" y="15">Hub</text>
+      <g transform="translate(0 20)">
+        <rect width="253" height="84" />
+        <rect width="229" height="44" x="12" y="10" />
+        <circle fill="red" cx="227" cy="71" r="7" />
+        <!-- five groups each using the defined socket -->
+        <g id="sock1et" transform="translate(25 20)">
+          <title>Socket 1</title>
+          <use xlink:href="#hubPlug" />
+        </g>
+        <g id="socket2" transform="translate(70 20)">
+          <title>Socket 2</title>
+          <use xlink:href="#hubPlug" />
+        </g>
+        <g id="socket3" transform="translate(115 20)">
+          <title>Socket 3</title>
+          <use xlink:href="#hubPlug" />
+        </g>
+        <g id="socket4" transform="translate(160 20)">
+          <title>Socket 4</title>
+          <use xlink:href="#hubPlug" />
+        </g>
+        <g id="socket5" transform="translate(205 20)">
+          <title>Socket 5</title>
+          <use xlink:href="#hubPlug" />
+        </g>
+      </g>
+    </symbol>
+
+    <!-- computer symbol -->
+    <symbol id="computer">
+      <desc>A common desktop PC</desc>
+      <g id="monitorStand" transform="translate(40 121)">
+        <title>Monitor stand</title>
+        <desc>
+          One of those cool swivelling monitor stands that sit under the monitor
+        </desc>
+        <path d="m0,0 S 10 10 40 12" />
+        <path d="m80,0 S 70 10 40 12" />
+        <path d="m0,20 L 10 10 S 40 12 70 10 L 80 20z" />
+      </g>
+      <g id="monitor">
+        <title>Monitor</title>
+        <desc>A very fancy monitor</desc>
+        <rect width="160" height="120" />
+        <rect fill="lightgrey" width="138" height="95" x="11" y="12" />
+      </g>
+      <g id="processor" transform="translate(0 142)">
+        <title>The computer</title>
+        <desc>A desktop computer - broad flat box style</desc>
+        <rect width="160" height="60" />
+        <g id="discDrive" transform="translate(70 8)">
+          <title>disc drive</title>
+          <desc>A built-in disc drive</desc>
+          <rect width="58" height="3" x="12" y="8" />
+          <rect width="8" height="2" x="12" y="15" />
+        </g>
+        <circle cx="135" cy="40" r="5" />
+      </g>
+    </symbol>
+  </defs>
+
+  <text x="0" y="15">Network</text>
+
+  <!-- Use the hub symbol. -->
+  <g id="Hub" transform="translate(80 45)">
+    <title>Hub</title>
+    <use xlink:href="#hub" transform="scale(0.75)" />
+  </g>
+
+  <!-- Use the computer symbol. -->
+  <g id="ComputerA" transform="translate(20 170)">
+    <title>Computer A</title>
+    <use xlink:href="#computer" transform="scale(0.5)" />
+  </g>
+
+  <!-- Use the same computer symbol. -->
+  <g id="ComputerB" transform="translate(300 170)">
+    <title>Computer B</title>
+    <use xlink:href="#computer" transform="scale(0.5)" />
+  </g>
+
+  <!-- Draw Cable A. -->
+  <g id="CableA" transform="translate(107 88)">
+    <title>Cable A</title>
+    <desc>10BaseT twisted pair cable</desc>
+    <path d="M0,0c100,140 50,140 -8,160" />
+  </g>
+
+  <!-- Draw Cable B. -->
+  <g id="CableB" transform="translate(142 88)">
+    <title>Cable B</title>
+    <desc>10BaseT twisted pair cable</desc>
+    <path d="M0,0c100,180 110,160 159,160" />
+  </g>
+
+  <!-- Draw Cable N. -->
+  <g id="CableN" transform="translate(242 88)">
+    <title>Cable N</title>
+    <desc>10BaseT twisted pair cable</desc>
+    <path d="M0,0c0,-70 20,-50 60,-50" />
+  </g>
+</svg>
+
+```
+[Specifications](#specifications)
+---------------------------------
+
+
+
+| Specification |
+| --- |
+| [Scalable Vector Graphics (SVG) 2 # MetadataElement](https://svgwg.org/svg2-draft/struct.html#MetadataElement) |
+
+[Browser compatibility](#browser_compatibility)
+-----------------------------------------------
+
+BCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.
+
+
+
+ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        accent_height = None,
+        accumulate = None,
+        additive = None,
+        alignment_baseline = None,
+        alphabetic = None,
+        amplitude = None,
+        arabic_form = None,
+        ascent = None,
+        attributeName = None,
+        attributeType = None,
+        azimuth = None,
+        baseFrequency = None,
+        baseline_shift = None,
+        baseProfile = None,
+        bbox = None,
+        begin = None,
+        bias = None,
+        by = None,
+        calcMode = None,
+        cap_height = None,
+        classs = None,
+        clip = None,
+        clip_path = None,
+        clip_rule = None,
+        clipPathUnits = None,
+        color = None,
+        color_interpolation = None,
+        color_interpolation_filters = None,
+        color_profile = None,
+        contentScriptType = None,
+        contentStyleType = None,
+        cursor = None,
+        cx = None,
+        cy = None,
+        d = None,
+        data______ = None,
+        decoding = None,
+        descent = None,
+        diffuseConstant = None,
+        direction = None,
+        display = None,
+        divisor = None,
+        dominant_baseline = None,
+        dur = None,
+        dx = None,
+        dy = None,
+        edgeMode = None,
+        elevation = None,
+        enable_background = None,
+        end = None,
+        exponent = None,
+        fill = None,
+        fill_opacity = None,
+        fill_rule = None,
+        filter = None,
+        filterRes = None,
+        filterUnits = None,
+        flood_color = None,
+        flood_opacity = None,
+        font_family = None,
+        font_size = None,
+        font_size_adjust = None,
+        font_stretch = None,
+        font_style = None,
+        font_variant = None,
+        font_weight = None,
+        fr = None,
+        fromm = None,
+        fx = None,
+        fy = None,
+        g1 = None,
+        g2 = None,
+        glyph_name = None,
+        glyph_orientation_horizontal = None,
+        glyph_orientation_vertical = None,
+        gradientTransform = None,
+        gradientUnits = None,
+        hanging = None,
+        height = None,
+        horiz_adv_x = None,
+        horiz_origin_x = None,
+        horiz_origin_y = None,
+        href = None,
+        id = None,
+        ideographic = None,
+        image_rendering = None,
+        inn = None,
+        in2 = None,
+        intercept = None,
+        k = None,
+        k1 = None,
+        k2 = None,
+        k3 = None,
+        k4 = None,
+        kernelMatrix = None,
+        kernelUnitLength = None,
+        kerning = None,
+        keyPoints = None,
+        keySplines = None,
+        keyTimes = None,
+        lang = None,
+        lengthAdjust = None,
+        letter_spacing = None,
+        lighting_color = None,
+        limitingConeAngle = None,
+        marker_end = None,
+        marker_mid = None,
+        marker_start = None,
+        markerHeight = None,
+        markerUnits = None,
+        markerWidth = None,
+        mask = None,
+        maskContentUnits = None,
+        maskUnits = None,
+        mathematical = None,
+        max = None,
+        media = None,
+        method = None,
+        min = None,
+        mode = None,
+        name = None,
+        numOctaves = None,
+        onclick = None,
+        opacity = None,
+        operator = None,
+        order = None,
+        orient = None,
+        orientation = None,
+        origin = None,
+        overflow = None,
+        overline_position = None,
+        overline_thickness = None,
+        paint_order = None,
+        panose_1 = None,
+        path = None,
+        pathLength = None,
+        patternContentUnits = None,
+        patternTransform = None,
+        patternUnits = None,
+        pointer_events = None,
+        points = None,
+        pointsAtX = None,
+        pointsAtY = None,
+        pointsAtZ = None,
+        preserveAlpha = None,
+        preserveAspectRatio = None,
+        primitiveUnits = None,
+        r = None,
+        radius = None,
+        refX = None,
+        refY = None,
+        repeatCount = None,
+        repeatDur = None,
+        requiredFeatures = None,
+        restart = None,
+        result = None,
+        rotate = None,
+        rx = None,
+        ry = None,
+        scale = None,
+        seed = None,
+        shape_rendering = None,
+        side = None,
+        slope = None,
+        spacing = None,
+        specularConstant = None,
+        specularExponent = None,
+        spreadMethod = None,
+        startOffset = None,
+        stdDeviation = None,
+        stemh = None,
+        stemv = None,
+        stitchTiles = None,
+        stop_color = None,
+        stop_opacity = None,
+        strikethrough_position = None,
+        strikethrough_thickness = None,
+        string = None,
+        stroke = None,
+        stroke_dasharray = None,
+        stroke_dashoffset = None,
+        stroke_linecap = None,
+        stroke_linejoin = None,
+        stroke_miterlimit = None,
+        stroke_opacity = None,
+        stroke_width = None,
+        style = None,
+        surfaceScale = None,
+        SVG___attribute_____crossorigin = None,
+        SVG___Conditional___Processing___Attributes = None,
+        SVG___Core___Attributes = None,
+        SVG___Event___Attributes = None,
+        SVG___Presentation___Attributes = None,
+        SVG___Styling___Attributes = None,
+        systemLanguage = None,
+        tabindex = None,
+        tableValues = None,
+        target = None,
+        targetX = None,
+        targetY = None,
+        text_anchor = None,
+        text_decoration = None,
+        text_rendering = None,
+        textLength = None,
+        to = None,
+        transform = None,
+        transform_origin = None,
+        typee = None,
+        u1 = None,
+        u2 = None,
+        underline_position = None,
+        underline_thickness = None,
+        unicode = None,
+        unicode_bidi = None,
+        unicode_range = None,
+        units_per_em = None,
+        v_alphabetic = None,
+        v_hanging = None,
+        v_ideographic = None,
+        v_mathematical = None,
+        values = None,
+        vector_effect = None,
+        version = None,
+        vert_adv_y = None,
+        vert_origin_x = None,
+        vert_origin_y = None,
+        viewBox = None,
+        viewTarget = None,
+        visibility = None,
+        width = None,
+        widths = None,
+        word_spacing = None,
+        writing_mode = None,
+        x = None,
+        x_height = None,
+        x1 = None,
+        x2 = None,
+        xChannelSelector = None,
+        xlink__arcrole = None,
+        xlink__href = None,
+        xlink__show = None,
+        xlink__title = None,
+        xlink__type = None,
+        xml__base = None,
+        xml__lang = None,
+        xml__space = None,
+        y = None,
+        y1 = None,
+        y2 = None,
+        yChannelSelector = None,
+        z = None,
+        zoomAndPan = None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            accent_height = accent_height,
+            accumulate = accumulate,
+            additive = additive,
+            alignment_baseline = alignment_baseline,
+            alphabetic = alphabetic,
+            amplitude = amplitude,
+            arabic_form = arabic_form,
+            ascent = ascent,
+            attributeName = attributeName,
+            attributeType = attributeType,
+            azimuth = azimuth,
+            baseFrequency = baseFrequency,
+            baseline_shift = baseline_shift,
+            baseProfile = baseProfile,
+            bbox = bbox,
+            begin = begin,
+            bias = bias,
+            by = by,
+            calcMode = calcMode,
+            cap_height = cap_height,
+            classs = classs,
+            clip = clip,
+            clip_path = clip_path,
+            clip_rule = clip_rule,
+            clipPathUnits = clipPathUnits,
+            color = color,
+            color_interpolation = color_interpolation,
+            color_interpolation_filters = color_interpolation_filters,
+            color_profile = color_profile,
+            contentScriptType = contentScriptType,
+            contentStyleType = contentStyleType,
+            cursor = cursor,
+            cx = cx,
+            cy = cy,
+            d = d,
+            data______ = data______,
+            decoding = decoding,
+            descent = descent,
+            diffuseConstant = diffuseConstant,
+            direction = direction,
+            display = display,
+            divisor = divisor,
+            dominant_baseline = dominant_baseline,
+            dur = dur,
+            dx = dx,
+            dy = dy,
+            edgeMode = edgeMode,
+            elevation = elevation,
+            enable_background = enable_background,
+            end = end,
+            exponent = exponent,
+            fill = fill,
+            fill_opacity = fill_opacity,
+            fill_rule = fill_rule,
+            filter = filter,
+            filterRes = filterRes,
+            filterUnits = filterUnits,
+            flood_color = flood_color,
+            flood_opacity = flood_opacity,
+            font_family = font_family,
+            font_size = font_size,
+            font_size_adjust = font_size_adjust,
+            font_stretch = font_stretch,
+            font_style = font_style,
+            font_variant = font_variant,
+            font_weight = font_weight,
+            fr = fr,
+            fromm = fromm,
+            fx = fx,
+            fy = fy,
+            g1 = g1,
+            g2 = g2,
+            glyph_name = glyph_name,
+            glyph_orientation_horizontal = glyph_orientation_horizontal,
+            glyph_orientation_vertical = glyph_orientation_vertical,
+            gradientTransform = gradientTransform,
+            gradientUnits = gradientUnits,
+            hanging = hanging,
+            height = height,
+            horiz_adv_x = horiz_adv_x,
+            horiz_origin_x = horiz_origin_x,
+            horiz_origin_y = horiz_origin_y,
+            href = href,
+            id = id,
+            ideographic = ideographic,
+            image_rendering = image_rendering,
+            inn = inn,
+            in2 = in2,
+            intercept = intercept,
+            k = k,
+            k1 = k1,
+            k2 = k2,
+            k3 = k3,
+            k4 = k4,
+            kernelMatrix = kernelMatrix,
+            kernelUnitLength = kernelUnitLength,
+            kerning = kerning,
+            keyPoints = keyPoints,
+            keySplines = keySplines,
+            keyTimes = keyTimes,
+            lang = lang,
+            lengthAdjust = lengthAdjust,
+            letter_spacing = letter_spacing,
+            lighting_color = lighting_color,
+            limitingConeAngle = limitingConeAngle,
+            marker_end = marker_end,
+            marker_mid = marker_mid,
+            marker_start = marker_start,
+            markerHeight = markerHeight,
+            markerUnits = markerUnits,
+            markerWidth = markerWidth,
+            mask = mask,
+            maskContentUnits = maskContentUnits,
+            maskUnits = maskUnits,
+            mathematical = mathematical,
+            max = max,
+            media = media,
+            method = method,
+            min = min,
+            mode = mode,
+            name = name,
+            numOctaves = numOctaves,
+            onclick = onclick,
+            opacity = opacity,
+            operator = operator,
+            order = order,
+            orient = orient,
+            orientation = orientation,
+            origin = origin,
+            overflow = overflow,
+            overline_position = overline_position,
+            overline_thickness = overline_thickness,
+            paint_order = paint_order,
+            panose_1 = panose_1,
+            path = path,
+            pathLength = pathLength,
+            patternContentUnits = patternContentUnits,
+            patternTransform = patternTransform,
+            patternUnits = patternUnits,
+            pointer_events = pointer_events,
+            points = points,
+            pointsAtX = pointsAtX,
+            pointsAtY = pointsAtY,
+            pointsAtZ = pointsAtZ,
+            preserveAlpha = preserveAlpha,
+            preserveAspectRatio = preserveAspectRatio,
+            primitiveUnits = primitiveUnits,
+            r = r,
+            radius = radius,
+            refX = refX,
+            refY = refY,
+            repeatCount = repeatCount,
+            repeatDur = repeatDur,
+            requiredFeatures = requiredFeatures,
+            restart = restart,
+            result = result,
+            rotate = rotate,
+            rx = rx,
+            ry = ry,
+            scale = scale,
+            seed = seed,
+            shape_rendering = shape_rendering,
+            side = side,
+            slope = slope,
+            spacing = spacing,
+            specularConstant = specularConstant,
+            specularExponent = specularExponent,
+            spreadMethod = spreadMethod,
+            startOffset = startOffset,
+            stdDeviation = stdDeviation,
+            stemh = stemh,
+            stemv = stemv,
+            stitchTiles = stitchTiles,
+            stop_color = stop_color,
+            stop_opacity = stop_opacity,
+            strikethrough_position = strikethrough_position,
+            strikethrough_thickness = strikethrough_thickness,
+            string = string,
+            stroke = stroke,
+            stroke_dasharray = stroke_dasharray,
+            stroke_dashoffset = stroke_dashoffset,
+            stroke_linecap = stroke_linecap,
+            stroke_linejoin = stroke_linejoin,
+            stroke_miterlimit = stroke_miterlimit,
+            stroke_opacity = stroke_opacity,
+            stroke_width = stroke_width,
+            style = style,
+            surfaceScale = surfaceScale,
+            SVG___attribute_____crossorigin = SVG___attribute_____crossorigin,
+            SVG___Conditional___Processing___Attributes = SVG___Conditional___Processing___Attributes,
+            SVG___Core___Attributes = SVG___Core___Attributes,
+            SVG___Event___Attributes = SVG___Event___Attributes,
+            SVG___Presentation___Attributes = SVG___Presentation___Attributes,
+            SVG___Styling___Attributes = SVG___Styling___Attributes,
+            systemLanguage = systemLanguage,
+            tabindex = tabindex,
+            tableValues = tableValues,
+            target = target,
+            targetX = targetX,
+            targetY = targetY,
+            text_anchor = text_anchor,
+            text_decoration = text_decoration,
+            text_rendering = text_rendering,
+            textLength = textLength,
+            to = to,
+            transform = transform,
+            transform_origin = transform_origin,
+            typee = typee,
+            u1 = u1,
+            u2 = u2,
+            underline_position = underline_position,
+            underline_thickness = underline_thickness,
+            unicode = unicode,
+            unicode_bidi = unicode_bidi,
+            unicode_range = unicode_range,
+            units_per_em = units_per_em,
+            v_alphabetic = v_alphabetic,
+            v_hanging = v_hanging,
+            v_ideographic = v_ideographic,
+            v_mathematical = v_mathematical,
+            values = values,
+            vector_effect = vector_effect,
+            version = version,
+            vert_adv_y = vert_adv_y,
+            vert_origin_x = vert_origin_x,
+            vert_origin_y = vert_origin_y,
+            viewBox = viewBox,
+            viewTarget = viewTarget,
+            visibility = visibility,
+            width = width,
+            widths = widths,
+            word_spacing = word_spacing,
+            writing_mode = writing_mode,
+            x = x,
+            x_height = x_height,
+            x1 = x1,
+            x2 = x2,
+            xChannelSelector = xChannelSelector,
+            xlink__arcrole = xlink__arcrole,
+            xlink__href = xlink__href,
+            xlink__show = xlink__show,
+            xlink__title = xlink__title,
+            xlink__type = xlink__type,
+            xml__base = xml__base,
+            xml__lang = xml__lang,
+            xml__space = xml__space,
+            y = y,
+            y1 = y1,
+            y2 = y2,
+            yChannelSelector = yChannelSelector,
+            z = z,
+            zoomAndPan = zoomAndPan,
+            startTagName=None,
+            endTagName=None,
+            tagName="metadata",
+        )
+
+        
+
