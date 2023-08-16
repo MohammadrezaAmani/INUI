@@ -20,7 +20,7 @@ class Element:
         attind = " " * (indent + 4)
         attributes_str = "\n".join(
             [
-                f'{attind}{reverse_replace(attr)}="""{value}""",'
+                f"{attind}{reverse_replace(attr)}='''{value}''',"
                 for attr, value in self.attributes.items()
             ]
         )
@@ -32,11 +32,11 @@ class Element:
         if self.data:
             if self.data.strip():
                 # print(self.data)
-                element_str += f'"""{self.data}""",' if self.data else ""
+                element_str += f"'''{self.data}'''," if self.data else ""
         for child in self.children:
             if type(child) == str:
                 # print(type(child))
-                element_str += '\n"' "" + child.__str__(indent + 8) + '""", '
+                element_str += "\n'''" + child.__str__(indent + 8) + ", '''"
             else:
                 element_str += "\n" + child.__str__(indent + 8) + ", "
         if self.data or self.children:
