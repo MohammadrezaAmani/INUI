@@ -327,9 +327,7 @@ class BaseElement:
             ]:
                 self.attributes[i] = self.__dict__[i]
         for attribute in self.attributes:
-            name = attribute
-            if attribute in replace:
-                name = replace[attribute]
+            name = replace(attribute)
             if type(self.attributes[attribute]) == str:
                 text += '%s="%s" ' % (name, self.attributes[attribute])
 
@@ -677,9 +675,7 @@ class BaseVoidElement:
             ]:
                 self.attributes[i] = self.__dict__[i]
         for attribute in self.attributes:
-            name = attribute
-            if attribute in replace:
-                name = replace[attribute]
+            name = replace(attribute)
             if type(self.attributes[attribute]) == str:
                 text += '%s="%s" ' % (name, self.attributes[attribute])
 
