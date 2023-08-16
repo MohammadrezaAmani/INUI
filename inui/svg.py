@@ -33203,3 +33203,849 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
+class Marker(SVG):
+    """
+
+
+
+In this article
+---------------
+
+* [Examples](#examples)
+* [Attributes](#attributes)
+* [Usage notes](#usage_notes)
+* [Specifications](#specifications)
+* [Browser compatibility](#browser_compatibility)
+* [See also](#see_also)
+<marker>
+========
+
+The **`<marker>`** element defines a graphic used for drawing arrowheads or polymarkers on a given [`<path>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/path), [`<line>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/line), [`<polyline>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/polyline) or [`<polygon>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/polygon) element.
+
+
+Markers can be attached to shapes using the `[marker-start](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-start)`, `[marker-mid](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-mid)`, and `[marker-end](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-end)` properties.
+
+[Examples](#examples)
+---------------------
+
+### [Drawing arrowheads](#drawing_arrowheads)
+
+
+ The following example shows how to draw an arrowhead on a line and on a curved path.
+ For the curved path, an arrowhead is drawn at each point with a `[marker-mid](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-mid)` marker.
+
+
+
+
+```
+html,
+body,
+svg {
+  height: 100%;
+}
+
+```
+
+html
+
+
+```
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- A marker to be used as an arrowhead -->
+    <marker
+ id="arrow"
+ viewBox="0 0 10 10"
+ refX="5"
+ refY="5"
+ markerWidth="6"
+ markerHeight="6"
+ orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+
+  <!-- A line with a marker -->
+  <line
+ x1="10"
+ y1="10"
+ x2="90"
+ y2="90"
+ stroke="black"
+ marker-end="url(#arrow)" />
+
+  <!-- A curved path with markers -->
+  <path
+ d="M 110 10
+ C 120 20, 130 20, 140 10
+ C 150 0, 160 0, 170 10
+ C 180 20, 190 20, 200 10"
+ stroke="black"
+ fill="none"
+ marker-start="url(#arrow)"
+ marker-mid="url(#arrow)"
+ marker-end="url(#arrow)" />
+</svg>
+
+```
+### [Drawing polymarkers](#drawing_polymarkers)
+
+
+```
+html,
+body,
+svg {
+  height: 100%;
+}
+
+```
+
+html
+
+
+```
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrowhead marker definition -->
+    <marker
+ id="arrow"
+ viewBox="0 0 10 10"
+ refX="5"
+ refY="5"
+ markerWidth="6"
+ markerHeight="6"
+ orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+
+    <!-- Dot marker definition -->
+    <marker
+ id="dot"
+ viewBox="0 0 10 10"
+ refX="5"
+ refY="5"
+ markerWidth="5"
+ markerHeight="5">
+      <circle cx="5" cy="5" r="5" fill="red" />
+    </marker>
+  </defs>
+
+  <!-- Coordinate axes with an arrowhead in both directions -->
+  <polyline
+ points="10,10 10,90 90,90"
+ fill="none"
+ stroke="black"
+ marker-start="url(#arrow)"
+ marker-end="url(#arrow)" />
+
+  <!-- Data line with polymarkers -->
+  <polyline
+ points="15,80 29,50 43,60 57,30 71,40 85,15"
+ fill="none"
+ stroke="grey"
+ marker-start="url(#dot)"
+ marker-mid="url(#dot)"
+ marker-end="url(#dot)" />
+</svg>
+
+```
+### [Using context fill and stroke](#using_context_fill_and_stroke)
+
+The following example shows how to use the `context-fill` and `context-stroke` values to make a marker use the same fill and stroke as the shape it is attached to.
+
+
+html
+
+
+```
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <marker
+ id="circle"
+ markerWidth="6"
+ markerHeight="6"
+ refX="3"
+ refY="3"
+ markerUnits="strokeWidth">
+    <circle cx="3" cy="3" r="2" stroke="context-stroke" fill="context-fill" />
+  </marker>
+
+  <style>
+ path {
+ marker: url(#circle);
+ }
+ </style>
+
+  <path d="M 10,10 30,10 h 10" stroke="black" />
+  <path d="M 10,20 30,20 h 10" stroke="blue" fill="red" />
+  <path d="M 10,30 30,30 h 10" stroke="red" fill="none" />
+  <path d="M 10,40 30,40 h 10" stroke="gray" fill="blue" stroke-width="1.5" />
+</svg>
+
+```
+
+
+```
+html,
+body,
+svg {
+  height: 100%;
+}
+
+```
+[Attributes](#attributes)
+-------------------------
+
+
+`[markerHeight](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/markerHeight)`
+
+
+ This attribute defines the height of the marker viewport.
+ *Value type*: **[<length>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+
+
+
+
+`[markerUnits](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/markerUnits)`
+
+
+ This attribute defines the coordinate system for the attributes `markerWidth`, `markerHeight` and the contents of the `<marker>`.
+ *Value type*: `userSpaceOnUse`|`strokeWidth` ; *Default value*: `strokeWidth`; *Animatable*: **yes**
+
+
+
+
+`[markerWidth](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/markerWidth)`
+
+
+ This attribute defines the width of the marker viewport.
+ *Value type*: **[<length>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+
+
+
+
+`[orient](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/orient)`
+
+
+ This attribute defines the orientation of the marker relative to the shape it is attached to.
+ *Value type*: `auto`|`auto-start-reverse`|**[<angle>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#angle)** ; *Default value*: `0`; *Animatable*: **yes**
+
+
+
+
+`[preserveAspectRatio](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/preserveAspectRatio)`
+
+
+ This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.
+ *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
+
+
+
+
+`[refX](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/refX)`
+
+
+ This attribute defines the x coordinate for the reference point of the marker.
+ *Value type*: `left`|`center`|`right`|**[<coordinate>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+
+
+
+
+`[refY](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/refY)`
+
+
+ This attribute defines the y coordinate for the reference point of the marker.
+ *Value type*: `top`|`center`|`bottom`|**[<coordinate>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+
+
+
+
+`[viewBox](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/viewBox)`
+
+
+ This attribute defines the bound of the SVG viewport for the current SVG fragment.
+ *Value type*: **[<list-of-numbers>](https://developer.mozilla.org//en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**
+
+
+
+
+### [Global attributes](#global_attributes)
+
+
+[Core Attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/Core)
+
+Most notably: `[id](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/id)`, `[tabindex](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/tabindex)`
+
+
+
+[Styling Attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/Styling)
+`[class](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/class)`, `[style](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/style)`
+[Conditional Processing Attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+
+Most notably: `[requiredExtensions](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/requiredExtensions "This is a link to an unwritten page")`, `[systemLanguage](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/systemLanguage)`
+
+
+
+[Presentation Attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/Presentation)
+
+Most notably: `[clip-path](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/clip-path)`, `[clip-rule](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/clip-rule)`, `[color](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/color)`, `[color-interpolation](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/color-interpolation)`, `[color-rendering](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/color-rendering "This is a link to an unwritten page")`, `[cursor](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/cursor)`, `[display](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/display)`, `[fill](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/fill)`, `[fill-opacity](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/fill-opacity)`, `[fill-rule](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/fill-rule)`, `[filter](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/filter)`, `[mask](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/mask)`, `[opacity](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/opacity)`, `[pointer-events](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/pointer-events)`, `[shape-rendering](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/shape-rendering)`, `[stroke](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke)`, `[stroke-dasharray](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-dasharray)`, `[stroke-dashoffset](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-dashoffset)`, `[stroke-linecap](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-linecap)`, `[stroke-linejoin](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-linejoin)`, `[stroke-miterlimit](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-miterlimit)`, `[stroke-opacity](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-opacity)`, `[stroke-width](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/stroke-width)`, `[transform](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/transform)`, `[vector-effect](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/vector-effect)`, `[visibility](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/visibility)`
+
+
+
+ARIA Attributes
+
+`aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+
+
+
+[Usage notes](#usage_notes)
+---------------------------
+
+
+
+|  |  |
+| --- | --- |
+| Categories | Container element |
+| Permitted content | Any number of the following elements, in any order:[Animation elements](https://developer.mozilla.org//en-US/docs/Web/SVG/Element#animation_elements)[Descriptive elements](https://developer.mozilla.org//en-US/docs/Web/SVG/Element#descriptive_elements)[Shape elements](https://developer.mozilla.org//en-US/docs/Web/SVG/Element#shape_elements)[Structural elements](https://developer.mozilla.org//en-US/docs/Web/SVG/Element#structural_elements)[Gradient elements](https://developer.mozilla.org//en-US/docs/Web/SVG/Element#gradient_elements)[`<a>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/a), [`<clipPath>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/clipPath), `<color-profile>`, [`<cursor>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/cursor), [`<filter>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/filter), [`<font>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/font), [`<font-face>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/font-face), [`<foreignObject>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/foreignObject), [`<image>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/image), [`<marker>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/marker), [`<mask>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/mask), [`<pattern>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/pattern), [`<script>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/script), [`<style>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/style), [`<switch>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/switch), [`<text>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/text), [`<view>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/view) |
+
+[Specifications](#specifications)
+---------------------------------
+
+
+
+| Specification |
+| --- |
+| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/painting.html#MarkerElement)  |
+
+[Browser compatibility](#browser_compatibility)
+-----------------------------------------------
+
+BCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.
+
+[See also](#see_also)
+---------------------
+
+* Related marker properties: `[marker-start](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-start)`, `[marker-mid](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-mid)`, and `[marker-end](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/marker-end)`
+
+
+ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        accent_height = None,
+        accumulate = None,
+        additive = None,
+        alignment_baseline = None,
+        alphabetic = None,
+        amplitude = None,
+        arabic_form = None,
+        ascent = None,
+        attributeName = None,
+        attributeType = None,
+        azimuth = None,
+        baseFrequency = None,
+        baseline_shift = None,
+        baseProfile = None,
+        bbox = None,
+        begin = None,
+        bias = None,
+        by = None,
+        calcMode = None,
+        cap_height = None,
+        classs = None,
+        clip = None,
+        clip_path = None,
+        clip_rule = None,
+        clipPathUnits = None,
+        color = None,
+        color_interpolation = None,
+        color_interpolation_filters = None,
+        color_profile = None,
+        contentScriptType = None,
+        contentStyleType = None,
+        cursor = None,
+        cx = None,
+        cy = None,
+        d = None,
+        data______ = None,
+        decoding = None,
+        descent = None,
+        diffuseConstant = None,
+        direction = None,
+        display = None,
+        divisor = None,
+        dominant_baseline = None,
+        dur = None,
+        dx = None,
+        dy = None,
+        edgeMode = None,
+        elevation = None,
+        enable_background = None,
+        end = None,
+        exponent = None,
+        fill = None,
+        fill_opacity = None,
+        fill_rule = None,
+        filter = None,
+        filterRes = None,
+        filterUnits = None,
+        flood_color = None,
+        flood_opacity = None,
+        font_family = None,
+        font_size = None,
+        font_size_adjust = None,
+        font_stretch = None,
+        font_style = None,
+        font_variant = None,
+        font_weight = None,
+        fr = None,
+        fromm = None,
+        fx = None,
+        fy = None,
+        g1 = None,
+        g2 = None,
+        glyph_name = None,
+        glyph_orientation_horizontal = None,
+        glyph_orientation_vertical = None,
+        gradientTransform = None,
+        gradientUnits = None,
+        hanging = None,
+        height = None,
+        horiz_adv_x = None,
+        horiz_origin_x = None,
+        horiz_origin_y = None,
+        href = None,
+        id = None,
+        ideographic = None,
+        image_rendering = None,
+        inn = None,
+        in2 = None,
+        intercept = None,
+        k = None,
+        k1 = None,
+        k2 = None,
+        k3 = None,
+        k4 = None,
+        kernelMatrix = None,
+        kernelUnitLength = None,
+        kerning = None,
+        keyPoints = None,
+        keySplines = None,
+        keyTimes = None,
+        lang = None,
+        lengthAdjust = None,
+        letter_spacing = None,
+        lighting_color = None,
+        limitingConeAngle = None,
+        marker_end = None,
+        marker_mid = None,
+        marker_start = None,
+        markerHeight = None,
+        markerUnits = None,
+        markerWidth = None,
+        mask = None,
+        maskContentUnits = None,
+        maskUnits = None,
+        mathematical = None,
+        max = None,
+        media = None,
+        method = None,
+        min = None,
+        mode = None,
+        name = None,
+        numOctaves = None,
+        onclick = None,
+        opacity = None,
+        operator = None,
+        order = None,
+        orient = None,
+        orientation = None,
+        origin = None,
+        overflow = None,
+        overline_position = None,
+        overline_thickness = None,
+        paint_order = None,
+        panose_1 = None,
+        path = None,
+        pathLength = None,
+        patternContentUnits = None,
+        patternTransform = None,
+        patternUnits = None,
+        pointer_events = None,
+        points = None,
+        pointsAtX = None,
+        pointsAtY = None,
+        pointsAtZ = None,
+        preserveAlpha = None,
+        preserveAspectRatio = None,
+        primitiveUnits = None,
+        r = None,
+        radius = None,
+        refX = None,
+        refY = None,
+        repeatCount = None,
+        repeatDur = None,
+        requiredFeatures = None,
+        restart = None,
+        result = None,
+        rotate = None,
+        rx = None,
+        ry = None,
+        scale = None,
+        seed = None,
+        shape_rendering = None,
+        side = None,
+        slope = None,
+        spacing = None,
+        specularConstant = None,
+        specularExponent = None,
+        spreadMethod = None,
+        startOffset = None,
+        stdDeviation = None,
+        stemh = None,
+        stemv = None,
+        stitchTiles = None,
+        stop_color = None,
+        stop_opacity = None,
+        strikethrough_position = None,
+        strikethrough_thickness = None,
+        string = None,
+        stroke = None,
+        stroke_dasharray = None,
+        stroke_dashoffset = None,
+        stroke_linecap = None,
+        stroke_linejoin = None,
+        stroke_miterlimit = None,
+        stroke_opacity = None,
+        stroke_width = None,
+        style = None,
+        surfaceScale = None,
+        SVG___attribute_____crossorigin = None,
+        SVG___Conditional___Processing___Attributes = None,
+        SVG___Core___Attributes = None,
+        SVG___Event___Attributes = None,
+        SVG___Presentation___Attributes = None,
+        SVG___Styling___Attributes = None,
+        systemLanguage = None,
+        tabindex = None,
+        tableValues = None,
+        target = None,
+        targetX = None,
+        targetY = None,
+        text_anchor = None,
+        text_decoration = None,
+        text_rendering = None,
+        textLength = None,
+        to = None,
+        transform = None,
+        transform_origin = None,
+        typee = None,
+        u1 = None,
+        u2 = None,
+        underline_position = None,
+        underline_thickness = None,
+        unicode = None,
+        unicode_bidi = None,
+        unicode_range = None,
+        units_per_em = None,
+        v_alphabetic = None,
+        v_hanging = None,
+        v_ideographic = None,
+        v_mathematical = None,
+        values = None,
+        vector_effect = None,
+        version = None,
+        vert_adv_y = None,
+        vert_origin_x = None,
+        vert_origin_y = None,
+        viewBox = None,
+        viewTarget = None,
+        visibility = None,
+        width = None,
+        widths = None,
+        word_spacing = None,
+        writing_mode = None,
+        x = None,
+        x_height = None,
+        x1 = None,
+        x2 = None,
+        xChannelSelector = None,
+        xlink__arcrole = None,
+        xlink__href = None,
+        xlink__show = None,
+        xlink__title = None,
+        xlink__type = None,
+        xml__base = None,
+        xml__lang = None,
+        xml__space = None,
+        y = None,
+        y1 = None,
+        y2 = None,
+        yChannelSelector = None,
+        z = None,
+        zoomAndPan = None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            accent_height = accent_height,
+            accumulate = accumulate,
+            additive = additive,
+            alignment_baseline = alignment_baseline,
+            alphabetic = alphabetic,
+            amplitude = amplitude,
+            arabic_form = arabic_form,
+            ascent = ascent,
+            attributeName = attributeName,
+            attributeType = attributeType,
+            azimuth = azimuth,
+            baseFrequency = baseFrequency,
+            baseline_shift = baseline_shift,
+            baseProfile = baseProfile,
+            bbox = bbox,
+            begin = begin,
+            bias = bias,
+            by = by,
+            calcMode = calcMode,
+            cap_height = cap_height,
+            classs = classs,
+            clip = clip,
+            clip_path = clip_path,
+            clip_rule = clip_rule,
+            clipPathUnits = clipPathUnits,
+            color = color,
+            color_interpolation = color_interpolation,
+            color_interpolation_filters = color_interpolation_filters,
+            color_profile = color_profile,
+            contentScriptType = contentScriptType,
+            contentStyleType = contentStyleType,
+            cursor = cursor,
+            cx = cx,
+            cy = cy,
+            d = d,
+            data______ = data______,
+            decoding = decoding,
+            descent = descent,
+            diffuseConstant = diffuseConstant,
+            direction = direction,
+            display = display,
+            divisor = divisor,
+            dominant_baseline = dominant_baseline,
+            dur = dur,
+            dx = dx,
+            dy = dy,
+            edgeMode = edgeMode,
+            elevation = elevation,
+            enable_background = enable_background,
+            end = end,
+            exponent = exponent,
+            fill = fill,
+            fill_opacity = fill_opacity,
+            fill_rule = fill_rule,
+            filter = filter,
+            filterRes = filterRes,
+            filterUnits = filterUnits,
+            flood_color = flood_color,
+            flood_opacity = flood_opacity,
+            font_family = font_family,
+            font_size = font_size,
+            font_size_adjust = font_size_adjust,
+            font_stretch = font_stretch,
+            font_style = font_style,
+            font_variant = font_variant,
+            font_weight = font_weight,
+            fr = fr,
+            fromm = fromm,
+            fx = fx,
+            fy = fy,
+            g1 = g1,
+            g2 = g2,
+            glyph_name = glyph_name,
+            glyph_orientation_horizontal = glyph_orientation_horizontal,
+            glyph_orientation_vertical = glyph_orientation_vertical,
+            gradientTransform = gradientTransform,
+            gradientUnits = gradientUnits,
+            hanging = hanging,
+            height = height,
+            horiz_adv_x = horiz_adv_x,
+            horiz_origin_x = horiz_origin_x,
+            horiz_origin_y = horiz_origin_y,
+            href = href,
+            id = id,
+            ideographic = ideographic,
+            image_rendering = image_rendering,
+            inn = inn,
+            in2 = in2,
+            intercept = intercept,
+            k = k,
+            k1 = k1,
+            k2 = k2,
+            k3 = k3,
+            k4 = k4,
+            kernelMatrix = kernelMatrix,
+            kernelUnitLength = kernelUnitLength,
+            kerning = kerning,
+            keyPoints = keyPoints,
+            keySplines = keySplines,
+            keyTimes = keyTimes,
+            lang = lang,
+            lengthAdjust = lengthAdjust,
+            letter_spacing = letter_spacing,
+            lighting_color = lighting_color,
+            limitingConeAngle = limitingConeAngle,
+            marker_end = marker_end,
+            marker_mid = marker_mid,
+            marker_start = marker_start,
+            markerHeight = markerHeight,
+            markerUnits = markerUnits,
+            markerWidth = markerWidth,
+            mask = mask,
+            maskContentUnits = maskContentUnits,
+            maskUnits = maskUnits,
+            mathematical = mathematical,
+            max = max,
+            media = media,
+            method = method,
+            min = min,
+            mode = mode,
+            name = name,
+            numOctaves = numOctaves,
+            onclick = onclick,
+            opacity = opacity,
+            operator = operator,
+            order = order,
+            orient = orient,
+            orientation = orientation,
+            origin = origin,
+            overflow = overflow,
+            overline_position = overline_position,
+            overline_thickness = overline_thickness,
+            paint_order = paint_order,
+            panose_1 = panose_1,
+            path = path,
+            pathLength = pathLength,
+            patternContentUnits = patternContentUnits,
+            patternTransform = patternTransform,
+            patternUnits = patternUnits,
+            pointer_events = pointer_events,
+            points = points,
+            pointsAtX = pointsAtX,
+            pointsAtY = pointsAtY,
+            pointsAtZ = pointsAtZ,
+            preserveAlpha = preserveAlpha,
+            preserveAspectRatio = preserveAspectRatio,
+            primitiveUnits = primitiveUnits,
+            r = r,
+            radius = radius,
+            refX = refX,
+            refY = refY,
+            repeatCount = repeatCount,
+            repeatDur = repeatDur,
+            requiredFeatures = requiredFeatures,
+            restart = restart,
+            result = result,
+            rotate = rotate,
+            rx = rx,
+            ry = ry,
+            scale = scale,
+            seed = seed,
+            shape_rendering = shape_rendering,
+            side = side,
+            slope = slope,
+            spacing = spacing,
+            specularConstant = specularConstant,
+            specularExponent = specularExponent,
+            spreadMethod = spreadMethod,
+            startOffset = startOffset,
+            stdDeviation = stdDeviation,
+            stemh = stemh,
+            stemv = stemv,
+            stitchTiles = stitchTiles,
+            stop_color = stop_color,
+            stop_opacity = stop_opacity,
+            strikethrough_position = strikethrough_position,
+            strikethrough_thickness = strikethrough_thickness,
+            string = string,
+            stroke = stroke,
+            stroke_dasharray = stroke_dasharray,
+            stroke_dashoffset = stroke_dashoffset,
+            stroke_linecap = stroke_linecap,
+            stroke_linejoin = stroke_linejoin,
+            stroke_miterlimit = stroke_miterlimit,
+            stroke_opacity = stroke_opacity,
+            stroke_width = stroke_width,
+            style = style,
+            surfaceScale = surfaceScale,
+            SVG___attribute_____crossorigin = SVG___attribute_____crossorigin,
+            SVG___Conditional___Processing___Attributes = SVG___Conditional___Processing___Attributes,
+            SVG___Core___Attributes = SVG___Core___Attributes,
+            SVG___Event___Attributes = SVG___Event___Attributes,
+            SVG___Presentation___Attributes = SVG___Presentation___Attributes,
+            SVG___Styling___Attributes = SVG___Styling___Attributes,
+            systemLanguage = systemLanguage,
+            tabindex = tabindex,
+            tableValues = tableValues,
+            target = target,
+            targetX = targetX,
+            targetY = targetY,
+            text_anchor = text_anchor,
+            text_decoration = text_decoration,
+            text_rendering = text_rendering,
+            textLength = textLength,
+            to = to,
+            transform = transform,
+            transform_origin = transform_origin,
+            typee = typee,
+            u1 = u1,
+            u2 = u2,
+            underline_position = underline_position,
+            underline_thickness = underline_thickness,
+            unicode = unicode,
+            unicode_bidi = unicode_bidi,
+            unicode_range = unicode_range,
+            units_per_em = units_per_em,
+            v_alphabetic = v_alphabetic,
+            v_hanging = v_hanging,
+            v_ideographic = v_ideographic,
+            v_mathematical = v_mathematical,
+            values = values,
+            vector_effect = vector_effect,
+            version = version,
+            vert_adv_y = vert_adv_y,
+            vert_origin_x = vert_origin_x,
+            vert_origin_y = vert_origin_y,
+            viewBox = viewBox,
+            viewTarget = viewTarget,
+            visibility = visibility,
+            width = width,
+            widths = widths,
+            word_spacing = word_spacing,
+            writing_mode = writing_mode,
+            x = x,
+            x_height = x_height,
+            x1 = x1,
+            x2 = x2,
+            xChannelSelector = xChannelSelector,
+            xlink__arcrole = xlink__arcrole,
+            xlink__href = xlink__href,
+            xlink__show = xlink__show,
+            xlink__title = xlink__title,
+            xlink__type = xlink__type,
+            xml__base = xml__base,
+            xml__lang = xml__lang,
+            xml__space = xml__space,
+            y = y,
+            y1 = y1,
+            y2 = y2,
+            yChannelSelector = yChannelSelector,
+            z = z,
+            zoomAndPan = zoomAndPan,
+            startTagName=None,
+            endTagName=None,
+            tagName="marker",
+        )
+
+        
+
