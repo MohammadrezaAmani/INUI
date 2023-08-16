@@ -5,7 +5,7 @@ import re
 
 class Element:
     def __init__(self, name="", children=None, attributes=None, data=None):
-        self.name = name
+        self.name = reverse_replace(name).capitalize()
         self.children = children if children is not None else []
         self.attributes = attributes if attributes is not None else {}
         self.data = data
@@ -16,15 +16,15 @@ class Element:
     def __str__(self, indent=0):
         element_str = ""
         if indent == 0:
-            element_str += "from inui.elements import *\n"
+            element_str += "from inui.elements import *\nfrom inui.svg import *\n"
         attind = " " * (indent + 4)
         attributes_str = "\n".join(
             [
-                f'{attind}{reverse_replace(attr)}="{value}",'
+                f'{attind}{reverse_replace(attr)}="""{value}""",'
                 for attr, value in self.attributes.items()
             ]
         )
-        element_str += f"{' ' * indent}{self.name.capitalize()}(\n{attributes_str}"
+        element_str += f"{' ' * indent}{self.name}(\n{attributes_str}"
 
         # element_str = f"{' ' * indent}"
         if self.data or self.children:
