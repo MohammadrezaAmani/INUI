@@ -263,6 +263,11 @@ class BaseSVG:
             endTagName=None,
             tagName=None,
         ):
+        self.data = data
+        self.startTagName=startTagName,
+        self.endTagName=endTagName,
+        self.tagName=tagName,
+        self.attributes = attributes
         self.accent_height = accent_height
         self.accumulate = accumulate
         self.additive = additive
@@ -565,7 +570,7 @@ class BaseSVG:
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.toHtml(prettify=prettify))
             
-class A(SVG):
+class A(BaseSVG):
     """
 
 
@@ -798,7 +803,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/linking.html#Links)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/linking.html#Links)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -1329,7 +1334,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Animate(SVG):
+class Animate(BaseSVG):
     """
 
 
@@ -1974,7 +1979,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Animatemotion(SVG):
+class Animatemotion(BaseSVG):
     """
 
 
@@ -2663,7 +2668,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Animatetransform(SVG):
+class Animatetransform(BaseSVG):
     """
 
 
@@ -3279,7 +3284,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Circle(SVG):
+class Circle(BaseSVG):
     """
 
 
@@ -3417,7 +3422,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#CircleElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#CircleElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -3952,7 +3957,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Clippath(SVG):
+class Clippath(BaseSVG):
     """
 
 
@@ -4630,7 +4635,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Cursor(SVG):
+class Cursor(BaseSVG):
     """
 
 
@@ -4696,7 +4701,7 @@ This element implements the [`SVGCursorElement`](https://developer.mozilla.org//
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/interact.html#CursorElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/interact.html#CursorElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -5227,7 +5232,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Defs(SVG):
+class Defs(BaseSVG):
     """
 
 
@@ -5324,7 +5329,7 @@ Most notably: `[clip-path](https://developer.mozilla.org//en-US/docs/Web/SVG/Att
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/struct.html#Head)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/struct.html#Head)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -5855,7 +5860,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Desc(SVG):
+class Desc(BaseSVG):
     """
 
 
@@ -5946,7 +5951,7 @@ Event Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2 # DescriptionAndTitleElements](https://svgwg.org/svg2-draft/struct.html#DescriptionAndTitleElements) |
+| [Scalable Vector Graphics (BaseSVG) 2 # DescriptionAndTitleElements](https://svgwg.org/svg2-draft/struct.html#DescriptionAndTitleElements) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -6481,7 +6486,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Ellipse(SVG):
+class Ellipse(BaseSVG):
     """
 
 
@@ -6633,7 +6638,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#EllipseElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#EllipseElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -7168,7 +7173,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feblend(SVG):
+class Feblend(BaseSVG):
     """
 
 
@@ -7818,7 +7823,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fecolormatrix(SVG):
+class Fecolormatrix(BaseSVG):
     """
 
 
@@ -8593,7 +8598,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fecomponenttransfer(SVG):
+class Fecomponenttransfer(BaseSVG):
     """
 
 
@@ -9323,7 +9328,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fecomposite(SVG):
+class Fecomposite(BaseSVG):
     """
 
 
@@ -10165,7 +10170,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feconvolvematrix(SVG):
+class Feconvolvematrix(BaseSVG):
     """
 
 
@@ -10873,7 +10878,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fediffuselighting(SVG):
+class Fediffuselighting(BaseSVG):
     """
 
 
@@ -11580,7 +11585,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fedisplacementmap(SVG):
+class Fedisplacementmap(BaseSVG):
     """
 
 
@@ -12231,7 +12236,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fedistantlight(SVG):
+class Fedistantlight(BaseSVG):
     """
 
 
@@ -12824,7 +12829,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fedropshadow(SVG):
+class Fedropshadow(BaseSVG):
     """
 
 
@@ -13488,7 +13493,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feflood(SVG):
+class Feflood(BaseSVG):
     """
 
 
@@ -14125,7 +14130,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fefunca(SVG):
+class Fefunca(BaseSVG):
     """
 
 
@@ -14719,7 +14724,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fefuncb(SVG):
+class Fefuncb(BaseSVG):
     """
 
 
@@ -15313,7 +15318,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fefuncg(SVG):
+class Fefuncg(BaseSVG):
     """
 
 
@@ -15907,7 +15912,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fefuncr(SVG):
+class Fefuncr(BaseSVG):
     """
 
 
@@ -16501,7 +16506,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fegaussianblur(SVG):
+class Fegaussianblur(BaseSVG):
     """
 
 
@@ -17181,7 +17186,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feimage(SVG):
+class Feimage(BaseSVG):
     """
 
 
@@ -17820,7 +17825,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Femerge(SVG):
+class Femerge(BaseSVG):
     """
 
 
@@ -18458,7 +18463,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Femergenode(SVG):
+class Femergenode(BaseSVG):
     """
 
 
@@ -19086,7 +19091,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Femorphology(SVG):
+class Femorphology(BaseSVG):
     """
 
 
@@ -19789,7 +19794,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feoffset(SVG):
+class Feoffset(BaseSVG):
     """
 
 
@@ -20429,7 +20434,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fepointlight(SVG):
+class Fepointlight(BaseSVG):
     """
 
 
@@ -21070,7 +21075,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fespecularlighting(SVG):
+class Fespecularlighting(BaseSVG):
     """
 
 
@@ -21720,7 +21725,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fespotlight(SVG):
+class Fespotlight(BaseSVG):
     """
 
 
@@ -22369,7 +22374,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Fetile(SVG):
+class Fetile(BaseSVG):
     """
 
 
@@ -23025,7 +23030,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Feturbulence(SVG):
+class Feturbulence(BaseSVG):
     """
 
 
@@ -23667,7 +23672,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Filter(SVG):
+class Filter(BaseSVG):
     """
 
 
@@ -24304,7 +24309,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font_face_format(SVG):
+class Font_face_format(BaseSVG):
     """
 
 
@@ -24358,7 +24363,7 @@ This element implements the [`SVGFontFaceFormatElement`](https://developer.mozil
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition) # FontFaceFormatElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceFormatElement) |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # FontFaceFormatElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceFormatElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -24894,7 +24899,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font_face_name(SVG):
+class Font_face_name(BaseSVG):
     """
 
 
@@ -24948,7 +24953,7 @@ This element implements the [`SVGFontFaceNameElement`](https://developer.mozilla
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition) # FontFaceNameElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement) |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # FontFaceNameElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -25484,7 +25489,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font_face_src(SVG):
+class Font_face_src(BaseSVG):
     """
 
 
@@ -25538,7 +25543,7 @@ This element implements the [`SVGFontFaceSrcElement`](https://developer.mozilla.
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontFaceSrcElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontFaceSrcElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -26076,7 +26081,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font_face_uri(SVG):
+class Font_face_uri(BaseSVG):
     """
 
 
@@ -26130,7 +26135,7 @@ This element implements the [`SVGFontFaceUriElement`](https://developer.mozilla.
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontFaceURIElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontFaceURIElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -26666,7 +26671,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font_face(SVG):
+class Font_face(BaseSVG):
     """
 
 
@@ -26784,7 +26789,7 @@ This element implements the [`SVGFontFaceElement`](https://developer.mozilla.org
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition) # FontFaceElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceElement) |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # FontFaceElement](https://www.w3.org/TR/SVG11/fonts.html#FontFaceElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -27321,7 +27326,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Font(SVG):
+class Font(BaseSVG):
     """
 
 
@@ -27388,7 +27393,7 @@ This element implements the [`SVGFontElement`](https://developer.mozilla.org//en
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#FontElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -27926,7 +27931,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Foreignobject(SVG):
+class Foreignobject(BaseSVG):
     """
 
 
@@ -28086,7 +28091,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2 # ForeignObjectElement](https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement) |
+| [Scalable Vector Graphics (BaseSVG) 2 # ForeignObjectElement](https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -28617,7 +28622,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class G(SVG):
+class G(BaseSVG):
     """
 
 
@@ -29324,7 +29329,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Glyph(SVG):
+class Glyph(BaseSVG):
     """
 
 
@@ -29452,7 +29457,7 @@ html
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#GlyphElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#GlyphElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -29989,7 +29994,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Glyphref(SVG):
+class Glyphref(BaseSVG):
     """
 
 
@@ -30057,7 +30062,7 @@ This element implements the [`SVGGlyphRefElement`](https://developer.mozilla.org
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition) # GlyphRefElement](https://www.w3.org/TR/SVG11/text.html#GlyphRefElement) |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # GlyphRefElement](https://www.w3.org/TR/SVG11/text.html#GlyphRefElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -30588,7 +30593,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Hkern(SVG):
+class Hkern(BaseSVG):
     """
 
 
@@ -30650,7 +30655,7 @@ This element implements the [`SVGHKernElement`](https://developer.mozilla.org//e
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition) # HKernElement](https://www.w3.org/TR/SVG11/fonts.html#HKernElement) |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # HKernElement](https://www.w3.org/TR/SVG11/fonts.html#HKernElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -31188,7 +31193,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Image(SVG):
+class Image(BaseSVG):
     """
 
 
@@ -31281,7 +31286,7 @@ html
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/embedded.html#ImageElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/embedded.html#ImageElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -31812,7 +31817,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Line(SVG):
+class Line(BaseSVG):
     """
 
 
@@ -31957,7 +31962,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#LineElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#LineElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -32492,7 +32497,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Lineargradient(SVG):
+class Lineargradient(BaseSVG):
     """
 
 
@@ -32672,7 +32677,7 @@ XLink Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/pservers.html#LinearGradients)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/pservers.html#LinearGradients)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -33203,7 +33208,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Marker(SVG):
+class Marker(BaseSVG):
     """
 
 
@@ -33514,7 +33519,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/painting.html#MarkerElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/painting.html#MarkerElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -34049,7 +34054,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Mask(SVG):
+class Mask(BaseSVG):
     """
 
 
@@ -34738,7 +34743,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Metadata(SVG):
+class Metadata(BaseSVG):
     """
 
 
@@ -34961,7 +34966,7 @@ html
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2 # MetadataElement](https://svgwg.org/svg2-draft/struct.html#MetadataElement) |
+| [Scalable Vector Graphics (BaseSVG) 2 # MetadataElement](https://svgwg.org/svg2-draft/struct.html#MetadataElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -35492,7 +35497,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Missing_glyph(SVG):
+class Missing_glyph(BaseSVG):
     """
 
 
@@ -35557,7 +35562,7 @@ This element implements the [`SVGMissingGlyphElement`](https://developer.mozilla
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#MissingGlyphElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/fonts.html#MissingGlyphElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -36094,7 +36099,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Mpath(SVG):
+class Mpath(BaseSVG):
     """
 
 
@@ -36736,7 +36741,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Path(SVG):
+class Path(BaseSVG):
     """
 
 
@@ -37378,7 +37383,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Pattern(SVG):
+class Pattern(BaseSVG):
     """
 
 
@@ -37595,7 +37600,7 @@ Most notably: `[xlink:title](https://developer.mozilla.org//en-US/docs/Web/SVG/A
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/pservers.html#Patterns)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/pservers.html#Patterns)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -38126,7 +38131,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Polygon(SVG):
+class Polygon(BaseSVG):
     """
 
 
@@ -38248,7 +38253,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#PolygonElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#PolygonElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -38788,7 +38793,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Polyline(SVG):
+class Polyline(BaseSVG):
     """
 
 
@@ -38907,7 +38912,7 @@ ARIA Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#PolylineElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#PolylineElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -39442,7 +39447,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Radialgradient(SVG):
+class Radialgradient(BaseSVG):
     """
 
 
@@ -39645,7 +39650,7 @@ XLink Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/pservers.html#RadialGradients)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/pservers.html#RadialGradients)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -40176,7 +40181,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Rect(SVG):
+class Rect(BaseSVG):
     """
 
 
@@ -40345,7 +40350,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/shapes.html#RectElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/shapes.html#RectElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -40880,7 +40885,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Script(SVG):
+class Script(BaseSVG):
     """
 
 
@@ -41021,7 +41026,7 @@ Event Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2 # ScriptElement](https://svgwg.org/svg2-draft/interact.html#ScriptElement) |
+| [Scalable Vector Graphics (BaseSVG) 2 # ScriptElement](https://svgwg.org/svg2-draft/interact.html#ScriptElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -41556,7 +41561,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Set(SVG):
+class Set(BaseSVG):
     """
 
 
@@ -42196,7 +42201,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Stop(SVG):
+class Stop(BaseSVG):
     """
 
 
@@ -42318,7 +42323,7 @@ Most notably: `[color](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribu
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/pservers.html#GradientStops)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/pservers.html#GradientStops)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -42849,7 +42854,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Style(SVG):
+class Style(BaseSVG):
     """
 
 
@@ -42968,7 +42973,7 @@ Event Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2 # StyleElement](https://svgwg.org/svg2-draft/styling.html#StyleElement) |
+| [Scalable Vector Graphics (BaseSVG) 2 # StyleElement](https://svgwg.org/svg2-draft/styling.html#StyleElement) |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -43503,7 +43508,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Svg(SVG):
+class Svg(BaseSVG):
     """
 
 
@@ -43716,7 +43721,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/struct.html#NewDocument)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/struct.html#NewDocument)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -44247,7 +44252,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Switch(SVG):
+class Switch(BaseSVG):
     """
 
 
@@ -44338,7 +44343,7 @@ html
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/struct.html#SwitchElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/struct.html#SwitchElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -44869,7 +44874,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Symbol(SVG):
+class Symbol(BaseSVG):
     """
 
 
@@ -45055,7 +45060,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/struct.html#SymbolElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/struct.html#SymbolElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -45586,7 +45591,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Text(SVG):
+class Text(BaseSVG):
     """
 
 
@@ -45768,7 +45773,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/text.html#TextElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/text.html#TextElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -46303,7 +46308,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Textpath(SVG):
+class Textpath(BaseSVG):
     """
 
 
@@ -46488,7 +46493,7 @@ XLink Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/text.html#TextPathElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/text.html#TextPathElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -47019,7 +47024,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Title(SVG):
+class Title(BaseSVG):
     """
  
 """
@@ -47543,7 +47548,7 @@ class Title(SVG):
 
         
 
-class Tref(SVG):
+class Tref(BaseSVG):
     """
 
 
@@ -47633,7 +47638,7 @@ xml
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/text.html#TRefElement)  |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition)](https://www.w3.org/TR/SVG11/text.html#TRefElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -48168,7 +48173,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Tspan(SVG):
+class Tspan(BaseSVG):
     """
 
 
@@ -48341,7 +48346,7 @@ Aria Attributes
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/text.html#TextElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/text.html#TextElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -48872,7 +48877,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class Use(SVG):
+class Use(BaseSVG):
     """
 
 
@@ -49051,7 +49056,7 @@ For security reasons, browsers may apply the [same-origin policy](https://develo
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/struct.html#UseElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/struct.html#UseElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -49582,7 +49587,7 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
 
         
 
-class View(SVG):
+class View(BaseSVG):
     """
 
 
@@ -49677,7 +49682,7 @@ This element implements the [`SVGViewElement`](https://developer.mozilla.org//en
 
 | Specification |
 | --- |
-| [Scalable Vector Graphics (SVG) 2](https://svgwg.org/svg2-draft/linking.html#ViewElement)  |
+| [Scalable Vector Graphics (BaseSVG) 2](https://svgwg.org/svg2-draft/linking.html#ViewElement)  |
 
 [Browser compatibility](#browser_compatibility)
 -----------------------------------------------
@@ -50204,6 +50209,606 @@ ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozil
             startTagName=None,
             endTagName=None,
             tagName="view",
+        )
+
+        
+
+class Vkern(BaseSVG):
+    """
+
+
+
+In this article
+---------------
+
+* [Usage context](#usage_context)
+* [Attributes](#attributes)
+* [DOM Interface](#dom_interface)
+* [Specifications](#specifications)
+* [Browser compatibility](#browser_compatibility)
+* [See also](#see_also)
+<vkern>
+=======
+
+**Deprecated:** This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the [compatibility table](#browser_compatibility) at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+
+
+The **`<vkern>`** SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
+
+[Usage context](#usage_context)
+-------------------------------
+
+
+
+|  |  |
+| --- | --- |
+| Categories | Font element |
+| Permitted content | Empty |
+
+[Attributes](#attributes)
+-------------------------
+
+### [Global attributes](#global_attributes)
+
+* [Core attributes](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute#core_attributes)
+### [Specific attributes](#specific_attributes)
+
+* `[u1](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/u1)` 
+Deprecated
+* `[g1](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/g1)` 
+Deprecated
+* `[u2](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/u2)` 
+Deprecated
+* `[g2](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/g2)` 
+Deprecated
+* `[k](https://developer.mozilla.org//en-US/docs/Web/SVG/Attribute/k)` 
+Deprecated
+[DOM Interface](#dom_interface)
+-------------------------------
+
+This element implements the [`SVGVKernElement`](https://developer.mozilla.org//en-US/docs/Web/API/SVGVKernElement) interface.
+
+[Specifications](#specifications)
+---------------------------------
+
+
+
+| Specification |
+| --- |
+| [Scalable Vector Graphics (BaseSVG) 1.1 (Second Edition) # VKernElement](https://www.w3.org/TR/SVG11/fonts.html#VKernElement) |
+
+[Browser compatibility](#browser_compatibility)
+-----------------------------------------------
+
+BCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.
+
+[See also](#see_also)
+---------------------
+
+* [`<font>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/font)
+* [`<glyph>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/glyph)
+* [`<hkern>`](https://developer.mozilla.org//en-US/docs/Web/SVG/Element/hkern)
+* [SVG tutorial: SVG fonts](https://developer.mozilla.org//en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+
+
+ref = [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+"""
+
+    def __init__(
+        self,
+        data=(),
+        attributes={},
+        accent_height = None,
+        accumulate = None,
+        additive = None,
+        alignment_baseline = None,
+        alphabetic = None,
+        amplitude = None,
+        arabic_form = None,
+        ascent = None,
+        attributeName = None,
+        attributeType = None,
+        azimuth = None,
+        baseFrequency = None,
+        baseline_shift = None,
+        baseProfile = None,
+        bbox = None,
+        begin = None,
+        bias = None,
+        by = None,
+        calcMode = None,
+        cap_height = None,
+        classs = None,
+        clip = None,
+        clip_path = None,
+        clip_rule = None,
+        clipPathUnits = None,
+        color = None,
+        color_interpolation = None,
+        color_interpolation_filters = None,
+        color_profile = None,
+        contentScriptType = None,
+        contentStyleType = None,
+        cursor = None,
+        cx = None,
+        cy = None,
+        d = None,
+        data______ = None,
+        decoding = None,
+        descent = None,
+        diffuseConstant = None,
+        direction = None,
+        display = None,
+        divisor = None,
+        dominant_baseline = None,
+        dur = None,
+        dx = None,
+        dy = None,
+        edgeMode = None,
+        elevation = None,
+        enable_background = None,
+        end = None,
+        exponent = None,
+        fill = None,
+        fill_opacity = None,
+        fill_rule = None,
+        filter = None,
+        filterRes = None,
+        filterUnits = None,
+        flood_color = None,
+        flood_opacity = None,
+        font_family = None,
+        font_size = None,
+        font_size_adjust = None,
+        font_stretch = None,
+        font_style = None,
+        font_variant = None,
+        font_weight = None,
+        fr = None,
+        fromm = None,
+        fx = None,
+        fy = None,
+        g1 = None,
+        g2 = None,
+        glyph_name = None,
+        glyph_orientation_horizontal = None,
+        glyph_orientation_vertical = None,
+        gradientTransform = None,
+        gradientUnits = None,
+        hanging = None,
+        height = None,
+        horiz_adv_x = None,
+        horiz_origin_x = None,
+        horiz_origin_y = None,
+        href = None,
+        id = None,
+        ideographic = None,
+        image_rendering = None,
+        inn = None,
+        in2 = None,
+        intercept = None,
+        k = None,
+        k1 = None,
+        k2 = None,
+        k3 = None,
+        k4 = None,
+        kernelMatrix = None,
+        kernelUnitLength = None,
+        kerning = None,
+        keyPoints = None,
+        keySplines = None,
+        keyTimes = None,
+        lang = None,
+        lengthAdjust = None,
+        letter_spacing = None,
+        lighting_color = None,
+        limitingConeAngle = None,
+        marker_end = None,
+        marker_mid = None,
+        marker_start = None,
+        markerHeight = None,
+        markerUnits = None,
+        markerWidth = None,
+        mask = None,
+        maskContentUnits = None,
+        maskUnits = None,
+        mathematical = None,
+        max = None,
+        media = None,
+        method = None,
+        min = None,
+        mode = None,
+        name = None,
+        numOctaves = None,
+        onclick = None,
+        opacity = None,
+        operator = None,
+        order = None,
+        orient = None,
+        orientation = None,
+        origin = None,
+        overflow = None,
+        overline_position = None,
+        overline_thickness = None,
+        paint_order = None,
+        panose_1 = None,
+        path = None,
+        pathLength = None,
+        patternContentUnits = None,
+        patternTransform = None,
+        patternUnits = None,
+        pointer_events = None,
+        points = None,
+        pointsAtX = None,
+        pointsAtY = None,
+        pointsAtZ = None,
+        preserveAlpha = None,
+        preserveAspectRatio = None,
+        primitiveUnits = None,
+        r = None,
+        radius = None,
+        refX = None,
+        refY = None,
+        repeatCount = None,
+        repeatDur = None,
+        requiredFeatures = None,
+        restart = None,
+        result = None,
+        rotate = None,
+        rx = None,
+        ry = None,
+        scale = None,
+        seed = None,
+        shape_rendering = None,
+        side = None,
+        slope = None,
+        spacing = None,
+        specularConstant = None,
+        specularExponent = None,
+        spreadMethod = None,
+        startOffset = None,
+        stdDeviation = None,
+        stemh = None,
+        stemv = None,
+        stitchTiles = None,
+        stop_color = None,
+        stop_opacity = None,
+        strikethrough_position = None,
+        strikethrough_thickness = None,
+        string = None,
+        stroke = None,
+        stroke_dasharray = None,
+        stroke_dashoffset = None,
+        stroke_linecap = None,
+        stroke_linejoin = None,
+        stroke_miterlimit = None,
+        stroke_opacity = None,
+        stroke_width = None,
+        style = None,
+        surfaceScale = None,
+        SVG___attribute_____crossorigin = None,
+        SVG___Conditional___Processing___Attributes = None,
+        SVG___Core___Attributes = None,
+        SVG___Event___Attributes = None,
+        SVG___Presentation___Attributes = None,
+        SVG___Styling___Attributes = None,
+        systemLanguage = None,
+        tabindex = None,
+        tableValues = None,
+        target = None,
+        targetX = None,
+        targetY = None,
+        text_anchor = None,
+        text_decoration = None,
+        text_rendering = None,
+        textLength = None,
+        to = None,
+        transform = None,
+        transform_origin = None,
+        typee = None,
+        u1 = None,
+        u2 = None,
+        underline_position = None,
+        underline_thickness = None,
+        unicode = None,
+        unicode_bidi = None,
+        unicode_range = None,
+        units_per_em = None,
+        v_alphabetic = None,
+        v_hanging = None,
+        v_ideographic = None,
+        v_mathematical = None,
+        values = None,
+        vector_effect = None,
+        version = None,
+        vert_adv_y = None,
+        vert_origin_x = None,
+        vert_origin_y = None,
+        viewBox = None,
+        viewTarget = None,
+        visibility = None,
+        width = None,
+        widths = None,
+        word_spacing = None,
+        writing_mode = None,
+        x = None,
+        x_height = None,
+        x1 = None,
+        x2 = None,
+        xChannelSelector = None,
+        xlink__arcrole = None,
+        xlink__href = None,
+        xlink__show = None,
+        xlink__title = None,
+        xlink__type = None,
+        xml__base = None,
+        xml__lang = None,
+        xml__space = None,
+        y = None,
+        y1 = None,
+        y2 = None,
+        yChannelSelector = None,
+        z = None,
+        zoomAndPan = None,
+    ):
+        super().__init__(
+            data=data,
+            attributes=attributes,
+            accent_height = accent_height,
+            accumulate = accumulate,
+            additive = additive,
+            alignment_baseline = alignment_baseline,
+            alphabetic = alphabetic,
+            amplitude = amplitude,
+            arabic_form = arabic_form,
+            ascent = ascent,
+            attributeName = attributeName,
+            attributeType = attributeType,
+            azimuth = azimuth,
+            baseFrequency = baseFrequency,
+            baseline_shift = baseline_shift,
+            baseProfile = baseProfile,
+            bbox = bbox,
+            begin = begin,
+            bias = bias,
+            by = by,
+            calcMode = calcMode,
+            cap_height = cap_height,
+            classs = classs,
+            clip = clip,
+            clip_path = clip_path,
+            clip_rule = clip_rule,
+            clipPathUnits = clipPathUnits,
+            color = color,
+            color_interpolation = color_interpolation,
+            color_interpolation_filters = color_interpolation_filters,
+            color_profile = color_profile,
+            contentScriptType = contentScriptType,
+            contentStyleType = contentStyleType,
+            cursor = cursor,
+            cx = cx,
+            cy = cy,
+            d = d,
+            data______ = data______,
+            decoding = decoding,
+            descent = descent,
+            diffuseConstant = diffuseConstant,
+            direction = direction,
+            display = display,
+            divisor = divisor,
+            dominant_baseline = dominant_baseline,
+            dur = dur,
+            dx = dx,
+            dy = dy,
+            edgeMode = edgeMode,
+            elevation = elevation,
+            enable_background = enable_background,
+            end = end,
+            exponent = exponent,
+            fill = fill,
+            fill_opacity = fill_opacity,
+            fill_rule = fill_rule,
+            filter = filter,
+            filterRes = filterRes,
+            filterUnits = filterUnits,
+            flood_color = flood_color,
+            flood_opacity = flood_opacity,
+            font_family = font_family,
+            font_size = font_size,
+            font_size_adjust = font_size_adjust,
+            font_stretch = font_stretch,
+            font_style = font_style,
+            font_variant = font_variant,
+            font_weight = font_weight,
+            fr = fr,
+            fromm = fromm,
+            fx = fx,
+            fy = fy,
+            g1 = g1,
+            g2 = g2,
+            glyph_name = glyph_name,
+            glyph_orientation_horizontal = glyph_orientation_horizontal,
+            glyph_orientation_vertical = glyph_orientation_vertical,
+            gradientTransform = gradientTransform,
+            gradientUnits = gradientUnits,
+            hanging = hanging,
+            height = height,
+            horiz_adv_x = horiz_adv_x,
+            horiz_origin_x = horiz_origin_x,
+            horiz_origin_y = horiz_origin_y,
+            href = href,
+            id = id,
+            ideographic = ideographic,
+            image_rendering = image_rendering,
+            inn = inn,
+            in2 = in2,
+            intercept = intercept,
+            k = k,
+            k1 = k1,
+            k2 = k2,
+            k3 = k3,
+            k4 = k4,
+            kernelMatrix = kernelMatrix,
+            kernelUnitLength = kernelUnitLength,
+            kerning = kerning,
+            keyPoints = keyPoints,
+            keySplines = keySplines,
+            keyTimes = keyTimes,
+            lang = lang,
+            lengthAdjust = lengthAdjust,
+            letter_spacing = letter_spacing,
+            lighting_color = lighting_color,
+            limitingConeAngle = limitingConeAngle,
+            marker_end = marker_end,
+            marker_mid = marker_mid,
+            marker_start = marker_start,
+            markerHeight = markerHeight,
+            markerUnits = markerUnits,
+            markerWidth = markerWidth,
+            mask = mask,
+            maskContentUnits = maskContentUnits,
+            maskUnits = maskUnits,
+            mathematical = mathematical,
+            max = max,
+            media = media,
+            method = method,
+            min = min,
+            mode = mode,
+            name = name,
+            numOctaves = numOctaves,
+            onclick = onclick,
+            opacity = opacity,
+            operator = operator,
+            order = order,
+            orient = orient,
+            orientation = orientation,
+            origin = origin,
+            overflow = overflow,
+            overline_position = overline_position,
+            overline_thickness = overline_thickness,
+            paint_order = paint_order,
+            panose_1 = panose_1,
+            path = path,
+            pathLength = pathLength,
+            patternContentUnits = patternContentUnits,
+            patternTransform = patternTransform,
+            patternUnits = patternUnits,
+            pointer_events = pointer_events,
+            points = points,
+            pointsAtX = pointsAtX,
+            pointsAtY = pointsAtY,
+            pointsAtZ = pointsAtZ,
+            preserveAlpha = preserveAlpha,
+            preserveAspectRatio = preserveAspectRatio,
+            primitiveUnits = primitiveUnits,
+            r = r,
+            radius = radius,
+            refX = refX,
+            refY = refY,
+            repeatCount = repeatCount,
+            repeatDur = repeatDur,
+            requiredFeatures = requiredFeatures,
+            restart = restart,
+            result = result,
+            rotate = rotate,
+            rx = rx,
+            ry = ry,
+            scale = scale,
+            seed = seed,
+            shape_rendering = shape_rendering,
+            side = side,
+            slope = slope,
+            spacing = spacing,
+            specularConstant = specularConstant,
+            specularExponent = specularExponent,
+            spreadMethod = spreadMethod,
+            startOffset = startOffset,
+            stdDeviation = stdDeviation,
+            stemh = stemh,
+            stemv = stemv,
+            stitchTiles = stitchTiles,
+            stop_color = stop_color,
+            stop_opacity = stop_opacity,
+            strikethrough_position = strikethrough_position,
+            strikethrough_thickness = strikethrough_thickness,
+            string = string,
+            stroke = stroke,
+            stroke_dasharray = stroke_dasharray,
+            stroke_dashoffset = stroke_dashoffset,
+            stroke_linecap = stroke_linecap,
+            stroke_linejoin = stroke_linejoin,
+            stroke_miterlimit = stroke_miterlimit,
+            stroke_opacity = stroke_opacity,
+            stroke_width = stroke_width,
+            style = style,
+            surfaceScale = surfaceScale,
+            SVG___attribute_____crossorigin = SVG___attribute_____crossorigin,
+            SVG___Conditional___Processing___Attributes = SVG___Conditional___Processing___Attributes,
+            SVG___Core___Attributes = SVG___Core___Attributes,
+            SVG___Event___Attributes = SVG___Event___Attributes,
+            SVG___Presentation___Attributes = SVG___Presentation___Attributes,
+            SVG___Styling___Attributes = SVG___Styling___Attributes,
+            systemLanguage = systemLanguage,
+            tabindex = tabindex,
+            tableValues = tableValues,
+            target = target,
+            targetX = targetX,
+            targetY = targetY,
+            text_anchor = text_anchor,
+            text_decoration = text_decoration,
+            text_rendering = text_rendering,
+            textLength = textLength,
+            to = to,
+            transform = transform,
+            transform_origin = transform_origin,
+            typee = typee,
+            u1 = u1,
+            u2 = u2,
+            underline_position = underline_position,
+            underline_thickness = underline_thickness,
+            unicode = unicode,
+            unicode_bidi = unicode_bidi,
+            unicode_range = unicode_range,
+            units_per_em = units_per_em,
+            v_alphabetic = v_alphabetic,
+            v_hanging = v_hanging,
+            v_ideographic = v_ideographic,
+            v_mathematical = v_mathematical,
+            values = values,
+            vector_effect = vector_effect,
+            version = version,
+            vert_adv_y = vert_adv_y,
+            vert_origin_x = vert_origin_x,
+            vert_origin_y = vert_origin_y,
+            viewBox = viewBox,
+            viewTarget = viewTarget,
+            visibility = visibility,
+            width = width,
+            widths = widths,
+            word_spacing = word_spacing,
+            writing_mode = writing_mode,
+            x = x,
+            x_height = x_height,
+            x1 = x1,
+            x2 = x2,
+            xChannelSelector = xChannelSelector,
+            xlink__arcrole = xlink__arcrole,
+            xlink__href = xlink__href,
+            xlink__show = xlink__show,
+            xlink__title = xlink__title,
+            xlink__type = xlink__type,
+            xml__base = xml__base,
+            xml__lang = xml__lang,
+            xml__space = xml__space,
+            y = y,
+            y1 = y1,
+            y2 = y2,
+            yChannelSelector = yChannelSelector,
+            z = z,
+            zoomAndPan = zoomAndPan,
+            startTagName=None,
+            endTagName=None,
+            tagName="vkern",
         )
 
         
