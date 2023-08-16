@@ -42,6 +42,10 @@ class Element:
         if self.data or self.children:
             element_str += ")"
         element_str += f"\n{' ' * indent})"
+        while "''''''" in element_str:
+            element_str = element_str.replace("''''''", "''")
+        while "''''" in element_str:
+            element_str = element_str.replace("''''", "'''")
         return element_str
 
 
