@@ -45,7 +45,6 @@ class Convert:
 
     @staticmethod
     def em_to_px(em):
-
         return em / 0.0625
 
     @staticmethod

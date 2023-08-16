@@ -3,6 +3,7 @@ class Langs:
     ISO 639-1 Language Codes
     ISO 639-1 defines abbreviations for languages:
     """
+
     Abkhazian = "ab"
     Afar = "aa"
     Afrikaans = "af"
