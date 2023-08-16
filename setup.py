@@ -6,7 +6,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '0.2.3'
+VERSION = '0.2.4'
 
 PACKAGE_NAME = "inui"
 DESCRIPTION = ''
@@ -14,7 +14,7 @@ LONG_DESCRIPTION = 'Powerful and Highly Customizable Python Library for UI'
 AUTHOR_NAME = "Mohammadreza Amani"
 AUTHOR_EMAIL = "more.amani@yahoo.com"
 PROJECT_URL = "https://github.com/MohammadrezaAmani/INUI/"
-REQUIRED_PACKAGES = ['beautifulsoup4']
+REQUIRED_PACKAGES = ["beautifulsoup4","livereload","requests","lxml"]
 PROJECT_KEYWORDS = ['ui', 'python', 'html', 'framework','frontend','bootstrap']
 
 CLASSIFIERS = [
