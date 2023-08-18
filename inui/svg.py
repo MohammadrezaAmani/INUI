@@ -40828,7 +40828,7 @@ class Rect(BaseSVG):
         )
 
 
-class Script(BaseSVG):
+class ScriptSvg(BaseSVG):
     """
 
 
