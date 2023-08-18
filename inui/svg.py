@@ -523,7 +523,7 @@ class BaseSVG:
         self.z = z
         self.zoomAndPan = zoomAndPan
 
-    def toHtml(self, prettify: bool = True):
+    def render(self, prettify: bool = True):
         starttag = ""
         endtag = ""
         if self.tagname != None:
@@ -534,12 +534,12 @@ class BaseSVG:
             endtag = self.startTagName
             if self.endTagName != None:
                 endtag = self.endTagName
-        html = f"""\n<{starttag} {self.attributesToHtml()}>\n{self.dataToHtml()}\n</{endtag}>"""
+        html = f"""\n<{starttag} {self.renderAttributes()}>\n{self.renderData()}\n</{endtag}>"""
         if prettify:
             return str(Pretiffy(html))
         return str(html)
 
-    def dataToHtml(self):
+    def renderData(self):
         if type(self.data) in [list, set, tuple]:
             text = ""
             for i in self.data:
@@ -548,7 +548,7 @@ class BaseSVG:
             return str(self.data)
         return text
 
-    def attributesToHtml(self):
+    def renderAttributes(self):
         text = ""
         for i in self.__dict__:
             if self.__dict__[i] != None and i not in [
@@ -571,7 +571,7 @@ class BaseSVG:
 
     def save(self, filePath: str = "./out.svg", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
-            f.write(self.toHtml(prettify=prettify))
+            f.write(self.render(prettify=prettify))
 
 
 class A(BaseSVG):

@@ -289,7 +289,7 @@ class BaseElement:
         self.tagname = tagName
         # self.laststate = None
 
-    def toHtml(self, prettify: bool = True):
+    def render(self, prettify: bool = True):
         starttag = ""
         endtag = ""
         if self.tagname != None:
@@ -300,12 +300,12 @@ class BaseElement:
             endtag = self.startTagName
             if self.endTagName != None:
                 endtag = self.endTagName
-        html = f"""\n<{starttag} {self.attributesToHtml()}>\n{self.dataToHtml()}\n</{endtag}>"""
+        html = f"""\n<{starttag} {self.renderAttributes()}>\n{self.renderData()}\n</{endtag}>"""
         if prettify:
             return str(Pretiffy(html))
         return str(html)
 
-    def dataToHtml(self):
+    def renderData(self):
         if type(self.data) in [list, set, tuple]:
             text = ""
             for i in self.data:
@@ -314,7 +314,7 @@ class BaseElement:
             return str(self.data)
         return text
 
-    def attributesToHtml(self):
+    def renderAttributes(self):
         text = ""
         for i in self.__dict__:
             if self.__dict__[i] != None and i not in [
@@ -337,18 +337,42 @@ class BaseElement:
 
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
-            f.write(self.toHtml(prettify=prettify))
-
+            f.write(self.render(prettify=prettify))
+            
+    def getAttributes(self):
+        att = {}
+        text = ""
+        for i in self.__dict__:
+            if self.__dict__[i] != None and i not in [
+                "data",
+                "attributes",
+                "startTagName",
+                "tagname",
+                "endTagName",
+                "laststate",
+            ]:
+                att[i] = self.__dict__[i]
+        return att
+    
+    def search(self, text:str)-> list:
+        results = []
+        if type(self.data) in [list, set, tuple]:
+            for i in self.data:
+                if type(i) == str:
+                    pass
+        else:
+            return str(self.data)
+        return text
     # def __hotsave(self, delay, path, name, hotreloader: HotReload):
     #     import os
     #     import time
     #     while True:
     #         time.sleep(delay)
     #         try:
-    #             html = self.toHtml()
+    #             html = self.render()
     #             if self.laststate != html:
     #                 if self.laststate != None:
-    #                     print(self.toHtml())
+    #                     print(self.render())
     #                     print(self.laststate)
     #                     break
     #                 hotreloader.text = html
@@ -361,7 +385,7 @@ class BaseElement:
     #               include='', exclude='', pattern='*', port=1904, ip='127.0.0.1', debug=False, webbrowser=True):
     #     try:
     #         import threading
-    #         server = HotReload( text = self.toHtml(), path=path, delay=delay, recurse=recurse,
+    #         server = HotReload( text = self.render(), path=path, delay=delay, recurse=recurse,
     #                            include=include, exclude=exclude, pattern=pattern, port=port, ip=ip, debug=debug)
     #         t = threading.Thread(target=self.__hotsave,
     #                              args=(delay, path, name, server))
@@ -373,10 +397,10 @@ class BaseElement:
     #         return False
 
     def __str__(self):
-        return self.toHtml()
+        return self.render()
 
     def __repr__(self):
-        return self.toHtml()
+        return self.render()
 
 
 class BaseVoidElement:
@@ -657,13 +681,13 @@ class BaseVoidElement:
         self.onwaiting = onwaiting
         self.tagname = tagName
 
-    def toHtml(self, prettify: bool = True):
-        html = f"""\n<{self.tagname} {self.attributesToHtml()}>"""
+    def render(self, prettify: bool = True):
+        html = f"""\n<{self.tagname} {self.renderAttributes()}>"""
         if prettify:
             return str(Pretiffy(html))
         return str(html)
 
-    def attributesToHtml(self):
+    def renderAttributes(self):
         text = ""
         for i in self.__dict__:
             if self.__dict__[i] != None and i not in [
@@ -685,7 +709,7 @@ class BaseVoidElement:
 
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
-            f.write(self.toHtml(prettify=prettify))
+            f.write(self.render(prettify=prettify))
 
     def hotreload(
         self,
@@ -720,10 +744,10 @@ class BaseVoidElement:
             return False
 
     def __str__(self):
-        return self.toHtml()
+        return self.render()
 
     def __repr__(self):
-        return self.toHtml()
+        return self.render()
 
 
 class Abbr(BaseElement):
@@ -13590,8 +13614,8 @@ class Comment(BaseElement):
             tagName=None,
         )
 
-    def toHtml(self, prettify: bool = True):
-        html = f"""\n<!-- {self.attributesToHtml()}>\n{self.dataToHtml()}\n -->"""
+    def render(self, prettify: bool = True):
+        html = f"""\n<!-- {self.renderAttributes()}>\n{self.renderData()}\n -->"""
         if prettify:
             return str(Pretiffy(html))
         return str(html)

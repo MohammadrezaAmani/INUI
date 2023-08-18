@@ -1,8 +1,10 @@
 *.env
 *.py[cod]
-*test*
 venv/*
 build 
 dist
 inui.egg-info
 .tempHotReloader
+thisfolderisjutjustfordevelopingthepackage
+
+___*

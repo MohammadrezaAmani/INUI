@@ -1,2 +1,4 @@
 beautifulsoup4==4.12.2
 soupsieve==2.4.1
+lxml
+livereload
