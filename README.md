@@ -1,4 +1,7 @@
 # INUI
+<a href='https://inui.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/inui/badge/?version=latest' alt='Documentation Status' />
+</a>
 
 <p align="center">
     <a>
