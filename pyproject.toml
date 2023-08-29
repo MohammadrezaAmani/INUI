@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inui"
-version = "0.2.92"
+version = "0.2.93"
 description = "Powerful and Highly Customizable Python Library for UI"
 readme = "README.md"
 authors = [{ name = "Mohammadreza Amani", email = "more.amani@yahoo.com" }]

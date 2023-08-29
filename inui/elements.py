@@ -544,7 +544,8 @@ class BaseVoidElement:
         tagName=None,
          **kwargs,
     ):
-        self.attributes = attributes + kwargs
+        attributes.update(kwargs)
+        self.attributes = attributes
         self.classs = classs
         self.id = id
         self.src = src
