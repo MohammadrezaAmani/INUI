@@ -5,7 +5,7 @@
 
 <p align="center">
     <a>
-        <img src="./assets/images/inui.png" alt="UniLand" width="256">
+        <img src="https://raw.githubusercontent.com/MohammadrezaAmani/INUI/main/assets/images/inui.png" alt="UniLand" width="256">
     </a>
     <br>
     <b>Powerful and Highly Customizable Python Library for UI</b>
