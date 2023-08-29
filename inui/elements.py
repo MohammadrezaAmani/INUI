@@ -1,6 +1,6 @@
 from inui.config.replaces import replace
-from inui.prettify import Pretiffy
-from inui.hotreload import HotReload
+
+# from inui.hotreload import HotReload
 
 
 class BaseElement:
@@ -303,6 +303,7 @@ class BaseElement:
                 endtag = self.endTagName
         html = f"""\n<{starttag} {self.renderAttributes()}>\n{self.renderData()}\n</{endtag}>"""
         if prettify:
+            from inui.prettify import Pretiffy
             return str(Pretiffy(html))
         return str(html)
 
@@ -686,6 +687,7 @@ class BaseVoidElement:
     def render(self, prettify: bool = True):
         html = f"""\n<{self.tagname} {self.renderAttributes()}>"""
         if prettify:
+            from inui.prettify import Pretiffy
             return str(Pretiffy(html))
         return str(html)
 
@@ -713,37 +715,37 @@ class BaseVoidElement:
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.render(prettify=prettify))
 
-    def hotreload(
-        self,
-        path=".",
-        delay=None,
-        recurse=True,
-        include="",
-        exclude="",
-        pattern="*",
-        port=1904,
-        ip="127.0.0.1",
-        debug=False,
-        webbrowser=True,
-    ):
-        try:
-            server = HotReload(
-                text=self,
-                path=path,
-                delay=delay,
-                recurse=recurse,
-                include=include,
-                exclude=exclude,
-                pattern=pattern,
-                port=port,
-                ip=ip,
-                debug=debug,
-            )
-            server.start_server(webbrowseropen=webbrowser)
-            return True
-        except Exception as e:
-            print(e)
-            return False
+    # def hotreload(
+    #     self,
+    #     path=".",
+    #     delay=None,
+    #     recurse=True,
+    #     include="",
+    #     exclude="",
+    #     pattern="*",
+    #     port=1904,
+    #     ip="127.0.0.1",
+    #     debug=False,
+    #     webbrowser=True,
+    # ):
+    #     try:
+    #         server = HotReload(
+    #             text=self,
+    #             path=path,
+    #             delay=delay,
+    #             recurse=recurse,
+    #             include=include,
+    #             exclude=exclude,
+    #             pattern=pattern,
+    #             port=port,
+    #             ip=ip,
+    #             debug=debug,
+    #         )
+    #         server.start_server(webbrowseropen=webbrowser)
+    #         return True
+    #     except Exception as e:
+    #         print(e)
+    #         return False
 
     def __str__(self):
         return self.render()
@@ -13694,6 +13696,7 @@ class Comment(BaseElement):
     def render(self, prettify: bool = True):
         html = f"""\n<!-- {self.renderAttributes()}>\n{self.renderData()}\n -->"""
         if prettify:
+            from inui.prettify import Pretiffy
             return str(Pretiffy(html))
         return str(html)
 
