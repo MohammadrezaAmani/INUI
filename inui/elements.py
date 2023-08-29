@@ -363,6 +363,30 @@ class BaseElement:
         else:
             return str(self.data)
         return text
+    
+    def __add__(self, other):
+        if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
+            return str(self.render()) + str(other.render())
+        elif isinstance(other, str):
+            return str(self.render()) + other
+        else:
+            raise TypeError("Unsupported operand type for +")
+    def __radd__(self,other):
+        if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
+            return str(other.render()) + str(self.render())
+        elif isinstance(other, str):
+            return other + str(self.render())
+        else:
+            raise TypeError("Unsupported operand type for +")
+    
+    def __getitem__(self, index):
+        return self.render()[index]
+    
+    def __mul__(self, other):
+        if isinstance(other, int):
+            return str(self.render() * other)
+        else:
+            raise TypeError("Unsupported operand type for *")
     # def __hotsave(self, delay, path, name, hotreloader: HotReload):
     #     import os
     #     import time
@@ -713,7 +737,30 @@ class BaseVoidElement:
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.render(prettify=prettify))
-
+    
+    def __add__(self, other):
+        if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
+            return str(self.render()) + str(other.render())
+        elif isinstance(other, str):
+            return str(self.render()) + other
+        else:
+            raise TypeError("Unsupported operand type for +")
+    def __radd__(self,other):
+        if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
+            return str(other.render()) + str(self.render())
+        elif isinstance(other, str):
+            return other + str(self.render())
+        else:
+            raise TypeError("Unsupported operand type for +")
+    
+    def __getitem__(self, index):
+        return self.render()[index]
+    
+    def __mul__(self, other):
+        if isinstance(other, int):
+            return str(self.render() * other)
+        else:
+            raise TypeError("Unsupported operand type for *")
     # def hotreload(
     #     self,
     #     path=".",
