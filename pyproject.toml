@@ -17,9 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 keywords = ['ui', 'python', 'html', 'framework','frontend','bootstrap']
-dependencies = [
-    "beautifulsoup4","livereload","requests","lxml"
-]
+dependencies = []
 requires-python = ">=3.5"
 
 [project.optional-dependencies]

@@ -1,4 +1,7 @@
-import livereload
+try:
+    import livereload
+except:
+    raise "you have to install livereload module: python3 -m pip install livereload"
 
 """
 this module is still under development and at this time just use livereload package

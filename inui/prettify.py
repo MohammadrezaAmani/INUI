@@ -1,4 +1,7 @@
-from bs4 import BeautifulSoup as bs
+try:
+    from bs4 import BeautifulSoup as bs
+except:
+    raise "you have to install bs4 module: python3 -m pip install beautifulsoup4"
 
 
 class Pretiffy:

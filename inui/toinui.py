@@ -1,5 +1,9 @@
 from inui.config.replaces import reverse_replace
-from lxml import etree
+try:
+    from lxml import etree
+except:
+    raise "you have to install lxml module: python3 -m pip install lxml"
+
 import re
 
 

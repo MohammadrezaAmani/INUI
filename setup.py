@@ -14,7 +14,7 @@ LONG_DESCRIPTION = 'Powerful and Highly Customizable Python Library for UI'
 AUTHOR_NAME = "Mohammadreza Amani"
 AUTHOR_EMAIL = "more.amani@yahoo.com"
 PROJECT_URL = "https://github.com/MohammadrezaAmani/INUI/"
-REQUIRED_PACKAGES = ["beautifulsoup4","livereload","requests","lxml"]
+REQUIRED_PACKAGES = []
 PROJECT_KEYWORDS = ['ui', 'python', 'html', 'framework','frontend','bootstrap']
 
 CLASSIFIERS = [
