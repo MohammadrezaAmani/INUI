@@ -1,0 +1,10 @@
+.switch-toggle-wrapper {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .switch {
+    margin-bottom: 0;
+  }
+}
