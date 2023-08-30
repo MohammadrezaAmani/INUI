@@ -1,0 +1,38 @@
+<div class="travel-feature-card">
+  <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+    <div class="row">
+       <div class="medium-12 columns">
+         <h5 class="travel-feature-card-subtitle">{{#if title}}{{title}}{{else}}Hotel{{/if}}</h5>
+          <div class="travel-feature-card-header-controls">
+            <span><a href="#"><i class="fa fa-edit"></i></a></span>
+            <span><a href="#"><i class="fa fa-remove"></i></a></span>
+         </div>
+      </div>
+    </div>  
+  </div>
+
+
+  <div class="travel-feature-card-details">
+    {{#if date}}
+    <h6 class="travel-feature-card-date-range">{{date}}</h6>
+    {{/if}}
+    <div class="row">
+      <div class="small-12 medium-9 columns travel-feature-card-content">
+        <div class="row">
+          <div class="small-4 medium-2 columns">
+            <img class="travel-feature-card-image" src="https://unsplash.it/600/600/?image=1081" alt="">
+          </div>
+          <div class="small-8 medium-10 columns">
+            <h6 class="travel-feature-card-title">New York Royale</h6>
+            <p>The rooms and suites have free WiFi and flat-screen TVs. Upgrades include outdoor decks with the gorgeous Manhattan views, 24-hour room service, and  cocktail bars.</p>
+          </div>
+        </div> 
+      </div>
+
+      <div class="small-12 medium-3 columns travel-feature-card-price">
+        <h6>$2,000.00</h6>
+        <p class="travel-feature-card-price-subtext">2 adults for 2 nights</p>
+      </div>
+    </div> 
+  </div>
+</div>
