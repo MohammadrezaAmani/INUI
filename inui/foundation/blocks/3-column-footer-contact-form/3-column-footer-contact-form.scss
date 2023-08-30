@@ -1,0 +1,106 @@
+.three-column-footer-contact-form-container {
+  background-color: $dark-gray;
+
+  .three-column-footer-contact-form {
+    @include grid-row();
+    color:$light-gray;
+    padding: rem-calc(60) 0;
+
+    a {
+      color: $light-gray;
+    }
+
+    .footer-left {
+      .baseline {
+        display: table-cell;
+        vertical-align: bottom
+      }
+
+      .contact-details {
+        p {
+          font-size: 0.8rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .input-group {
+        padding: 2rem 0 0 0 ;
+
+        input{
+          border-bottom: 2px solid $medium-gray;
+        }
+      }
+
+      @include breakpoint(small) {
+        @include grid-column(12);
+        display: table;
+      }
+
+      @include breakpoint(large) {
+        @include grid-column(3);
+      }
+    }
+
+    .footer-center {
+      text-align: left;
+
+      @include breakpoint(small) {
+        @include grid-column(12);
+        display: table;
+      }
+
+      @include breakpoint(large) {
+        @include grid-column(4);
+        @include grid-column-position(1);
+      }
+
+      .baseline {
+        display: table-cell;
+        vertical-align: bottom;
+      }
+
+      .input-group {
+        padding: 0.5rem 0 0 0;
+
+        input{
+          border-bottom: 2px solid $medium-gray;
+        }
+
+        textarea{
+          border-bottom: 2px solid $medium-gray;
+        }
+      }
+    }
+
+    .footer-right {
+      text-align: right;
+
+      .baseline {
+        display: table-cell;
+        vertical-align: bottom;
+      }
+
+      h2 {
+        color: $white;
+      }
+
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
+
+      .fa {
+        padding: 1rem 0 1rem 0.2rem;
+      }
+
+      @include breakpoint(small) {
+        @include grid-column(12);
+        display: table;
+      }
+
+      @include breakpoint(large) {
+        @include grid-column(3);
+      }
+    }
+  }
+}
