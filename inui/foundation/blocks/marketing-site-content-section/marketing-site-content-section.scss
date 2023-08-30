@@ -1,0 +1,47 @@
+.marketing-site-content-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .marketing-site-content-section-img {
+    align-self: center;
+    flex: 1 0 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 40em) {
+      flex: 1 0 50%;
+    }
+  }
+
+  .marketing-site-content-section-block {
+    padding: 1rem;
+    flex: 1 0 100%;
+    align-self: stretch;
+    background: $light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media screen and (min-width: 40em) {
+      flex: 1 0 50%;
+      padding: 2rem;
+    }
+  }
+}
+
+.marketing-site-content-section-block-header {
+  font-size: 24px;
+}
+
+.marketing-site-content-section-block-subheader {
+  font-size: 13px;
+}
