@@ -1,0 +1,40 @@
+.sticky-footer-css {
+  height: 100vh;
+  display: flex;
+}
+
+.sticky-footer-css-body {
+  overflow: auto;
+}
+
+// Styles for demo
+// -------------------------------------------------
+$slate-gray: #2c3840;
+
+.sticky-footer-css {
+  .header {
+    background-color: $slate-gray;
+    height: 10rem;
+    color: #fff;
+    padding: 3rem;
+
+    .menu a {
+      color: #fff;
+    }
+  }
+
+  .body-content {
+    background-color: #fff;
+  }
+
+  .footer {
+    height: 10rem;
+    background-color: $slate-gray;
+    color: #fff;
+    padding: 3rem;
+
+    .menu a {
+      color: #fff;
+    }
+  }
+}
