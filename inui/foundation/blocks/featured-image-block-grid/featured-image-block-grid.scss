@@ -1,0 +1,25 @@
+.featured-image-block-grid-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-image-block {
+
+  margin-bottom: 20px;
+  
+  .featured-image-block-title {
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: #404040;
+  }
+ 
+  a:hover {
+    p {
+      color: map-get($foundation-palette, primary);
+    }
+  }
+}
+
