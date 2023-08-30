@@ -1,0 +1,71 @@
+$dashboard-number-color: $primary-color;
+$dashboard-number-positive-bg: $success-color;
+$dashboard-number-negative-bg: $alert-color;
+
+.dashboard-number-card {
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 20px 20px;
+  position: relative;
+
+  .dashboard-number-delta {
+    align-items: baseline;
+    bottom: 6px;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+    opacity: 0.7;
+    position: absolute;
+    right: 6px;
+    color: $dashboard-number-color;
+
+    i {
+      margin-right: 5px;
+      width: 0.6rem;
+    }
+  }
+
+  &.positive,
+  &.negative {
+    .dashboard-number-delta {
+      color: $white;
+    }
+
+    .dashboard-number-value,
+    .dashboard-number-area {
+      color: lighten($white, 10%);
+    }
+
+    .dashboard-number-area {
+      opacity: 0.6;
+    }
+  }
+
+  &.positive {
+    background: $dashboard-number-positive-bg;
+  }
+
+  &.negative {
+    background: $dashboard-number-negative-bg;
+  }
+}
+
+.dashboard-number-value {
+  color: $dashboard-number-color;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 1rem 2rem 1.75rem;
+  text-align: center;
+}
+
+.dashboard-number-area {
+  bottom: 6px;
+  color: $dashboard-number-color;
+  font-size: 12px;
+  left: 6px;
+  margin-bottom: 0;
+  position: absolute;
+}
+
+
