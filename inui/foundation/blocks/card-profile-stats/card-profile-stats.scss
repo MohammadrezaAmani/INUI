@@ -1,0 +1,74 @@
+.card-profile-stats {
+  border: 1px solid $medium-gray;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: $white;
+
+  .card-profile-stats-intro {
+    text-align: center;
+
+    .card-profile-stats-intro-pic {
+      border-radius: 50%;
+      margin: 0 0 1.25rem;
+    } // .card-profile-stats-intro-pic
+
+    .card-profile-stats-intro-content {
+      p:last-child {
+        margin: 0;
+      } // p:last-child
+    } // .card-profile-stats-intro-content
+  } // .card-profile-stats-intro
+
+  .card-profile-stats-container {
+    text-align: center;
+
+    .card-profile-stats-statistic {
+      margin: 0 0 1.25rem;
+
+      p:last-child {
+        margin: 0;
+      }
+    } // .card-profile-stats-statistic
+  } // .card-profile-stats-container
+
+  .card-profile-stats-more {
+    .card-profile-stats-more-link {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $body-font-color;
+      padding: 0.5rem;
+      cursor: pointer;
+    } // .card-profile-stats-more-link
+
+    .card-profile-stats-more-content {
+      display: none;
+    } // .card-profile-stats-more-content
+  } // .card-profile-stats-more
+} // .card-profile-stats
+
+
+
+/* Large and up */
+@include breakpoint(large) {
+  .card-profile-stats {
+    .card-profile-stats-intro {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
+
+      .card-profile-stats-intro-pic {
+        margin: 0 1.25rem 0 0;
+        max-width: 250px;
+      } // .card-profile-stats-intro-pic
+    } // .card-profile-stats-intro
+
+    .card-profile-stats-container {
+      display: flex;
+      justify-content: space-around;
+    } // .card-profile-stats-container
+  } // .card-profile-stats
+
+} // media query - large & up
