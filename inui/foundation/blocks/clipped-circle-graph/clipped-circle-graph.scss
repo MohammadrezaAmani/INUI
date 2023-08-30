@@ -1,0 +1,91 @@
+@mixin clipped-circle-graph-circle($size) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - #{$size/2});
+  top: calc(50% - #{$size/2});
+  width: $size;
+  height: $size;
+}
+
+$clipped-circle-graph-size: rem-calc(180);
+$clipped-circle-graph-percent-number-size: rem-calc(24);
+$clipped-circle-graph-percent-unit-size: rem-calc(16);
+$clipped-circle-graph-empty-color: $dark-gray;
+$clipped-circle-background-color: $light-gray;
+$clipped-circle-graph-fill-color: $primary-color;
+$clipped-circle-clip-size: rem-calc(80);
+
+.clipped-circle-graph {
+  width: $clipped-circle-graph-size;
+  height: $clipped-circle-graph-size;
+  border-radius: 50%;
+  background-color: $clipped-circle-graph-empty-color;
+  position: relative;
+
+  &.gt-50 {
+    background-color: $clipped-circle-graph-fill-color;
+  }
+  &:after {
+    content: '';
+    @include horizontal-center;
+    bottom: 19px;
+    background: $clipped-circle-background-color;
+    height: $clipped-circle-clip-size;
+    width: $clipped-circle-clip-size;
+    z-index: 3;
+    transform: rotate(45deg) translate3d(0,0,0);
+    transform-origin: -30px 15px;
+  }
+}
+
+.clipped-circle-graph-progress {
+  @include clipped-circle-graph-circle($clipped-circle-graph-size);
+  clip: rect(0, $clipped-circle-graph-size, $clipped-circle-graph-size, #{$clipped-circle-graph-size/2});
+  transform: rotate(-180deg) perspective(0);
+
+  .clipped-circle-graph-progress-fill {
+    @include clipped-circle-graph-circle($clipped-circle-graph-size);
+    clip: rect(0, #{$clipped-circle-graph-size/2}, $clipped-circle-graph-size, 0);
+    background: $clipped-circle-graph-fill-color;
+    transform: rotate(60deg);
+  }
+
+  .gt-50 & {
+    clip: rect(0, #{$clipped-circle-graph-size/2}, $clipped-circle-graph-size, 0);
+
+    .clipped-circle-graph-progress-fill {
+      clip: rect(0, $clipped-circle-graph-size, $clipped-circle-graph-size, #{$clipped-circle-graph-size/2});
+      background: $clipped-circle-graph-empty-color;
+    }
+  }
+}
+.clipped-circle-graph-percents {
+  @include clipped-circle-graph-circle(#{$clipped-circle-graph-size/1.45});
+  background: $clipped-circle-background-color;
+  text-align: center;
+  display: table;
+  z-index: 4;
+
+  .clipped-circle-graph-percents-number {
+    display: block;
+    font-size: $clipped-circle-graph-percent-number-size;
+    font-weight: bold;
+    color: $clipped-circle-graph-fill-color;
+  }
+
+  .clipped-circle-graph-percents-units {
+    display: block;
+    font-size: $clipped-circle-graph-percent-unit-size;
+    font-weight: bold;
+  }
+}
+.clipped-circle-graph-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 0;
+
+  span {
+    line-height: 1;
+  }
+}
