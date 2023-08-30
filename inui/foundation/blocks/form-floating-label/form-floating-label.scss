@@ -1,0 +1,68 @@
+$highlight-color: dodgerblue;
+
+.form-floating-label {
+  position: relative;
+
+  [type='text'],
+  [type='password'],
+  [type='date'],
+  [type='datetime'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='email'],
+  [type='number'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='url'],
+  [type='color'],
+  textarea {
+    margin-bottom: 0;
+    color: $dark-gray;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 30px 1rem 1rem 25px;
+  }
+
+  label {
+    color: $medium-gray;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 25px;
+    bottom: 0;
+    transition: all 0.2s ease-in;
+    font-weight: 300;
+  }
+
+  textarea ~ label {
+    top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:disabled[value] ~ label,
+  &.has-value input ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+  }
+
+  textarea:focus ~ label,
+  &.has-value textarea ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+  }
+}
+
+
+
+
+
+
