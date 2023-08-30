@@ -1,74 +1,90 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row expanded collapse''',
-                    data = (
+                    classs="""row expanded collapse""",
+                    data=(
                         Div(
-                            classs='''column''',
-                            data = (
+                            classs="""column""",
+                            data=(
                                 Div(
-                                    classs='''large-article-header''',
-                                    data = (
+                                    classs="""large-article-header""",
+                                    data=(
                                         Div(
-                                            classs='''large-article-header-content''',
-                                            data = (
+                                            classs="""large-article-header-content""",
+                                            data=(
                                                 Div(
-                                                    classs='''center-container''',
-                                                    data = (
+                                                    classs="""center-container""",
+                                                    data=(
                                                         Div(
-                                                            classs='''article-date''',
-                                                            data = (
+                                                            classs="""article-date""",
+                                                            data=(
                                                                 P(
-
-                                                                    data = ('''Published on Jan 12, 2016''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """Published on Jan 12, 2016""",
+                                                                    )
+                                                                ),
+                                                            ),
+                                                        ),
                                                         Div(
-                                                            classs='''article-title''',
-                                                            data = (
+                                                            classs="""article-title""",
+                                                            data=(
                                                                 H1(
-
-                                                                    data = ('''A Great Big Article Title Goes Here''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """A Great Big Article Title Goes Here""",
+                                                                    )
+                                                                ),
+                                                            ),
+                                                        ),
                                                         Div(
-                                                            classs='''article-details''',
-                                                            data = (
+                                                            classs="""article-details""",
+                                                            data=(
                                                                 Div(
-                                                                    classs='''article-author''',
-                                                                    data = (
+                                                                    classs="""article-author""",
+                                                                    data=(
                                                                         Img(
-                                                                            src='''https://unsplash.it/50/50?image=1005''',
-                                                                            alt='',
-                                                                        ), 
+                                                                            src="""https://unsplash.it/50/50?image=1005""",
+                                                                            alt="",
+                                                                        ),
                                                                         A(
-                                                                            href='''#''',
-                                                                            data = ('''Jane Austen''',)
-                                                                        ), )
-                                                                ), 
+                                                                            href="""#""",
+                                                                            data=(
+                                                                                """Jane Austen""",
+                                                                            ),
+                                                                        ),
+                                                                    ),
+                                                                ),
                                                                 Div(
-                                                                    classs='''article-comments''',
-                                                                    data = (
+                                                                    classs="""article-comments""",
+                                                                    data=(
                                                                         A(
-                                                                            href='''#''',
-                                                                            data = (
+                                                                            href="""#""",
+                                                                            data=(
                                                                                 I(
-                                                                                    classs='''fa fa-comment''',
-                                                                                    aria_hidden='''true''',
-                                                                                ), )
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                                                    classs="""fa fa-comment""",
+                                                                                    aria_hidden="""true""",
+                                                                                ),
+                                                                            ),
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,284 +1,264 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Section(
-                    classs='''block-list''',
-                    data = (
-                        Header(
-
-                            data = ('''A block list header''',)
-                        ), 
+                    classs="""block-list""",
+                    data=(
+                        Header(data=("""A block list header""",)),
                         Ul(
-
-                            data = (
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Div(
-
-                                            data = (
+                                            data=(
                                                 P(
-                                                    classs='''list-header''',
-                                                    data = (
+                                                    classs="""list-header""",
+                                                    data=(
                                                         Img(
-                                                            src='''https://lorempixel.com/30/30/animals''',
-                                                            classs='',
-                                                            height='',
-                                                            width='',
-                                                            alt='',
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                            src="""https://lorempixel.com/30/30/animals""",
+                                                            classs="",
+                                                            height="",
+                                                            width="",
+                                                            alt="",
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Div(
-
-                                            data = (
+                                            data=(
                                                 P(
-                                                    classs='''list-header''',
-                                                    data = ('''DOUBLE LINE''',)
-                                                ), 
+                                                    classs="""list-header""",
+                                                    data=("""DOUBLE LINE""",),
+                                                ),
                                                 P(
-                                                    classs='''list-subheader dark''',
-                                                    data = ('''Now with an icon''',)
-                                                ), )
-                                        ), 
+                                                    classs="""list-subheader dark""",
+                                                    data=("""Now with an icon""",),
+                                                ),
+                                            )
+                                        ),
                                         Div(
-
-                                            data = (
+                                            data=(
                                                 Img(
-                                                    src='''https://lorempixel.com/30/30/animals''',
-                                                    classs='',
-                                                    height='',
-                                                    width='',
-                                                    alt='',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    src="""https://lorempixel.com/30/30/animals""",
+                                                    classs="",
+                                                    height="",
+                                                    width="",
+                                                    alt="",
+                                                ),
+                                            )
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Div(
-
-                                            data = (
+                                            data=(
                                                 P(
-                                                    classs='''list-header''',
-                                                    data = ('''DOUBLE LINE''',)
-                                                ), 
+                                                    classs="""list-header""",
+                                                    data=("""DOUBLE LINE""",),
+                                                ),
                                                 P(
-                                                    classs='''list-subheader dark''',
-                                                    data = ('''What about a two icons??''',)
-                                                ), )
-                                        ), 
+                                                    classs="""list-subheader dark""",
+                                                    data=(
+                                                        """What about a two icons??""",
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Div(
-
-                                            data = (
+                                            data=(
                                                 Img(
-                                                    src='''https://lorempixel.com/30/30/animals''',
-                                                    classs='',
-                                                    height='',
-                                                    width='',
-                                                    alt='',
-                                                ), 
+                                                    src="""https://lorempixel.com/30/30/animals""",
+                                                    classs="",
+                                                    height="",
+                                                    width="",
+                                                    alt="",
+                                                ),
                                                 Img(
-                                                    src='''https://lorempixel.com/30/30/animals''',
-                                                    classs='',
-                                                    height='',
-                                                    width='',
-                                                    alt='',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    src="""https://lorempixel.com/30/30/animals""",
+                                                    classs="",
+                                                    height="",
+                                                    width="",
+                                                    alt="",
+                                                ),
+                                            )
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         P(
-                                            classs='''list-header''',
-                                            data = ('''IMAGE ON THE RIGHT''',)
-                                        ), 
+                                            classs="""list-header""",
+                                            data=("""IMAGE ON THE RIGHT""",),
+                                        ),
                                         Img(
-                                            src='''https://lorempixel.com/30/30/animals''',
-                                            classs='',
-                                            height='',
-                                            width='',
-                                            alt='',
-                                        ), )
-                                ), 
+                                            src="""https://lorempixel.com/30/30/animals""",
+                                            classs="",
+                                            height="",
+                                            width="",
+                                            alt="",
+                                        ),
+                                    )
+                                ),
                                 Li(
-                                    classs='''with-chevron''',
-                                    data = (
+                                    classs="""with-chevron""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = ('''Independent With a Chevron''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                            href="""#""",
+                                            data=("""Independent With a Chevron""",),
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
                 Section(
-                    classs='''block-list''',
-                    data = (
-                        Header(
-
-                            data = ('''Radio buttons list''',)
-                        ), 
+                    classs="""block-list""",
+                    data=(
+                        Header(data=("""Radio buttons list""",)),
                         Ul(
-
-                            data = (
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''delicious''',
-                                            id='''eggs''',
-                                            value='''eggs''',
-                                            checked='',
-                                        ), 
-                                        Label(
-                                            forr='''eggs''',
-                                            data = ('''Eggs''',)
-                                        ), )
-                                ), 
+                                            typee="""radio""",
+                                            name="""delicious""",
+                                            id="""eggs""",
+                                            value="""eggs""",
+                                            checked="",
+                                        ),
+                                        Label(forr="""eggs""", data=("""Eggs""",)),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''delicious''',
-                                            id='''bacon''',
-                                            value='''bacon''',
-                                        ), 
-                                        Label(
-                                            forr='''bacon''',
-                                            data = ('''Bacon''',)
-                                        ), )
-                                ), 
+                                            typee="""radio""",
+                                            name="""delicious""",
+                                            id="""bacon""",
+                                            value="""bacon""",
+                                        ),
+                                        Label(forr="""bacon""", data=("""Bacon""",)),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''delicious''',
-                                            id='''toast''',
-                                            value='''toast''',
-                                        ), 
-                                        Label(
-                                            forr='''toast''',
-                                            data = ('''Toast''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                            typee="""radio""",
+                                            name="""delicious""",
+                                            id="""toast""",
+                                            value="""toast""",
+                                        ),
+                                        Label(forr="""toast""", data=("""Toast""",)),
+                                    )
+                                ),
+                            )
+                        ),
+                    ),
+                ),
                 Section(
-                    classs='''block-list''',
-                    data = (
-                        Header(
-
-                            data = ('''Look, I gotta Switch''',)
-                        ), 
+                    classs="""block-list""",
+                    data=(
+                        Header(data=("""Look, I gotta Switch""",)),
                         Ul(
-
-                            data = (
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Span(
-                                            classs='''list-label''',
-                                            data = ('''Switch!''',)
-                                        ), 
+                                            classs="""list-label""",
+                                            data=("""Switch!""",),
+                                        ),
                                         Div(
-                                            classs='''switch''',
-                                            data = (
+                                            classs="""switch""",
+                                            data=(
                                                 Input(
-                                                    classs='''switch-input''',
-                                                    id='''exampleSwitch''',
-                                                    typee='''checkbox''',
-                                                    name='''exampleSwitch''',
-                                                ), 
+                                                    classs="""switch-input""",
+                                                    id="""exampleSwitch""",
+                                                    typee="""checkbox""",
+                                                    name="""exampleSwitch""",
+                                                ),
                                                 Label(
-                                                    classs='''switch-paddle''',
-                                                    forr='''exampleSwitch''',
-                                                    data = (
+                                                    classs="""switch-paddle""",
+                                                    forr="""exampleSwitch""",
+                                                    data=(
                                                         Span(
-                                                            classs='''show-for-sr''',
-                                                            data = ('''Download Kittens''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                                            classs="""show-for-sr""",
+                                                            data=(
+                                                                """Download Kittens""",
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            )
+                        ),
+                    ),
+                ),
                 Section(
-                    classs='''block-list''',
-                    data = (
-                        Header(
-
-                            data = ('''I Hold Forms''',)
-                        ), 
+                    classs="""block-list""",
+                    data=(
+                        Header(data=("""I Hold Forms""",)),
                         Ul(
-
-                            data = (
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''text''',
-                                            placeholder='''User name''',
-                                        ), )
-                                ), 
+                                            typee="""text""",
+                                            placeholder="""User name""",
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''password''',
-                                            placeholder='''Password''',
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                            typee="""password""",
+                                            placeholder="""Password""",
+                                        ),
+                                    )
+                                ),
+                            )
+                        ),
+                    ),
+                ),
                 Section(
-                    classs='''block-list''',
-                    data = (
-                        Header(
-
-                            data = ('''I Even Have Selectboxes''',)
-                        ), 
+                    classs="""block-list""",
+                    data=(
+                        Header(data=("""I Even Have Selectboxes""",)),
                         Ul(
-
-                            data = (
+                            data=(
                                 Li(
-                                    classs='''with-dropdown''',
-                                    data = (
+                                    classs="""with-dropdown""",
+                                    data=(
                                         Select(
-                                            name='',
-                                            id='',
-                                            data = (
-                                                Option(
-
-                                                    data = ('''Now''',)
-                                                ), 
-                                                Option(
-
-                                                    data = ('''Later''',)
-                                                ), 
-                                                Option(
-
-                                                    data = ('''Eventually''',)
-                                                ), 
-                                                Option(
-
-                                                    data = ('''Forever''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            name="",
+                                            id="",
+                                            data=(
+                                                Option(data=("""Now""",)),
+                                                Option(data=("""Later""",)),
+                                                Option(data=("""Eventually""",)),
+                                                Option(data=("""Forever""",)),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

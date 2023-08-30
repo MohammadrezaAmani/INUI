@@ -1,362 +1,311 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''multilevel-offcanvas off-canvas position-right''',
-                    id='''offCanvasRight''',
-                    data_off_canvas='',
-                    data = (
+                    classs="""multilevel-offcanvas off-canvas position-right""",
+                    id="""offCanvasRight""",
+                    data_off_canvas="",
+                    data=(
                         Ul(
-                            classs='''vertical menu''',
-                            data_accordion_menu='',
-                            data = (
+                            classs="""vertical menu""",
+                            data_accordion_menu="",
+                            data=(
                                 Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''SERVICES''',)
-                                        ), 
+                                    data=(
+                                        A(href="""#""", data=("""SERVICES""",)),
                                         Ul(
-                                            classs='''menu vertical nested''',
-                                            data = (
+                                            classs="""menu vertical nested""",
+                                            data=(
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Brand''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Brand""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Web Apps''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Web Apps""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Mobile Apps''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                            href="""#""",
+                                                            data=("""Mobile Apps""",),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''PRODUCTS''',)
-                                        ), 
+                                    data=(
+                                        A(href="""#""", data=("""PRODUCTS""",)),
                                         Ul(
-                                            classs='''menu vertical nested''',
-                                            data = (
+                                            classs="""menu vertical nested""",
+                                            data=(
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Product 1''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Product 1""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Product 2''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Product 2""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Product 3''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                            href="""#""",
+                                                            data=("""Product 3""",),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''CITIES''',)
-                                        ), 
+                                    data=(
+                                        A(href="""#""", data=("""CITIES""",)),
                                         Ul(
-                                            classs='''menu vertical nested''',
-                                            data = (
+                                            classs="""menu vertical nested""",
+                                            data=(
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''London''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""London""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''New York''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""New York""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Paris''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                            href="""#""",
+                                                            data=("""Paris""",),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Ul(
-                            classs='''vertical menu''',
-                            data = (
+                            classs="""vertical menu""",
+                            data=(
                                 Li(
-                                    classs='''off-canvas-menu-item''',
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Tour''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Login''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Register''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Pricing''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Support''',)
-                                        ), )
-                                ), )
-                        ), 
+                                    classs="""off-canvas-menu-item""",
+                                    data=(A(href="""#""", data=("""Tour""",)),),
+                                ),
+                                Li(data=(A(href="""#""", data=("""Login""",)),)),
+                                Li(data=(A(href="""#""", data=("""Register""",)),)),
+                                Li(data=(A(href="""#""", data=("""Pricing""",)),)),
+                                Li(data=(A(href="""#""", data=("""Support""",)),)),
+                            ),
+                        ),
                         Ul(
-                            classs='''vertical menu''',
-                            data = (
+                            classs="""vertical menu""",
+                            data=(
+                                Li(data=(A(href="""#""", data=("""Journal""",)),)),
+                                Li(data=(A(href="""#""", data=("""FAQ""",)),)),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = ('''Journal''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''FAQ''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Terms & Conditions''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Careers''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            href='''#''',
-                                            data = ('''Students''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            href="""#""",
+                                            data=("""Terms & Conditions""",),
+                                        ),
+                                    )
+                                ),
+                                Li(data=(A(href="""#""", data=("""Careers""",)),)),
+                                Li(data=(A(href="""#""", data=("""Students""",)),)),
+                            ),
+                        ),
                         Ul(
-                            classs='''menu simple social-links''',
-                            data = (
+                            classs="""menu simple social-links""",
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            target='''_blank''',
-                                            data = (
+                                            href="""#""",
+                                            target="""_blank""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-twitter-square''',
-                                                    aria_hidden='''true''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""fa fa-twitter-square""",
+                                                    aria_hidden="""true""",
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            target='''_blank''',
-                                            data = (
+                                            href="""#""",
+                                            target="""_blank""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-facebook-square''',
-                                                    aria_hidden='''true''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""fa fa-facebook-square""",
+                                                    aria_hidden="""true""",
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            target='''_blank''',
-                                            data = (
+                                            href="""#""",
+                                            target="""_blank""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-github-square''',
-                                                    aria_hidden='''true''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""fa fa-github-square""",
+                                                    aria_hidden="""true""",
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            target='''_blank''',
-                                            data = (
+                                            href="""#""",
+                                            target="""_blank""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-google-plus-square''',
-                                                    aria_hidden='''true''',
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                                    classs="""fa fa-google-plus-square""",
+                                                    aria_hidden="""true""",
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''off-canvas-content''',
-                    data_off_canvas_content='',
-                    data = (
+                    classs="""off-canvas-content""",
+                    data_off_canvas_content="",
+                    data=(
                         Div(
-                            classs='''nav-bar''',
-                            data = (
+                            classs="""nav-bar""",
+                            data=(
                                 Div(
-                                    classs='''nav-bar-left''',
-                                    data = (
+                                    classs="""nav-bar-left""",
+                                    data=(
                                         A(
-                                            classs='''nav-bar-logo''',
-                                            data = (
+                                            classs="""nav-bar-logo""",
+                                            data=(
                                                 Img(
-                                                    classs='''logo''',
-                                                    src='''https://placehold.it/150x30''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""logo""",
+                                                    src="""https://placehold.it/150x30""",
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''nav-bar-right''',
-                                    data = (
+                                    classs="""nav-bar-right""",
+                                    data=(
                                         Ul(
-                                            classs='''menu''',
-                                            data = (
+                                            classs="""menu""",
+                                            data=(
                                                 Li(
-                                                    classs='''hide-for-small-only''',
-                                                    data = (
+                                                    classs="""hide-for-small-only""",
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''TOUR''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""TOUR""",),
+                                                        ),
+                                                    ),
+                                                ),
                                                 Li(
-                                                    classs='''hide-for-small-only''',
-                                                    data = (
+                                                    classs="""hide-for-small-only""",
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''LOGIN''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""LOGIN""",),
+                                                        ),
+                                                    ),
+                                                ),
+                                                Li(data=()),
                                                 Li(
-
-                                                    data = ()
-                                                ), 
-                                                Li(
-
-                                                    data = (
+                                                    data=(
                                                         Button(
-                                                            classs='''offcanvas-trigger''',
-                                                            typee='''button''',
-                                                            data_open='''offCanvasRight''',
-                                                            data = (
+                                                            classs="""offcanvas-trigger""",
+                                                            typee="""button""",
+                                                            data_open="""offCanvasRight""",
+                                                            data=(
                                                                 Span(
-                                                                    classs='''offcanvas-trigger-text hide-for-small-only''',
-                                                                    data = ('''Menu''',)
-                                                                ), 
+                                                                    classs="""offcanvas-trigger-text hide-for-small-only""",
+                                                                    data=("""Menu""",),
+                                                                ),
                                                                 Div(
-                                                                    classs='''hamburger''',
-                                                                    data = (
+                                                                    classs="""hamburger""",
+                                                                    data=(
                                                                         Span(
-                                                                            classs='''line''',
-                                                                        ), 
+                                                                            classs="""line""",
+                                                                        ),
                                                                         Span(
-                                                                            classs='''line''',
-                                                                        ), 
+                                                                            classs="""line""",
+                                                                        ),
                                                                         Span(
-                                                                            classs='''line''',
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                                            classs="""line""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''body-info''',
-                            data = (
-                                H4(
-
-                                    data = (''' Multilevel Off-Canvas ''',)
-                                ), 
+                            classs="""body-info""",
+                            data=(
+                                H4(data=(""" Multilevel Off-Canvas """,)),
                                 A(
-                                    classs='''button disabled''',
-                                    href='''#''',
-                                    data = ('''Watch Video (coming soon)''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""button disabled""",
+                                    href="""#""",
+                                    data=("""Watch Video (coming soon)""",),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

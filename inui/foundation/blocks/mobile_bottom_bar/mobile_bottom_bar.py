@@ -1,38 +1,36 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''mobile-bottom-bar''',
-                    data = (
+                    classs="""mobile-bottom-bar""",
+                    data=(
                         A(
-                            href='''#''',
-                            classs='''footer-link''',
-                            data = (
+                            href="""#""",
+                            classs="""footer-link""",
+                            data=(
                                 I(
-                                    classs='''fa fa-cog''',
-                                ), 
-                                Span(
-                                    classs='''footer-text''',
-                                    data = ('''Settings''',)
-                                ), )
-                        ), 
+                                    classs="""fa fa-cog""",
+                                ),
+                                Span(classs="""footer-text""", data=("""Settings""",)),
+                            ),
+                        ),
                         A(
-                            href='''#''',
-                            classs='''footer-link''',
-                            data = (
+                            href="""#""",
+                            classs="""footer-link""",
+                            data=(
                                 I(
-                                    classs='''fa fa-sign-out''',
-                                ), 
-                                Span(
-                                    classs='''footer-text''',
-                                    data = ('''Log out''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""fa fa-sign-out""",
+                                ),
+                                Span(classs="""footer-text""", data=("""Log out""",)),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

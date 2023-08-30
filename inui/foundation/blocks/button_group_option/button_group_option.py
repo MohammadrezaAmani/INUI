@@ -1,25 +1,27 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''button-group-option''',
-                    data_grouptype='''OR''',
-                    data = (
+                    classs="""button-group-option""",
+                    data_grouptype="""OR""",
+                    data=(
                         A(
-                            href='''#''',
-                            classs='''button success radius''',
-                            data = ('''Buy it now''',)
-                        ), 
+                            href="""#""",
+                            classs="""button success radius""",
+                            data=("""Buy it now""",),
+                        ),
                         A(
-                            href='''#''',
-                            classs='''button primary radius''',
-                            data = ('''Learn More''',)
-                        ), )
-                ), )
-        ), )
+                            href="""#""",
+                            classs="""button primary radius""",
+                            data=("""Learn More""",),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

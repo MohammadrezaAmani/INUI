@@ -1,81 +1,88 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''pagination pagination-circular''',
-                    role='''navigation''',
-                    aria_lable='''Pagination''',
-                    data = (
+                    classs="""pagination pagination-circular""",
+                    role="""navigation""",
+                    aria_lable="""Pagination""",
+                    data=(
                         Li(
-                            classs='''disabled''',
-                            data = ('''« ''',
+                            classs="""disabled""",
+                            data=(
+                                """« """,
                                 Span(
-                                    classs='''show-for-sr''',
-                                    data = ('''Previous page''',)
-                                ), )
-                        ), 
+                                    classs="""show-for-sr""",
+                                    data=("""Previous page""",),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''current''',
-                            data = (
+                            classs="""current""",
+                            data=(
                                 Span(
-                                    classs='''show-for-sr''',
-                                    data = ('''You're on page''',)
-                                ), )
-                        ), 
+                                    classs="""show-for-sr""",
+                                    data=("""You're on page""",),
+                                ),
+                            ),
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    href='''#''',
-                                    aria_lable='''Page 2''',
-                                    data = ('''2''',)
-                                ), )
-                        ), 
+                                    href="""#""",
+                                    aria_lable="""Page 2""",
+                                    data=("""2""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    href='''#''',
-                                    aria_lable='''Page 3''',
-                                    data = ('''3''',)
-                                ), )
-                        ), 
+                                    href="""#""",
+                                    aria_lable="""Page 3""",
+                                    data=("""3""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    href='''#''',
-                                    aria_lable='''Page 4''',
-                                    data = ('''4''',)
-                                ), )
-                        ), 
+                                    href="""#""",
+                                    aria_lable="""Page 4""",
+                                    data=("""4""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    href='''#''',
-                                    aria_lable='''Page 5''',
-                                    data = ('''5''',)
-                                ), )
-                        ), 
+                                    href="""#""",
+                                    aria_lable="""Page 5""",
+                                    data=("""5""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    href='''#''',
-                                    aria_lable='''Next page''',
-                                    data = ('''» ''',
+                                    href="""#""",
+                                    aria_lable="""Next page""",
+                                    data=(
+                                        """» """,
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Next page''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""show-for-sr""",
+                                            data=("""Next page""",),
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,134 +1,133 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''comment-section-container''',
-                    data = (
-                        H3(
-
-                            data = ('''Comments (2)''',)
-                        ), 
+                    classs="""comment-section-container""",
+                    data=(
+                        H3(data=("""Comments (2)""",)),
                         Div(
-                            classs='''comment-section-author''',
-                            data = (
+                            classs="""comment-section-author""",
+                            data=(
                                 Img(
-                                    src='''https://placehold.it/50x50''',
-                                    alt='',
-                                ), 
+                                    src="""https://placehold.it/50x50""",
+                                    alt="",
+                                ),
                                 Div(
-                                    classs='''comment-section-name''',
-                                    data = (
+                                    classs="""comment-section-name""",
+                                    data=(
                                         H5(
-
-                                            data = (
-                                                A(
-                                                    href='',
-                                                    data = ('''Janice Jones''',)
-                                                ), )
-                                        ), 
-                                        P(
-
-                                            data = ('''March 12, 2017 at 1:28pm''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            data=(
+                                                A(href="", data=("""Janice Jones""",)),
+                                            )
+                                        ),
+                                        P(data=("""March 12, 2017 at 1:28pm""",)),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''comment-section-text''',
-                            data = (
+                            classs="""comment-section-text""",
+                            data=(
                                 P(
-
-                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia
+                                    data=(
+                                        """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia
       deserunt.
-    ''',)
-                                ), )
-                        ), 
+    """,
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''comment-section-author''',
-                            data = (
+                            classs="""comment-section-author""",
+                            data=(
                                 Img(
-                                    src='''https://placehold.it/50x50''',
-                                    alt='',
-                                ), 
+                                    src="""https://placehold.it/50x50""",
+                                    alt="",
+                                ),
                                 Div(
-                                    classs='''comment-section-name''',
-                                    data = (
+                                    classs="""comment-section-name""",
+                                    data=(
                                         H5(
-
-                                            data = (
-                                                A(
-                                                    href='',
-                                                    data = ('''Janice Jones''',)
-                                                ), )
-                                        ), 
-                                        P(
-
-                                            data = ('''March 12, 2017 at 1:28pm''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            data=(
+                                                A(href="", data=("""Janice Jones""",)),
+                                            )
+                                        ),
+                                        P(data=("""March 12, 2017 at 1:28pm""",)),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''comment-section-text''',
-                            data = (
+                            classs="""comment-section-text""",
+                            data=(
                                 P(
-
-                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia deserunt.
-    ''',)
-                                ), )
-                        ), )
-                ), 
+                                    data=(
+                                        """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia deserunt.
+    """,
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Form(
-                    classs='''comment-section-form''',
-                    data = (
+                    classs="""comment-section-form""",
+                    data=(
                         Div(
-                            classs='''comment-section-box''',
-                            data = (
+                            classs="""comment-section-box""",
+                            data=(
                                 Div(
-                                    classs='''row''',
-                                    data = (
+                                    classs="""row""",
+                                    data=(
                                         Div(
-                                            classs='''small-12 column''',
-                                            data = (
-                                                H4(
-
-                                                    data = ('''Leave a Comment''',)
-                                                ), 
+                                            classs="""small-12 column""",
+                                            data=(
+                                                H4(data=("""Leave a Comment""",)),
                                                 Label(
-
-                                                    data = ('''Name
-          ''',
+                                                    data=(
+                                                        """Name
+          """,
                                                         Input(
-                                                            typee='''text''',
-                                                        ), )
-                                                ), 
+                                                            typee="""text""",
+                                                        ),
+                                                    )
+                                                ),
                                                 Label(
-
-                                                    data = ('''Email
-          ''',
+                                                    data=(
+                                                        """Email
+          """,
                                                         Input(
-                                                            typee='''text''',
-                                                        ), )
-                                                ), 
+                                                            typee="""text""",
+                                                        ),
+                                                    )
+                                                ),
                                                 Label(
-
-                                                    data = ('''Comment
-          ''',
+                                                    data=(
+                                                        """Comment
+          """,
                                                         Textarea(
-                                                            rows='''10''',
-                                                            typee='''text''',
-                                                        ), )
-                                                ), 
+                                                            rows="""10""",
+                                                            typee="""text""",
+                                                        ),
+                                                    )
+                                                ),
                                                 Button(
-                                                    classs='''button expanded''',
-                                                    data = ('''Submit''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                    classs="""button expanded""",
+                                                    data=("""Submit""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,38 +1,36 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''responsive-blog-post''',
-                    data = (
+                    classs="""responsive-blog-post""",
+                    data=(
                         Div(
-                            classs='''individual-post''',
-                            data = (
-                                H4(
-
-                                    data = ('''Title of Blog''',)
-                                ), 
-                                P(
-                                    classs='''date''',
-                                    data = ('''Date''',)
-                                ), 
+                            classs="""individual-post""",
+                            data=(
+                                H4(data=("""Title of Blog""",)),
+                                P(classs="""date""", data=("""Date""",)),
                                 Img(
-                                    src='''https://placehold.it/1200x650''',
-                                ), 
+                                    src="""https://placehold.it/1200x650""",
+                                ),
                                 P(
-
-                                    data = (''' First few sentences of blog post show here and then eventually cuts out. First few sentences of blog post show here and then eventually cuts out. First few sentences of blog post show here and then eventually cuts out...''',)
-                                ), 
+                                    data=(
+                                        """ First few sentences of blog post show here and then eventually cuts out. First few sentences of blog post show here and then eventually cuts out. First few sentences of blog post show here and then eventually cuts out...""",
+                                    )
+                                ),
                                 A(
-                                    classs='''button''',
-                                    href='''#''',
-                                    data = ('''Read On''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""button""",
+                                    href="""#""",
+                                    data=("""Read On""",),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

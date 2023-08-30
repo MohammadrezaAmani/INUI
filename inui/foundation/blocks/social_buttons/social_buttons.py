@@ -1,189 +1,202 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
-                H4(
-
-                    data = ('''Button tag''',)
-                ), 
+            data=(
+                H4(data=("""Button tag""",)),
                 Div(
-                    classs='''clearfix''',
-                ), 
+                    classs="""clearfix""",
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social facebook''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social facebook""",
+                    data=(
                         I(
-                            classs='''fa fa-facebook''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-facebook""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social twitter''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social twitter""",
+                    data=(
                         I(
-                            classs='''fa fa-twitter''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-twitter""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social linkedin''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social linkedin""",
+                    data=(
                         I(
-                            classs='''fa fa-linkedin''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-linkedin""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social youtube''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social youtube""",
+                    data=(
                         I(
-                            classs='''fa fa-youtube''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-youtube""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social instagram''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social instagram""",
+                    data=(
                         I(
-                            classs='''fa fa-instagram''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-instagram""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social pinterest''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social pinterest""",
+                    data=(
                         I(
-                            classs='''fa fa-pinterest-p''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-pinterest-p""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social google-plus''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social google-plus""",
+                    data=(
                         I(
-                            classs='''fa fa-google-plus''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-google-plus""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social github''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social github""",
+                    data=(
                         I(
-                            classs='''fa fa-github''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-github""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Button(
-                    typee='''button''',
-                    classs='''button social tumblr''',
-                    data = (
+                    typee="""button""",
+                    classs="""button social tumblr""",
+                    data=(
                         I(
-                            classs='''fa fa-tumblr''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-tumblr""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''clearfix''',
-                ), 
-                H4(
-
-                    data = ('''Button as an Anchor tag''',)
-                ), 
+                    classs="""clearfix""",
+                ),
+                H4(data=("""Button as an Anchor tag""",)),
                 Div(
-                    classs='''clearfix''',
-                ), 
+                    classs="""clearfix""",
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social facebook''',
-                    data = (
+                    href="""#""",
+                    classs="""button social facebook""",
+                    data=(
                         I(
-                            classs='''fa fa-facebook''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-facebook""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social twitter''',
-                    data = (
+                    href="""#""",
+                    classs="""button social twitter""",
+                    data=(
                         I(
-                            classs='''fa fa-twitter''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-twitter""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social linkedin''',
-                    data = (
+                    href="""#""",
+                    classs="""button social linkedin""",
+                    data=(
                         I(
-                            classs='''fa fa-linkedin''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-linkedin""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social youtube''',
-                    data = (
+                    href="""#""",
+                    classs="""button social youtube""",
+                    data=(
                         I(
-                            classs='''fa fa-youtube''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-youtube""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social instagram''',
-                    data = (
+                    href="""#""",
+                    classs="""button social instagram""",
+                    data=(
                         I(
-                            classs='''fa fa-instagram''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-instagram""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social pinterest''',
-                    data = (
+                    href="""#""",
+                    classs="""button social pinterest""",
+                    data=(
                         I(
-                            classs='''fa fa-pinterest-p''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-pinterest-p""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social google-plus''',
-                    data = (
+                    href="""#""",
+                    classs="""button social google-plus""",
+                    data=(
                         I(
-                            classs='''fa fa-google-plus''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-google-plus""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social github''',
-                    data = (
+                    href="""#""",
+                    classs="""button social github""",
+                    data=(
                         I(
-                            classs='''fa fa-github''',
-                            aria_hidden='''true''',
-                        ), )
-                ), 
+                            classs="""fa fa-github""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
                 A(
-                    href='''#''',
-                    classs='''button social tumblr''',
-                    data = (
+                    href="""#""",
+                    classs="""button social tumblr""",
+                    data=(
                         I(
-                            classs='''fa fa-tumblr''',
-                            aria_hidden='''true''',
-                        ), )
-                ), )
-        ), )
+                            classs="""fa fa-tumblr""",
+                            aria_hidden="""true""",
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

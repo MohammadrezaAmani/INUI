@@ -1,40 +1,44 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    id='''page''',
-                    data = ('''
+                    id="""page""",
+                    data=(
+                        """
   {{> sticky-topbar}}
 
-  ''',
+  """,
                         Div(
-                            classs='''column row''',
-                            id='''content''',
-                            data = (
+                            classs="""column row""",
+                            id="""content""",
+                            data=(
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/100''',
-                                ), 
+                                    src="""https://placehold.it/1200x300&text=content/100""",
+                                ),
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/200''',
-                                ), 
+                                    src="""https://placehold.it/1200x300&text=content/200""",
+                                ),
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/300''',
-                                ), 
+                                    src="""https://placehold.it/1200x300&text=content/300""",
+                                ),
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/400''',
-                                ), 
+                                    src="""https://placehold.it/1200x300&text=content/400""",
+                                ),
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/500''',
-                                ), 
+                                    src="""https://placehold.it/1200x300&text=content/500""",
+                                ),
                                 Img(
-                                    src='''https://placehold.it/1200x300&text=content/600''',
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    src="""https://placehold.it/1200x300&text=content/600""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

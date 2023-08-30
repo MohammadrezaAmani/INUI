@@ -1,255 +1,271 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''multilevel-accordion-menu vertical menu''',
-                    data_accordion_menu='',
-                    data = (
+                    classs="""multilevel-accordion-menu vertical menu""",
+                    data_accordion_menu="",
+                    data=(
                         Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 1''',)
-                                ), 
+                            data=(
+                                A(href="""#""", data=("""Item 1""",)),
                                 Ul(
-                                    classs='''menu vertical sublevel-1''',
-                                    data = (
+                                    classs="""menu vertical sublevel-1""",
+                                    data=(
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''#''',
-                                                    data = ('''Sub-item 1''',)
-                                                ), 
+                                                    href="""#""",
+                                                    data=("""Sub-item 1""",),
+                                                ),
                                                 Ul(
-                                                    classs='''menu vertical sublevel-2''',
-                                                    data = (
+                                                    classs="""menu vertical sublevel-2""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 1''',)
-                                                                ), )
-                                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 1""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 2''',)
-                                                                ), )
-                                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 2""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 3''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 3""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''#''',
-                                                    data = ('''Sub-item 2''',)
-                                                ), 
+                                                    href="""#""",
+                                                    data=("""Sub-item 2""",),
+                                                ),
                                                 Ul(
-                                                    classs='''menu vertical sublevel-2''',
-                                                    data = (
+                                                    classs="""menu vertical sublevel-2""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Super-sub-item 1''',)
-                                                                ), 
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Super-sub-item 1""",
+                                                                    ),
+                                                                ),
                                                                 Ul(
-                                                                    classs='''menu vertical sublevel-3''',
-                                                                    data = (
+                                                                    classs="""menu vertical sublevel-3""",
+                                                                    data=(
                                                                         Li(
-
-                                                                            data = (
+                                                                            data=(
                                                                                 A(
-                                                                                    classs='''subitem''',
-                                                                                    href='''#''',
-                                                                                    data = ('''Thing 1''',)
-                                                                                ), )
-                                                                        ), 
+                                                                                    classs="""subitem""",
+                                                                                    href="""#""",
+                                                                                    data=(
+                                                                                        """Thing 1""",
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
                                                                         Li(
-
-                                                                            data = (
+                                                                            data=(
                                                                                 A(
-                                                                                    classs='''subitem''',
-                                                                                    href='''#''',
-                                                                                    data = ('''Thing 2''',)
-                                                                                ), )
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                                    classs="""subitem""",
+                                                                                    href="""#""",
+                                                                                    data=(
+                                                                                        """Thing 2""",
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 2''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 2""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 1''',)
-                                                ), )
-                                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 1""",),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 2''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 2""",),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 2''',)
-                                ), 
+                            data=(
+                                A(href="""#""", data=("""Item 2""",)),
                                 Ul(
-                                    classs='''menu vertical sublevel-1''',
-                                    data = (
+                                    classs="""menu vertical sublevel-1""",
+                                    data=(
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 1''',)
-                                                ), )
-                                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 1""",),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 2''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 2""",),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 3''',)
-                                ), 
+                            data=(
+                                A(href="""#""", data=("""Item 3""",)),
                                 Ul(
-                                    classs='''menu vertical sublevel-1''',
-                                    data = (
+                                    classs="""menu vertical sublevel-1""",
+                                    data=(
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 1''',)
-                                                ), )
-                                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 1""",),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 2''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 2""",),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 4''',)
-                                ), 
+                            data=(
+                                A(href="""#""", data=("""Item 4""",)),
                                 Ul(
-                                    classs='''menu vertical sublevel-1''',
-                                    data = (
+                                    classs="""menu vertical sublevel-1""",
+                                    data=(
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''#''',
-                                                    data = ('''Sub-item 3''',)
-                                                ), 
+                                                    href="""#""",
+                                                    data=("""Sub-item 3""",),
+                                                ),
                                                 Ul(
-                                                    classs='''menu vertical sublevel-2''',
-                                                    data = (
+                                                    classs="""menu vertical sublevel-2""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 1''',)
-                                                                ), )
-                                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 1""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    classs='''subitem''',
-                                                                    href='''#''',
-                                                                    data = ('''Thing 2''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    classs="""subitem""",
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Thing 2""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 1''',)
-                                                ), )
-                                        ), 
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 1""",),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    classs='''subitem''',
-                                                    href='''#''',
-                                                    data = ('''Thing 2''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                    classs="""subitem""",
+                                                    href="""#""",
+                                                    data=("""Thing 2""",),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

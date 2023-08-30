@@ -1,45 +1,44 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Form(
-
-                    data = (
+                    data=(
                         Div(
-                            classs='''sign-in-form''',
-                            data = (
-                                H4(
-                                    classs='''text-center''',
-                                    data = ('''Sign In''',)
-                                ), 
+                            classs="""sign-in-form""",
+                            data=(
+                                H4(classs="""text-center""", data=("""Sign In""",)),
                                 Label(
-                                    forr='''sign-in-form-username''',
-                                    data = ('''Username''',)
-                                ), 
+                                    forr="""sign-in-form-username""",
+                                    data=("""Username""",),
+                                ),
                                 Input(
-                                    typee='''text''',
-                                    classs='''sign-in-form-username''',
-                                    id='''sign-in-form-username''',
-                                ), 
+                                    typee="""text""",
+                                    classs="""sign-in-form-username""",
+                                    id="""sign-in-form-username""",
+                                ),
                                 Label(
-                                    forr='''sign-in-form-password''',
-                                    data = ('''Password''',)
-                                ), 
+                                    forr="""sign-in-form-password""",
+                                    data=("""Password""",),
+                                ),
                                 Input(
-                                    typee='''text''',
-                                    classs='''sign-in-form-password''',
-                                    id='''sign-in-form-password''',
-                                ), 
+                                    typee="""text""",
+                                    classs="""sign-in-form-password""",
+                                    id="""sign-in-form-password""",
+                                ),
                                 Button(
-                                    typee='''submit''',
-                                    classs='''sign-in-form-button''',
-                                    data = ('''Sign In''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    typee="""submit""",
+                                    classs="""sign-in-form-button""",
+                                    data=("""Sign In""",),
+                                ),
+                            ),
+                        ),
+                    )
+                ),
+            )
+        ),
+    )
 )

@@ -1,20 +1,24 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row align-center''',
-                    data = (
+                    classs="""row align-center""",
+                    data=(
                         Div(
-                            classs='''large-6 columns''',
-                            data = ('''
+                            classs="""large-6 columns""",
+                            data=(
+                                """
     {{> comment-section}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,32 +1,40 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row small-up-1 medium-up-3''',
-                    data = (
+                    classs="""row small-up-1 medium-up-3""",
+                    data=(
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> news-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> news-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> news-card}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

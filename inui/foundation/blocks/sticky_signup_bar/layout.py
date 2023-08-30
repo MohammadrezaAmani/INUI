@@ -1,27 +1,31 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 P(
-
-                    data = ('''{{#repeat 20}}
-''',)
-                ), 
+                    data=(
+                        """{{#repeat 20}}
+""",
+                    )
+                ),
                 P(
-
-                    data = ('''
+                    data=(
+                        """
   The signup bar is stuck until you scroll past me
-''',)
-                ), 
+""",
+                    )
+                ),
                 P(
-
-                    data = ('''
+                    data=(
+                        """
   Sticky will now be in the page.
-''',)
-                ), )
-        ), )
+""",
+                    )
+                ),
+            )
+        ),
+    )
 )

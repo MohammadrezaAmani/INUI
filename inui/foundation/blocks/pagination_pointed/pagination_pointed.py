@@ -1,100 +1,104 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''pagination-pointed pagination text-center''',
-                    role='''navigation''',
-                    aria_lable='''Pagination''',
-                    data = (
+                    classs="""pagination-pointed pagination text-center""",
+                    role="""navigation""",
+                    aria_lable="""Pagination""",
+                    data=(
                         Li(
-                            classs='''pagination-previous disabled''',
-                            data = ('''Previous ''',
+                            classs="""pagination-previous disabled""",
+                            data=(
+                                """Previous """,
+                                Span(classs="""show-for-sr""", data=("""page""",)),
+                            ),
+                        ),
+                        Li(
+                            classs="""current""",
+                            data=(
                                 Span(
-                                    classs='''show-for-sr''',
-                                    data = ('''page''',)
-                                ), )
-                        ), 
+                                    classs="""show-for-sr""",
+                                    data=("""You're on page""",),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''current''',
-                            data = (
-                                Span(
-                                    classs='''show-for-sr''',
-                                    data = ('''You're on page''',)
-                                ), )
-                        ), 
-                        Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Page 2''',
-                                    data = ('''2''',)
-                                ), )
-                        ), 
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Page 2""",
+                                    data=("""2""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Page 3''',
-                                    data = ('''3''',)
-                                ), )
-                        ), 
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Page 3""",
+                                    data=("""3""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Page 4''',
-                                    data = ('''4''',)
-                                ), )
-                        ), 
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Page 4""",
+                                    data=("""4""",),
+                                ),
+                            )
+                        ),
                         Li(
-                            classs='''ellipsis''',
-                            aria_hidden='''true''',
-                        ), 
+                            classs="""ellipsis""",
+                            aria_hidden="""true""",
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Page 12''',
-                                    data = ('''12''',)
-                                ), )
-                        ), 
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Page 12""",
+                                    data=("""12""",),
+                                ),
+                            )
+                        ),
                         Li(
-
-                            data = (
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Page 13''',
-                                    data = ('''13''',)
-                                ), )
-                        ), 
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Page 13""",
+                                    data=("""13""",),
+                                ),
+                            )
+                        ),
                         Li(
-                            classs='''pagination-next''',
-                            data = (
+                            classs="""pagination-next""",
+                            data=(
                                 A(
-                                    classs='''pagination-pointed-button''',
-                                    href='''#''',
-                                    aria_lable='''Next page''',
-                                    data = ('''Next ''',
+                                    classs="""pagination-pointed-button""",
+                                    href="""#""",
+                                    aria_lable="""Next page""",
+                                    data=(
+                                        """Next """,
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''page''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""show-for-sr""", data=("""page""",)
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

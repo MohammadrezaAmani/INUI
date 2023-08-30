@@ -1,20 +1,19 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 P(
+                    data=(
+                        """{{> scrollhide-nav}}
 
-                    data = ('''{{> scrollhide-nav}}
-
-''',)
-                ), 
-                H3(
-
-                    data = ('''Scroll down a bit...then back up''',)
-                ), )
-        ), )
+""",
+                    )
+                ),
+                H3(data=("""Scroll down a bit...then back up""",)),
+            )
+        ),
+    )
 )

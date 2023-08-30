@@ -1,26 +1,22 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 A(
-                    href='''#''',
-                    classs='''button button-icon-badge''',
-                    data = (
+                    href="""#""",
+                    classs="""button button-icon-badge""",
+                    data=(
                         I(
-                            classs='''fa fa-envelope''',
-                        ), 
-                        Span(
-                            classs='''button-icon-badge-text''',
-                            data = ('''Emails''',)
-                        ), 
-                        Span(
-                            classs='''badge success''',
-                            data = ('''1''',)
-                        ), )
-                ), )
-        ), )
+                            classs="""fa fa-envelope""",
+                        ),
+                        Span(classs="""button-icon-badge-text""", data=("""Emails""",)),
+                        Span(classs="""badge success""", data=("""1""",)),
+                    ),
+                ),
+            )
+        ),
+    )
 )

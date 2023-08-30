@@ -1,30 +1,32 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''list-group''',
-                    data = (
+                    classs="""list-group""",
+                    data=(
                         Li(
-                            classs='''list-group-item active''',
-                            data = ('''List Group Item 1 (Active)''',)
-                        ), 
+                            classs="""list-group-item active""",
+                            data=("""List Group Item 1 (Active)""",),
+                        ),
                         Li(
-                            classs='''list-group-item''',
-                            data = ('''List Group Item 2''',)
-                        ), 
+                            classs="""list-group-item""",
+                            data=("""List Group Item 2""",),
+                        ),
                         Li(
-                            classs='''list-group-item''',
-                            data = ('''List Group Item 3''',)
-                        ), 
+                            classs="""list-group-item""",
+                            data=("""List Group Item 3""",),
+                        ),
                         Li(
-                            classs='''list-group-item disabled''',
-                            data = ('''List Group Item 4 (Disabled)''',)
-                        ), )
-                ), )
-        ), )
+                            classs="""list-group-item disabled""",
+                            data=("""List Group Item 4 (Disabled)""",),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

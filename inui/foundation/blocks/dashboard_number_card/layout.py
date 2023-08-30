@@ -1,32 +1,40 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row''',
-                    data = (
+                    classs="""row""",
+                    data=(
                         Div(
-                            classs='''columns''',
-                            data = ('''
+                            classs="""columns""",
+                            data=(
+                                """
     {{> dashboard-number-card positive=true}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''columns''',
-                            data = ('''
+                            classs="""columns""",
+                            data=(
+                                """
     {{> dashboard-number-card negative=true}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''columns''',
-                            data = ('''
+                            classs="""columns""",
+                            data=(
+                                """
     {{> dashboard-number-card}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

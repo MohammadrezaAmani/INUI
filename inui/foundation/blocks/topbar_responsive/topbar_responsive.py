@@ -1,107 +1,110 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Nav(
-                    classs='''top-bar topbar-responsive''',
-                    data = (
+                    classs="""top-bar topbar-responsive""",
+                    data=(
                         Div(
-                            classs='''top-bar-title''',
-                            data = (
+                            classs="""top-bar-title""",
+                            data=(
                                 Span(
-                                    data_responsive_toggle='''topbar-responsive''',
-                                    data_hide_for='''medium''',
-                                    data = (
+                                    data_responsive_toggle="""topbar-responsive""",
+                                    data_hide_for="""medium""",
+                                    data=(
                                         Button(
-                                            classs='''menu-icon''',
-                                            typee='''button''',
-                                            data_toggle='',
-                                        ), )
-                                ), 
+                                            classs="""menu-icon""",
+                                            typee="""button""",
+                                            data_toggle="",
+                                        ),
+                                    ),
+                                ),
                                 A(
-                                    classs='''topbar-responsive-logo''',
-                                    href='''#''',
-                                    data = (
-                                        Strong(
-
-                                            data = ('''Site Title''',)
-                                        ), )
-                                ), )
-                        ), 
+                                    classs="""topbar-responsive-logo""",
+                                    href="""#""",
+                                    data=(Strong(data=("""Site Title""",)),),
+                                ),
+                            ),
+                        ),
                         Div(
-                            id='''topbar-responsive''',
-                            classs='''topbar-responsive-links''',
-                            data = (
+                            id="""topbar-responsive""",
+                            classs="""topbar-responsive-links""",
+                            data=(
                                 Div(
-                                    classs='''top-bar-right''',
-                                    data = (
+                                    classs="""top-bar-right""",
+                                    data=(
                                         Ul(
-                                            classs='''menu simple vertical medium-horizontal''',
-                                            data = (
+                                            classs="""menu simple vertical medium-horizontal""",
+                                            data=(
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Home''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Home""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''About''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""About""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Services''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Services""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Works''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Works""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''News''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""News""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Contact''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Contact""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         Button(
-                                                            typee='''button''',
-                                                            classs='''button hollow topbar-responsive-button''',
-                                                            data = ('''Categories''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                            typee="""button""",
+                                                            classs="""button hollow topbar-responsive-button""",
+                                                            data=("""Categories""",),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

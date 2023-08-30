@@ -1,16 +1,17 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Input(
-                    typee='''search''',
-                    name='''search''',
-                    placeholder='''Search..''',
-                    classs='''animated-search-form''',
-                ), )
-        ), )
+                    typee="""search""",
+                    name="""search""",
+                    placeholder="""Search..""",
+                    classs="""animated-search-form""",
+                ),
+            )
+        ),
+    )
 )

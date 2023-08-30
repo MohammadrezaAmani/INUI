@@ -1,24 +1,29 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row''',
-                    data = (
+                    classs="""row""",
+                    data=(
                         Div(
-                            classs='''columns''',
-                            data = (
+                            classs="""columns""",
+                            data=(
                                 Div(
-                                    classs='''demo-center''',
-                                    data = ('''
+                                    classs="""demo-center""",
+                                    data=(
+                                        """
       {{> plus-minus-input}}
-    ''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+    """,
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,16 +1,19 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row small-12 medium-8 large-6 columns align-center''',
-                    data = ('''
+                    classs="""row small-12 medium-8 large-6 columns align-center""",
+                    data=(
+                        """
   {{>ecommerce-loading-button}}
-''',)
-                ), )
-        ), )
+""",
+                    ),
+                ),
+            )
+        ),
+    )
 )

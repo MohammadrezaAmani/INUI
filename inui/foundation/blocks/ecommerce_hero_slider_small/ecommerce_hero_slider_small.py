@@ -1,223 +1,265 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''ecommerce-hero-slider-small orbit''',
-                    role='''region''',
-                    aria_lable='''Favorite Space Pictures''',
-                    data_orbit='',
-                    data = (
+                    classs="""ecommerce-hero-slider-small orbit""",
+                    role="""region""",
+                    aria_lable="""Favorite Space Pictures""",
+                    data_orbit="",
+                    data=(
                         Ul(
-                            classs='''orbit-container''',
-                            data = (
+                            classs="""orbit-container""",
+                            data=(
                                 Button(
-                                    classs='''orbit-previous''',
-                                    data = (
+                                    classs="""orbit-previous""",
+                                    data=(
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Previous Slide''',)
-                                        ), )
-                                ), 
+                                            classs="""show-for-sr""",
+                                            data=("""Previous Slide""",),
+                                        ),
+                                    ),
+                                ),
                                 Button(
-                                    classs='''orbit-next''',
-                                    data = (
+                                    classs="""orbit-next""",
+                                    data=(
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Next Slide''',)
-                                        ), )
-                                ), 
+                                            classs="""show-for-sr""",
+                                            data=("""Next Slide""",),
+                                        ),
+                                    ),
+                                ),
                                 Li(
-                                    classs='''is-active orbit-slide''',
-                                    data = (
+                                    classs="""is-active orbit-slide""",
+                                    data=(
                                         Div(
-                                            classs='''hero-slider-slide''',
-                                            data = (
+                                            classs="""hero-slider-slide""",
+                                            data=(
                                                 Div(
-                                                    classs='''row''',
-                                                    data = (
+                                                    classs="""row""",
+                                                    data=(
                                                         Div(
-                                                            classs='''small-12 medium-3 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-3 columns""",
+                                                            data=(
                                                                 Img(
-                                                                    src='''https://placehold.it/300x300''',
-                                                                ), )
-                                                        ), 
+                                                                    src="""https://placehold.it/300x300""",
+                                                                ),
+                                                            ),
+                                                        ),
                                                         Div(
-                                                            classs='''small-12 medium-9 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-9 columns""",
+                                                            data=(
                                                                 Div(
-                                                                    classs='''hero-slider-slide-content''',
-                                                                    data = (
+                                                                    classs="""hero-slider-slide-content""",
+                                                                    data=(
                                                                         H3(
-
-                                                                            data = ('''Title Will Display Here''',)
-                                                                        ), 
+                                                                            data=(
+                                                                                """Title Will Display Here""",
+                                                                            )
+                                                                        ),
                                                                         P(
-
-                                                                            data = ('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.''',
+                                                                            data=(
+                                                                                """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.""",
                                                                                 A(
-                                                                                    href='''#''',
-                                                                                    data = (''' Learn More''',)
-                                                                                ), )
-                                                                        ), 
+                                                                                    href="""#""",
+                                                                                    data=(
+                                                                                        """ Learn More""",
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
                                                                         Div(
-
-                                                                            data = (
+                                                                            data=(
                                                                                 Button(
-                                                                                    classs='''hollow button''',
-                                                                                    typee='''button''',
-                                                                                    data = (
+                                                                                    classs="""hollow button""",
+                                                                                    typee="""button""",
+                                                                                    data=(
                                                                                         Img(
-                                                                                            src='''https://placehold.it/20x20''',
-                                                                                        ), )
-                                                                                ), )
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                                                            src="""https://placehold.it/20x20""",
+                                                                                        ),
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Li(
-                                    classs='''orbit-slide''',
-                                    data = (
+                                    classs="""orbit-slide""",
+                                    data=(
                                         Div(
-                                            classs='''hero-slider-slide''',
-                                            data = (
+                                            classs="""hero-slider-slide""",
+                                            data=(
                                                 Div(
-                                                    classs='''row''',
-                                                    data = (
+                                                    classs="""row""",
+                                                    data=(
                                                         Div(
-                                                            classs='''small-12 medium-3 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-3 columns""",
+                                                            data=(
                                                                 Img(
-                                                                    src='''https://placehold.it/300x300''',
-                                                                ), )
-                                                        ), 
+                                                                    src="""https://placehold.it/300x300""",
+                                                                ),
+                                                            ),
+                                                        ),
                                                         Div(
-                                                            classs='''small-12 medium-9 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-9 columns""",
+                                                            data=(
                                                                 Div(
-                                                                    classs='''hero-slider-slide-content''',
-                                                                    data = (
+                                                                    classs="""hero-slider-slide-content""",
+                                                                    data=(
                                                                         H3(
-
-                                                                            data = ('''Title Will Display Here''',)
-                                                                        ), 
+                                                                            data=(
+                                                                                """Title Will Display Here""",
+                                                                            )
+                                                                        ),
                                                                         P(
-
-                                                                            data = ('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.''',
+                                                                            data=(
+                                                                                """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.""",
                                                                                 A(
-                                                                                    href='''#''',
-                                                                                    data = (''' Learn More''',)
-                                                                                ), )
-                                                                        ), 
+                                                                                    href="""#""",
+                                                                                    data=(
+                                                                                        """ Learn More""",
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
                                                                         Div(
-
-                                                                            data = (
+                                                                            data=(
                                                                                 Button(
-                                                                                    classs='''hollow button''',
-                                                                                    typee='''button''',
-                                                                                    data = (
+                                                                                    classs="""hollow button""",
+                                                                                    typee="""button""",
+                                                                                    data=(
                                                                                         Img(
-                                                                                            src='''https://placehold.it/20x20''',
-                                                                                        ), )
-                                                                                ), )
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                                                            src="""https://placehold.it/20x20""",
+                                                                                        ),
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Li(
-                                    classs='''orbit-slide''',
-                                    data = (
+                                    classs="""orbit-slide""",
+                                    data=(
                                         Div(
-                                            classs='''hero-slider-slide''',
-                                            data = (
+                                            classs="""hero-slider-slide""",
+                                            data=(
                                                 Div(
-                                                    classs='''row''',
-                                                    data = (
+                                                    classs="""row""",
+                                                    data=(
                                                         Div(
-                                                            classs='''small-12 medium-3 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-3 columns""",
+                                                            data=(
                                                                 Img(
-                                                                    src='''https://placehold.it/300x300''',
-                                                                ), )
-                                                        ), 
+                                                                    src="""https://placehold.it/300x300""",
+                                                                ),
+                                                            ),
+                                                        ),
                                                         Div(
-                                                            classs='''small-12 medium-9 columns''',
-                                                            data = (
+                                                            classs="""small-12 medium-9 columns""",
+                                                            data=(
                                                                 Div(
-                                                                    classs='''hero-slider-slide-content''',
-                                                                    data = (
+                                                                    classs="""hero-slider-slide-content""",
+                                                                    data=(
                                                                         H3(
-
-                                                                            data = ('''Title Will Display Here''',)
-                                                                        ), 
+                                                                            data=(
+                                                                                """Title Will Display Here""",
+                                                                            )
+                                                                        ),
                                                                         P(
-
-                                                                            data = ('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.''',
+                                                                            data=(
+                                                                                """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo consectetur arcu ut aliquam. Nullam rhoncus tellus dolor, eu mollis libero suscipit at. Mauris imperdiet aliquam consectetur. Curabitur ac massa dapibus, viverra neque eu, lacinia nisi.""",
                                                                                 A(
-                                                                                    href='''#''',
-                                                                                    data = (''' Learn More''',)
-                                                                                ), )
-                                                                        ), 
+                                                                                    href="""#""",
+                                                                                    data=(
+                                                                                        """ Learn More""",
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
                                                                         Div(
-
-                                                                            data = (
+                                                                            data=(
                                                                                 Button(
-                                                                                    classs='''hollow button''',
-                                                                                    typee='''button''',
-                                                                                    data = (
+                                                                                    classs="""hollow button""",
+                                                                                    typee="""button""",
+                                                                                    data=(
                                                                                         Img(
-                                                                                            src='''https://placehold.it/20x20''',
-                                                                                        ), )
-                                                                                ), )
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                                                            src="""https://placehold.it/20x20""",
+                                                                                        ),
+                                                                                    ),
+                                                                                ),
+                                                                            )
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Nav(
-                            classs='''orbit-bullets''',
-                            data = (
+                            classs="""orbit-bullets""",
+                            data=(
                                 Button(
-                                    classs='''is-active''',
-                                    data_slide='''0''',
-                                    data = (
+                                    classs="""is-active""",
+                                    data_slide="""0""",
+                                    data=(
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''First slide details.''',)
-                                        ), 
+                                            classs="""show-for-sr""",
+                                            data=("""First slide details.""",),
+                                        ),
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Current Slide''',)
-                                        ), )
-                                ), 
+                                            classs="""show-for-sr""",
+                                            data=("""Current Slide""",),
+                                        ),
+                                    ),
+                                ),
                                 Button(
-                                    data_slide='''1''',
-                                    data = (
+                                    data_slide="""1""",
+                                    data=(
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Second slide details.''',)
-                                        ), )
-                                ), 
+                                            classs="""show-for-sr""",
+                                            data=("""Second slide details.""",),
+                                        ),
+                                    ),
+                                ),
                                 Button(
-                                    data_slide='''2''',
-                                    data = (
+                                    data_slide="""2""",
+                                    data=(
                                         Span(
-                                            classs='''show-for-sr''',
-                                            data = ('''Third slide details.''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""show-for-sr""",
+                                            data=("""Third slide details.""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )
