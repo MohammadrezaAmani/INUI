@@ -1,0 +1,51 @@
+$button-rounded-hover-radius: 5000px;
+$button-rounded-hover-border: 5px solid darken($primary-color, 10%);
+
+.button-rounded-hover {
+  border: 0;
+  border-radius: $button-rounded-hover-radius;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: $white;
+  transition: all 0.3s;
+  transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: $button-rounded-hover-border;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: darken($primary-color, 10%);
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  transform: translateX(0%);
+  opacity: 0.25;
+}
