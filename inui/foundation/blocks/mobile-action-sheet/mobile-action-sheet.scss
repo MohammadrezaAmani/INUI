@@ -1,0 +1,50 @@
+.mobile-action-sheet {
+  background: $primary-color;
+  overflow: visible;
+  width: 94%;
+  left: 3%;
+  height: auto;
+  transform: translateY(100%);
+  color: $white;
+  padding-top: $global-padding;
+
+  label {
+    color: $white;
+  }
+  .close-button {
+    top: 0;
+    font-size: 26px;
+    color: darken($primary-color, 20%);
+    display: none;
+  }
+
+  &.is-open .close-button {
+    display: block;
+  }
+
+  .mobile-action-sheet-inner {
+    position: relative;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .action-sheet-toggle {
+    position: absolute;
+    top: - $global-padding;
+    left: 50%;
+    transform: translate3D(-50%, -100%, 0);
+  }
+
+  &.position-bottom.is-transition-push::after {
+    box-shadow: none;
+  }
+
+  .button.white {
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover, &:active {
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+}
