@@ -1,0 +1,35 @@
+$offcanvas-full-screen-bg: $black;
+$offcanvas-full-screen-side: left;
+$offcanvas-full-screen-closebutton-size: 5rem;
+
+.offcanvas-full-screen {
+  @include off-canvas-base($background: $offcanvas-full-screen-bg, $transition: 0.3s ease-in-out);
+  @include off-canvas-position($position: $offcanvas-full-screen-side, $size: 100%);
+}
+
+.offcanvas-full-screen-inner {
+  padding: 1rem;
+  text-align: center;
+}
+
+.offcanvas-full-screen-menu {
+  @include menu-base;
+  @include menu-direction(vertical);
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: darken($white, 30%);
+    }
+  }
+}
+
+.offcanvas-full-screen-close {
+  color: $white;
+  font-size: $offcanvas-full-screen-closebutton-size;
+
+  &:hover {
+    color: darken($white, 30%);
+  }
+}
