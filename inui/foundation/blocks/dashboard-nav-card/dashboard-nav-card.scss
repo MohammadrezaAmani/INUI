@@ -1,0 +1,39 @@
+.dashboard-nav-card {
+  background: $primary-color;
+  border-radius: $card-border-radius;
+  color: $white;
+  display: block;
+  min-height: 100px;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .dashboard-nav-card-title,
+    .dashboard-nav-card-icon {
+      color: $white;
+    }
+
+    .dashboard-nav-card-icon {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.dashboard-nav-card-icon {
+  font-size: rem-calc(20);
+  left: 1rem;
+  opacity: 0.5;
+  position: absolute;
+  top: 1rem;
+  transition: all 0.2s ease;
+  width: auto;
+}
+
+.dashboard-nav-card-title {
+  bottom: 0;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+}
