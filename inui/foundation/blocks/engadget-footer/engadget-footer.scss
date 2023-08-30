@@ -1,0 +1,139 @@
+ #engadget-footer-sitemap-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem-calc(0);
+  background-color: $black;
+  
+    #engadget-footer-sitemap { 
+      @include grid-row();
+      color:$light-gray;
+      padding: rem-calc(60) 0;
+      a {
+        color:$light-gray !important;
+        }
+	  .links {
+  	  @include breakpoint(small) {
+        @include grid-layout(2, '.link-column', $grid-column-gutter);
+        }
+      @include breakpoint(large) {
+        @include grid-layout(4, '.link-column', $grid-column-gutter);
+        }
+
+      .link-column:not(:last-child) {
+      border-right:1px solid $light-gray
+      }
+	  }	  
+  }
+}
+#engadget-footer-social-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem-calc(0);
+  background-color: $dark-gray;
+  
+  #engadget-footer-social {
+    @include grid-row();
+	  color:$light-gray;
+	  padding: rem-calc(60) 0;
+	  a {
+  	  color:$light-gray !important;
+  	  }
+    .footer-left {
+		  @include breakpoint(small) {
+		  	@include grid-column(12);
+		  }
+      @include breakpoint(medium) { 
+        @include grid-column(6);
+		  }
+		  @include breakpoint(large) { 
+        @include grid-column(5);
+		  }
+      .input-group-field {
+  	  	background: $white
+      }
+    }
+
+  	.footer-right {
+    	text-align: right;
+      @include breakpoint(small) {
+        @include grid-column(12); 
+      }
+      @include breakpoint(medium) {
+        @include grid-column(6);
+      }
+    }
+    .fa {
+      padding: 0 0 0 0.6rem;
+      }
+    h2 {
+      color: $white;
+      }
+    p {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#engadget-footer-contact-details-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem-calc(0);
+  background-color: $white;
+  
+  #engadget-footer-contact-details { 
+    @include grid-row();
+	  color:$dark-gray;
+	  padding: rem-calc(20) 0;
+	  a {
+  	  color:$dark-gray !important;
+  	  }
+	  
+	  .footer-left {
+		@include breakpoint(small) {
+		@include grid-column(12); 
+		li {
+  		display: block;
+  		}
+		text-align: center;
+		}
+		@include breakpoint(medium) {
+		@include grid-column(6); 
+		text-align: left;
+		}
+		 @include breakpoint(large) { 
+		 @include grid-column(8);
+		 ul {
+  		 margin-bottom: 0;
+  		 }
+		li {
+  		display: inline-block
+  		}	 
+		}
+		font-size: 0.9rem;
+		.fa {
+  		padding: 0 0.4rem;
+  		}
+	}
+	.footer-right {
+		@include breakpoint(small) {
+		@include hide-for-only(small);
+		}
+		@include breakpoint(medium) {
+		@include grid-column(6); 
+		}
+		 @include breakpoint(large) {
+		 @include grid-column(4);
+		 text-align: right;
+		 ul {padding-top: 1.6rem;}
+		
+		 
+		}
+		font-size: 0.9rem;
+		.fa {padding: 0 0.4rem;}
+    }
+  }
+}
