@@ -1,0 +1,30 @@
+body {
+  height: 10000px;
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    position: relative;
+    top: 50vh;
+  }
+
+  .top-bar {
+    background: #2c3840;
+
+    .menu-text {
+      color: #fff;
+    }
+
+    .menu {
+      background:  #2c3840;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fff transparent transparent;
+}
