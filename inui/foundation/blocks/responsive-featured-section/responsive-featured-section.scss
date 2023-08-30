@@ -1,0 +1,46 @@
+$gray: #808080;
+$highlight: #4ec6cd;
+$nav-text-color: $gray;
+$vert-seperate: 4rem;
+
+.featured-items {
+  background: lighten($gray, 40%);
+  margin-bottom: $vert-seperate;
+  padding: 1rem 1rem;
+
+  h4 {
+    @media screen and (max-width: 39.9375em) {
+     font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: $gray;
+  }
+
+  .featured-items-brands {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 39.9375em) {
+      flex-wrap: wrap;
+      width: 100%;
+      }
+    }
+
+  .featured-items-title {
+    margin-bottom: 0;
+  }
+
+    @media screen and (max-width: 39.9375em) {
+      .featured-items-brands img {
+        flex-basis: 40%;
+        margin-bottom: 1rem;
+      }
+
+      .featured-items-title {
+        margin-bottom: 1rem;
+      }
+    }
+}
