@@ -1,0 +1,41 @@
+$mobile-app-message-bar-bg: $white;
+$mobile-app-message-bar-icon-size: 1.5rem;
+$mobile-app-message-bar-height: rem-calc(80);
+$mobile-app-message-bar-input-radius: rem-calc(10);
+
+.mobile-app-message-bar {
+  height: $mobile-app-message-bar-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $mobile-app-message-bar-bg;
+
+  .camera-button {
+    flex-shrink: 1;
+    padding: 1rem;
+
+    i,
+    img,
+    svg {
+      font-size: $mobile-app-message-bar-icon-size;
+      max-width: $mobile-app-message-bar-icon-size;
+      max-height: $mobile-app-message-bar-icon-size;
+    }
+  }
+
+  .message-input {
+    flex-grow: 1;
+
+    input[type='text'] {
+      border-radius: $mobile-app-message-bar-input-radius;
+      margin: 0;
+    }
+  }
+
+  .send-button {
+    flex-shrink: 1;
+    padding: 1rem;
+    margin: 0;
+    font-weight: 600;
+  }
+}
