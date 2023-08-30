@@ -1,0 +1,86 @@
+.status-update-input-box {
+  background-color: $white;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid $medium-gray;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0, 0.18), 0 0.125rem 2px rgba(0,0,0, 0.36);
+
+  .input-box-container {
+
+    textarea {
+      margin-bottom: 0;
+
+      &:focus {
+        border: 1px solid $medium-gray;
+        box-shadow: none;
+      }
+
+      &,
+      &:focus {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .user-action-container {
+    @include breakpoint(medium) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .user-action-box {
+      padding: 0;
+      border: 1px solid $medium-gray;
+      display: flex;
+
+      .action-area {
+        width: 20%;
+        border-right: 0.0625rem solid $medium-gray;
+        text-align: center;
+        padding-top: 0.675rem;
+        padding-bottom: 0.675rem;
+
+        &:last-of-type {
+          border-right: none;
+        }
+
+        .action-anchor {
+          &.has-tip {
+            border-bottom: none;
+            cursor: pointer;
+          }
+
+          .fa {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .user-submit-box {
+      padding: 0.35rem 0.5rem;
+      border: 1px solid $medium-gray;
+      display: flex;
+      justify-content: flex-end;
+
+      @include breakpoint(small only) {
+        border-top: none;
+        justify-content: center;
+      }
+
+      @include breakpoint(medium) {
+        border-left: none;
+      }
+
+      .button {
+        margin-bottom: 0;
+
+        @include breakpoint(small only) {
+          @include button-expand;
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+  }
+}
