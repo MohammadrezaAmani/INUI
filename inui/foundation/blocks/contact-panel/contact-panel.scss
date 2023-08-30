@@ -1,0 +1,91 @@
+$contact-panel-bg: $black;
+$contact-panel-height: 375px;
+$contact-panel-width: 350px;
+$contact-panel-right-offset: 20px;
+$contact-panel-button-arrow: ⥣;
+
+.contact-panel-button {
+  background: $contact-panel-bg;
+  color: $white;
+  width: auto;
+  padding: 0.25rem 1.25rem;
+  text-align: center;
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  transition: background 0.25s ease-in-out;
+
+  &:after {
+    content: "⥣";
+    margin-left: 5px;
+  }
+
+  &:hover {
+    background: lighten($contact-panel-bg, 10%);
+    color: lighten($contact-panel-bg, 90%);
+  }
+}
+
+.is-active .contact-panel-button:after {
+  content: "⥥";
+}
+
+.contact-panel {
+  padding: 1rem;
+  z-index: 1;
+  background: $contact-panel-bg;
+  width: $contact-panel-width;
+  height: $contact-panel-height;
+  position: fixed;
+  bottom: -$contact-panel-height;
+  right: $contact-panel-right-offset;
+  transition: bottom 0.5s ease-in-out;
+
+  label {
+    color: $white;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background: lighten($contact-panel-bg, 15%);
+    border: $contact-panel-bg;
+    transition: background 0.3s ease-in-out;
+
+    &:focus {
+      background: $white;
+    }
+  }
+
+  .contact-panel-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .submit-button {
+    margin-bottom: 0;
+  }
+
+  .cancel-button {
+    margin-bottom: 0;
+    padding: 0.75rem 1rem;
+    color: $white;
+    transition: background 0.25s ease-in-out;
+
+    &:hover {
+      background: lighten($contact-panel-bg, 10%);
+      color: lighten($contact-panel-bg, 90%);
+    }
+  }
+
+  &.is-active {
+    bottom: 0;
+  }
+
+  @include breakpoint(small only) {
+    width: 100%;
+    right: 0;
+  }
+}
