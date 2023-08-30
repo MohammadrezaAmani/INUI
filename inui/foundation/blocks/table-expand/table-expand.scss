@@ -1,0 +1,55 @@
+.table-expand {
+  margin-top: 5rem;
+
+  td {
+    color: $dark-gray;
+  }
+
+  tr {
+    border: 1px solid $light-gray;
+  }
+
+  .text-right {
+    padding-right: 3rem;
+  }
+}
+
+.table-expand-row {
+  &.is-active {
+    .expand-icon::after {
+      content: '-';
+    }
+  }
+
+  .expand-icon::after {
+    content: '+';
+    float: right;
+  }
+}
+
+// this is where the magic happens
+.table-expand-row-content {
+  display: none;
+}
+
+.table-expand-row-content {
+  &.is-active {
+    display: table-row;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+  }
+}
+
+.table-expand-row-nested {
+  background-color: $light-gray;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
