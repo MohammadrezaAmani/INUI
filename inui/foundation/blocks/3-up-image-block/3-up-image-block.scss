@@ -1,0 +1,51 @@
+$gray: #808080;
+$white: #fff;
+$highlight: #4ec6cd;
+$nav-text-color: $gray;
+$header-font:'Sanchez', serif;
+$vert-seperate: 4rem;
+
+
+  .main-links {
+    padding-top: $vert-seperate;
+    margin-bottom: $vert-seperate;
+
+    h4 {
+      font-family: $header-font;
+
+      @media screen and (max-width: 39.9375em) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .columns {
+      position: relative;
+    }
+
+    .title-box {
+      text-align: center;
+      background: white;
+      color: $highlight;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding: .2rem 1rem;
+
+      .title-box-title {
+        margin-bottom: 0;
+
+       &:hover {
+         color: darken($highlight, 25%);
+         transition: color .3s ease-in;
+       }
+      }
+    }
+      @media screen and (max-width: 39.9375em) {
+       img {
+         height: 250px;
+         display: block;
+         margin: 2rem auto;
+       }
+    }
+  }
