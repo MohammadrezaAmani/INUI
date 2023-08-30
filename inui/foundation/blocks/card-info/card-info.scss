@@ -1,0 +1,97 @@
+$card-info-bg: $white;
+$card-info-font-color: $body-font-color;
+$card-info-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+$card-info-info-color: lighten($primary-color, 15%);
+$card-info-border-radius: $global-radius;
+
+.card-info {
+  background: $card-info-bg;
+  border: 1px solid $dark-gray;
+  box-shadow: $card-info-shadow;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: $card-info-border-radius;
+
+  .card-info-label {
+    border-color: transparent $dark-gray transparent transparent;
+    border-color: rgba(255,255,255,0) $dark-gray rgba(255,255,255,0) rgba(255,255,255,0);
+  }
+
+  &.primary {
+    border-color: $primary-color;
+
+    .card-info-label {
+      border-color: transparent $primary-color transparent transparent;
+      border-color: rgba(255,255,255,0) $primary-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  &.secondary {
+    border-color: $secondary-color;
+
+    .card-info-label {
+      border-color: transparent $secondary-color transparent transparent;
+      border-color: rgba(255,255,255,0) $secondary-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  &.info {
+    border-color: $card-info-info-color;
+
+    .card-info-label {
+      border-color: transparent $card-info-info-color transparent transparent;
+      border-color: rgba(255,255,255,0) $card-info-info-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  &.alert {
+    border-color: $alert-color;
+
+    .card-info-label {
+      border-color: transparent $alert-color transparent transparent;
+      border-color: rgba(255,255,255,0) $alert-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  &.success {
+    border-color: $success-color;
+
+    .card-info-label {
+      border-color: transparent $success-color transparent transparent;
+      border-color: rgba(255,255,255,0) $success-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  &.warning {
+    border-color: $warning-color;
+
+    .card-info-label {
+      border-color: transparent $warning-color transparent transparent;
+      border-color: rgba(255,255,255,0) $warning-color rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  .card-info-label {
+    border-style: solid;
+    border-width: 0 rem-calc(70) rem-calc(40) 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    transform:rotate(360deg);
+  }
+
+  .card-info-content {
+    padding: 0.5rem 1.5rem 0.875rem;
+  }
+
+  .card-info-label-text {
+    color: $white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: rem-calc(-40);
+    top: 2px;
+    white-space: nowrap;
+    transform: rotate(30deg);
+  }
+}
