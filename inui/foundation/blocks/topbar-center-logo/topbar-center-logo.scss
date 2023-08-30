@@ -1,0 +1,29 @@
+$topbar-center-logo-bg: #2c3840;
+
+.topbar-center-logo {
+  background: $topbar-center-logo-bg;
+
+  .menu {
+    background: $topbar-center-logo-bg;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.topbar-center-logo .top-bar-center {
+  flex: 1 0 auto;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.topbar-center-logo-mobile {
+  background: $topbar-center-logo-bg;
+
+  .menu-icon {
+    vertical-align: text-top;
+  }
+}
