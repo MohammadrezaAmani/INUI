@@ -1,0 +1,25 @@
+.basic-card {
+  @include card-container;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.basic-card-image {
+  grid-row-end: 4;
+  grid-row-start: 1;
+
+  img {
+    width: 100%;
+  }
+}
+
+.basic-card-content {
+  border: 0;
+  grid-row-start: 3 / 4;
+  margin: 0;
+  overflow: scroll;
+}
