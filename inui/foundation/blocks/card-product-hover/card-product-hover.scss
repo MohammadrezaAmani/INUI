@@ -1,0 +1,78 @@
+$card-product-hover-price-color: $primary-color;
+$card-product-hover-font-size: 1.5rem;
+$card-product-hover-title-font-size: 1.4rem;
+
+.card-product-hover-title {
+  font-size: $card-product-hover-title-font-size;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.card-product-hover {
+  position: relative;
+  line-height: 1.2rem;
+  transition: all 0.35s ease;
+}
+
+.card-product-hover-details {
+  @include card-section;
+}
+
+.card-product-hover-price {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  color: $card-product-hover-price-color;
+  font-size: $card-product-hover-price-color;
+}
+
+.card-product-hover-icons {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-product-hover-icons a i {
+  display: block;
+  font-size: 1.5rem;
+  line-height: rem-calc(40);
+  width: rem-calc(40);
+  background-color: $white;
+  text-align: center;
+  color: $black;
+}
+
+.card-product-hover-icons a i:hover {
+  background-color: $dark-gray;
+  color: $white;
+  cursor: pointer;
+}
+
+.card-product-hover-icons a {
+  margin: 2px;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.35s ease;
+}
+
+.card-product-hover:hover a,
+.card-product-hover.hover a {
+  transition: all 0.35s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-product-hover:hover a:nth-child(2),
+.card-product-hover.hover a:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.card-product-hover:hover a:nth-child(3),
+.card-product-hover.hover a:nth-child(3) {
+  transition-delay: 0.2s;
+}
