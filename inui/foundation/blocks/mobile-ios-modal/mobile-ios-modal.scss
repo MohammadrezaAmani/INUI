@@ -1,0 +1,48 @@
+$mobile-ios-modal-width: 226px;
+$mobile-ios-modal-radius: rem-calc(12);
+
+.mobile-ios-modal {
+  width: $mobile-ios-modal-width;
+  min-height: 160px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: $mobile-ios-modal-radius;
+  @include horizontal-center;
+}
+
+.mobile-ios-modal-inner {
+  padding: 0.5rem 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.mobile-ios-modal-options {
+  display: flex;
+
+  .button {
+    flex: 1 0 0;
+    margin-bottom: 0;
+    color: $primary-color;
+    background: transparent;
+    border-color: $light-gray;
+    border-bottom: 0;
+  }
+}
+
+.mobile-ios-modal-options-stacked {
+
+  .button {
+    display: block;
+    width: 100%;
+    flex: 1 0 0;
+    margin-bottom: 0;
+    color: $primary-color;
+    background: transparent;
+    border-color: $light-gray;
+    border-bottom: 0;
+  }
+}
