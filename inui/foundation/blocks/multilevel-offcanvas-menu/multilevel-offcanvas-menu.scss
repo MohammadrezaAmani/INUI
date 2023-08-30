@@ -1,0 +1,143 @@
+$nav-text-color: $white;
+$nav-height: 75px;
+$nav-background: #2c3840;
+$offcanvas-padding: 20px;
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $nav-background;
+  height: $nav-height;
+  margin-bottom: 75px;
+
+  .nav-bar-logo {
+    padding: 1.8rem;
+  }
+
+  li {
+     background: $nav-background;
+  }
+
+  a {
+    color: $nav-text-color;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: lighten($nav-background, 50%);
+    }
+  }
+
+  @media screen and (max-width: 39.9375em) {
+    height: $nav-height/1.4;
+  }
+
+  .offcanvas-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    color: $nav-text-color;
+    text-transform: uppercase;
+    background-color: lighten($nav-background, 20%);
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+
+    .offcanvas-trigger-text {
+      margin-right: 0.25rem;
+      margin-top: 0.25rem;
+    }
+
+    &:hover {
+      background-color: lighten($nav-background, 30%);
+    }
+
+    @media screen and (max-width: 39.9375em) {
+      padding: 0.9rem;
+    }
+  }
+}
+
+.multilevel-offcanvas {
+  background: darken($nav-background, 5%);
+  padding: 20px;
+  color: $white;
+
+  > .menu {
+    margin-bottom: 1rem;
+  }
+
+  .menu a {
+    color: rgba($nav-text-color,.6);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $nav-text-color;
+    }
+  }
+
+  .fa {
+    color: $nav-text-color;
+  }
+
+  .is-accordion-submenu-parent > a::after {
+    border-color: rgba($nav-text-color,.6) transparent transparent;
+  }
+
+  .social-links {
+    margin-left: $offcanvas-padding;
+
+    li {
+      margin-right: 5px;
+    }
+
+    a:hover .fa {
+      color: darken($nav-text-color,25%);
+      transition: color .2s ease-in;
+    }
+
+    .fa {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.body-info {
+  text-align: center;
+  color: $nav-background;
+
+  .button {
+    margin: 1rem 0;
+    padding: 0.85em 2em;
+  }
+}
+
+.is-open + .off-canvas-content .hamburger {
+  .line:nth-child(1),
+  .line:nth-child(3) {
+    width: 12px;
+  }
+
+  .line:nth-child(1) {
+    transform: translateX(-5px) rotate(-45deg);
+  }
+
+  .line:nth-child(3) {
+    transform: translateX(-5px) rotate(45deg);
+  }
+}
+
+.hamburger .line {
+  width: 20px;
+  height: 2px;
+  background-color: $nav-text-color;
+  display: block;
+  margin: 3px auto;
+  transition: all 0.3s ease-in-out;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
