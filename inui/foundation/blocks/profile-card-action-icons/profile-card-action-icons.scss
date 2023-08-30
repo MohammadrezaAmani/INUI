@@ -1,0 +1,128 @@
+$profile-card-about-text-transform: uppercase;
+$profile-card-about-separator-width: 3rem;
+$profile-card-about-separator-thickness: 0.125rem;
+
+.profile-card-action-icons {
+  background-color: $white;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+  border-radius: 0.125rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0, 0.18), 0 0.125rem 2px rgba(0,0,0, 0.36);
+
+  .card-section {
+    background-color: inherit;
+    padding: 0.5rem 0 0;
+
+    .profile-card-header,
+    .profile-card-about {
+      border-bottom: .0625rem solid $medium-gray;
+      padding: 0.7rem 1rem;
+    }
+
+    .profile-card-header {
+      display: flex;
+      align-items: flex-start;
+
+      .profile-card-avatar {
+        margin-right: 0.5rem;
+
+        .avatar-image {
+          border-radius: 50%;
+          width: rem-calc(60);
+          height: rem-calc(60);
+        }
+      }
+
+      .profile-card-author {
+        flex: 1 0 0;
+        margin-top: 0.3rem;
+        padding-bottom: 0;
+
+        .author-title,
+        .author-description {
+          margin-bottom: 0;
+        }
+
+        .author-title {
+          color: $black;
+        }
+
+        .author-description {
+          color: $dark-gray;
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .profile-card-about {
+      .about-title {
+        text-transform: $profile-card-about-text-transform;
+      }
+
+      .separator-left {
+        text-align: left;
+        @include clearfix;
+
+        &::after {
+          position: relative;
+          width: $profile-card-about-separator-width;
+          border-bottom: $profile-card-about-separator-thickness solid $primary-color;
+          margin: 0.3rem auto 0;
+          margin-left: 0;
+        }
+      }
+
+      .about-content {
+        margin-bottom: 0;
+      }
+
+      .about-skills {
+        margin-top: 0.6rem;
+
+        ul.arrow {
+          list-style-type: none;
+          padding-left: 0;
+          margin-left: 0;
+          margin-bottom: 0;
+
+          li {
+            &:before {
+              content: '\f006';
+              font-family: 'FontAwesome';
+              float: left;
+              color: $primary-color;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .profile-card-action {
+      display: flex;
+
+      .action-area {
+        width: 20%;
+        border-right: 0.0625rem solid $medium-gray;
+        text-align: center;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+
+        &:last-of-type {
+          border-right: none;
+        }
+
+        .action-anchor {
+          &.has-tip {
+            border-bottom: none;
+            cursor: pointer;
+          }
+
+          .fa {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
