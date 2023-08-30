@@ -1,0 +1,34 @@
+.floated-label-wrapper {
+  position: relative;
+
+  label {
+    background: $white;
+    color: $primary-color;
+    font-size: 0.75rem;
+    font-weight: 600;
+    left: 0.75rem;
+    opacity: 0;
+    padding: 0 0.25rem;
+    position: absolute;
+    top: 2rem;
+    transition: all 0.15s ease-in;
+    z-index: -1;
+
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+      border-radius: 4px;
+      font-size: 1.75em;
+      padding: 0.5em;
+    }
+
+    &.show {
+      opacity: 1;
+      top: -0.85rem;
+      z-index: 1;
+      transition: all 0.15s ease-in;
+    }
+  }
+}
+
+
