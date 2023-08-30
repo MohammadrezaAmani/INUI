@@ -1,0 +1,45 @@
+.button-hover-reveal-wrapper {
+  overflow: hidden;
+  border: 2px solid $primary-color;
+  border-radius: 5000px;
+  text-align: center;
+  width: 100%;
+  background: $white;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    border: none;
+    background-color: $primary-color;
+    transition: background-color 0.5s ease;
+
+    .button-hover-reveal {
+      display: block;
+      font-size: 16px;
+      padding: 22px;
+
+      &:hover {
+        transition: background-color 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  .button-hover-reveal {
+    display: none;
+    color: $white;
+    width: 50%;
+    z-index: 1;
+  }
+
+  label {
+    padding: 16px;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
