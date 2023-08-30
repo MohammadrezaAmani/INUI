@@ -1,0 +1,22 @@
+$polls-question-label-color: $primary-color;
+$polls-submit-button-transform: uppercase;
+
+.polls {
+  margin-bottom: 1rem;
+  .polls-question {
+    margin-bottom: .5rem;
+    .polls-question-label {
+      color: $polls-question-label-color;
+      font-weight: 500;
+      margin-right: .25rem;
+    }
+  }
+
+  .polls-submit {
+    margin-top: .3rem;
+    .button {
+      margin-right: .5rem;
+      text-transform: $polls-submit-button-transform;
+    }
+  }
+}
