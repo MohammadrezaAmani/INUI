@@ -1,0 +1,46 @@
+$pull-quote-maxwidth: 50%;
+$pull-quote-color: $primary-color;
+$pull-quote-offset-large: -25%;
+$pull-quote-offset-medium: -15%;
+$pull-quote-fontsize-medium-up: 1.875rem;
+$pull-quote-fontsize-small: 1.125rem;
+$pull-quote-gradient: true;
+
+.pull-quote {
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-style: normal;
+  font-size: $pull-quote-fontsize-small;
+  max-width: $pull-quote-maxwidth;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  color: $pull-quote-color;
+  float: right;
+  margin: 10px 0 0 20px;
+  @if $pull-quote-gradient == true {
+    background: linear-gradient($secondary-color, $pull-quote-color);
+  } @else if $pull-quote-gradient == false {
+    background: $pull-quote-color; // sets text color
+  }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:before {
+    content: '';
+  }
+
+  &:after {
+    content: '';
+  }
+
+  @include breakpoint(medium) {
+    font-size: $pull-quote-fontsize-medium-up;
+    max-width: calc(#{$pull-quote-maxwidth} - 5%);
+    margin-right: $pull-quote-offset-medium;
+  }
+
+  @include breakpoint(large) {
+    max-width: calc(#{$pull-quote-maxwidth} + 5%);
+    margin-right: $pull-quote-offset-large;
+  }
+}
