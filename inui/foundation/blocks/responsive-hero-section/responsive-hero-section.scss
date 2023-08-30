@@ -1,0 +1,16 @@
+$hero-height: 60vh;
+
+.hero-section {
+  background: url('https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
+  }
+}
