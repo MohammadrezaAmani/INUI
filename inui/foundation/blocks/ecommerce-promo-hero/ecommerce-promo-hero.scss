@@ -1,0 +1,60 @@
+.promo-hero {
+  width: 100%;
+  text-align: center;
+  height: 420px;
+  background: $dark-gray;
+  position: relative;
+  color: white;
+
+  .button.white-hollow {
+    border: 1px solid $white;
+    color: $white;
+    background-color: transparent;
+    transition: border 0.5s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid darken($white, 30%);
+      transition: border 0.5s ease;
+    }
+  }
+}
+
+.promo-hero-content {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.promo-hero-title {
+  line-height: 1.25em;
+  margin-bottom: 1rem;
+}
+
+.promo-hero-description {
+  margin-bottom: 1rem;
+}
+
+
+.promo-hero-bg-image {
+  overflow: hidden;
+  background-image: url(https://placehold.it/2000x900);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  // overlay
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+  }
+}
