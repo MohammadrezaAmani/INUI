@@ -1,0 +1,47 @@
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$social-brand-youtube: #bb0000;
+$social-brand-instagram: #125688;
+$social-brand-pinterest: #cb2027;
+$social-brand-google-plus: #dd4b39;
+$social-brand-github: #000000;
+$social-brand-tumblr: #32506d;
+
+.social {
+  margin-right: .25rem;
+
+  &.facebook {
+    @include button-style($social-brand-facebook, auto, $white);
+  }
+  &.twitter {
+    @include button-style($social-brand-twitter, auto, $white);
+  }
+  &.linkedin {
+    @include button-style($social-brand-linkedin, auto, $white);
+  }
+  &.youtube {
+    @include button-style($social-brand-youtube, auto, $white);
+  }
+  &.instagram {
+    @include button-style($social-brand-instagram, auto, $white);
+  }
+  &.pinterest {
+    @include button-style($social-brand-pinterest, auto, $white);
+  }
+  &.google-plus {
+    @include button-style($social-brand-google-plus, auto, $white);
+  }
+  &.github {
+    @include button-style($social-brand-github, auto, $white);
+  }
+  &.tumblr {
+    @include button-style($social-brand-tumblr, auto, $white);
+  }
+
+  > .fa {
+    color: $white;
+    margin-right: .25rem;
+  }
+}
