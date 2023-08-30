@@ -1,0 +1,59 @@
+$mobile-app-dashboard-height: 60vh;
+$mobile-app-dashboard-item-color: $dark-gray;
+$mobile-app-dashboard-img-size: rem-calc(50);
+$mobile-app-dashboard-bg: transparent;
+
+.mobile-app-dashboard-header {
+  display: flex;
+  height: 100vh - $mobile-app-dashboard-height;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?h=350&auto=compress&cs=tinysrgb') center center no-repeat;
+
+  h1 {
+    color: $white;
+    text-align: center;
+    font-size: 22px;
+    background: rgba($white, 0.2);
+  }
+}
+
+.mobile-app-dashboard {
+  background-color: $mobile-app-dashboard-bg;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  height: $mobile-app-dashboard-height;
+
+  a {
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    color: $mobile-app-dashboard-item-color;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $mobile-app-dashboard-item-color;
+
+    &:nth-child(2n-1){
+      border-right: 1px solid $mobile-app-dashboard-item-color;
+    }
+  }
+
+  .mobile-app-dashboard-inner {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    img,
+    svg,
+    i {
+      max-width: $mobile-app-dashboard-img-size;
+      max-height: $mobile-app-dashboard-img-size;
+      font-size: $mobile-app-dashboard-img-size;
+    }
+  }
+}
