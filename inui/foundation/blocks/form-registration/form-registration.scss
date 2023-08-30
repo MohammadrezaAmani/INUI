@@ -1,0 +1,99 @@
+$form-registration-bg: $white;
+$form-registration-highlight-color: $primary-color;
+$social-brand-facebook: #3b5998;
+
+.form-registration {
+  background: $form-registration-bg;
+
+  .form-registration-img {
+    position: relative;
+
+    .form-registration-img-caption {
+      position: absolute;
+      padding: 0.5rem;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(1, rgba($white, 0.3)), /* Top */
+        color-stop(0, rgba($white, 1.0)) /* Bottom */
+      );
+    }
+  }
+}
+
+.form-registration-group {
+  padding: $global-padding;
+
+  .form-registration-input {
+    border-radius: $global-radius;
+
+    &:focus {
+      border: 2px solid $form-registration-highlight-color;
+      box-shadow: 0 0 5px $form-registration-highlight-color;
+    }
+  }
+
+  .form-registration-submit-button {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    @include button(true, $primary-color, auto, auto, solid);
+    border-radius: 5000px;
+  }
+
+  .form-registration-social-button {
+    text-transform: uppercase;
+    font-size: 16px;
+    @include button(true, $social-brand-facebook, auto, $social-brand-facebook, hollow);
+    border-radius: 5000px;
+
+    .fa {
+      vertical-align: text-top;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .form-registration-member-signin {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+
+    a {
+      margin-left: 0.25rem;
+    }
+  }
+
+  .form-registration-terms {
+    text-align: center;
+    font-size: 12px;
+
+    a:first-child {
+      margin-right: 0.25rem;
+    }
+
+    a:last-child {
+      margin-left: 0.25rem;
+    }
+  }
+
+  .or-divider {
+    position: relative;
+    margin: 1.5rem 0px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    height: 0px;
+    border: 1px solid $light-gray;
+
+    span {
+      color: $dark-gray;
+      @include horizontal-center;
+      top: -12px;
+      background-color: $form-registration-bg;
+      padding: 0 8px;
+    }
+  }
+}
