@@ -1,0 +1,53 @@
+.sign-in-form {
+  padding: 1rem 1.5em;
+  border-radius: .5rem;
+  background-color: #3d454f;
+
+  h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase
+  }
+
+  label {
+    text-transform: uppercase;
+    color: #adadad;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    color: white;
+  }
+
+  input:focus {
+    opacity: .8;
+  }
+}
+
+.sign-in-form-username,
+.sign-in-form-password {
+  border-radius: 30px;
+  border: none;
+  opacity: .1;
+  transition: all ease .4s;
+}
+
+.sign-in-form-button {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 1rem;
+  transition: all ease .4s;
+
+  &:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+  }
+}
