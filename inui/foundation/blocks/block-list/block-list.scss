@@ -1,0 +1,361 @@
+$block-list-background: $white;
+
+$block-list-item-height: rem-calc(65);
+$block-list-item-border: 1px solid $light-gray;
+$block-list-item-icon-size: 0.8;
+
+$block-list-header-background: $light-gray;
+
+$block-list-check-icons: true;
+
+
+@mixin block-list-container {
+  width: 100%;
+  line-height: 1;
+  user-select: none;
+  background: $block-list-background;
+
+  a {
+    width: 100%;
+    padding-top: $global-padding;
+    padding-bottom: $global-padding;
+    color: $primary-color;
+  }
+
+  img {
+    margin-right: $global-margin;
+
+    &.small-icon {
+      margin-right: 0.3rem;
+    }
+  }
+
+  &, ul {
+    list-style-type: none;
+  }
+
+  ul {
+    margin-left: 0;
+    margin-bottom: 0;
+
+    li {
+      height: $block-list-item-height;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  }
+}
+
+@mixin block-list-header {
+  padding-left: 0.75rem;
+  padding-bottom: 0.5rem;
+  height: 45px;
+  display: flex;
+  align-items: flex-end;
+  cursor: default;
+  background-color: $block-list-header-background;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@mixin block-list-item(
+  $border: $block-list-item-border,
+  $height: $block-list-item-height
+) {
+  position: relative;
+
+  label {
+    color: $body-font-color;
+    font-size: rem-calc(14);
+    letter-spacing: 0;
+    margin: 0;
+  }
+
+  input, select {
+    margin: 0;
+  }
+
+  button {
+    padding: $global-padding;
+
+    img {
+      margin: 0;
+    }
+  }
+
+  @if hasvalue($border) {
+    border-bottom: $border;
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  // Inner elements share the same basic styles
+  > a,
+  > span,
+  > label {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  > span {
+    cursor: default;
+  }
+  > a, > label {
+    cursor: pointer;
+  }
+}
+
+
+@mixin block-list-label(
+) {
+  display: inline-block;
+  float: right;
+  padding: 0;
+  pointer-events: none;
+}
+
+@mixin block-list-chevron {
+  // Chevrons are a pseudo-element
+  &::after {
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f054";
+    display: block;
+    right: $global-margin;
+    @include vertical-center;
+    font-weight: bold;
+    font-size: 1em;
+    color: $dark-gray;
+  }
+}
+
+@mixin block-list-icons(
+  $size: $block-list-item-icon-size,
+  $item-selector: 'li'
+) {
+
+  $item-height: $size;
+
+  $icon-height: $item-height * $block-list-item-icon-size;
+  $icon-offset: ($item-height - $icon-height) / 2;
+
+  #{$item-selector} {
+    > a, > span, > label {
+      padding-left: (get-side($block-list-item-height, left) * 2) + $block-list-item-icon-size;
+    }
+    img, .iconic {
+      position: absolute;
+      top: $icon-offset;
+      left: $icon-offset;
+      width: $icon-height;
+      height: $icon-height;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+  }
+}
+
+@mixin block-list-inputs(
+  $height: $block-list-item-height,
+  $color: $body-font-color,
+  $icons: $block-list-check-icons,
+  $switch-class: 'switch'
+) {
+
+  // Multiple select
+  li > input[type="checkbox"], li > input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+
+    & + label {
+      margin: 0;
+      margin-left: 0.5rem;
+      width: 100%;
+      padding-top: $global-padding;
+      padding-bottom: $global-padding;
+    }
+
+    & + label.list-header {
+      margin: 0;
+    }
+
+    @if $icons == true {
+      &:checked + label {
+        &::before {
+          font: normal normal normal 14px/1 FontAwesome;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\f00c";
+          background-size: 100% 100%;
+          width: 1.5em;
+          height: 1.5em;
+          color: $primary-color;
+          @include vertical-center;
+          right: $global-margin;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  // Switches
+  .#{$switch-class} {
+    align-self: center;
+    margin: 0;
+  }
+}
+.switch {
+  .switch-paddle {
+    width: 3.25rem;
+  }
+
+  input:checked ~ .switch-paddle::after {
+    left: 1.3rem;
+  }
+}
+
+.block-list {
+  @include block-list-container;
+  @include block-list-inputs;
+
+  li {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+
+    p {
+      margin: 0;
+    }
+  }
+  
+
+  .section-header-bg {
+    width: 100%;
+    height: rem-calc(20);
+    border-bottom: none;
+    border-top: none;
+    color: $white;
+
+    p {
+      z-index: 10;
+    }
+
+    &.gray {
+      background: $medium-gray;
+
+      &:before {
+        content: '';
+        height: rem-calc(20);
+        position: absolute;
+        width: rem-calc(20);
+        background: $medium-gray;
+        left: -rem-calc(20);
+      }
+
+      &:after {
+        content: '';
+        height: rem-calc(20);
+        position: absolute;
+        width: rem-calc(20);
+        background: $medium-gray;
+        right: -rem-calc(20);
+      }
+    }
+  }
+
+  &.block-list-short {
+    margin-top: 2rem;
+    border-top: $block-list-item-border;
+
+    li {
+      height: rem-calc(40);
+    }
+  }
+
+  &.block-list-padded {
+    padding: 0 rem-calc(20);
+
+    p {
+      margin-left: 0;
+    }
+  }
+
+  &.with-icons { @include block-list-icons; }
+  header       { @include block-list-header; }
+
+  li {
+    @include block-list-item;
+
+    &.block-list-time-item {
+      justify-content: flex-start;
+
+      div:first-of-type {
+        border-right: 1px solid $primary-color;
+        padding-right: rem-calc(20);
+        margin-right: rem-calc(10);
+      }
+    }
+
+    .list-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        flex-basis: 100%;
+        text-align: right;
+        color: #4D4D4E;
+        font-weight: 400;
+      }
+
+      [type="text"], [type="tel"] {
+        border: none;
+        box-shadow: none;
+        text-align: center;
+      }
+    }
+
+    p {
+      margin-left: 0.5rem;
+    }
+
+    &.list-header-selected {
+      padding: 1.25rem 2rem 1.25rem;
+      border: none;
+    }
+
+    &.with-chevron {
+      @include block-list-chevron;
+
+      a {
+        color: $dark-gray;
+      }
+
+      img {
+        vertical-align: bottom;
+      }
+    }
+
+    .block-list-label {
+      @include block-list-label;
+    }
+
+  }
+}
+
+.block-list-item-highlight {
+  span,
+  p {
+    color: $primary-color;
+  }
+}
+
