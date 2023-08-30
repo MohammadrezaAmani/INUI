@@ -1,0 +1,111 @@
+.ecommerce-footer {
+  background-color: $white;
+  padding: 70px 20px 40px 20px;
+}
+
+.ecommerce-footer-links {
+
+  h5 {
+    color: $black;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .menu > li > a {
+    line-height: 1.5em;
+    padding: 0.5rem 0rem;
+  }
+
+  a {
+    color: lighten($black, 40%);
+    font-size: 1rem;
+    transition: all 0.5s ease;
+  }
+
+  a:hover {
+    color: $black;
+    transition: all 0.5s ease;
+  }
+
+  .more-categories {
+    margin-top: 2rem;
+
+    @include breakpoint(small down) {
+      margin-top: 2rem;
+    }
+  }
+
+  .ecommerce-footer-links-block {
+
+    @include breakpoint(medium down) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.ecommerce-footer-bottom-bar {
+  border-top: 1px solid $light-gray;
+  margin-top: 40px;
+  padding-bottom: 80px;
+  padding-top: 30px;
+
+  .menu > li > a {
+    line-height: 1.2em;
+    padding: 10px 0;
+  }
+
+  a {
+    color: $dark-gray;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+  }
+
+  a:hover {
+    color: $black;
+    transition: all 0.5s ease;
+  }
+
+  ul {
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+
+  li {
+    display: inline;
+  }
+
+  .bottom-links {
+    margin-top: 0.65rem;
+    margin-left: 0;
+  }
+
+  .bottom-links li {
+    padding-right: 2rem;
+
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+
+  .ecommerce-footer-logomark {
+    text-align: center;
+
+    @include breakpoint(small down) {
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .bottom-copyright {
+    color: $dark-gray;
+    font-size: 0.9rem;
+    line-height: 1.2em; 
+    padding-top: 1rem;
+    text-align: right;
+
+    @include breakpoint(small down) {
+      text-align: center; 
+    }
+  }
+}
