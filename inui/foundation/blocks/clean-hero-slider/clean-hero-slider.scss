@@ -1,0 +1,116 @@
+$clean-hero-slider-accent: $warning-color;
+
+.clean-hero-slider {
+  .orbit-caption {
+    width: auto;
+    height: auto;
+    background: $black;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    padding: 0.2rem 2rem;
+
+    @include breakpoint(medium) {
+      @include vertical-center;
+      background: rgba(0,0,0,.6);
+      text-align: left;
+      width: 70%;
+      right: 0;
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint(xlarge) {
+      padding-right: 10%;
+    }
+
+    @include breakpoint(xxlarge) {
+      padding-right: 20%;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.25;
+
+      @include breakpoint(medium) {
+        font-size: 1.1rem;
+      }
+    }
+
+    h3 {
+      color: $clean-hero-slider-accent;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      @include breakpoint(medium) {
+        font-size: 2.5rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .orbit-slide {
+    padding-bottom: 40%;
+    background: $black;
+
+    @include breakpoint(medium) {
+      padding-bottom: 0;
+    }
+  }
+
+  .orbit-controls {
+    button {
+      background: $clean-hero-slider-accent;
+      padding: 1rem 0.5rem;
+
+      &:hover {
+        background: $white;
+        color: $black;
+      }
+    }
+
+    .orbit-previous {
+      @include breakpoint(medium) {
+        left: auto;
+        right: 2.4rem;
+      }
+    }
+
+    .orbit-next {
+      @include breakpoint(medium) {
+        right: 0.5rem;
+      }
+    }
+  }
+
+  .orbit-bullets {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+      margin-bottom: 0;
+      margin-top: -3rem;
+      background: none;
+    }
+
+    button {
+      width: 3rem;
+      height: 0.4rem;
+      border-radius: 0;
+      background-color: $white;
+
+      &.is-active {
+        background-color: $clean-hero-slider-accent;
+      }
+    }
+  }
+
+  ul.orbit-container {
+    height: auto !important;
+  }
+
+  li.orbit-slide {
+    max-height: none !important;
+  }
+}
