@@ -1,0 +1,104 @@
+$menu-fancy-spacing: 5px;
+$menu-fancy-link-color: $dark-gray;
+
+.menu-fancy {
+  li {
+    position: relative;
+    margin: 0 $menu-fancy-spacing;
+
+    a {
+      padding: 0.5rem 0;
+      color: $menu-fancy-link-color;
+    }
+  }
+
+  li:after,
+  li:before,
+  a:before,
+  a:after {
+    position: absolute;
+    content:'';
+    border-radius: 4px;
+  }
+
+  li:after,
+  li:before {
+    bottom: -4px;
+    height: 4px;
+  }
+
+  li:not(.is-selected):before {
+    left: 0;
+    right: -2px;
+  }
+
+  li.is-selected:after {
+    left: 0;
+    right: 39px;
+  }
+
+  li.is-selected:before {
+    right: -2px;
+    width: 13px;
+  }
+
+
+  .is-selected a:before {
+    height: 22px;
+    width: 4px;
+    bottom: -22px;
+    right: 7px;
+  }
+
+  .is-selected a:after {
+    height: 4px;
+    width: 40px;
+    bottom: -13px;
+    right: 5px;
+    transform: rotate(30deg);
+  }
+
+  .menu-fancy-option1 a:hover {
+    color: $success-color;
+  }
+
+  .menu-fancy-option1:after,
+  .menu-fancy-option1:before,
+  .menu-fancy-option1 a:after,
+  .menu-fancy-option1 a:before {
+    background-color: $success-color;
+  }
+
+  .menu-fancy-option2 a:hover{
+    color: $alert-color;
+  }
+
+  .menu-fancy-option2:after,
+  .menu-fancy-option2:before,
+  .menu-fancy-option2 a:after,
+  .menu-fancy-option2 a:before{
+    background-color: $alert-color;
+  }
+
+  .menu-fancy-option3 a:hover{
+    color: $primary-color;
+  }
+
+  .menu-fancy-option3:after,
+  .menu-fancy-option3:before,
+  .menu-fancy-option3 a:after,
+  .menu-fancy-option3 a:before{
+    background-color: $primary-color;
+  }
+
+  .menu-fancy-option4 a:hover{
+    color: $warning-color;
+  }
+
+  .menu-fancy-option4:after,
+  .menu-fancy-option4:before,
+  .menu-fancy-option4 a:after,
+  .menu-fancy-option4 a:before{
+    background-color: $warning-color;
+  }
+}
