@@ -1,0 +1,72 @@
+$white: #fff;
+$black: #000;
+$highlight: #2daebf;
+$shadow: #888888;
+
+.card-article-hover {
+  box-shadow: 0px 0px 7px $shadow;
+
+  .card-section {
+    width: 90%;
+    background: $white;
+    margin: 0 auto;
+    padding-top: 25px;
+    margin-top: -3rem;
+    z-index: 2;
+
+    .article-subtext {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    .article-title {
+      font-weight: bold;
+      font-family: ‘Georgia’, serif;
+      font-size: 1.5rem;
+      color: $black;
+    }
+
+    .article-desc {
+      font-family: ‘Georgia, serif;
+      font-size: 1rem;
+    }
+  }
+
+  .card-divider {
+    background: $white;
+
+    .author {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $highlight;
+    }
+  }
+
+  .hover-border {
+    height: 10px;
+    width: 450px;
+    background: $highlight;
+    width: 0;
+    transition: width 1s ease;
+  }
+
+  &:hover .hover-border {
+    height: 10px;
+    width: 450px;
+    transition: width 1s ease;
+  }
+
+  .author {
+    color: navy;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    margin: 0 1rem;
+  }
+
+  .meta-data {
+    text-transform: uppercase;
+  }
+}
