@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.card-article-hover {
+  box-shadow: 0px 0px 7px #888888;
+}
+.card-article-hover .card-section {
+  width: 90%;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 25px;
+  margin-top: -3rem;
+  z-index: 2;
+}
+.card-article-hover .card-section .article-subtext {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.card-article-hover .card-section .article-title {
+  font-weight: bold;
+  font-family: ‘Georgia’, serif;
+  font-size: 1.5rem;
+  color: #000;
+}
+.card-article-hover .card-section .article-desc {
+  font-family: ‘Georgia, serif;
+  font-size: 1rem;
+}
+.card-article-hover .card-divider {
+  background: #fff;
+}
+.card-article-hover .card-divider .author {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2daebf;
+}
+.card-article-hover .hover-border {
+  height: 10px;
+  width: 450px;
+  background: #2daebf;
+  width: 0;
+  transition: width 1s ease;
+}
+.card-article-hover:hover .hover-border {
+  height: 10px;
+  width: 450px;
+  transition: width 1s ease;
+}
+.card-article-hover .author {
+  color: navy;
+}
+.card-article-hover .avatar {
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+.card-article-hover .meta-data {
+  text-transform: uppercase;
+}/*# sourceMappingURL=article-card-hover.css.map */
