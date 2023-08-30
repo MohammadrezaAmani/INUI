@@ -1,0 +1,10 @@
+.hero-background {
+  height: 700px;
+  background-image: url(https://unsplash.it/1200/700);
+  background-size: cover;
+  color: $white;
+  padding: 40px 0;
+  h1, p {
+    color: $white;
+  }
+}
