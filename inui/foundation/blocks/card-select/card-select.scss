@@ -1,0 +1,44 @@
+.card-select {
+  text-align: center;
+  transition: all 0.5s ease;
+
+  .card-divider {
+    background-color: $white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid $medium-gray;
+  }
+
+  .button {
+    padding: 1rem;
+    background-color: $medium-gray;
+
+    &:after {
+      content: 'Select';
+    }
+
+    &:hover {
+      background-color: $primary-color;
+    }
+
+    &:focus {
+      background-color: $primary-color;
+    }
+  }
+
+  // toggle this class on click
+  &.is-selected {
+    border: 1px solid $primary-color;
+    box-shadow: 0 0 10px $light-gray;
+    transition: all 0.5s ease;
+
+    .button {
+      background-color: $primary-color;
+
+      &:after {
+        content: 'Selected';
+      }
+    }
+  }
+}
