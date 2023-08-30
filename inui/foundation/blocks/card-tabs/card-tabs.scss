@@ -1,0 +1,42 @@
+.card-tabs {
+  .card-divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+    }
+
+    .fa {
+      position: relative;
+      margin-right: 0;
+    }
+  }
+
+  .tabs {
+    padding-top: 4px;
+  }
+
+  .tabs,
+  .tabs a {
+    background:none;
+  }
+
+  .tabs a {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 13px;
+    color: lighten($body-font-color, 50%);
+  }
+
+  .tabs a:hover,
+  .tabs .is-active a {
+    color: $body-font-color;
+  }
+
+  .tabs-panel {
+    padding: 0;
+  }
+}
