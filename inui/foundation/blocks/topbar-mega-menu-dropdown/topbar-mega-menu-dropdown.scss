@@ -1,0 +1,26 @@
+.mega-menu {
+  .dropdown-pane {
+    width: 100%;
+    max-width: 85rem;
+    margin: 0 auto !important;
+    left: 0% !important;
+    right: 0% !important;
+  }
+
+  .menu {
+    background: none;
+  }
+
+  > a::after {
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    content: '';
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #1779ba transparent transparent;
+    margin-left: 10px;
+    margin-top: 11%;
+  }
+}
