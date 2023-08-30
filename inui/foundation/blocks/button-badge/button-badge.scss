@@ -1,0 +1,24 @@
+.button-badge {
+  background-color: $primary-color;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  position: relative;
+  display: inline-block;
+  border-radius: .2rem;
+  transition: all ease 0.4s;
+}
+
+.button-badge:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: .8em;
+}
+
+.fa {
+  color: white;
+}
