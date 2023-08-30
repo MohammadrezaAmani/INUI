@@ -1,0 +1,72 @@
+$flip-card-height: rem-calc(320);
+$flip-card-transition-speed: 0.6s;
+
+.flip-card {
+  perspective: 1000;
+  border: 0;
+  background: transparent;
+
+  &:hover .flip-card-inner,
+  &.hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card,
+.flip-card-inner-front,
+.flip-card-inner-back {
+  width: 100%;
+  height: $flip-card-height;
+}
+
+.flip-card-inner {
+  transition: $flip-card-transition-speed;
+  transform-style: preserve-3d;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+.flip-card-inner-front,
+.flip-card-inner-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// non-essential front and rear styles
+.flip-card-inner-front {
+  background: url(https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=940&h=650&auto=compress&cs=tinysrg) 0 0 no-repeat;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    width: 100%;
+    text-align: center;
+    background: rgba($white, 0.8);
+    padding: 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+.flip-card-inner-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: $medium-gray;
+  padding: 1rem;
+}
+
+.flip-card-inner-back-title {
+  font-weight: bold;
+}
+
+.flip-card-inner-back-text {
+  line-height: 1.3;
+}
