@@ -1,0 +1,109 @@
+$expand-column-transition: all 0.5s ease-in-out;
+$expand-column-background-color: #2c3840;
+$expand-column-hover-width: 40%;
+$expand-column-fluid: true;
+
+.expand-column-wrapper {
+  height: 100vh;
+
+  @if $expand-column-fluid == 'true' {
+    max-width: none;
+  } @else {
+    max-wdtih: $global-width;
+  }
+
+  .column {
+    padding: 1rem;
+    transition: $expand-column-transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      flex-basis: $expand-column-hover-width;
+    }
+
+    &:hover {
+      .expand-column-content {
+        opacity: 1;
+      }
+    }
+  }
+
+  .expand-column-content {
+    color: $white;
+    font-weight: bold;
+    opacity: 0;
+    transition: $expand-column-transition;
+  }
+
+  @include breakpoint(small only) {
+    flex-direction: column;
+  }
+}
+
+
+// optional theming
+// .expand-column-wrapper .column {
+//   &:nth-of-type(1) {
+//     background: lighten($expand-column-background-color, 25%);
+//   }
+
+//   &:nth-of-type(2) {
+//     background: lighten($expand-column-background-color, 20%);
+//   }
+
+//   &:nth-of-type(3) {
+//     background: lighten($expand-column-background-color, 15%);
+//   }
+
+//   &:nth-of-type(4) {
+//     background: lighten($expand-column-background-color, 10%);
+//   }
+
+//   &:nth-of-type(5) {
+//     background: lighten($expand-column-background-color, 5%);
+//   }
+
+//   &:nth-of-type(6) {
+//     background: $expand-column-background-color;
+//   }
+// }
+
+.expand-column-wrapper .column {
+  &:nth-of-type(1) {
+    background: url('https://images.pexels.com/photos/2154/sky-lights-space-dark.jpg?w=940&h=650&auto=compress&cs=tinysrgb') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  &:nth-of-type(2) {
+    background: url('https://images.pexels.com/photos/113744/helix-nebula-ngc-7293-planetary-fog-constellation-aquarius-113744.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  &:nth-of-type(3) {
+    background: url('https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?w=940&h=650&auto=compress&cs=tinysrgb') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  &:nth-of-type(4) {
+    background: url('https://images.pexels.com/photos/24248/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  &:nth-of-type(5) {
+    background: url('https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  &:nth-of-type(6) {
+    background: url('https://images.pexels.com/photos/2156/sky-earth-space-working.jpg') center center no-repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+}
