@@ -1,0 +1,40 @@
+$newsletter-subscribe-bg: $white;
+$newsletter-subscribe-height: 200px;
+$newsletter-subscribe-button-width: 25vw; // % of wiewport width
+
+.newsletter-subscribe {
+  background: $newsletter-subscribe-bg;
+  height: $newsletter-subscribe-height;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    position: relative;
+    transform: translateX(0.5rem);
+  }
+
+  .input-group {
+    margin-bottom: 0;
+  }
+
+  .newsletter-subscribe-inner {
+    text-align: center;
+  }
+
+  .input-group-button .button{
+    border-radius: 5000px;
+    position: relative;
+    transform: translateX(-0.5rem);
+    min-width: $newsletter-subscribe-button-width;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0 3rem;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 6rem;
+  }
+}
