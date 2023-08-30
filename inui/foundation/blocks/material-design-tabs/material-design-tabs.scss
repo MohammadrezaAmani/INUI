@@ -1,0 +1,134 @@
+$primary-blue: #1779BA;
+$accent-green: #3ADB76;
+
+.md-tabs {
+  background-color: $primary-blue;
+
+  > {
+    .mobile-nav-bar {
+      background-color: $primary-blue;
+      margin-bottom: 15px;
+
+      .title-bar-text {
+        font-size: 26px;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    .tabs {
+      margin: 0;
+      border: 0;
+      background: $primary-blue;
+      list-style-type: none;
+      display: table;
+      width: 100%;
+
+      > .tabs-title {
+        display: table-cell;
+        width: 25%;
+        text-align: center;
+        display: inline-block;
+
+        &.is-active {
+          > a {
+            color: $accent-green;
+            background-color: transparent;
+            outline: none;
+          }
+
+          &:nth-of-type(1) ~ .slide {
+            left: calc((100% / 4) * 0);
+          }
+
+          &:nth-of-type(2) ~ .slide {
+            left: calc((100% / 4) * 1);
+          }
+
+          &:nth-of-type(3) ~ .slide {
+            left: calc((100% / 4) * 2);
+          }
+
+          &:nth-of-type(4) ~ .slide {
+            left: calc((100% / 4) * 3);
+          }
+        }
+
+        > a {
+          color: $white;
+          font-size: 16px;
+
+          &:hover,
+          &:focus {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide {
+  background: $accent-green;
+  width: calc(100% / 4);
+  height: 4px;
+  position: relative;
+  left: 0;
+  top: 52px;
+  transition: left 0.3s ease-out;
+}
+
+@include breakpoint(small only) {
+  .slide {
+    width: 0;
+    height: 0;
+  }
+
+  .md-tabs {
+    > .accordion {
+      margin-left: 0;
+      list-style-type: none;
+
+      > .accordion-item > .accordion-title {
+        position: relative;
+        display: block;
+        padding: 1.25rem 1rem;
+        border: 0;
+        font-size: 0.75rem;
+        line-height: 1;
+        background: $primary-blue;
+        color: $white;
+
+        &:hover {
+          background-color: $primary-blue;
+          color: $accent-green;
+          outline: none;
+        }
+      }
+    }
+
+    > .accordion > {
+      .is-active.accordion-item > a.accordion-title {
+        border-bottom: 4px solid $accent-green;
+        color: $accent-green;
+      }
+
+      .accordion-item > .accordion-content {
+        display: none;
+        padding: 1rem;
+        border: 1px solid #e6e6e6;
+        border-top: 0px;
+        background-color: #fefefe;
+        color: #0a0a0a;
+      }
+    }
+  }
+
+  > .accordion > .accordion-item > .accordion-title:focus {
+    background-color: $primary-blue;
+    color: $accent-green;
+    outline: none;
+  }
+}
