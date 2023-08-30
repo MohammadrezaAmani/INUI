@@ -1,0 +1,13 @@
+$work-feature-image-offset-padding: 10px 0;
+
+.work-feature-block {
+  padding: 10px 0;
+  border-top: 1px solid $medium-gray;
+  border-bottom: 1px solid $medium-gray;
+}
+
+.work-feature-block-image {
+  display: block;
+  margin: auto;
+  padding: $work-feature-image-offset-padding;
+}
