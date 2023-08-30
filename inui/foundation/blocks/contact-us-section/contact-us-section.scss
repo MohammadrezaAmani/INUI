@@ -1,0 +1,101 @@
+$contact-us-section-padding: 2rem;
+$contact-us-section-bg: $body-background;
+
+.contact-us-section {
+  padding: $contact-us-section-padding;
+  background: $contact-us-section-bg;
+
+  .contact-us-section-left {
+    padding-right: $contact-us-section-padding;
+    border-bottom: 2px solid $light-gray;
+    padding-bottom: $contact-us-section-padding;
+    margin-bottom: $contact-us-section-padding;
+
+    @include breakpoint(medium) {
+      border-right: 1px solid $light-gray;
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .contact-us-section-right {
+    padding-left: $contact-us-section-padding;
+
+    @include breakpoint(medium) {
+      border-left: 1px solid $light-gray;
+    }
+  }
+
+  .contact-us-header {
+    margin-bottom: $contact-us-section-padding;
+
+    @media screen and #{breakpoint(medium)} and #{breakpoint(large down)} {
+      font-size: 32px;
+    }
+  }
+
+  .responsive-embed {
+    margin-bottom: 0;
+    padding-bottom: 55%;
+  }
+}
+
+.contact-us-form {
+  input[type=text],
+  input[type=email],
+  textarea {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-us-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input[type=submit] {
+    border-radius: 5000px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .contact-us-file-button {
+    background: transparent;
+    color: $dark-gray;
+  }
+}
+
+.contact-us-list {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    a {
+      color: $black;
+    }
+  }
+
+  li::before {
+    margin-right: 2rem;
+    font-size: 2rem;
+    vertical-align: middle;
+    color: $dark-gray;
+    font-family: 'FontAwesome';
+  }
+
+  // generates icons - change fontawesome content codes below to change icons
+  .address::before {
+    content: '\f041';
+    margin-left: 0.4rem;
+    margin-right: 2.3rem;
+  }
+
+  .email::before {
+    content: '\f003';
+  }
+
+  .phone::before {
+    content: '\f098';
+  }
+}
