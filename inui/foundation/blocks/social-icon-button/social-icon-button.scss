@@ -1,0 +1,82 @@
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-google-plus: #dd4b39;
+
+$social-icon-button-bg: none;
+$social-icon-button-font-size: 2rem;
+$social-icon-button-size: 3.6rem;
+$social-icon-button-space-between: 0.25rem;
+$social-icon-button-transition: all 0.3s ease-in-out;
+
+
+.social-icon-button {
+  border-radius: $social-icon-button-size;
+  width: $social-icon-button-size;
+  height: $social-icon-button-size;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: $social-icon-button-font-size;
+  background: $social-icon-button-bg;
+
+  + .social-icon-button {
+    margin-left: $social-icon-button-space-between;
+  }
+
+  .fa {
+    background: none;
+    @include absolute-center;
+    z-index: 1;
+    line-height: $social-icon-button-size;
+    transition: $social-icon-button-transition;
+  }
+
+  span {
+    display: block;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+    @include absolute-center;
+    transition: $social-icon-button-transition;
+  }
+
+  &:hover {
+
+    .fa {
+      color: $white;
+    }
+
+    span {
+      display: block;
+      border-radius: $social-icon-button-size;
+      width: $social-icon-button-size;
+      height: $social-icon-button-size;
+    }
+  }
+
+  &.gplus {
+    color: $social-brand-google-plus;
+
+    span{
+      background-color: $social-brand-google-plus;
+    }
+  }
+
+  &.twitter {
+    color: $social-brand-twitter;
+
+    span{
+      background-color: $social-brand-twitter;
+    }
+  }
+
+  &.facebook {
+    color: $social-brand-facebook;
+
+    span{
+      background-color: $social-brand-facebook;
+    }
+  }
+}
+
