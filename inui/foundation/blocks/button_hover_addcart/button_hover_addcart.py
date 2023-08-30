@@ -1,21 +1,20 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Button(
-                    classs='''button-hover-addcart button''',
-                    data = (
-                        Span(
-
-                            data = ('''Add to cart''',)
-                        ), 
+                    classs="""button-hover-addcart button""",
+                    data=(
+                        Span(data=("""Add to cart""",)),
                         I(
-                            classs='''fa fa-shopping-cart''',
-                        ), )
-                ), )
-        ), )
+                            classs="""fa fa-shopping-cart""",
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,44 +1,56 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row''',
-                    data = (
+                    classs="""row""",
+                    data=(
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> ecommerce-product-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> ecommerce-product-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> ecommerce-product-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> ecommerce-product-card}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> ecommerce-product-card}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

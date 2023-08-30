@@ -1,137 +1,145 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''translucent-form-overlay''',
-                    data = (
+                    classs="""translucent-form-overlay""",
+                    data=(
                         Form(
-
-                            data = (
-                                H3(
-
-                                    data = ('''Search for Properties''',)
-                                ), 
+                            data=(
+                                H3(data=("""Search for Properties""",)),
                                 Div(
-                                    classs='''row columns''',
-                                    data = (
+                                    classs="""row columns""",
+                                    data=(
                                         Label(
-
-                                            data = ('''Keyword
-        ''',
+                                            data=(
+                                                """Keyword
+        """,
                                                 Input(
-                                                    typee='''text''',
-                                                    name='''keyword''',
-                                                    placeholder='''Any''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    typee="""text""",
+                                                    name="""keyword""",
+                                                    placeholder="""Any""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''row columns''',
-                                    data = (
+                                    classs="""row columns""",
+                                    data=(
                                         Label(
-
-                                            data = ('''Property Status
-        ''',
+                                            data=(
+                                                """Property Status
+        """,
                                                 Select(
-                                                    name='''status''',
-                                                    typee='''text''',
-                                                    data = (
+                                                    name="""status""",
+                                                    typee="""text""",
+                                                    data=(
+                                                        Option(data=("""Any""",)),
                                                         Option(
-
-                                                            data = ('''Any''',)
-                                                        ), 
+                                                            value="""rent""",
+                                                            data=("""Rent""",),
+                                                        ),
                                                         Option(
-                                                            value='''rent''',
-                                                            data = ('''Rent''',)
-                                                        ), 
-                                                        Option(
-                                                            value='''buy''',
-                                                            data = ('''Buy''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                            value="""buy""",
+                                                            data=("""Buy""",),
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''row columns''',
-                                    data = (
+                                    classs="""row columns""",
+                                    data=(
                                         Label(
-
-                                            data = ('''Property Type
-        ''',
+                                            data=(
+                                                """Property Type
+        """,
                                                 Select(
-                                                    name='''status''',
-                                                    typee='''text''',
-                                                    data = (
+                                                    name="""status""",
+                                                    typee="""text""",
+                                                    data=(
+                                                        Option(data=("""Any""",)),
                                                         Option(
-
-                                                            data = ('''Any''',)
-                                                        ), 
+                                                            value="""office""",
+                                                            data=("""Office""",),
+                                                        ),
                                                         Option(
-                                                            value='''office''',
-                                                            data = ('''Office''',)
-                                                        ), 
-                                                        Option(
-                                                            value='''building''',
-                                                            data = ('''Building''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                            value="""building""",
+                                                            data=("""Building""",),
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''row columns''',
-                                    data = (
+                                    classs="""row columns""",
+                                    data=(
                                         Label(
-
-                                            data = ('''Location
-        ''',
+                                            data=(
+                                                """Location
+        """,
                                                 Input(
-                                                    typee='''text''',
-                                                    name='''location''',
-                                                    placeholder='''Any''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    typee="""text""",
+                                                    name="""location""",
+                                                    placeholder="""Any""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''row''',
-                                    data = (
+                                    classs="""row""",
+                                    data=(
                                         Label(
-                                            classs='''columns small-12''',
-                                            data = ('''Price''',)
-                                        ), 
+                                            classs="""columns small-12""",
+                                            data=("""Price""",),
+                                        ),
                                         Div(
-                                            classs='''columns small-6''',
-                                            data = (
+                                            classs="""columns small-6""",
+                                            data=(
                                                 Input(
-                                                    typee='''number''',
-                                                    min='''0''',
-                                                    name='''min''',
-                                                    placeholder='''Min''',
-                                                ), )
-                                        ), 
+                                                    typee="""number""",
+                                                    min="""0""",
+                                                    name="""min""",
+                                                    placeholder="""Min""",
+                                                ),
+                                            ),
+                                        ),
                                         Div(
-                                            classs='''columns small-6''',
-                                            data = (
+                                            classs="""columns small-6""",
+                                            data=(
                                                 Input(
-                                                    typee='''number''',
-                                                    min='''0''',
-                                                    name='''max''',
-                                                    placeholder='''Max''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    typee="""number""",
+                                                    min="""0""",
+                                                    name="""max""",
+                                                    placeholder="""Max""",
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Button(
-                                    typee='''button''',
-                                    classs='''primary button expanded search-button''',
-                                    data = ('''
+                                    typee="""button""",
+                                    classs="""primary button expanded search-button""",
+                                    data=(
+                                        """
       Search
-    ''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+    """,
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

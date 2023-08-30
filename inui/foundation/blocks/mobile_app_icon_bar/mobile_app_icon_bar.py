@@ -1,54 +1,56 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''mobile-app-icon-bar''',
-                    data = (
+                    classs="""mobile-app-icon-bar""",
+                    data=(
                         Button(
-
-                            data = (
+                            data=(
                                 I(
-                                    classs='''fa fa-picture-o''',
-                                    aria_hidden='''true''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-picture-o""",
+                                    aria_hidden="""true""",
+                                ),
+                            )
+                        ),
                         Button(
-
-                            data = (
+                            data=(
                                 I(
-                                    classs='''fa fa-map-marker''',
-                                    aria_hidden='''true''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-map-marker""",
+                                    aria_hidden="""true""",
+                                ),
+                            )
+                        ),
                         Button(
-
-                            data = (
+                            data=(
                                 I(
-                                    classs='''fa fa-upload''',
-                                    aria_hidden='''true''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-upload""",
+                                    aria_hidden="""true""",
+                                ),
+                            )
+                        ),
                         Button(
-
-                            data = (
+                            data=(
                                 I(
-                                    classs='''fa fa-list-ul''',
-                                    aria_hidden='''true''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-list-ul""",
+                                    aria_hidden="""true""",
+                                ),
+                            )
+                        ),
                         Button(
-
-                            data = (
+                            data=(
                                 I(
-                                    classs='''fa fa-cog''',
-                                    aria_hidden='''true''',
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""fa fa-cog""",
+                                    aria_hidden="""true""",
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

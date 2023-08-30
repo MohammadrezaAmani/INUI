@@ -1,110 +1,124 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''sticky-social-bar''',
-                    data = (
+                    classs="""sticky-social-bar""",
+                    data=(
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-facebook''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-facebook""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Facebook''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""social-icon-text""",
+                                            data=("""Facebook""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-twitter''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-twitter""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Twitter''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""social-icon-text""",
+                                            data=("""Twitter""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-linkedin''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-linkedin""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Linkedin''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""social-icon-text""",
+                                            data=("""Linkedin""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-youtube''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-youtube""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Youtube''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""social-icon-text""",
+                                            data=("""Youtube""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-instagram''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-instagram""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Instagram''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""social-icon-text""",
+                                            data=("""Instagram""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''social-icon''',
-                            data = (
+                            classs="""social-icon""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         I(
-                                            classs='''fa fa-pinterest-p''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-pinterest-p""",
+                                            aria_hidden="""true""",
+                                        ),
                                         Span(
-                                            classs='''social-icon-text''',
-                                            data = ('''Pinterest''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""social-icon-text""",
+                                            data=("""Pinterest""",),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

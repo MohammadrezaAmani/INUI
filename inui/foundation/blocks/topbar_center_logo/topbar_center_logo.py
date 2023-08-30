@@ -1,118 +1,90 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''title-bar topbar-center-logo-mobile''',
-                    data_responsive_toggle='''topbar-center-logo''',
-                    data_hide_for='''medium''',
-                    data = (
+                    classs="""title-bar topbar-center-logo-mobile""",
+                    data_responsive_toggle="""topbar-center-logo""",
+                    data_hide_for="""medium""",
+                    data=(
                         Div(
-                            classs='''title-bar-left''',
-                            data = (
+                            classs="""title-bar-left""",
+                            data=(
                                 Div(
-                                    classs='''title-bar-title''',
-                                    data = (
+                                    classs="""title-bar-title""",
+                                    data=(
                                         Img(
-                                            src='''https://placehold.it/100x39''',
-                                            alt='',
-                                        ), )
-                                ), )
-                        ), 
+                                            src="""https://placehold.it/100x39""",
+                                            alt="",
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''title-bar-right''',
-                            data = (
+                            classs="""title-bar-right""",
+                            data=(
                                 Button(
-                                    classs='''menu-icon''',
-                                    typee='''button''',
-                                    data_toggle='''topbar-center-logo''',
-                                ), )
-                        ), )
-                ), 
+                                    classs="""menu-icon""",
+                                    typee="""button""",
+                                    data_toggle="""topbar-center-logo""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''top-bar topbar-center-logo''',
-                    id='''topbar-center-logo''',
-                    data = (
+                    classs="""top-bar topbar-center-logo""",
+                    id="""topbar-center-logo""",
+                    data=(
                         Div(
-                            classs='''top-bar-left''',
-                            data = (
+                            classs="""top-bar-left""",
+                            data=(
                                 Ul(
-                                    classs='''menu vertical medium-horizontal''',
-                                    data = (
+                                    classs="""menu vertical medium-horizontal""",
+                                    data=(
+                                        Li(data=(A(href="""#""", data=("""One""",)),)),
+                                        Li(data=(A(href="""#""", data=("""Two""",)),)),
                                         Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''One''',)
-                                                ), )
-                                        ), 
-                                        Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Two''',)
-                                                ), )
-                                        ), 
-                                        Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Three''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                            data=(A(href="""#""", data=("""Three""",)),)
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''top-bar-center''',
-                            data = (
+                            classs="""top-bar-center""",
+                            data=(
                                 A(
-                                    href='''#''',
-                                    data = (
+                                    href="""#""",
+                                    data=(
                                         Img(
-                                            src='''https://placehold.it/100x39''',
-                                            alt='',
-                                        ), )
-                                ), )
-                        ), 
+                                            src="""https://placehold.it/100x39""",
+                                            alt="",
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''top-bar-right''',
-                            data = (
+                            classs="""top-bar-right""",
+                            data=(
                                 Ul(
-                                    classs='''menu vertical medium-horizontal''',
-                                    data = (
-                                        Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Four''',)
-                                                ), )
-                                        ), 
-                                        Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Five''',)
-                                                ), )
-                                        ), 
-                                        Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Six''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""menu vertical medium-horizontal""",
+                                    data=(
+                                        Li(data=(A(href="""#""", data=("""Four""",)),)),
+                                        Li(data=(A(href="""#""", data=("""Five""",)),)),
+                                        Li(data=(A(href="""#""", data=("""Six""",)),)),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,21 +1,20 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Button(
-                    classs='''button-hover-like button''',
-                    data = (
-                        Span(
-
-                            data = ('''Like me''',)
-                        ), 
+                    classs="""button-hover-like button""",
+                    data=(
+                        Span(data=("""Like me""",)),
                         I(
-                            classs='''fa fa-heart''',
-                        ), )
-                ), )
-        ), )
+                            classs="""fa fa-heart""",
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

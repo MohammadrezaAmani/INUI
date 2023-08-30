@@ -24,8 +24,8 @@ replaceDict = {
     "aria_hidden": "aria-hidden",
     "data_icon": "data-icon",
     "data_rating": "data-rating",
-    'fromm': 'from',
-    'inn': 'in',
+    "fromm": "from",
+    "inn": "in",
 }
 
 
@@ -33,9 +33,9 @@ def replace(string: str):
     if string in replaceDict:
         return replaceDict[string]
     string = string.replace("_", "-", string.count("-"))
-    string = string.replace('___', ' ', string.count(' '))
-    string = string.replace('__', ':', string.count(':'))
-    string = string.replace('_____', '*', string.count('*'))
+    string = string.replace("___", " ", string.count(" "))
+    string = string.replace("__", ":", string.count(":"))
+    string = string.replace("_____", "*", string.count("*"))
     return string
 
 
@@ -44,7 +44,7 @@ def reverse_replace(string: str):
         if string == replaceDict[i]:
             return i
     string = string.replace("-", "_", string.count("-"))
-    string = string.replace(' ', '___', string.count(' '))
-    string = string.replace(':', '__', string.count(':'))
-    string = string.replace('*', '_____', string.count('*'))
+    string = string.replace(" ", "___", string.count(" "))
+    string = string.replace(":", "__", string.count(":"))
+    string = string.replace("*", "_____", string.count("*"))
     return string

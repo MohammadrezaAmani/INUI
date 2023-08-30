@@ -1,150 +1,168 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''featured-image-block-grid''',
-                    data = (
+                    classs="""featured-image-block-grid""",
+                    data=(
                         Div(
-                            classs='''featured-image-block-grid-header small-10 medium-8 large-7 columns text-center''',
-                            data = (
-                                H2(
-
-                                    data = ('''Top Destinations''',)
-                                ), 
+                            classs="""featured-image-block-grid-header small-10 medium-8 large-7 columns text-center""",
+                            data=(
+                                H2(data=("""Top Destinations""",)),
                                 P(
-
-                                    data = ('''Start planning your travels here with the latest deals for popular destinations.''',)
-                                ), )
-                        ), 
+                                    data=(
+                                        """Start planning your travels here with the latest deals for popular destinations.""",
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''row large-up-4 small-up-2''',
-                            data = (
+                            classs="""row large-up-4 small-up-2""",
+                            data=(
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=899''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=899""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''New York''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""New York""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=693''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=693""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''San Francisco''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""San Francisco""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=452''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=452""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Las Vegas''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Las Vegas""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=792''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=792""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Sacramento''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Sacramento""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=667''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=667""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Los Angeles''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Los Angeles""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=249''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=249""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Chicago''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Chicago""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=382''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=382""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Boston''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Boston""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''featured-image-block column''',
-                                    data = (
+                                    classs="""featured-image-block column""",
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = (
+                                            href="""#""",
+                                            data=(
                                                 Img(
-                                                    src='''https://unsplash.it/600/440?image=1075''',
-                                                ), 
+                                                    src="""https://unsplash.it/600/440?image=1075""",
+                                                ),
                                                 P(
-                                                    classs='''text-center featured-image-block-title''',
-                                                    data = ('''Seattle''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                    classs="""text-center featured-image-block-title""",
+                                                    data=("""Seattle""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

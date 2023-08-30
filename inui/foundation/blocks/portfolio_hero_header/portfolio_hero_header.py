@@ -1,69 +1,64 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Header(
-                    classs='''portfolio-hero-header''',
-                    data = (
+                    classs="""portfolio-hero-header""",
+                    data=(
                         Img(
-                            classs='''portfolio-hero-header-logo''',
-                            src='''https://placehold.it/200''',
-                        ), 
+                            classs="""portfolio-hero-header-logo""",
+                            src="""https://placehold.it/200""",
+                        ),
                         H1(
-                            classs='''portfolio-hero-header-h1''',
-                            data = ('''My Portfolio''',)
-                        ), 
+                            classs="""portfolio-hero-header-h1""",
+                            data=("""My Portfolio""",),
+                        ),
                         Ul(
-                            classs='''portfolio-hero-header-description''',
-                            data = (
-                                Li(
-
-                                    data = ('''Portfolio Example''',)
-                                ), 
-                                Li(
-
-                                    data = ('''Super Clean''',)
-                                ), 
-                                Li(
-
-                                    data = ('''Super Simple''',)
-                                ), )
-                        ), 
+                            classs="""portfolio-hero-header-description""",
+                            data=(
+                                Li(data=("""Portfolio Example""",)),
+                                Li(data=("""Super Clean""",)),
+                                Li(data=("""Super Simple""",)),
+                            ),
+                        ),
                         Ul(
-                            classs='''portfolio-hero-header-menu''',
-                            data = (
+                            classs="""portfolio-hero-header-menu""",
+                            data=(
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            classs='''button primary''',
-                                            href='''#''',
-                                            data = ('''Link 1''',)
-                                        ), )
-                                ), 
+                                            classs="""button primary""",
+                                            href="""#""",
+                                            data=("""Link 1""",),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            classs='''button primary''',
-                                            href='''#''',
-                                            data = ('''Link 2''',)
-                                        ), )
-                                ), 
+                                            classs="""button primary""",
+                                            href="""#""",
+                                            data=("""Link 2""",),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            classs='''button primary''',
-                                            href='''#''',
-                                            data = ('''Link 3''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""button primary""",
+                                            href="""#""",
+                                            data=("""Link 3""",),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

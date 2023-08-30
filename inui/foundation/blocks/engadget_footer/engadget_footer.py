@@ -1,340 +1,364 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    id='''engadget-footer-sitemap-container''',
-                    data = (
+                    id="""engadget-footer-sitemap-container""",
+                    data=(
                         Footer(
-                            id='''engadget-footer-sitemap''',
-                            data = (
+                            id="""engadget-footer-sitemap""",
+                            data=(
                                 Div(
-                                    classs='''links''',
-                                    data = (
+                                    classs="""links""",
+                                    data=(
                                         Div(
-                                            classs='''link-column''',
-                                            data = (
+                                            classs="""link-column""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu vertical''',
-                                                    data = (
+                                                    classs="""menu vertical""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''One''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""One""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Two''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Two""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Three''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Three""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Four''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Four""",),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
                                         Div(
-                                            classs='''link-column''',
-                                            data = (
+                                            classs="""link-column""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu vertical''',
-                                                    data = (
+                                                    classs="""menu vertical""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''One''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""One""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Two''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Two""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Three''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Three""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Four''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Four""",),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
                                         Div(
-                                            classs='''link-column''',
-                                            data = (
+                                            classs="""link-column""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu vertical''',
-                                                    data = (
+                                                    classs="""menu vertical""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''One''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""One""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Two''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Two""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Three''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Three""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Four''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Four""",),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
                                         Div(
-                                            classs='''link-column''',
-                                            data = (
+                                            classs="""link-column""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu vertical''',
-                                                    data = (
+                                                    classs="""menu vertical""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''One''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""One""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Two''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Two""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Three''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Three""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Four''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                                                    href="""#""",
+                                                                    data=("""Four""",),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    id='''engadget-footer-social-container''',
-                    data = (
+                    id="""engadget-footer-social-container""",
+                    data=(
                         Footer(
-                            id='''engadget-footer-social''',
-                            data = (
+                            id="""engadget-footer-social""",
+                            data=(
                                 Div(
-                                    classs='''footer-left''',
-                                    data = (
+                                    classs="""footer-left""",
+                                    data=(
                                         Div(
-                                            classs='''newsletter''',
-                                            data = (
+                                            classs="""newsletter""",
+                                            data=(
                                                 H6(
-
-                                                    data = ('''Sign up for our newsletter''',)
-                                                ), 
+                                                    data=(
+                                                        """Sign up for our newsletter""",
+                                                    )
+                                                ),
                                                 Div(
-                                                    classs='''input-group''',
-                                                    data = (
+                                                    classs="""input-group""",
+                                                    data=(
                                                         Input(
-                                                            classs='''input-group-field''',
-                                                            typee='''email''',
-                                                            placeholder='''Email address''',
-                                                        ), 
+                                                            classs="""input-group-field""",
+                                                            typee="""email""",
+                                                            placeholder="""Email address""",
+                                                        ),
                                                         Div(
-                                                            classs='''input-group-button''',
-                                                            data = (
+                                                            classs="""input-group-button""",
+                                                            data=(
                                                                 Input(
-                                                                    typee='''submit''',
-                                                                    classs='''button''',
-                                                                    value='''Submit''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                                    typee="""submit""",
+                                                                    classs="""button""",
+                                                                    value="""Submit""",
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''footer-right''',
-                                    data = (
-                                        H6(
-
-                                            data = ('''Follow us''',)
-                                        ), 
+                                    classs="""footer-right""",
+                                    data=(
+                                        H6(data=("""Follow us""",)),
                                         I(
-                                            classs='''fa fa-facebook-square fa-3x''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-facebook-square fa-3x""",
+                                            aria_hidden="""true""",
+                                        ),
                                         I(
-                                            classs='''fa fa-twitter-square fa-3x''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-twitter-square fa-3x""",
+                                            aria_hidden="""true""",
+                                        ),
                                         I(
-                                            classs='''fa fa-google-plus-square fa-3x''',
-                                            aria_hidden='''true''',
-                                        ), 
+                                            classs="""fa fa-google-plus-square fa-3x""",
+                                            aria_hidden="""true""",
+                                        ),
                                         I(
-                                            classs='''fa fa-linkedin-square fa-3x''',
-                                            aria_hidden='''true''',
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                            classs="""fa fa-linkedin-square fa-3x""",
+                                            aria_hidden="""true""",
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    id='''engadget-footer-contact-details-container''',
-                    data = (
+                    id="""engadget-footer-contact-details-container""",
+                    data=(
                         Footer(
-                            id='''engadget-footer-contact-details''',
-                            data = (
+                            id="""engadget-footer-contact-details""",
+                            data=(
                                 Div(
-                                    classs='''footer-left''',
-                                    data = (
+                                    classs="""footer-left""",
+                                    data=(
                                         Div(
-                                            classs='''contact-details''',
-                                            data = (
+                                            classs="""contact-details""",
+                                            data=(
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Img(
-                                                                    classs='''thumbnail''',
-                                                                    src='''https://placehold.it/80''',
-                                                                ), )
-                                                        ), 
+                                                                    classs="""thumbnail""",
+                                                                    src="""https://placehold.it/80""",
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-phone fa-lg''',
-                                                                    aria_hidden='''true''',
-                                                                ), )
-                                                        ), 
+                                                                    classs="""fa fa-phone fa-lg""",
+                                                                    aria_hidden="""true""",
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    data_toggle='''animatedModal10''',
-                                                                    data = (
+                                                                    data_toggle="""animatedModal10""",
+                                                                    data=(
                                                                         I(
-                                                                            classs='''fa fa-envelope-o''',
-                                                                            aria_hidden='''true''',
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""fa fa-envelope-o""",
+                                                                            aria_hidden="""true""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-map-marker fa-lg''',
-                                                                    aria_hidden='''true''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                                    classs="""fa fa-map-marker fa-lg""",
+                                                                    aria_hidden="""true""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Div(
-                                    classs='''footer-right''',
-                                    data = (
+                                    classs="""footer-right""",
+                                    data=(
                                         Ul(
-                                            classs='''menu align-right''',
-                                            data = (
+                                            classs="""menu align-right""",
+                                            data=(
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''One''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""One""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Two''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Two""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Three''',)
-                                                        ), )
-                                                ), 
+                                                            href="""#""",
+                                                            data=("""Three""",),
+                                                        ),
+                                                    )
+                                                ),
                                                 Li(
-
-                                                    data = (
+                                                    data=(
                                                         A(
-                                                            href='''#''',
-                                                            data = ('''Four''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                            href="""#""",
+                                                            data=("""Four""",),
+                                                        ),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

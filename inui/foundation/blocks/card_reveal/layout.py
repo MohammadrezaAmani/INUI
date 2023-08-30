@@ -1,116 +1,142 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row medium-unstack''',
-                    data = (
+                    classs="""row medium-unstack""",
+                    data=(
                         Div(
-                            classs='''medium-6 columns''',
-                            data = (
+                            classs="""medium-6 columns""",
+                            data=(
                                 Div(
-                                    classs='''card card-reveal-wrapper''',
-                                    data = (
+                                    classs="""card card-reveal-wrapper""",
+                                    data=(
                                         Img(
-                                            src='''https://placehold.it/568x150''',
-                                        ), 
+                                            src="""https://placehold.it/568x150""",
+                                        ),
                                         Div(
-                                            classs='''card-section''',
-                                            data = (
+                                            classs="""card-section""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-angle-up open-button''',
-                                                    data = (
+                                                    classs="""fa fa-angle-up open-button""",
+                                                    data=(
                                                         Span(
-                                                            classs='''show-for-sr''',
-                                                            data = ('''More''',)
-                                                        ), )
-                                                ), 
+                                                            classs="""show-for-sr""",
+                                                            data=("""More""",),
+                                                        ),
+                                                    ),
+                                                ),
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et voluptas, praesentium temporibus est? Recusandae blanditiis eaque ea quam omnis, expedita amet, et eius ipsum quod ipsa, veritatis doloribus enim.''',)
-                                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et voluptas, praesentium temporibus est? Recusandae blanditiis eaque ea quam omnis, expedita amet, et eius ipsum quod ipsa, veritatis doloribus enim.""",
+                                                    )
+                                                ),
                                                 Div(
-                                                    classs='''card-reveal''',
-                                                    data = (
+                                                    classs="""card-reveal""",
+                                                    data=(
                                                         Span(
-                                                            classs='''card-reveal-title''',
-                                                            data = (
+                                                            classs="""card-reveal-title""",
+                                                            data=(
                                                                 H4(
-
-                                                                    data = ('''Card Title''',)
-                                                                ), 
+                                                                    data=(
+                                                                        """Card Title""",
+                                                                    )
+                                                                ),
                                                                 I(
-                                                                    classs='''fa fa-angle-down close-button''',
-                                                                    data = (
+                                                                    classs="""fa fa-angle-down close-button""",
+                                                                    data=(
                                                                         Span(
-                                                                            classs='''show-for-sr''',
-                                                                            data = ('''Close''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""show-for-sr""",
+                                                                            data=(
+                                                                                """Close""",
+                                                                            ),
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
                                                         P(
-
-                                                            data = ('''Here is some more information. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                            data=(
+                                                                """Here is some more information. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.""",
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''medium-6 column''',
-                            data = (
+                            classs="""medium-6 column""",
+                            data=(
                                 Div(
-                                    classs='''card card-reveal-wrapper''',
-                                    data = (
+                                    classs="""card card-reveal-wrapper""",
+                                    data=(
                                         Img(
-                                            src='''https://placehold.it/568x150''',
-                                        ), 
+                                            src="""https://placehold.it/568x150""",
+                                        ),
                                         Div(
-                                            classs='''card-section''',
-                                            data = (
+                                            classs="""card-section""",
+                                            data=(
                                                 I(
-                                                    classs='''fa fa-angle-up open-button''',
-                                                    data = (
+                                                    classs="""fa fa-angle-up open-button""",
+                                                    data=(
                                                         Span(
-                                                            classs='''show-for-sr''',
-                                                            data = ('''More''',)
-                                                        ), )
-                                                ), 
+                                                            classs="""show-for-sr""",
+                                                            data=("""More""",),
+                                                        ),
+                                                    ),
+                                                ),
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et voluptas, praesentium temporibus est? Recusandae blanditiis eaque ea quam omnis, expedita amet, et eius ipsum quod ipsa, veritatis doloribus enim.''',)
-                                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et voluptas, praesentium temporibus est? Recusandae blanditiis eaque ea quam omnis, expedita amet, et eius ipsum quod ipsa, veritatis doloribus enim.""",
+                                                    )
+                                                ),
                                                 Div(
-                                                    classs='''card-reveal''',
-                                                    data = (
+                                                    classs="""card-reveal""",
+                                                    data=(
                                                         Span(
-                                                            classs='''card-reveal-title''',
-                                                            data = (
+                                                            classs="""card-reveal-title""",
+                                                            data=(
                                                                 H4(
-
-                                                                    data = ('''Card Title''',)
-                                                                ), 
+                                                                    data=(
+                                                                        """Card Title""",
+                                                                    )
+                                                                ),
                                                                 I(
-                                                                    classs='''fa fa-angle-down close-button''',
-                                                                    data = (
+                                                                    classs="""fa fa-angle-down close-button""",
+                                                                    data=(
                                                                         Span(
-                                                                            classs='''show-for-sr''',
-                                                                            data = ('''Close''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""show-for-sr""",
+                                                                            data=(
+                                                                                """Close""",
+                                                                            ),
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
                                                         P(
-
-                                                            data = ('''Here is some more information. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.''',)
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                            data=(
+                                                                """Here is some more information. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.""",
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

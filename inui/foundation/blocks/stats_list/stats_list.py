@@ -1,41 +1,47 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''stats-list''',
-                    data = (
+                    classs="""stats-list""",
+                    data=(
                         Li(
-
-                            data = ('''
-    135 ''',
+                            data=(
+                                """
+    135 """,
                                 Span(
-                                    classs='''stats-list-label''',
-                                    data = ('''Commits''',)
-                                ), )
-                        ), 
+                                    classs="""stats-list-label""", data=("""Commits""",)
+                                ),
+                            )
+                        ),
                         Li(
-                            classs='''stats-list-positive''',
-                            data = ('''
-    17,678 ''',
+                            classs="""stats-list-positive""",
+                            data=(
+                                """
+    17,678 """,
                                 Span(
-                                    classs='''stats-list-label''',
-                                    data = ('''Additions''',)
-                                ), )
-                        ), 
+                                    classs="""stats-list-label""",
+                                    data=("""Additions""",),
+                                ),
+                            ),
+                        ),
                         Li(
-                            classs='''stats-list-negative''',
-                            data = ('''
-    2,390 ''',
+                            classs="""stats-list-negative""",
+                            data=(
+                                """
+    2,390 """,
                                 Span(
-                                    classs='''stats-list-label''',
-                                    data = ('''Deletions''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    classs="""stats-list-label""",
+                                    data=("""Deletions""",),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

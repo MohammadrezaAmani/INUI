@@ -1,38 +1,42 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''featured-items''',
-                    data = (
+                    classs="""featured-items""",
+                    data=(
                         Div(
-                            classs='''row align-middle align-justify featured-items-wrapper''',
-                            data = (
+                            classs="""row align-middle align-justify featured-items-wrapper""",
+                            data=(
                                 H4(
-                                    classs='''featured-items-title''',
-                                    data = ('''As Featured In:''',)
-                                ), 
+                                    classs="""featured-items-title""",
+                                    data=("""As Featured In:""",),
+                                ),
                                 Div(
-                                    classs='''featured-items-brands''',
-                                    data = (
+                                    classs="""featured-items-brands""",
+                                    data=(
                                         Img(
-                                            src='''https://placehold.it/150x70''',
-                                        ), 
+                                            src="""https://placehold.it/150x70""",
+                                        ),
                                         Img(
-                                            src='''https://placehold.it/125x60''',
-                                        ), 
+                                            src="""https://placehold.it/125x60""",
+                                        ),
                                         Img(
-                                            src='''https://placehold.it/150x70''',
-                                        ), 
+                                            src="""https://placehold.it/150x70""",
+                                        ),
                                         Img(
-                                            src='''https://placehold.it/130x50''',
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            src="""https://placehold.it/130x50""",
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

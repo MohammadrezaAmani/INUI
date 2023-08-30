@@ -1,16 +1,19 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row column medium-4 align-center''',
-                    data = ('''
+                    classs="""row column medium-4 align-center""",
+                    data=(
+                        """
   {{> ecommerce-product-filters}}
-''',)
-                ), )
-        ), )
+""",
+                    ),
+                ),
+            )
+        ),
+    )
 )

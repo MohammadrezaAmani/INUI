@@ -1,30 +1,29 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Head(
-
-            data = (
+            data=(
                 Link(
-                    href='''https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css''',
-                    rel='''stylesheet''',
-                ), )
-        ), 
+                    href="""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css""",
+                    rel="""stylesheet""",
+                ),
+            )
+        ),
         Body(
-
-            data = (
+            data=(
                 A(
-                    href='''#''',
-                    classs='''button-badge''',
-                    data = (
+                    href="""#""",
+                    classs="""button-badge""",
+                    data=(
                         I(
-                            classs='''fa fa-envelope''',
-                        ), 
-                        Span(
-                            classs='''badge alert''',
-                            data = ('''1''',)
-                        ), )
-                ), )
-        ), )
+                            classs="""fa fa-envelope""",
+                        ),
+                        Span(classs="""badge alert""", data=("""1""",)),
+                    ),
+                ),
+            )
+        ),
+    )
 )

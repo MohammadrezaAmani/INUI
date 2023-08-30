@@ -1,376 +1,352 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Table(
-                    classs='''table-expand''',
-                    data = (
+                    classs="""table-expand""",
+                    data=(
                         Thead(
-
-                            data = (
+                            data=(
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data=(
+                                        Th(width="""200""", data=("""Date""",)),
+                                        Th(data=("""Number of items""",)),
                                         Th(
-                                            width='''200''',
-                                            data = ('''Date''',)
-                                        ), 
-                                        Th(
-
-                                            data = ('''Number of items''',)
-                                        ), 
-                                        Th(
-                                            classs='''text-right''',
-                                            width='''150''',
-                                            data = ('''Amount''',)
-                                        ), 
-                                        Th(
-                                            width='''150''',
-                                            data = ('''Status''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            classs="""text-right""",
+                                            width="""150""",
+                                            data=("""Amount""",),
+                                        ),
+                                        Th(width="""150""", data=("""Status""",)),
+                                    ),
+                                ),
+                            )
+                        ),
                         Tbody(
-
-                            data = (
+                            data=(
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""August 15""",)),
+                                        Td(data=("""2 items""",)),
                                         Td(
-
-                                            data = ('''August 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.50""",)
+                                        ),
                                         Td(
-
-                                            data = ('''2 items''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.50''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''in progress ''',
+                                            data=(
+                                                """in progress """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""July 15""",)),
+                                        Td(data=("""4 items""",)),
                                         Td(
-
-                                            data = ('''July 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$1.30""",)
+                                        ),
                                         Td(
-
-                                            data = ('''4 items''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$1.30''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''scheduled ''',
+                                            data=(
+                                                """scheduled """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""June 15""",)),
+                                        Td(data=("""1 item""",)),
                                         Td(
-
-                                            data = ('''June 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.10""",)
+                                        ),
                                         Td(
-
-                                            data = ('''1 item''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.10''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""May 15""",)),
+                                        Td(data=("""1 item""",)),
                                         Td(
-
-                                            data = ('''May 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.10""",)
+                                        ),
                                         Td(
-
-                                            data = ('''1 item''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.10''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""April 15""",)),
+                                        Td(data=("""1 item""",)),
                                         Td(
-
-                                            data = ('''April 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.10""",)
+                                        ),
                                         Td(
-
-                                            data = ('''1 item''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.10''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""March 15""",)),
+                                        Td(data=("""1 item""",)),
                                         Td(
-
-                                            data = ('''March 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.10""",)
+                                        ),
                                         Td(
-
-                                            data = ('''1 item''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.10''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""February 15""",)),
+                                        Td(data=("""2 items""",)),
                                         Td(
-
-                                            data = ('''February 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$1.20""",)
+                                        ),
                                         Td(
-
-                                            data = ('''2 items''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$1.20''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''paid ''',
+                                            data=(
+                                                """paid """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""January 15""",)),
+                                        Td(data=("""5 items""",)),
                                         Td(
-
-                                            data = ('''January 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.50""",)
+                                        ),
                                         Td(
-
-                                            data = ('''5 items''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.50''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), 
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row''',
-                                    data_open_details='',
-                                    data = (
+                                    classs="""table-expand-row""",
+                                    data_open_details="",
+                                    data=(
+                                        Td(data=("""December 15""",)),
+                                        Td(data=("""2 items""",)),
                                         Td(
-
-                                            data = ('''December 15''',)
-                                        ), 
+                                            classs="""text-right""", data=("""$0.20""",)
+                                        ),
                                         Td(
-
-                                            data = ('''2 items''',)
-                                        ), 
-                                        Td(
-                                            classs='''text-right''',
-                                            data = ('''$0.20''',)
-                                        ), 
-                                        Td(
-
-                                            data = ('''carried over ''',
+                                            data=(
+                                                """carried over """,
                                                 Span(
-                                                    classs='''expand-icon''',
-                                                ), )
-                                        ), )
-                                ), 
+                                                    classs="""expand-icon""",
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
                                 Tr(
-                                    classs='''table-expand-row-content''',
-                                    data = (
+                                    classs="""table-expand-row-content""",
+                                    data=(
                                         Td(
-                                            colspan='''8''',
-                                            classs='''table-expand-row-nested''',
-                                            data = (
+                                            colspan="""8""",
+                                            classs="""table-expand-row-nested""",
+                                            data=(
                                                 P(
-
-                                                    data = ('''Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                    data=(
+                                                        """Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?""",
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

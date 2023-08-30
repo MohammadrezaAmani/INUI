@@ -1,429 +1,447 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''callout''',
-                    data = (
-                        H4(
-
-                            data = (
-                                Strong(
-
-                                    data = ('''FOUNDATION FOR EMAILS''',)
-                                ), )
-                        ), 
+                    classs="""callout""",
+                    data=(
+                        H4(data=(Strong(data=("""FOUNDATION FOR EMAILS""",)),)),
                         P(
-
-                            data = ('''We know building HTML emails is hard, especially responsive emails. That's why we created Foundation for Emails. Get away from complex table markup and inconsistent results. Use Foundation for Emails to spend less time coding emails, and more time
-    on other things, like building amazing products.''',)
-                        ), 
+                            data=(
+                                """We know building HTML emails is hard, especially responsive emails. That's why we created Foundation for Emails. Get away from complex table markup and inconsistent results. Use Foundation for Emails to spend less time coding emails, and more time
+    on other things, like building amazing products.""",
+                            )
+                        ),
                         Button(
-                            data_toggle='''read-more-content''',
-                            href='''#''',
-                            data = ('''SHOW MORE ''',
+                            data_toggle="""read-more-content""",
+                            href="""#""",
+                            data=(
+                                """SHOW MORE """,
                                 I(
-                                    classs='''fa fa-plus''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-plus""",
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''read-more-content''',
-                            id='''read-more-content''',
-                            data_toggler='',
-                            data_animate='''hinge-in-from-top slide-out-right''',
-                            data = (
+                            classs="""read-more-content""",
+                            id="""read-more-content""",
+                            data_toggler="",
+                            data_animate="""hinge-in-from-top slide-out-right""",
+                            data=(
                                 H5(
-
-                                    data = ('''Spend Less Time Coding, Testing, and Preparing:''',)
-                                ), 
+                                    data=(
+                                        """Spend Less Time Coding, Testing, and Preparing:""",
+                                    )
+                                ),
                                 Ul(
-
-                                    data = (
+                                    data=(
                                         Li(
-
-                                            data = ('''Responsive Grid for Any Layout''',)
-                                        ), 
+                                            data=("""Responsive Grid for Any Layout""",)
+                                        ),
                                         Li(
-
-                                            data = ('''Common UI Patterns to Build Faster''',)
-                                        ), 
+                                            data=(
+                                                """Common UI Patterns to Build Faster""",
+                                            )
+                                        ),
                                         Li(
-
-                                            data = ('''Make stylish emails fast with Sass''',)
-                                        ), 
+                                            data=(
+                                                """Make stylish emails fast with Sass""",
+                                            )
+                                        ),
                                         Li(
-
-                                            data = ('''Inky: A New Templating Language''',)
-                                        ), 
+                                            data=(
+                                                """Inky: A New Templating Language""",
+                                            )
+                                        ),
                                         Li(
-
-                                            data = ('''The ZURB Email Stack will make you an email pro''',)
-                                        ), 
+                                            data=(
+                                                """The ZURB Email Stack will make you an email pro""",
+                                            )
+                                        ),
                                         Li(
-
-                                            data = ('''Emails that work in all of the major clients, even Outlook''',)
-                                        ), 
+                                            data=(
+                                                """Emails that work in all of the major clients, even Outlook""",
+                                            )
+                                        ),
                                         Li(
-
-                                            data = ('''Inlining CSS ''',
-                                                Strike(
-
-                                                    data = ('''is''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                            data=(
+                                                """Inlining CSS """,
+                                                Strike(data=("""is""",)),
+                                            )
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''callout''',
-                    data = (
-                        H4(
-
-                            data = (
-                                Strong(
-
-                                    data = ('''Motion UI Animations''',)
-                                ), )
-                        ), 
+                    classs="""callout""",
+                    data=(
+                        H4(data=(Strong(data=("""Motion UI Animations""",)),)),
                         P(
-
-                            data = ('''Choose from the following classes to change the animation:''',)
-                        ), 
+                            data=(
+                                """Choose from the following classes to change the animation:""",
+                            )
+                        ),
                         Button(
-                            data_toggle='''read-more''',
-                            href='''#''',
-                            data = ('''SHOW MORE ''',
+                            data_toggle="""read-more""",
+                            href="""#""",
+                            data=(
+                                """SHOW MORE """,
                                 I(
-                                    classs='''fa fa-plus''',
-                                ), )
-                        ), 
+                                    classs="""fa fa-plus""",
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''read-more''',
-                            id='''read-more''',
-                            data_toggler='',
-                            data_animate='''hinge-in-from-top spin-out''',
-                            data = (
+                            classs="""read-more""",
+                            id="""read-more""",
+                            data_toggler="",
+                            data_animate="""hinge-in-from-top spin-out""",
+                            data=(
                                 H5(
-
-                                    data = ('''Spend Less Time Coding, Testing, and Preparing:''',)
-                                ), 
+                                    data=(
+                                        """Spend Less Time Coding, Testing, and Preparing:""",
+                                    )
+                                ),
                                 Ul(
-
-                                    data = (
+                                    data=(
                                         Li(
-
-                                            data = (
-                                                Strong(
-
-                                                    data = ('''Slide:''',)
-                                                ), 
+                                            data=(
+                                                Strong(data=("""Slide:""",)),
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-in-down''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-in-down""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-in-left''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-in-left""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-in-up''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-in-up""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-in-right''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-in-right""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-out-down''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-out-down""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-out-left''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-out-left""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-out-up''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.slide-out-up""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.slide-out-right''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    data=(
+                                                                        """.slide-out-right""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                Strong(
-
-                                                    data = ('''Fade:''',)
-                                                ), 
+                                            data=(
+                                                Strong(data=("""Fade:""",)),
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.fade-in''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.fade-in""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.fade-out''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    data=(
+                                                                        """.fade-out""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                Strong(
-
-                                                    data = ('''Hinge:''',)
-                                                ), 
+                                            data=(
+                                                Strong(data=("""Hinge:""",)),
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-top''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-top""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-right''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-right""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-bottom''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-bottom""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-left''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-left""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-middle-x''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-middle-x""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-in-from-middle-y''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-in-from-middle-y""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-top''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-top""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-right''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-right""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-bottom''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-bottom""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-left''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-left""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-middle-x''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-middle-x""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.hinge-out-from-middle-y''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    data=(
+                                                                        """.hinge-out-from-middle-y""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                Strong(
-
-                                                    data = ('''Scale:''',)
-                                                ), 
+                                            data=(
+                                                Strong(data=("""Scale:""",)),
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.scale-in-up''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.scale-in-up""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.scale-in-down''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.scale-in-down""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.scale-out-up''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.scale-out-up""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.scale-out-down''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    data=(
+                                                                        """.scale-out-down""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                Strong(
-
-                                                    data = ('''Spin:''',)
-                                                ), 
+                                            data=(
+                                                Strong(data=("""Spin:""",)),
                                                 Ul(
-
-                                                    data = (
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.spin-in''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.spin-in""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.spin-out''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.spin-out""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.spin-in-ccw''',)
-                                                                ), )
-                                                        ), 
+                                                                    data=(
+                                                                        """.spin-in-ccw""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 Code(
-
-                                                                    data = ('''.spin-out-ccw''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), 
+                                                                    data=(
+                                                                        """.spin-out-ccw""",
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    )
+                                                ),
+                                            )
+                                        ),
+                                    )
+                                ),
                                 Button(
-                                    data_toggle='''read-more''',
-                                    href='''#''',
-                                    data = ('''SHOW LESS ''',
+                                    data_toggle="""read-more""",
+                                    href="""#""",
+                                    data=(
+                                        """SHOW LESS """,
                                         I(
-                                            classs='''fa fa-plus''',
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            classs="""fa fa-plus""",
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

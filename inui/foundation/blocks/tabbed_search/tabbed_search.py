@@ -1,466 +1,543 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row''',
-                    data = (
+                    classs="""row""",
+                    data=(
                         Div(
-                            classs='''medium-12 columns''',
-                            data = (
+                            classs="""medium-12 columns""",
+                            data=(
                                 Ul(
-                                    classs='''tabbed-search tabs''',
-                                    data_tabs='',
-                                    id='''tabbed-search''',
-                                    data = (
+                                    classs="""tabbed-search tabs""",
+                                    data_tabs="",
+                                    id="""tabbed-search""",
+                                    data=(
                                         Li(
-                                            classs='''tabs-title is-active''',
-                                            data = (
+                                            classs="""tabs-title is-active""",
+                                            data=(
                                                 A(
-                                                    href='''#panel1''',
-                                                    data = ('''Flights''',)
-                                                ), )
-                                        ), 
+                                                    href="""#panel1""",
+                                                    data=("""Flights""",),
+                                                ),
+                                            ),
+                                        ),
                                         Li(
-                                            classs='''tabs-title''',
-                                            data = (
+                                            classs="""tabs-title""",
+                                            data=(
                                                 A(
-                                                    href='''#panel2''',
-                                                    data = ('''Hotels''',)
-                                                ), )
-                                        ), 
+                                                    href="""#panel2""",
+                                                    data=("""Hotels""",),
+                                                ),
+                                            ),
+                                        ),
                                         Li(
-                                            classs='''tabs-title''',
-                                            data = (
+                                            classs="""tabs-title""",
+                                            data=(
                                                 A(
-                                                    href='''#panel3''',
-                                                    data = ('''Cars''',)
-                                                ), )
-                                        ), 
+                                                    href="""#panel3""",
+                                                    data=("""Cars""",),
+                                                ),
+                                            ),
+                                        ),
                                         Li(
-                                            classs='''tabs-title''',
-                                            data = (
+                                            classs="""tabs-title""",
+                                            data=(
                                                 A(
-                                                    href='''#panel4''',
-                                                    aria_selected='''true''',
-                                                    data = ('''Packages''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), 
+                                                    href="""#panel4""",
+                                                    aria_selected="""true""",
+                                                    data=("""Packages""",),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''tabbed-search-content tabs-content''',
-                    data_tabs_content='''tabbed-search''',
-                    data = (
+                    classs="""tabbed-search-content tabs-content""",
+                    data_tabs_content="""tabbed-search""",
+                    data=(
                         Div(
-                            classs='''tabs-panel is-active''',
-                            id='''panel1''',
-                            data = (
+                            classs="""tabs-panel is-active""",
+                            id="""panel1""",
+                            data=(
                                 Form(
-
-                                    data = (
+                                    data=(
                                         Div(
-                                            classs='''row''',
-                                            data = (
+                                            classs="""row""",
+                                            data=(
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''From''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""From""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''To''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""To""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Start Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Start Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Return Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Return Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Select(
-
-                                                                    data = (
+                                                                    data=(
                                                                         Option(
-                                                                            value='''one''',
-                                                                            data = ('''1 person''',)
-                                                                        ), 
+                                                                            value="""one""",
+                                                                            data=(
+                                                                                """1 person""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''two''',
-                                                                            data = ('''2 people''',)
-                                                                        ), 
+                                                                            value="""two""",
+                                                                            data=(
+                                                                                """2 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''three''',
-                                                                            data = ('''3 people''',)
-                                                                        ), 
+                                                                            value="""three""",
+                                                                            data=(
+                                                                                """3 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''four''',
-                                                                            data = ('''4 people''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                            value="""four""",
+                                                                            data=(
+                                                                                """4 people""",
+                                                                            ),
+                                                                        ),
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Button(
-                                                            typee='''button''',
-                                                            classs='''primary button expanded search-button''',
-                                                            data = (
+                                                            typee="""button""",
+                                                            classs="""primary button expanded search-button""",
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-search''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                                    classs="""fa fa-search""",
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''tabs-panel''',
-                            id='''panel2''',
-                            data = (
+                            classs="""tabs-panel""",
+                            id="""panel2""",
+                            data=(
                                 Form(
-
-                                    data = (
+                                    data=(
                                         Div(
-                                            classs='''row''',
-                                            data = (
+                                            classs="""row""",
+                                            data=(
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''From''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""From""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''To''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""To""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Start Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Start Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Return Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Return Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Select(
-
-                                                                    data = (
+                                                                    data=(
                                                                         Option(
-                                                                            value='''one''',
-                                                                            data = ('''1 person''',)
-                                                                        ), 
+                                                                            value="""one""",
+                                                                            data=(
+                                                                                """1 person""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''two''',
-                                                                            data = ('''2 people''',)
-                                                                        ), 
+                                                                            value="""two""",
+                                                                            data=(
+                                                                                """2 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''three''',
-                                                                            data = ('''3 people''',)
-                                                                        ), 
+                                                                            value="""three""",
+                                                                            data=(
+                                                                                """3 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''four''',
-                                                                            data = ('''4 people''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                            value="""four""",
+                                                                            data=(
+                                                                                """4 people""",
+                                                                            ),
+                                                                        ),
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Button(
-                                                            typee='''button''',
-                                                            classs='''primary button expanded search-button''',
-                                                            data = (
+                                                            typee="""button""",
+                                                            classs="""primary button expanded search-button""",
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-search''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                                    classs="""fa fa-search""",
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''tabs-panel''',
-                            id='''panel3''',
-                            data = (
+                            classs="""tabs-panel""",
+                            id="""panel3""",
+                            data=(
                                 Form(
-
-                                    data = (
+                                    data=(
                                         Div(
-                                            classs='''row''',
-                                            data = (
+                                            classs="""row""",
+                                            data=(
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''From''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""From""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''To''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""To""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Start Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Start Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Return Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Return Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Select(
-
-                                                                    data = (
+                                                                    data=(
                                                                         Option(
-                                                                            value='''one''',
-                                                                            data = ('''1 person''',)
-                                                                        ), 
+                                                                            value="""one""",
+                                                                            data=(
+                                                                                """1 person""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''two''',
-                                                                            data = ('''2 people''',)
-                                                                        ), 
+                                                                            value="""two""",
+                                                                            data=(
+                                                                                """2 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''three''',
-                                                                            data = ('''3 people''',)
-                                                                        ), 
+                                                                            value="""three""",
+                                                                            data=(
+                                                                                """3 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''four''',
-                                                                            data = ('''4 people''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                            value="""four""",
+                                                                            data=(
+                                                                                """4 people""",
+                                                                            ),
+                                                                        ),
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Button(
-                                                            typee='''button''',
-                                                            classs='''primary button expanded search-button''',
-                                                            data = (
+                                                            typee="""button""",
+                                                            classs="""primary button expanded search-button""",
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-search''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                                    classs="""fa fa-search""",
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''tabs-panel''',
-                            id='''panel4''',
-                            data = (
+                            classs="""tabs-panel""",
+                            id="""panel4""",
+                            data=(
                                 Form(
-
-                                    data = (
+                                    data=(
                                         Div(
-                                            classs='''row''',
-                                            data = (
+                                            classs="""row""",
+                                            data=(
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''From''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""From""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''To''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""To""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Start Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Start Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Input(
-                                                                    typee='''text''',
-                                                                    placeholder='''Return Date''',
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                    typee="""text""",
+                                                                    placeholder="""Return Date""",
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Label(
-
-                                                            data = (
+                                                            data=(
                                                                 Select(
-
-                                                                    data = (
+                                                                    data=(
                                                                         Option(
-                                                                            value='''one''',
-                                                                            data = ('''1 person''',)
-                                                                        ), 
+                                                                            value="""one""",
+                                                                            data=(
+                                                                                """1 person""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''two''',
-                                                                            data = ('''2 people''',)
-                                                                        ), 
+                                                                            value="""two""",
+                                                                            data=(
+                                                                                """2 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''three''',
-                                                                            data = ('''3 people''',)
-                                                                        ), 
+                                                                            value="""three""",
+                                                                            data=(
+                                                                                """3 people""",
+                                                                            ),
+                                                                        ),
                                                                         Option(
-                                                                            value='''four''',
-                                                                            data = ('''4 people''',)
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), 
+                                                                            value="""four""",
+                                                                            data=(
+                                                                                """4 people""",
+                                                                            ),
+                                                                        ),
+                                                                    )
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
                                                 Div(
-                                                    classs='''small-12 medium-2 columns''',
-                                                    data = (
+                                                    classs="""small-12 medium-2 columns""",
+                                                    data=(
                                                         Button(
-                                                            typee='''button''',
-                                                            classs='''primary button expanded search-button''',
-                                                            data = (
+                                                            typee="""button""",
+                                                            classs="""primary button expanded search-button""",
+                                                            data=(
                                                                 I(
-                                                                    classs='''fa fa-search''',
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                                    classs="""fa fa-search""",
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

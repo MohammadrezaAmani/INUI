@@ -1,50 +1,52 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''rounded-social-buttons''',
-                    data = (
+                    classs="""rounded-social-buttons""",
+                    data=(
                         A(
-                            classs='''social-button facebook''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button facebook""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button twitter''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button twitter""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button linkedin''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button linkedin""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button youtube''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button youtube""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button instagram''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button instagram""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button pinterest''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button pinterest""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button google-plus''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button google-plus""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button github''',
-                            href='''#''',
-                        ), 
+                            classs="""social-button github""",
+                            href="""#""",
+                        ),
                         A(
-                            classs='''social-button tumblr''',
-                            href='''#''',
-                        ), )
-                ), )
-        ), )
+                            classs="""social-button tumblr""",
+                            href="""#""",
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

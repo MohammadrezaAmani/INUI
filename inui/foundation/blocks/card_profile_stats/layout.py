@@ -1,20 +1,24 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row align-center''',
-                    data = (
+                    classs="""row align-center""",
+                    data=(
                         Div(
-                            classs='''medium-8 columns''',
-                            data = ('''
+                            classs="""medium-8 columns""",
+                            data=(
+                                """
     {{> card-profile-stats}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

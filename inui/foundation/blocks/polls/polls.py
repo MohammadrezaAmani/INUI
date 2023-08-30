@@ -1,168 +1,172 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''polls''',
-                    data = (
+                    classs="""polls""",
+                    data=(
                         H5(
-                            classs='''polls-question''',
-                            data = (
+                            classs="""polls-question""",
+                            data=(
                                 Span(
-                                    classs='''polls-question-label''',
-                                    data = ('''Q:''',)
-                                ), )
-                        ), 
+                                    classs="""polls-question-label""", data=("""Q:""",)
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''polls-options''',
-                            data = (
+                            classs="""polls-options""",
+                            data=(
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''programming''',
-                                            value='''Javascript''',
-                                            id='''programmingJavascript''',
-                                            required='',
-                                        ), 
+                                            typee="""radio""",
+                                            name="""programming""",
+                                            value="""Javascript""",
+                                            id="""programmingJavascript""",
+                                            required="",
+                                        ),
                                         Label(
-                                            forr='''programmingJavascript''',
-                                            data = ('''Javascript''',)
-                                        ), )
-                                ), 
+                                            forr="""programmingJavascript""",
+                                            data=("""Javascript""",),
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''programming''',
-                                            value='''Ruby''',
-                                            id='''programmingRuby''',
-                                            required='',
-                                        ), 
+                                            typee="""radio""",
+                                            name="""programming""",
+                                            value="""Ruby""",
+                                            id="""programmingRuby""",
+                                            required="",
+                                        ),
                                         Label(
-                                            forr='''programmingRuby''',
-                                            data = ('''Ruby''',)
-                                        ), )
-                                ), 
+                                            forr="""programmingRuby""",
+                                            data=("""Ruby""",),
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''programming''',
-                                            value='''Php''',
-                                            id='''programmingPhp''',
-                                            required='',
-                                        ), 
+                                            typee="""radio""",
+                                            name="""programming""",
+                                            value="""Php""",
+                                            id="""programmingPhp""",
+                                            required="",
+                                        ),
                                         Label(
-                                            forr='''programmingPhp''',
-                                            data = ('''Php''',)
-                                        ), )
-                                ), 
+                                            forr="""programmingPhp""", data=("""Php""",)
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            typee='''radio''',
-                                            name='''programming''',
-                                            value='''Python''',
-                                            id='''programmingPython''',
-                                            required='',
-                                        ), 
+                                            typee="""radio""",
+                                            name="""programming""",
+                                            value="""Python""",
+                                            id="""programmingPython""",
+                                            required="",
+                                        ),
                                         Label(
-                                            forr='''programmingPython''',
-                                            data = ('''Python''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            forr="""programmingPython""",
+                                            data=("""Python""",),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''polls-submit''',
-                            data = (
+                            classs="""polls-submit""",
+                            data=(
                                 Input(
-                                    typee='''submit''',
-                                    classs='''button''',
-                                    value='''Submit Vote''',
-                                ), )
-                        ), )
-                ), 
+                                    typee="""submit""",
+                                    classs="""button""",
+                                    value="""Submit Vote""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    classs='''polls''',
-                    data = (
+                    classs="""polls""",
+                    data=(
                         H5(
-                            classs='''polls-question''',
-                            data = (
+                            classs="""polls-question""",
+                            data=(
                                 Span(
-                                    classs='''polls-question-label''',
-                                    data = ('''Q:''',)
-                                ), )
-                        ), 
+                                    classs="""polls-question-label""", data=("""Q:""",)
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''polls-options''',
-                            data = (
+                            classs="""polls-options""",
+                            data=(
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            id='''checkbox1''',
-                                            typee='''checkbox''',
-                                        ), 
+                                            id="""checkbox1""",
+                                            typee="""checkbox""",
+                                        ),
                                         Label(
-                                            forr='''checkbox1''',
-                                            data = ('''Angular.js''',)
-                                        ), )
-                                ), 
+                                            forr="""checkbox1""",
+                                            data=("""Angular.js""",),
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            id='''checkbox2''',
-                                            typee='''checkbox''',
-                                        ), 
+                                            id="""checkbox2""",
+                                            typee="""checkbox""",
+                                        ),
                                         Label(
-                                            forr='''checkbox2''',
-                                            data = ('''React.js''',)
-                                        ), )
-                                ), 
+                                            forr="""checkbox2""", data=("""React.js""",)
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            id='''checkbox3''',
-                                            typee='''checkbox''',
-                                        ), 
+                                            id="""checkbox3""",
+                                            typee="""checkbox""",
+                                        ),
                                         Label(
-                                            forr='''checkbox3''',
-                                            data = ('''Vue.js''',)
-                                        ), )
-                                ), 
+                                            forr="""checkbox3""", data=("""Vue.js""",)
+                                        ),
+                                    )
+                                ),
                                 Div(
-
-                                    data = (
+                                    data=(
                                         Input(
-                                            id='''checkbox4''',
-                                            typee='''checkbox''',
-                                        ), 
+                                            id="""checkbox4""",
+                                            typee="""checkbox""",
+                                        ),
                                         Label(
-                                            forr='''checkbox4''',
-                                            data = ('''Knockout.js''',)
-                                        ), )
-                                ), )
-                        ), 
+                                            forr="""checkbox4""",
+                                            data=("""Knockout.js""",),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''polls-submit''',
-                            data = (
+                            classs="""polls-submit""",
+                            data=(
                                 Input(
-                                    typee='''submit''',
-                                    classs='''button''',
-                                    value='''Submit Vote''',
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    typee="""submit""",
+                                    classs="""button""",
+                                    value="""Submit Vote""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

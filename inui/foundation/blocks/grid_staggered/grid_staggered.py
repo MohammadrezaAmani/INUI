@@ -1,46 +1,49 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''header-grid''',
-                    data = (
+                    classs="""header-grid""",
+                    data=(
                         Div(
-                            id='''b1''',
-                            classs='''block''',
-                        ), 
+                            id="""b1""",
+                            classs="""block""",
+                        ),
                         Div(
-                            id='''b2''',
-                            classs='''block''',
-                        ), 
+                            id="""b2""",
+                            classs="""block""",
+                        ),
                         Div(
-                            id='''b3''',
-                            classs='''block''',
-                        ), 
+                            id="""b3""",
+                            classs="""block""",
+                        ),
                         Div(
-                            id='''b4''',
-                            classs='''block''',
-                        ), 
+                            id="""b4""",
+                            classs="""block""",
+                        ),
                         Div(
-                            classs='''bottom-block''',
-                            data = (
+                            classs="""bottom-block""",
+                            data=(
                                 Div(
-                                    id='''b5''',
-                                    classs='''block''',
-                                ), 
+                                    id="""b5""",
+                                    classs="""block""",
+                                ),
                                 Div(
-                                    id='''b6''',
-                                    classs='''block''',
-                                ), 
+                                    id="""b6""",
+                                    classs="""block""",
+                                ),
                                 Div(
-                                    id='''b7''',
-                                    classs='''block''',
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                    id="""b7""",
+                                    classs="""block""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

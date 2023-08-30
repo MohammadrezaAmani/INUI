@@ -1,5 +1,3 @@
-    
-
 class GET_STARTED_WITH_BOOTSTRAP:
     """
 
@@ -5980,16 +5978,16 @@ class BREAKPOINTS:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    XSMALL =  "   " 
-    SMALL =  ' sm ' 
-    sm =  ' sm ' 
-    MEDIUM =  ' md ' 
-    md =  ' md ' 
-    LARGE =  ' lg ' 
-    lg =  ' lg ' 
-    EXTRALARGE =  ' xl ' 
-    xl =  ' xl ' 
-    EXTRAEXTRALARGE =  ' xxl '
+    XSMALL = "   "
+    SMALL = " sm "
+    sm = " sm "
+    MEDIUM = " md "
+    md = " md "
+    LARGE = " lg "
+    lg = " lg "
+    EXTRALARGE = " xl "
+    xl = " xl "
+    EXTRAEXTRALARGE = " xxl "
 
 
 class CONTAINERS:
@@ -6179,14 +6177,14 @@ class CONTAINERS:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    CONTAINER =  ' container ' 
-    CONTAINER_SM =  ' container-sm ' 
-    CONTAINER_MD =  ' container-md ' 
-    CONTAINER_LG =  ' container-lg ' 
-    CONTAINER_XL =  ' container-xl ' 
-    CONTAINER_XXL =  ' container-xxl ' 
-    CONTAINER_FLUID =  ' container-fluid ' 
-    
+    CONTAINER = " container "
+    CONTAINER_SM = " container-sm "
+    CONTAINER_MD = " container-md "
+    CONTAINER_LG = " container-lg "
+    CONTAINER_XL = " container-xl "
+    CONTAINER_XXL = " container-xxl "
+    CONTAINER_FLUID = " container-fluid "
+
     sm = CONTAINER_SM
     md = CONTAINER_MD
     lg = CONTAINER_LG
@@ -8017,118 +8015,145 @@ class COLUMNS:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    COL =  ' col ' 
-    ROW =  ' row ' 
-    
+    COL = " col "
+    ROW = " row "
+
     @staticmethod
-    def col(num:int) -> str:
-        return f' col-{num} ' 
+    def col(num: int) -> str:
+        return f" col-{num} "
+
     @staticmethod
-    def col_sm(num:int) -> str:
-        return f' col-sm-{num} ' 
-    JUSTIFY_CONTENT_START =  ' justify-content-start ' 
-    JUSTIFY_CONTENT_CENTER =  ' justify-content-center ' 
-    JUSTIFY_CONTENT_END =  ' justify-content-end ' 
+    def col_sm(num: int) -> str:
+        return f" col-sm-{num} "
+
+    JUSTIFY_CONTENT_START = " justify-content-start "
+    JUSTIFY_CONTENT_CENTER = " justify-content-center "
+    JUSTIFY_CONTENT_END = " justify-content-end "
     jcs = JUSTIFY_CONTENT_START
     jcc = JUSTIFY_CONTENT_CENTER
     jce = JUSTIFY_CONTENT_END
-    ALIGN_ITEMS_START= ' align-items-start ' 
-    ALIGN_ITEMS_CENTER= ' align-items-center ' 
-    ALIGN_ITEMS_END= ' align-items-end ' 
+    ALIGN_ITEMS_START = " align-items-start "
+    ALIGN_ITEMS_CENTER = " align-items-center "
+    ALIGN_ITEMS_END = " align-items-end "
     ais = ALIGN_ITEMS_START
     aic = ALIGN_ITEMS_CENTER
     aie = ALIGN_ITEMS_END
-    ALIGN_SELF_START =  " align-self-start " 
-    ALIGN_SELF_CENTER =  " align-self-center " 
-    ALIGN_SELF_END =  " align-self-end " 
+    ALIGN_SELF_START = " align-self-start "
+    ALIGN_SELF_CENTER = " align-self-center "
+    ALIGN_SELF_END = " align-self-end "
     ass = ALIGN_SELF_START
     asc = ALIGN_SELF_CENTER
     ase = ALIGN_SELF_END
+
     @staticmethod
-    def order(num:int) -> str:
-        return f' order-{num} ' 
-    ORDER_LAST =  ' order-last ' 
-    ORDER_FIRST =  ' order-first ' 
-    
+    def order(num: int) -> str:
+        return f" order-{num} "
+
+    ORDER_LAST = " order-last "
+    ORDER_FIRST = " order-first "
+
     @staticmethod
-    def order_sm(num:int) -> str:
-        return f' order-sm-{num} ' 
+    def order_sm(num: int) -> str:
+        return f" order-sm-{num} "
+
     @staticmethod
-    def order_md(num:int) -> str:
-        return f' order-md-{num} ' 
+    def order_md(num: int) -> str:
+        return f" order-md-{num} "
+
     @staticmethod
-    def col_md(num:int) -> str:
-        return f' col-md-{num} ' 
+    def col_md(num: int) -> str:
+        return f" col-md-{num} "
+
     @staticmethod
-    def col_lg(num:int) -> str:
-        return f' col-lg-{num} ' 
+    def col_lg(num: int) -> str:
+        return f" col-lg-{num} "
+
     @staticmethod
-    def col_xl(num:int) -> str:
-        return f' col-xl{num} ' 
+    def col_xl(num: int) -> str:
+        return f" col-xl{num} "
+
     @staticmethod
-    def col_xxl(num:int) -> str:
-        return f' col-xxl{num} ' 
-    
+    def col_xxl(num: int) -> str:
+        return f" col-xxl{num} "
+
     @staticmethod
-    def order_sm(num:int) -> str:
-        return f' order-sm-{num} ' 
+    def order_sm(num: int) -> str:
+        return f" order-sm-{num} "
+
     @staticmethod
-    def order_lg(num:int) -> str:
-        return f' order-lg-{num} ' 
+    def order_lg(num: int) -> str:
+        return f" order-lg-{num} "
+
     @staticmethod
-    def order_xl(num:int) -> str:
-        return f' order-xl{num} ' 
+    def order_xl(num: int) -> str:
+        return f" order-xl{num} "
+
     @staticmethod
-    def order_xxl(num:int) -> str:
-        return f' order-xxl{num} ' 
+    def order_xxl(num: int) -> str:
+        return f" order-xxl{num} "
+
     @staticmethod
-    def offset_sm(num:int) -> str:
-        return f' offset-sm-{num} ' 
+    def offset_sm(num: int) -> str:
+        return f" offset-sm-{num} "
+
     @staticmethod
-    def offset_lg(num:int) -> str:
-        return f' offset-lg-{num} ' 
+    def offset_lg(num: int) -> str:
+        return f" offset-lg-{num} "
+
     @staticmethod
-    def offset_xl(num:int) -> str:
-        return f' offset-xl{num} ' 
+    def offset_xl(num: int) -> str:
+        return f" offset-xl{num} "
+
     @staticmethod
-    def offset_xxl(num:int) -> str:
-        return f' offset-xxl{num} ' 
+    def offset_xxl(num: int) -> str:
+        return f" offset-xxl{num} "
+
     @staticmethod
-    def offset_md(num:int) -> str:
-        return f' offset-md{num} ' 
+    def offset_md(num: int) -> str:
+        return f" offset-md{num} "
+
     @staticmethod
-    def ms_sm(num:int) -> str:
-        return f' ms-sm-{num} ' 
+    def ms_sm(num: int) -> str:
+        return f" ms-sm-{num} "
+
     @staticmethod
-    def ms_lg(num:int) -> str:
-        return f' ms-lg-{num} ' 
+    def ms_lg(num: int) -> str:
+        return f" ms-lg-{num} "
+
     @staticmethod
-    def ms_xl(num:int) -> str:
-        return f' ms-xl{num} ' 
+    def ms_xl(num: int) -> str:
+        return f" ms-xl{num} "
+
     @staticmethod
-    def ms_xxl(num:int) -> str:
-        return f' ms-xxl{num} ' 
+    def ms_xxl(num: int) -> str:
+        return f" ms-xxl{num} "
+
     @staticmethod
-    def ms_md(num:int) -> str:
-        return f' ms-md{num} ' 
+    def ms_md(num: int) -> str:
+        return f" ms-md{num} "
+
     @staticmethod
-    def me_sm(num:int) -> str:
-        return f' me-sm-{num} ' 
+    def me_sm(num: int) -> str:
+        return f" me-sm-{num} "
+
     @staticmethod
-    def me_lg(num:int) -> str:
-        return f' me-lg-{num} ' 
+    def me_lg(num: int) -> str:
+        return f" me-lg-{num} "
+
     @staticmethod
-    def me_xl(num:int) -> str:
-        return f' me-xl{num} ' 
+    def me_xl(num: int) -> str:
+        return f" me-xl{num} "
+
     @staticmethod
-    def me_xxl(num:int) -> str:
-        return f' me-xxl{num} ' 
+    def me_xxl(num: int) -> str:
+        return f" me-xxl{num} "
+
     @staticmethod
-    def me_md(num:int) -> str:
-        return f' me-md{num} ' 
-    
-    CLEARFIX =  ' clearfix ' 
-    COL_AUTO =  ' col_auto ' 
+    def me_md(num: int) -> str:
+        return f" me-md{num} "
+
+    CLEARFIX = " clearfix "
+    COL_AUTO = " col_auto "
 
 
 class GUTTERS:
@@ -8528,32 +8553,38 @@ class GUTTERS:
     """
 
     @staticmethod
-    def gx(num:int)->str:
-        return f' gx-{num} '
-    
+    def gx(num: int) -> str:
+        return f" gx-{num} "
+
     @staticmethod
-    def gy(num:int)->str:
-        return f' gy-{num} '
-    
+    def gy(num: int) -> str:
+        return f" gy-{num} "
+
     @staticmethod
-    def g(num:int)->str:
-        return f' g-{num} '
+    def g(num: int) -> str:
+        return f" g-{num} "
+
     @staticmethod
-    def g_sm(num:int)->str:
-        return f' g-sm-{num} '
+    def g_sm(num: int) -> str:
+        return f" g-sm-{num} "
+
     @staticmethod
-    def g_md(num:int)->str:
-        return f' g-md-{num} '
+    def g_md(num: int) -> str:
+        return f" g-md-{num} "
+
     @staticmethod
-    def g_lg(num:int)->str:
-        return f' g-lg-{num} '
+    def g_lg(num: int) -> str:
+        return f" g-lg-{num} "
+
     @staticmethod
-    def g_xl(num:int)->str:
-        return f' g-xl-{num} '
+    def g_xl(num: int) -> str:
+        return f" g-xl-{num} "
+
     @staticmethod
-    def g_xxl(num:int)->str:
-        return f' g-xxl-{num} '
-    OVERFLOW_HIDDEN = ' overflow-hidden '
+    def g_xxl(num: int) -> str:
+        return f" g-xxl-{num} "
+
+    OVERFLOW_HIDDEN = " overflow-hidden "
 
 
 class UTILITIES_FOR_LAYOUT:
@@ -11057,27 +11088,27 @@ class TYPOGRAPHY:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    H1 = ' h1 '
-    H2 = ' h2 '
-    H3 = ' h3 '
-    H4 = ' h4 '
-    H5 = ' h5 '
-    H6 = ' h6 '
-    TEXT_MUTED = ' text-muted '
-    DISPlAY = ' display '
-    DISPlAY1 = ' display1 '
-    DISPlAY2 = ' display2 '
-    DISPlAY3 = ' display3 '
-    DISPlAY4 = ' display4 '
-    DISPlAY5 = ' display5 '
-    DISPlAY5 = ' display6 '
-    LEAD = ' lead '
-    BLOCKQUOTE = ' blockquote '
-    BLOCKQUOTE_FOOTER = ' blockquote-footer '
-    LIST_UNSTYLED = ' list-unstyled '
-    LIST_INLINE = ' list-inline '
-    LIST_INLINE_ITEM = ' list-inline-item '
-    TEXT_TRUNCATE = ' text-truncate '
+    H1 = " h1 "
+    H2 = " h2 "
+    H3 = " h3 "
+    H4 = " h4 "
+    H5 = " h5 "
+    H6 = " h6 "
+    TEXT_MUTED = " text-muted "
+    DISPlAY = " display "
+    DISPlAY1 = " display1 "
+    DISPlAY2 = " display2 "
+    DISPlAY3 = " display3 "
+    DISPlAY4 = " display4 "
+    DISPlAY5 = " display5 "
+    DISPlAY5 = " display6 "
+    LEAD = " lead "
+    BLOCKQUOTE = " blockquote "
+    BLOCKQUOTE_FOOTER = " blockquote-footer "
+    LIST_UNSTYLED = " list-unstyled "
+    LIST_INLINE = " list-inline "
+    LIST_INLINE_ITEM = " list-inline-item "
+    TEXT_TRUNCATE = " text-truncate "
 
 
 class IMAGES:
@@ -11287,14 +11318,14 @@ class IMAGES:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    IMAGE_FLUID = ' image-fluid '
-    IMAGE_THUMBNAIL = ' img-thumbnail '
-    ROUNDED = ' rounded '
-    FLOAT_START = ' float-start '
-    FLOAT_END = ' float-end '
-    TEXT_CENTER = ' text-center '
-    TEXT_START = ' text-start '
-    TEXT_END = ' text-end '
+    IMAGE_FLUID = " image-fluid "
+    IMAGE_THUMBNAIL = " img-thumbnail "
+    ROUNDED = " rounded "
+    FLOAT_START = " float-start "
+    FLOAT_END = " float-end "
+    TEXT_CENTER = " text-center "
+    TEXT_START = " text-start "
+    TEXT_END = " text-end "
 
 
 class TABLES:
@@ -12516,18 +12547,18 @@ class TABLES:
     * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
     """
 
-    TABLE = ' table '
-    TABLE_DARK = ' table-dark '
-    TABLE_PRIMARY = ' table-primary '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
-    TABLE_ = ' table- '
+    TABLE = " table "
+    TABLE_DARK = " table-dark "
+    TABLE_PRIMARY = " table-primary "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
+    TABLE_ = " table- "
 
 
 class FIGURES:
@@ -49192,11 +49223,11 @@ Bootstrap](/)
 * Designed and built with all the love in the world by the [Bootstrap team](/docs/5.3/about/team/) with the help of [our contributors](https://github.com/twbs/bootstrap/graphs/contributors).
 * Code licensed [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE), docs [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 """
-    IMAGE_FLUID = ' image-fluid '
-    IMAGE_THUMBNAIL = ' img-thumbnail '
-    ROUNDED = ' rounded '
-    FLOAT_START = ' float-start '
-    FLOAT_END = ' float-end '
-    TEXT_CENTER = ' text-center '
-    TEXT_START = ' text-start '
-    TEXT_END = ' text-end '
+    IMAGE_FLUID = " image-fluid "
+    IMAGE_THUMBNAIL = " img-thumbnail "
+    ROUNDED = " rounded "
+    FLOAT_START = " float-start "
+    FLOAT_END = " float-end "
+    TEXT_CENTER = " text-center "
+    TEXT_START = " text-start "
+    TEXT_END = " text-end "

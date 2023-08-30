@@ -1,44 +1,56 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row small-up-2 medium-up-3 large-up-3 align-center''',
-                    data = (
+                    classs="""row small-up-2 medium-up-3 large-up-3 align-center""",
+                    data=(
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> card-select}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> card-select}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> card-select}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> card-select}}
-  ''',)
-                        ), 
+  """,
+                            ),
+                        ),
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> card-select}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

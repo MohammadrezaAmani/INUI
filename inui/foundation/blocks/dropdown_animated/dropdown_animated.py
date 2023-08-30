@@ -1,84 +1,51 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Ul(
-                    classs='''dropdown menu''',
-                    data_dropdown_menu='',
-                    id='''primary-menu''',
-                    data = (
+                    classs="""dropdown menu""",
+                    data_dropdown_menu="",
+                    id="""primary-menu""",
+                    data=(
                         Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 1''',)
-                                ), 
+                            data=(
+                                A(href="""#""", data=("""Item 1""",)),
                                 Ul(
-                                    classs='''menu''',
-                                    data = (
+                                    classs="""menu""",
+                                    data=(
                                         Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Item 1A''',)
-                                                ), )
-                                        ), 
+                                            data=(
+                                                A(href="""#""", data=("""Item 1A""",)),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Item 1A''',)
-                                                ), )
-                                        ), 
+                                            data=(
+                                                A(href="""#""", data=("""Item 1A""",)),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Item 1A''',)
-                                                ), )
-                                        ), 
+                                            data=(
+                                                A(href="""#""", data=("""Item 1A""",)),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
-                                                A(
-                                                    href='''#''',
-                                                    data = ('''Item 1A''',)
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
-                        Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 2''',)
-                                ), )
-                        ), 
-                        Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 3''',)
-                                ), )
-                        ), 
-                        Li(
-
-                            data = (
-                                A(
-                                    href='''#''',
-                                    data = ('''Item 4''',)
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            data=(
+                                                A(href="""#""", data=("""Item 1A""",)),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            )
+                        ),
+                        Li(data=(A(href="""#""", data=("""Item 2""",)),)),
+                        Li(data=(A(href="""#""", data=("""Item 3""",)),)),
+                        Li(data=(A(href="""#""", data=("""Item 4""",)),)),
+                    ),
+                ),
+            )
+        ),
+    )
 )

@@ -1,20 +1,24 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''row expanded collapse''',
-                    data = (
+                    classs="""row expanded collapse""",
+                    data=(
                         Div(
-                            classs='''column''',
-                            data = ('''
+                            classs="""column""",
+                            data=(
+                                """
     {{> large-article-header}}
-  ''',)
-                        ), )
-                ), )
-        ), )
+  """,
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

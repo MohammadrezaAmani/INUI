@@ -1,217 +1,241 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Head(
-
-            data = (
+            data=(
                 Link(
-                    href='''https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css''',
-                    rel='''stylesheet''',
-                ), )
-        ), 
+                    href="""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css""",
+                    rel="""stylesheet""",
+                ),
+            )
+        ),
         Body(
-
-            data = (
+            data=(
                 Div(
-                    classs='''responsive-nav-social-mobile''',
-                    data_responsive_toggle='''responsive-nav-social''',
-                    data_hide_for='''medium''',
-                    data = (
+                    classs="""responsive-nav-social-mobile""",
+                    data_responsive_toggle="""responsive-nav-social""",
+                    data_hide_for="""medium""",
+                    data=(
                         Div(
-                            classs='''responsive-nav-social-mobile-left''',
-                            data = (
+                            classs="""responsive-nav-social-mobile-left""",
+                            data=(
                                 Ul(
-                                    classs='''menu''',
-                                    data = (
+                                    classs="""menu""",
+                                    data=(
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''https://www.facebook.com/''',
-                                                    data = (
+                                                    href="""https://www.facebook.com/""",
+                                                    data=(
                                                         I(
-                                                            classs='''fa fa-facebook''',
-                                                            aria_hidden='''true''',
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                            classs="""fa fa-facebook""",
+                                                            aria_hidden="""true""",
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''https://www.instagram.com/?hl=en''',
-                                                    data = (
+                                                    href="""https://www.instagram.com/?hl=en""",
+                                                    data=(
                                                         I(
-                                                            classs='''fa fa-instagram''',
-                                                            aria_hidden='''true''',
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                            classs="""fa fa-instagram""",
+                                                            aria_hidden="""true""",
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''https://www.pinterest.com/''',
-                                                    data = (
+                                                    href="""https://www.pinterest.com/""",
+                                                    data=(
                                                         I(
-                                                            classs='''fa fa-pinterest-p''',
-                                                            aria_hidden='''true''',
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                            classs="""fa fa-pinterest-p""",
+                                                            aria_hidden="""true""",
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
                                         Li(
-
-                                            data = (
+                                            data=(
                                                 A(
-                                                    href='''https://twitter.com/?lang=en''',
-                                                    data = (
+                                                    href="""https://twitter.com/?lang=en""",
+                                                    data=(
                                                         I(
-                                                            classs='''fa fa-twitter''',
-                                                            aria_hidden='''true''',
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), 
+                                                            classs="""fa fa-twitter""",
+                                                            aria_hidden="""true""",
+                                                        ),
+                                                    ),
+                                                ),
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         Div(
-                            classs='''responsive-nav-social-mobile-right''',
-                            data = (
+                            classs="""responsive-nav-social-mobile-right""",
+                            data=(
                                 Button(
-                                    classs='''menu-icon''',
-                                    typee='''button''',
-                                    data_toggle='''responsive-nav-social''',
-                                ), )
-                        ), )
-                ), 
+                                    classs="""menu-icon""",
+                                    typee="""button""",
+                                    data_toggle="""responsive-nav-social""",
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
                 Div(
-                    data_sticky_container='',
-                    data = (
+                    data_sticky_container="",
+                    data=(
                         Div(
-                            classs='''responsive-nav-social''',
-                            id='''responsive-nav-social''',
-                            data_sticky='',
-                            data_options='''marginTop:0;''',
-                            data = (
+                            classs="""responsive-nav-social""",
+                            id="""responsive-nav-social""",
+                            data_sticky="",
+                            data_options="""marginTop:0;""",
+                            data=(
                                 Div(
-                                    classs='''row align-justify align-middle''',
-                                    id='''responsive-menu''',
-                                    data = (
+                                    classs="""row align-justify align-middle""",
+                                    id="""responsive-menu""",
+                                    data=(
                                         Div(
-                                            classs='''responsive-nav-social-left''',
-                                            data = (
+                                            classs="""responsive-nav-social-left""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu vertical medium-horizontal''',
-                                                    data = (
+                                                    classs="""menu vertical medium-horizontal""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Home''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Home""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''About''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""About""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Travel''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Travel""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Eat''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Eat""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Relax''',)
-                                                                ), )
-                                                        ), 
+                                                                    href="""#""",
+                                                                    data=("""Relax""",),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''#''',
-                                                                    data = ('''Videos''',)
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), 
+                                                                    href="""#""",
+                                                                    data=(
+                                                                        """Videos""",
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
                                         Div(
-                                            classs='''responsive-nav-social-right hide-for-small-only''',
-                                            data = (
+                                            classs="""responsive-nav-social-right hide-for-small-only""",
+                                            data=(
                                                 Ul(
-                                                    classs='''menu''',
-                                                    data = (
+                                                    classs="""menu""",
+                                                    data=(
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''https://www.facebook.com/''',
-                                                                    data = (
+                                                                    href="""https://www.facebook.com/""",
+                                                                    data=(
                                                                         I(
-                                                                            classs='''fa fa-facebook''',
-                                                                            aria_hidden='''true''',
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""fa fa-facebook""",
+                                                                            aria_hidden="""true""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''https://www.instagram.com/?hl=en''',
-                                                                    data = (
+                                                                    href="""https://www.instagram.com/?hl=en""",
+                                                                    data=(
                                                                         I(
-                                                                            classs='''fa fa-instagram''',
-                                                                            aria_hidden='''true''',
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""fa fa-instagram""",
+                                                                            aria_hidden="""true""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''https://www.pinterest.com/''',
-                                                                    data = (
+                                                                    href="""https://www.pinterest.com/""",
+                                                                    data=(
                                                                         I(
-                                                                            classs='''fa fa-pinterest-p''',
-                                                                            aria_hidden='''true''',
-                                                                        ), )
-                                                                ), )
-                                                        ), 
+                                                                            classs="""fa fa-pinterest-p""",
+                                                                            aria_hidden="""true""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
                                                         Li(
-
-                                                            data = (
+                                                            data=(
                                                                 A(
-                                                                    href='''https://twitter.com/?lang=en''',
-                                                                    data = (
+                                                                    href="""https://twitter.com/?lang=en""",
+                                                                    data=(
                                                                         I(
-                                                                            classs='''fa fa-twitter''',
-                                                                            aria_hidden='''true''',
-                                                                        ), )
-                                                                ), )
-                                                        ), )
-                                                ), )
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                                                            classs="""fa fa-twitter""",
+                                                                            aria_hidden="""true""",
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            )
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

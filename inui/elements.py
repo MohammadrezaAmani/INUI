@@ -1,5 +1,6 @@
 from inui.config.replaces import replace
 
+
 class BaseElement:
     def __init__(
         self,
@@ -302,6 +303,7 @@ class BaseElement:
         html = f"""\n<{starttag} {self.renderAttributes()}>\n{self.renderData()}\n</{endtag}>"""
         if prettify:
             from inui.prettify import Pretiffy
+
             return str(Pretiffy(html))
         return str(html)
 
@@ -338,7 +340,7 @@ class BaseElement:
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.render(prettify=prettify))
-            
+
     def getAttributes(self):
         att = {}
         text = ""
@@ -353,8 +355,8 @@ class BaseElement:
             ]:
                 att[i] = self.__dict__[i]
         return att
-    
-    def search(self, text:str)-> list:
+
+    def search(self, text: str) -> list:
         results = []
         if type(self.data) in [list, set, tuple]:
             for i in self.data:
@@ -363,7 +365,7 @@ class BaseElement:
         else:
             return str(self.data)
         return text
-    
+
     def __add__(self, other):
         if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
             return str(self.render()) + str(other.render())
@@ -371,22 +373,24 @@ class BaseElement:
             return str(self.render()) + other
         else:
             raise TypeError("Unsupported operand type for +")
-    def __radd__(self,other):
+
+    def __radd__(self, other):
         if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
             return str(other.render()) + str(self.render())
         elif isinstance(other, str):
             return other + str(self.render())
         else:
             raise TypeError("Unsupported operand type for +")
-    
+
     def __getitem__(self, index):
         return self.render()[index]
-    
+
     def __mul__(self, other):
         if isinstance(other, int):
             return str(self.render() * other)
         else:
             raise TypeError("Unsupported operand type for *")
+
     # def __hotsave(self, delay, path, name, hotreloader: HotReload):
     #     import os
     #     import time
@@ -566,7 +570,7 @@ class BaseVoidElement:
         onvolumechange=None,
         onwaiting=None,
         tagName=None,
-         **kwargs,
+        **kwargs,
     ):
         attributes.update(kwargs)
         self.attributes = attributes
@@ -711,6 +715,7 @@ class BaseVoidElement:
         html = f"""\n<{self.tagname} {self.renderAttributes()}>"""
         if prettify:
             from inui.prettify import Pretiffy
+
             return str(Pretiffy(html))
         return str(html)
 
@@ -737,7 +742,7 @@ class BaseVoidElement:
     def save(self, filePath: str = "./out.html", prettify: bool = True):
         with open(filePath, "w", encoding="utf-8") as f:
             f.write(self.render(prettify=prettify))
-    
+
     def __add__(self, other):
         if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
             return str(self.render()) + str(other.render())
@@ -745,22 +750,24 @@ class BaseVoidElement:
             return str(self.render()) + other
         else:
             raise TypeError("Unsupported operand type for +")
-    def __radd__(self,other):
+
+    def __radd__(self, other):
         if isinstance(other, BaseElement) or isinstance(other, BaseVoidElement):
             return str(other.render()) + str(self.render())
         elif isinstance(other, str):
             return other + str(self.render())
         else:
             raise TypeError("Unsupported operand type for +")
-    
+
     def __getitem__(self, index):
         return self.render()[index]
-    
+
     def __mul__(self, other):
         if isinstance(other, int):
             return str(self.render() * other)
         else:
             raise TypeError("Unsupported operand type for *")
+
     # def hotreload(
     #     self,
     #     path=".",
@@ -1007,7 +1014,7 @@ class Abbr(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -1147,8 +1154,8 @@ class Abbr(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="abbr",
             **kwargs,
         )
@@ -1294,7 +1301,7 @@ class Doctype(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -1433,7 +1440,7 @@ class Doctype(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="!DOCTYPE html",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -1642,7 +1649,7 @@ class Acronym(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -1782,8 +1789,8 @@ class Acronym(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="acronym",
         )
 
@@ -1989,7 +1996,7 @@ class Address(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -2129,8 +2136,8 @@ class Address(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="address",
         )
 
@@ -2454,7 +2461,7 @@ class A(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -2594,8 +2601,8 @@ class A(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="a",
         )
 
@@ -2740,7 +2747,7 @@ class Link(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -2879,7 +2886,7 @@ class Link(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="link",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -3023,7 +3030,7 @@ class Doctype(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -3162,7 +3169,7 @@ class Doctype(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="doctype",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -3373,7 +3380,7 @@ class Abbr(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -3513,8 +3520,8 @@ class Abbr(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="abbr",
         )
 
@@ -3724,7 +3731,7 @@ class Acronym(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -3864,8 +3871,8 @@ class Acronym(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="acronym",
         )
 
@@ -4071,7 +4078,7 @@ class Address(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -4211,8 +4218,8 @@ class Address(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="address",
         )
 
@@ -4536,7 +4543,7 @@ class A(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -4676,8 +4683,8 @@ class A(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="a",
         )
 
@@ -4822,7 +4829,7 @@ class Link(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -4961,7 +4968,7 @@ class Link(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="link",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -5216,7 +5223,7 @@ class Script(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -5356,8 +5363,8 @@ class Script(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="script",
         )
 
@@ -5633,7 +5640,7 @@ class Applet(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -5773,8 +5780,8 @@ class Applet(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="applet",
         )
 
@@ -5919,7 +5926,7 @@ class Area(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -6058,7 +6065,7 @@ class Area(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="area",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -6303,7 +6310,7 @@ class Article(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -6443,8 +6450,8 @@ class Article(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="article",
         )
 
@@ -6694,7 +6701,7 @@ class Aside(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -6834,8 +6841,8 @@ class Aside(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="aside",
         )
 
@@ -6981,7 +6988,7 @@ class Audio(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -7121,8 +7128,8 @@ class Audio(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="audio",
         )
 
@@ -7267,7 +7274,7 @@ class Base(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -7406,7 +7413,7 @@ class Base(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="base",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -7550,7 +7557,7 @@ class Basefont(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -7689,7 +7696,7 @@ class Basefont(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="basefont",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -7896,7 +7903,7 @@ class Bdi(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -8036,8 +8043,8 @@ class Bdi(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="bdi",
         )
 
@@ -8257,7 +8264,7 @@ class Bdo(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -8397,8 +8404,8 @@ class Bdo(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="bdo",
         )
 
@@ -8543,7 +8550,7 @@ class Bgsound(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -8682,7 +8689,7 @@ class Bgsound(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="bgsound",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -8917,7 +8924,7 @@ class Big(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -9057,8 +9064,8 @@ class Big(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="big",
         )
 
@@ -9290,7 +9297,7 @@ class Blockquote(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -9430,8 +9437,8 @@ class Blockquote(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="blockquote",
         )
 
@@ -9681,7 +9688,7 @@ class Body(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -9821,8 +9828,8 @@ class Body(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="body",
         )
 
@@ -10078,7 +10085,7 @@ class B(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -10218,8 +10225,8 @@ class B(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="b",
         )
 
@@ -10364,7 +10371,7 @@ class Br(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -10503,7 +10510,7 @@ class Br(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="br",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -10730,7 +10737,7 @@ class Button(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -10870,8 +10877,8 @@ class Button(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="button",
         )
 
@@ -11119,7 +11126,7 @@ class Caption(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -11259,8 +11266,8 @@ class Caption(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="caption",
         )
 
@@ -11522,7 +11529,7 @@ class Canvas(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -11662,8 +11669,8 @@ class Canvas(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="canvas",
         )
 
@@ -11913,7 +11920,7 @@ class Center(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -12053,8 +12060,8 @@ class Center(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="center",
         )
 
@@ -12258,7 +12265,7 @@ class Cite(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -12398,8 +12405,8 @@ class Cite(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="cite",
         )
 
@@ -12649,7 +12656,7 @@ class Code(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -12789,8 +12796,8 @@ class Code(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="code",
         )
 
@@ -13024,7 +13031,7 @@ class Colgroup(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -13164,8 +13171,8 @@ class Colgroup(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="colgroup",
         )
 
@@ -13310,7 +13317,7 @@ class Col(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -13449,7 +13456,7 @@ class Col(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="col",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -13594,7 +13601,7 @@ class Comment(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -13734,8 +13741,8 @@ class Comment(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName="!--",
-             **kwargs,endTagName="--"
-            ,
+            **kwargs,
+            endTagName="--",
             tagName=None,
         )
 
@@ -13743,6 +13750,7 @@ class Comment(BaseElement):
         html = f"""\n<!-- {self.renderAttributes()}>\n{self.renderData()}\n -->"""
         if prettify:
             from inui.prettify import Pretiffy
+
             return str(Pretiffy(html))
         return str(html)
 
@@ -13962,7 +13970,7 @@ class Data(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -14102,8 +14110,8 @@ class Data(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="data",
         )
 
@@ -14331,7 +14339,7 @@ class Datalist(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -14471,8 +14479,8 @@ class Datalist(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="datalist",
         )
 
@@ -14704,7 +14712,7 @@ class Dd(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -14844,8 +14852,8 @@ class Dd(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="dd",
         )
 
@@ -15137,7 +15145,7 @@ class Dfn(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -15277,8 +15285,8 @@ class Dfn(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="dfn",
         )
 
@@ -15518,7 +15526,7 @@ class Del(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -15658,8 +15666,8 @@ class Del(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="del",
         )
 
@@ -15927,7 +15935,7 @@ class Details(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -16067,8 +16075,8 @@ class Details(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="details",
         )
 
@@ -16274,7 +16282,7 @@ class Dialog(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -16414,8 +16422,8 @@ class Dialog(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="dialog",
         )
 
@@ -16651,7 +16659,7 @@ class Dir(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -16791,8 +16799,8 @@ class Dir(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="dir",
         )
 
@@ -16938,7 +16946,7 @@ class Div(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -17078,8 +17086,8 @@ class Div(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="div",
         )
 
@@ -17289,7 +17297,7 @@ class Dl(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -17429,8 +17437,8 @@ class Dl(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="dl",
         )
 
@@ -17576,7 +17584,7 @@ class Ulembed(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -17716,8 +17724,8 @@ class Ulembed(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="ulembed",
         )
 
@@ -17957,7 +17965,7 @@ class Fieldset(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -18097,8 +18105,8 @@ class Fieldset(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="fieldset",
         )
 
@@ -18328,7 +18336,7 @@ class Figcaption(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -18468,8 +18476,8 @@ class Figcaption(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="figcaption",
         )
 
@@ -18697,7 +18705,7 @@ class Figure(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -18837,8 +18845,8 @@ class Figure(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="figure",
         )
 
@@ -19172,7 +19180,7 @@ class Font(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -19312,8 +19320,8 @@ class Font(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="font",
         )
 
@@ -19565,7 +19573,7 @@ class Footer(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -19705,8 +19713,8 @@ class Footer(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="footer",
         )
 
@@ -19924,7 +19932,7 @@ class Form(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -20064,8 +20072,8 @@ class Form(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="form",
         )
 
@@ -20210,7 +20218,7 @@ class Frame(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -20349,7 +20357,7 @@ class Frame(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="frame",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -20610,7 +20618,7 @@ class Frameset(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -20750,8 +20758,8 @@ class Frameset(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="frameset",
         )
 
@@ -21031,7 +21039,7 @@ class Head(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -21171,8 +21179,8 @@ class Head(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="head",
         )
 
@@ -21430,7 +21438,7 @@ class Header(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -21570,8 +21578,8 @@ class Header(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="header",
         )
 
@@ -21717,7 +21725,7 @@ class H1(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -21857,8 +21865,8 @@ class H1(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h1",
         )
 
@@ -22004,7 +22012,7 @@ class H2(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -22144,8 +22152,8 @@ class H2(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h2",
         )
 
@@ -22291,7 +22299,7 @@ class H3(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -22431,8 +22439,8 @@ class H3(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h3",
         )
 
@@ -22578,7 +22586,7 @@ class H4(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -22718,8 +22726,8 @@ class H4(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h4",
         )
 
@@ -22865,7 +22873,7 @@ class H5(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -23005,8 +23013,8 @@ class H5(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h5",
         )
 
@@ -23152,7 +23160,7 @@ class H6(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -23292,8 +23300,8 @@ class H6(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="h6",
         )
 
@@ -23535,7 +23543,7 @@ class Hgroup(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -23675,8 +23683,8 @@ class Hgroup(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="hgroup",
         )
 
@@ -23821,7 +23829,7 @@ class Hr(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -23960,7 +23968,7 @@ class Hr(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="hr",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -24201,7 +24209,7 @@ class Html(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -24341,8 +24349,8 @@ class Html(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="html",
         )
 
@@ -24488,7 +24496,7 @@ class Iframe(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -24628,8 +24636,8 @@ class Iframe(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="iframe",
         )
 
@@ -24775,7 +24783,7 @@ class Img(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -24915,8 +24923,8 @@ class Img(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="img",
         )
 
@@ -25061,7 +25069,7 @@ class Input(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -25200,7 +25208,7 @@ class Input(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="input",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -25447,7 +25455,7 @@ class Ins(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -25587,8 +25595,8 @@ class Ins(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="ins",
         )
 
@@ -25733,7 +25741,7 @@ class Isindex(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -25872,7 +25880,7 @@ class Isindex(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="isindex",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -26147,7 +26155,7 @@ class I(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -26287,8 +26295,8 @@ class I(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="i",
         )
 
@@ -26538,7 +26546,7 @@ class Kbd(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -26678,8 +26686,8 @@ class Kbd(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="kbd",
         )
 
@@ -26824,7 +26832,7 @@ class Keygen(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -26963,7 +26971,7 @@ class Keygen(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="keygen",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -27214,7 +27222,7 @@ class Label(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -27354,8 +27362,8 @@ class Label(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="label",
         )
 
@@ -27595,7 +27603,7 @@ class Legend(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -27735,8 +27743,8 @@ class Legend(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="legend",
         )
 
@@ -28008,7 +28016,7 @@ class Li(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -28148,8 +28156,8 @@ class Li(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="li",
         )
 
@@ -28371,7 +28379,7 @@ class Main(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -28511,8 +28519,8 @@ class Main(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="main",
         )
 
@@ -28752,7 +28760,7 @@ class Mark(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -28892,8 +28900,8 @@ class Mark(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="mark",
         )
 
@@ -29233,7 +29241,7 @@ class Marquee(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -29373,8 +29381,8 @@ class Marquee(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="marquee",
         )
 
@@ -29612,7 +29620,7 @@ class Menuitem(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -29752,8 +29760,8 @@ class Menuitem(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="menuitem",
         )
 
@@ -29898,7 +29906,7 @@ class Meta(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -30037,7 +30045,7 @@ class Meta(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="meta",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -30268,7 +30276,7 @@ class Meter(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -30408,8 +30416,8 @@ class Meter(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="meter",
         )
 
@@ -30645,7 +30653,7 @@ class Nav(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -30785,8 +30793,8 @@ class Nav(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="nav",
         )
 
@@ -30996,7 +31004,7 @@ class Nobr(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -31136,8 +31144,8 @@ class Nobr(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="nobr",
         )
 
@@ -31345,7 +31353,7 @@ class Noembed(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -31485,8 +31493,8 @@ class Noembed(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="noembed",
         )
 
@@ -31696,7 +31704,7 @@ class Noscript(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -31836,8 +31844,8 @@ class Noscript(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="noscript",
         )
 
@@ -32077,7 +32085,7 @@ class Object(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -32217,8 +32225,8 @@ class Object(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="object",
         )
 
@@ -32468,7 +32476,7 @@ class Optgroup(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -32608,8 +32616,8 @@ class Optgroup(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="optgroup",
         )
 
@@ -32847,7 +32855,7 @@ class Option(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -32987,8 +32995,8 @@ class Option(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="option",
         )
 
@@ -33236,7 +33244,7 @@ class Output(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -33376,8 +33384,8 @@ class Output(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="output",
         )
 
@@ -33523,7 +33531,7 @@ class P(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -33663,8 +33671,8 @@ class P(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="p",
         )
 
@@ -33809,7 +33817,7 @@ class Param(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -33948,7 +33956,7 @@ class Param(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="param",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -34093,7 +34101,7 @@ class Em(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -34233,8 +34241,8 @@ class Em(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="em",
         )
 
@@ -34476,7 +34484,7 @@ class Pre(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -34616,8 +34624,8 @@ class Pre(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="pre",
         )
 
@@ -34835,7 +34843,7 @@ class Progress(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -34975,8 +34983,8 @@ class Progress(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="progress",
         )
 
@@ -35210,7 +35218,7 @@ class Q(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -35350,8 +35358,8 @@ class Q(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="q",
         )
 
@@ -35565,7 +35573,7 @@ class Rp(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -35705,8 +35713,8 @@ class Rp(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="rp",
         )
 
@@ -35946,7 +35954,7 @@ class Rt(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -36086,8 +36094,8 @@ class Rt(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="rt",
         )
 
@@ -36313,7 +36321,7 @@ class Ruby(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -36453,8 +36461,8 @@ class Ruby(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="ruby",
         )
 
@@ -36668,7 +36676,7 @@ class S(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -36808,8 +36816,8 @@ class S(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="s",
         )
 
@@ -37023,7 +37031,7 @@ class Samp(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -37163,8 +37171,8 @@ class Samp(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="samp",
         )
 
@@ -37420,7 +37428,7 @@ class Script(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -37560,8 +37568,8 @@ class Script(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="script",
         )
 
@@ -37805,7 +37813,7 @@ class Section(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -37945,8 +37953,8 @@ class Section(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="section",
         )
 
@@ -38268,7 +38276,7 @@ class Small(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -38408,8 +38416,8 @@ class Small(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="small",
         )
 
@@ -38663,7 +38671,7 @@ class Source(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -38803,8 +38811,8 @@ class Source(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="source",
         )
 
@@ -38949,7 +38957,7 @@ class Spacer(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -39088,7 +39096,7 @@ class Spacer(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="spacer",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -39233,7 +39241,7 @@ class Span(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -39373,8 +39381,8 @@ class Span(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="span",
         )
 
@@ -39604,7 +39612,7 @@ class Strike(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -39744,8 +39752,8 @@ class Strike(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="strike",
         )
 
@@ -39981,7 +39989,7 @@ class Strong(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -40121,8 +40129,8 @@ class Strong(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="strong",
         )
 
@@ -40470,7 +40478,7 @@ class Style(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -40610,8 +40618,8 @@ class Style(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="style",
         )
 
@@ -40757,7 +40765,7 @@ class Sub(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -40897,8 +40905,8 @@ class Sub(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="sub",
         )
 
@@ -41044,7 +41052,7 @@ class Sup(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -41184,8 +41192,8 @@ class Sup(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="sup",
         )
 
@@ -41407,7 +41415,7 @@ class Summary(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -41547,8 +41555,8 @@ class Summary(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="summary",
         )
 
@@ -41694,7 +41702,7 @@ class Svg(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -41834,8 +41842,8 @@ class Svg(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="svg",
         )
 
@@ -41981,7 +41989,7 @@ class Table(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -42121,8 +42129,8 @@ class Table(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="table",
         )
 
@@ -42342,7 +42350,7 @@ class Tbody(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -42482,8 +42490,8 @@ class Tbody(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="tbody",
         )
 
@@ -42743,7 +42751,7 @@ class Td(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -42883,8 +42891,8 @@ class Td(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="td",
         )
 
@@ -43136,7 +43144,7 @@ class Template(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -43276,8 +43284,8 @@ class Template(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="template",
         )
 
@@ -43497,7 +43505,7 @@ class Tfoot(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -43637,8 +43645,8 @@ class Tfoot(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="tfoot",
         )
 
@@ -43892,7 +43900,7 @@ class Th(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -44032,8 +44040,8 @@ class Th(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="th",
         )
 
@@ -44257,7 +44265,7 @@ class Thead(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -44397,8 +44405,8 @@ class Thead(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="thead",
         )
 
@@ -44608,7 +44616,7 @@ class Time(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -44748,8 +44756,8 @@ class Time(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="time",
         )
 
@@ -44955,7 +44963,7 @@ class Title(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -45095,8 +45103,8 @@ class Title(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="title",
         )
 
@@ -45320,7 +45328,7 @@ class Tr(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -45460,8 +45468,8 @@ class Tr(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="tr",
         )
 
@@ -45681,7 +45689,7 @@ class Track(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -45821,8 +45829,8 @@ class Track(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="track",
         )
 
@@ -46020,7 +46028,7 @@ class Tt(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -46160,8 +46168,8 @@ class Tt(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="tt",
         )
 
@@ -46399,7 +46407,7 @@ class U(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -46539,8 +46547,8 @@ class U(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="u",
         )
 
@@ -46744,7 +46752,7 @@ class Var(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -46884,8 +46892,8 @@ class Var(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="var",
         )
 
@@ -47031,7 +47039,7 @@ class Video(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -47171,8 +47179,8 @@ class Video(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="video",
         )
 
@@ -47382,7 +47390,7 @@ class Wbr(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -47522,8 +47530,8 @@ class Wbr(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="wbr",
         )
 
@@ -47733,7 +47741,7 @@ class Xmp(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -47873,8 +47881,8 @@ class Xmp(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="xmp",
         )
 
@@ -48020,7 +48028,7 @@ class Ol(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -48160,8 +48168,8 @@ class Ol(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="ol",
         )
 
@@ -48307,7 +48315,7 @@ class Ul(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -48447,8 +48455,8 @@ class Ul(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="ul",
         )
 
@@ -48594,7 +48602,7 @@ class Defs(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -48734,8 +48742,8 @@ class Defs(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="defs",
         )
 
@@ -48880,7 +48888,7 @@ class Command(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -49019,7 +49027,7 @@ class Command(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="command",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -49163,7 +49171,7 @@ class Embed(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -49302,7 +49310,7 @@ class Embed(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="embed",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -49446,7 +49454,7 @@ class Path(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -49585,7 +49593,7 @@ class Path(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="path",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -49729,7 +49737,7 @@ class Animate(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -49868,7 +49876,7 @@ class Animate(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="animate",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -50012,7 +50020,7 @@ class AnimateMotion(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -50151,7 +50159,7 @@ class AnimateMotion(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="animateMotion",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -50295,7 +50303,7 @@ class AnimateTransform(BaseVoidElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             attributes=attributes,
@@ -50434,7 +50442,7 @@ class AnimateTransform(BaseVoidElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             tagName="animateTransform",
-         **kwargs,
+            **kwargs,
         )
 
 
@@ -50579,7 +50587,7 @@ class Textarea(BaseElement):
         ontimeupdate=None,
         onvolumechange=None,
         onwaiting=None,
-         **kwargs,
+        **kwargs,
     ):
         super().__init__(
             data,
@@ -50719,7 +50727,7 @@ class Textarea(BaseElement):
             onvolumechange=onvolumechange,
             onwaiting=onwaiting,
             startTagName=None,
-             **kwargs,endTagName=None
-            ,
+            **kwargs,
+            endTagName=None,
             tagName="textarea",
         )

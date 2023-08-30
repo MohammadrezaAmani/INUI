@@ -1,23 +1,25 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 A(
-                    classs='''dashboard-nav-card''',
-                    href='''#''',
-                    data = (
+                    classs="""dashboard-nav-card""",
+                    href="""#""",
+                    data=(
                         I(
-                            classs='''dashboard-nav-card-icon fa fa-users''',
-                            aria_hidden='''true''',
-                        ), 
+                            classs="""dashboard-nav-card-icon fa fa-users""",
+                            aria_hidden="""true""",
+                        ),
                         H3(
-                            classs='''dashboard-nav-card-title''',
-                            data = ('''Visitors''',)
-                        ), )
-                ), )
-        ), )
+                            classs="""dashboard-nav-card-title""",
+                            data=("""Visitors""",),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )

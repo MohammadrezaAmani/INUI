@@ -1,52 +1,47 @@
 from inui.elements import *
 from inui.svg import *
+
 Html(
-
-    data = (
+    data=(
         Body(
-
-            data = (
+            data=(
                 Header(
-                    classs='''subnav-hero-section''',
-                    data = (
+                    classs="""subnav-hero-section""",
+                    data=(
                         H1(
-                            classs='''subnav-hero-headline''',
-                            data = ('''Foundation ''',
-                                Small(
-
-                                    data = ('''by ZURB''',)
-                                ), )
-                        ), 
+                            classs="""subnav-hero-headline""",
+                            data=(
+                                """Foundation """,
+                                Small(data=("""by ZURB""",)),
+                            ),
+                        ),
                         Ul(
-                            classs='''subnav-hero-subnav''',
-                            data = (
+                            classs="""subnav-hero-subnav""",
+                            data=(
+                                Li(data=(A(href="""#""", data=("""Take Action!""",)),)),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            data = ('''Take Action!''',)
-                                        ), )
-                                ), 
+                                            href="""#""",
+                                            classs="""is-active""",
+                                            data=("""Carpe Diem!""",),
+                                        ),
+                                    )
+                                ),
                                 Li(
-
-                                    data = (
+                                    data=(
                                         A(
-                                            href='''#''',
-                                            classs='''is-active''',
-                                            data = ('''Carpe Diem!''',)
-                                        ), )
-                                ), 
-                                Li(
-
-                                    data = (
-                                        A(
-                                            target='''_blank''',
-                                            href='''https://zurb.com/responsive''',
-                                            data = ('''Just do it!''',)
-                                        ), )
-                                ), )
-                        ), )
-                ), )
-        ), )
+                                            target="""_blank""",
+                                            href="""https://zurb.com/responsive""",
+                                            data=("""Just do it!""",),
+                                        ),
+                                    )
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        ),
+    )
 )
