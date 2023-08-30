@@ -1,0 +1,41 @@
+.card  {
+  width: 350px;
+}
+
+.card-info {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 2.5rem;
+  grid-template-columns: 3fr 1fr;
+}
+
+.card-title {
+  font-size: 2rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.card-icon {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  justify-self: right;
+  width: 30px;
+  height: 30px;
+  background-color: LightBlue;
+  border-radius: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-author {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  align-self: bottom;
+}
+
+.card-stats {
+  align-self: bottom;
+  justify-self: right;
+ 
+}
