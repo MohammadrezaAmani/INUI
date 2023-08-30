@@ -1,0 +1,41 @@
+$rating-block-margin-bottom: 2rem; //spacing below each rating line
+$rating-block-star-color: $alert-color;
+
+.rating-block {
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .ratings-type {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .rating-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: $rating-block-margin-bottom;
+  }
+
+  .rating-block-rating {
+    display: flex;
+  }
+
+  .star {
+    cursor: pointer;
+    stroke: $rating-block-star-color;
+  }
+
+  .rating-block-rating .star.selected polygon {
+    fill: $rating-block-star-color;
+  }
+
+  .rating-block-rating.is-voted .star polygon {
+    fill: $rating-block-star-color;
+  }
+
+  .rating-block-rating.is-voted .star.selected ~ .star polygon {
+    fill: transparent;
+  }
+}
