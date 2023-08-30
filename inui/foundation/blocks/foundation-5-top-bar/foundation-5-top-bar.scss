@@ -1,0 +1,35 @@
+$foundation-5-top-bar-bg: #333;
+$foundation-5-top-bar-text-color: $white;
+
+.foundation-5-top-bar {
+  background: $foundation-5-top-bar-bg;
+  color: $foundation-5-top-bar-text-color;
+
+  .menu {
+    background: $foundation-5-top-bar-bg;
+
+    a {
+      color: $foundation-5-top-bar-text-color;
+    }
+  }
+
+  .is-dropdown-submenu {
+    border: 0;
+  }
+
+  .is-dropdown-submenu-item.opens-right a::after {
+    border-color: transparent transparent transparent $foundation-5-top-bar-text-color;
+  }
+
+  .js-drilldown-back > a::before {
+    border-color: transparent $foundation-5-top-bar-text-color transparent transparent;
+  }
+
+  .is-drilldown-submenu-parent > a::after {
+    border-color: transparent transparent transparent $foundation-5-top-bar-text-color;
+  }
+
+  .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+    border-color: $foundation-5-top-bar-text-color transparent transparent;
+  }
+}
