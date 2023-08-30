@@ -1,0 +1,30 @@
+.sticky-footer-css {
+  height: 100vh;
+  display: flex;
+}
+
+.sticky-footer-css-body {
+  overflow: auto;
+}
+
+.sticky-footer-css .header {
+  background-color: #2c3840;
+  height: 10rem;
+  color: #fff;
+  padding: 3rem;
+}
+.sticky-footer-css .header .menu a {
+  color: #fff;
+}
+.sticky-footer-css .body-content {
+  background-color: #fff;
+}
+.sticky-footer-css .footer {
+  height: 10rem;
+  background-color: #2c3840;
+  color: #fff;
+  padding: 3rem;
+}
+.sticky-footer-css .footer .menu a {
+  color: #fff;
+}/*# sourceMappingURL=sticky-footer-css.css.map */

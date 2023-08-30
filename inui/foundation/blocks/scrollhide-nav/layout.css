@@ -1,0 +1,25 @@
+body {
+  height: 10000px;
+  display: flex;
+  justify-content: center;
+}
+body h3 {
+  position: relative;
+  top: 50vh;
+}
+body .top-bar {
+  background: #2c3840;
+}
+body .top-bar .menu-text {
+  color: #fff;
+}
+body .top-bar .menu {
+  background: #2c3840;
+}
+body .top-bar .menu a {
+  color: #fff;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fff transparent transparent;
+}/*# sourceMappingURL=layout.css.map */
