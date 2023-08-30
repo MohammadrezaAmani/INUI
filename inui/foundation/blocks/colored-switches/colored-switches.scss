@@ -1,0 +1,29 @@
+@mixin colored-switches ($switch-background-active) {
+  input:checked ~ .switch-paddle {
+    background: $switch-background-active;
+  }
+}
+
+.switch {
+  &,
+
+  &.primary {
+    @include colored-switches($primary-color)
+  }
+
+  &.secondary {
+    @include colored-switches($secondary-color)
+  }
+
+  &.success {
+    @include colored-switches($success-color)
+  }
+
+  &.alert {
+    @include colored-switches($alert-color)
+  }
+
+  &.warning {
+    @include colored-switches($warning-color)
+  }
+}
