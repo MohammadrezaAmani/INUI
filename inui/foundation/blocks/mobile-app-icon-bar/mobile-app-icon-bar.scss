@@ -1,0 +1,22 @@
+$mobile-app-icon-bar-bg: $white;
+$mobile-app-icon-bar-icon-size: 2rem;
+
+.mobile-app-icon-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $mobile-app-icon-bar-bg;
+
+  button {
+    padding: 1.25rem;
+    cursor: pointer;
+
+    svg,
+    i,
+    img {
+      font-size: $mobile-app-icon-bar-icon-size;
+      max-height: $mobile-app-icon-bar-icon-size;
+      max-width: $mobile-app-icon-bar-icon-size;
+    }
+  }
+}
