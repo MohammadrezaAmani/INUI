@@ -5,18 +5,22 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-       <div className="App">
+    <div className="App">
+
       <header className="App-header">
+        <p>
+          This is your First <i>INUI REACT app</i>
+        </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://inui.readthedocs.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn INUI
         </a>
       </header>
     </div>

@@ -4,8 +4,8 @@ from inui.config.replaces import replace
 class BaseElement:
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -145,6 +145,10 @@ class BaseElement:
         tagName=None,
         **kwargs,
     ):
+        if data == None:
+            data = ()
+        if attributes == None:
+            attributes = {}
         self.data = data
         attributes.update(kwargs)
         self.attributes = attributes
@@ -434,7 +438,7 @@ class BaseElement:
 class BaseVoidElement:
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -572,6 +576,8 @@ class BaseVoidElement:
         tagName=None,
         **kwargs,
     ):
+        if attributes == None:
+            attributes = {}
         attributes.update(kwargs)
         self.attributes = attributes
         self.classs = classs
@@ -878,8 +884,8 @@ class Abbr(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -1166,7 +1172,7 @@ class Doctype(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -1513,8 +1519,8 @@ class Acronym(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -1860,8 +1866,8 @@ class Address(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -2325,8 +2331,8 @@ class A(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -2612,7 +2618,7 @@ class Link(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -2895,7 +2901,7 @@ class Doctype(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -3244,8 +3250,8 @@ class Abbr(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -3595,8 +3601,8 @@ class Acronym(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -3942,8 +3948,8 @@ class Address(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -4407,8 +4413,8 @@ class A(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -4694,7 +4700,7 @@ class Link(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -5087,8 +5093,8 @@ class Script(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -5504,8 +5510,8 @@ class Applet(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -5791,7 +5797,7 @@ class Area(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -6174,8 +6180,8 @@ class Article(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -6565,8 +6571,8 @@ class Aside(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -6852,8 +6858,8 @@ class Audio(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -7139,7 +7145,7 @@ class Base(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -7422,7 +7428,7 @@ class Basefont(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -7767,8 +7773,8 @@ class Bdi(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -8128,8 +8134,8 @@ class Bdo(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -8415,7 +8421,7 @@ class Bgsound(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -8788,8 +8794,8 @@ class Big(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -9161,8 +9167,8 @@ class Blockquote(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -9552,8 +9558,8 @@ class Body(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -9949,8 +9955,8 @@ class B(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -10236,7 +10242,7 @@ class Br(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -10601,8 +10607,8 @@ class Button(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -10990,8 +10996,8 @@ class Caption(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -11393,8 +11399,8 @@ class Canvas(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -11784,8 +11790,8 @@ class Center(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -12129,8 +12135,8 @@ class Cite(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -12520,8 +12526,8 @@ class Code(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -12895,8 +12901,8 @@ class Colgroup(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -13182,7 +13188,7 @@ class Col(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -13465,8 +13471,8 @@ class Comment(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -13834,8 +13840,8 @@ class Data(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -14203,8 +14209,8 @@ class Datalist(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -14576,8 +14582,8 @@ class Dd(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -15009,8 +15015,8 @@ class Dfn(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -15390,8 +15396,8 @@ class Del(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -15799,8 +15805,8 @@ class Details(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -16146,8 +16152,8 @@ class Dialog(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -16523,8 +16529,8 @@ class Dir(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -16810,8 +16816,8 @@ class Div(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -17161,8 +17167,8 @@ class Dl(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -17448,8 +17454,8 @@ class Ulembed(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -17829,8 +17835,8 @@ class Fieldset(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -18200,8 +18206,8 @@ class Figcaption(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -18569,8 +18575,8 @@ class Figure(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -19044,8 +19050,8 @@ class Font(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -19437,8 +19443,8 @@ class Footer(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -19796,8 +19802,8 @@ class Form(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -20083,7 +20089,7 @@ class Frame(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -20482,8 +20488,8 @@ class Frameset(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -20903,8 +20909,8 @@ class Head(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -21302,8 +21308,8 @@ class Header(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -21589,8 +21595,8 @@ class H1(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -21876,8 +21882,8 @@ class H2(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -22163,8 +22169,8 @@ class H3(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -22450,8 +22456,8 @@ class H4(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -22737,8 +22743,8 @@ class H5(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -23024,8 +23030,8 @@ class H6(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -23407,8 +23413,8 @@ class Hgroup(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -23694,7 +23700,7 @@ class Hr(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -24073,8 +24079,8 @@ class Html(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -24360,8 +24366,8 @@ class Iframe(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -24647,8 +24653,8 @@ class Img(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -24934,7 +24940,7 @@ class Input(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -25319,8 +25325,8 @@ class Ins(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -25606,7 +25612,7 @@ class Isindex(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -26019,8 +26025,8 @@ class I(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -26410,8 +26416,8 @@ class Kbd(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -26697,7 +26703,7 @@ class Keygen(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -27086,8 +27092,8 @@ class Label(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -27467,8 +27473,8 @@ class Legend(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -27880,8 +27886,8 @@ class Li(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -28243,8 +28249,8 @@ class Main(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -28624,8 +28630,8 @@ class Mark(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -29105,8 +29111,8 @@ class Marquee(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -29484,8 +29490,8 @@ class Menuitem(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -29771,7 +29777,7 @@ class Meta(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -30140,8 +30146,8 @@ class Meter(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -30517,8 +30523,8 @@ class Nav(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -30868,8 +30874,8 @@ class Nobr(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -31217,8 +31223,8 @@ class Noembed(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -31568,8 +31574,8 @@ class Noscript(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -31949,8 +31955,8 @@ class Object(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -32340,8 +32346,8 @@ class Optgroup(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -32719,8 +32725,8 @@ class Option(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -33108,8 +33114,8 @@ class Output(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -33395,8 +33401,8 @@ class P(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -33682,7 +33688,7 @@ class Param(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -33965,8 +33971,8 @@ class Em(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -34348,8 +34354,8 @@ class Pre(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -34707,8 +34713,8 @@ class Progress(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -35082,8 +35088,8 @@ class Q(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -35437,8 +35443,8 @@ class Rp(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -35818,8 +35824,8 @@ class Rt(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -36185,8 +36191,8 @@ class Ruby(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -36540,8 +36546,8 @@ class S(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -36895,8 +36901,8 @@ class Samp(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -37292,8 +37298,8 @@ class Script(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -37677,8 +37683,8 @@ class Section(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -38140,8 +38146,8 @@ class Small(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -38535,8 +38541,8 @@ class Source(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -38822,7 +38828,7 @@ class Spacer(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -39105,8 +39111,8 @@ class Span(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -39476,8 +39482,8 @@ class Strike(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -39853,8 +39859,8 @@ class Strong(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -40342,8 +40348,8 @@ class Style(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -40629,8 +40635,8 @@ class Sub(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -40916,8 +40922,8 @@ class Sup(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -41279,8 +41285,8 @@ class Summary(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -41566,8 +41572,8 @@ class Svg(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -41853,8 +41859,8 @@ class Table(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -42214,8 +42220,8 @@ class Tbody(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -42615,8 +42621,8 @@ class Td(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -43008,8 +43014,8 @@ class Template(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -43369,8 +43375,8 @@ class Tfoot(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -43764,8 +43770,8 @@ class Th(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -44129,8 +44135,8 @@ class Thead(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -44480,8 +44486,8 @@ class Time(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -44827,8 +44833,8 @@ class Title(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -45192,8 +45198,8 @@ class Tr(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -45553,8 +45559,8 @@ class Track(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -45892,8 +45898,8 @@ class Tt(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -46271,8 +46277,8 @@ class U(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -46616,8 +46622,8 @@ class Var(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -46903,8 +46909,8 @@ class Video(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -47254,8 +47260,8 @@ class Wbr(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -47605,8 +47611,8 @@ class Xmp(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -47892,8 +47898,8 @@ class Ol(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -48179,8 +48185,8 @@ class Ul(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -48466,8 +48472,8 @@ class Defs(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -48753,7 +48759,7 @@ class Command(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -49036,7 +49042,7 @@ class Embed(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -49319,7 +49325,7 @@ class Path(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -49602,7 +49608,7 @@ class Animate(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -49885,7 +49891,7 @@ class AnimateMotion(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -50168,7 +50174,7 @@ class AnimateTransform(BaseVoidElement):
 
     def __init__(
         self,
-        attributes={},
+        attributes=None,
         classs=None,
         id=None,
         src=None,
@@ -50451,8 +50457,8 @@ class Textarea(BaseElement):
 
     def __init__(
         self,
-        data=(),
-        attributes={},
+        data=None,
+        attributes=None,
         classs=None,
         id=None,
         src=None,
