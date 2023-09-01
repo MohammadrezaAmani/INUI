@@ -9,3 +9,9 @@ thisfolderisjutjustfordevelopingthepackage
 
 ___*
 venv
+yarn.lock
+package.json
+node_modules
+public
+mui/inuireact/.git
+mui/inuireact/.gitignore
