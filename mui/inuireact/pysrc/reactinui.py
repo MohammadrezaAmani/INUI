@@ -1,4 +1,5 @@
 from inui.elements import *
+import os
 
 
 class React:
@@ -116,6 +117,23 @@ class React:
             pass
         with open(self.__public_path + "index.html", "w", encoding="utf-8") as f:
             f.write(self.root(head_childs, header_body_childs, footer_body_childs))
+
+    def __install_yarn(self):
+        os.system("npm install --global yarn")
+        os.system("yarn --version")
+
+    def __install_create_react_app(self):
+        os.system("yarn add create_react_app")
+
+    def __create_react_app(self, name: str = "inuireactapp"):
+        name = name.lower()
+        os.system("yarn create_react_app %s" % name)
+        os.rmdir("%s/public" % name)
+        os.rmdir("%s/src" % name)
+
+    def __run_start(name: str = "inuireactapp"):
+        os.chdir(name)
+        os.system("yarn run start")
 
 
 p = React("test")
