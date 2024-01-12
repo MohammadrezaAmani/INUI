@@ -1,9 +1,0 @@
-.read-more-content,
-.read-more {
-  display: none;
-  margin-top: 1rem;
-}
-.read-more-content.expanded .read-more,
-.read-more.expanded .read-more {
-  display: block;
-}/*# sourceMappingURL=read_more.css.map */

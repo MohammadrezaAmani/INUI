@@ -1,4 +1,4 @@
-from inui.elements import Body, Head, Html, Title, Div, Meta, Comment, Strong, Hr, A
+from inui.elements import A, Body, Comment, Div, Head, Hr, Html, Meta, Strong, Title
 
 INUI_IS_THE_BEST = Div(
     (
