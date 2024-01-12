@@ -1,7 +1,4 @@
 from inui.elements import A, Body, Comment, Div, Head, Hr, Html, Meta, Strong, Title
-import time
-
-start = time.time()
 
 INUI_IS_THE_BEST = Div(
     Strong(
@@ -23,9 +20,9 @@ h = Html(
         ),
     ),
     Body(
-        *[INUI_IS_THE_BEST for i in range(100000)],
+        *[INUI_IS_THE_BEST for i in range(10)],
     ),
     style="background:#000000;",
 )
-h.render()
-print(time.time()- start)
+
+print(h.render())
