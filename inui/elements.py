@@ -1,8 +1,10 @@
 from inui.base import BaseElement, BaseVoidElement
 
 
-class Doctype(BaseVoidElement):
-    ...
+class Doctype(BaseElement):
+    class Meta:
+        start_tag = "<!DOCTYPE"
+        end_tag = ">"
 
 
 class Abbr(BaseElement):

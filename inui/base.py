@@ -73,6 +73,7 @@ class _Data:
 class Meta(NamedTuple):
     start_tag: str = None
     end_tag: str = None
+    sep: str = ">"
 
 
 class Base:
@@ -92,11 +93,9 @@ class Base:
 
     @property
     def start_tag(self) -> str:
-        return (
-            self.Meta.start_tag
-            if self.Meta.start_tag
-            else self.__class__.__name__.lower()
-        )
+        if self.Meta.start_tag is not None:
+            return self.Meta.start_tag
+        return "<" + self.__class__.__name__.lower()
 
     @start_tag.setter
     def start_tag(self, value: str) -> None:
@@ -104,17 +103,29 @@ class Base:
 
     @property
     def end_tag(self) -> str:
-        return (
-            self.Meta.end_tag if self.Meta.end_tag else self.__class__.__name__.lower()
-        )
+        if self.Meta.end_tag is not None:
+            return self.Meta.end_tag
+        return "</" + self.__class__.__name__.lower() + ">"
 
     @end_tag.setter
     def end_tag(self, value: str) -> None:
         self.Meta.end_tag = value
 
     @property
+    def sep(self) -> str:
+        if self.Meta.sep is not None:
+            return self.Meta.sep
+    @sep.setter
+    def sep(self, value: str) -> None:
+        self.Meta.sep = value
+
+    @property
     def attributes(self) -> Attributes:
         return self._attributes
+
+    @property
+    def _space(self) -> str:
+        return " " if len(self.attributes) > 0 else ""
 
     @attributes.setter
     def attributes(self, value: Union[Attributes, Dict[str, Any]]) -> None:
@@ -125,7 +136,7 @@ class Base:
         )
 
     def render(self, prettify: bool = False) -> str:
-        return f"<{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}>{str(self.data)}</{self.end_tag}>"
+        return f"{self.start_tag}{self._space}{str(self.attributes)}{str(self.sep)}{str(self.data)}{self.end_tag}"
 
     def __str__(self) -> str:
         return self.render()
