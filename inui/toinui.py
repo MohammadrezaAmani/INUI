@@ -33,7 +33,7 @@ class Element:
 
         # element_str = f"{' ' * indent}"
         if self.data or self.children:
-            element_str += "\n" + attind + "data = ("
+            element_str += "\n" + attind 
         if self.data:
             if self.data.strip():
                 # print(self.data)
@@ -44,8 +44,7 @@ class Element:
                 element_str += "\n'''" + child.__str__(indent + 8) + ", '''"
             else:
                 element_str += "\n" + child.__str__(indent + 8) + ", "
-        if self.data or self.children:
-            element_str += ")"
+                
         element_str += f"\n{' ' * indent})"
         while "''''''" in element_str:
             element_str = element_str.replace("''''''", "''")
@@ -113,14 +112,16 @@ class HtmlToInui:
     def fromUrl(self, url):
         try:
             import requests
-        except:
-            raise 'requests package not found, try: "python3 -m pip install requests"'
+        except ModuleNotFoundError:
+            raise ModuleNotFoundError(
+                'requests package not found, try: "python3 -m pip install requests"'
+            )
         self.url = url
         self.html = requests.get(self.url).text
         return self.toInui(self.html)
 
     def fromFile(self, path=None):
-        if path != None:
+        if path is not None:
             self.filename = path
         with open(self.filename, "r", encoding="utf-8") as f:
             self.html = f.read()
