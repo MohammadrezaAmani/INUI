@@ -1,11 +1,8 @@
-from inui.config.replaces import reverse_replace
-
-try:
-    from lxml import etree
-except:
-    raise "you have to install lxml module: python3 -m pip install lxml"
-
 import re
+
+from lxml import etree
+
+from inui.config.replaces import reverse_replace
 
 
 class Element:
@@ -33,18 +30,18 @@ class Element:
 
         # element_str = f"{' ' * indent}"
         if self.data or self.children:
-            element_str += "\n" + attind 
+            element_str += "\n" + attind
         if self.data:
             if self.data.strip():
                 # print(self.data)
                 element_str += f"'''{self.data}'''," if self.data else ""
         for child in self.children:
-            if type(child) == str:
+            if isinstance(child, str):
                 # print(type(child))
                 element_str += "\n'''" + child.__str__(indent + 8) + ", '''"
             else:
                 element_str += "\n" + child.__str__(indent + 8) + ", "
-                
+
         element_str += f"\n{' ' * indent})"
         while "''''''" in element_str:
             element_str = element_str.replace("''''''", "''")
@@ -74,7 +71,7 @@ def create_element_from_etree(element):
     )
 
 
-class HtmlToInui:
+class HtmlTo_inui:
     def __init__(
         self, html=None, url=None, fileName=None, saveTo=None, indent=4
     ) -> None:
@@ -84,23 +81,23 @@ class HtmlToInui:
         self.indent = indent
         self.inui = None
 
-    def toInui(self, html_text):
-        root = etree.HTML(self.remove_html_comments(html_text))
-        return self.__create_element_from_etree(root)
+    def to_inui(self, html_text):
+        root = etree.HTML(self._remove_html_comments(html_text))
+        return self._create_element_from_etree(root)
 
-    def remove_html_comments(self, html):
+    def _remove_html_comments(self, html):
         pattern = r"<!--(.*?)-->"
         clean_html = re.sub(pattern, "", html, flags=re.DOTALL)
         return clean_html
 
-    def __create_element_from_etree(self, element):
+    def _create_element_from_etree(self, element):
         attributes = {}
         if element.attrib:
             attributes = element.attrib
 
         children = []
         for child in element:
-            children.append(self.__create_element_from_etree(child))
+            children.append(self._create_element_from_etree(child))
 
         data = element.text if element.text else None
 
@@ -109,7 +106,7 @@ class HtmlToInui:
         )
         return self.inui
 
-    def fromUrl(self, url):
+    def url(self, url):
         try:
             import requests
         except ModuleNotFoundError:
@@ -118,18 +115,18 @@ class HtmlToInui:
             )
         self.url = url
         self.html = requests.get(self.url).text
-        return self.toInui(self.html)
+        return self.to_inui(self.html)
 
-    def fromFile(self, path=None):
+    def file(self, path=None):
         if path is not None:
             self.filename = path
         with open(self.filename, "r", encoding="utf-8") as f:
             self.html = f.read()
-        return self.toInui(self.html)
+        return self.to_inui(self.html)
 
     def save(self, path):
         if self.inui:
-            self.toInui(self.html)
+            self.to_inui(self.html)
         with open(path, "w", encoding="utf-8") as f:
             f.write(str(self.inui))
         return True
