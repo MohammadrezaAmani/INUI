@@ -1,4 +1,4 @@
-name: Publish Python 🐍 distributions 📦 to PyPI
+name: Publish to PyPI
 
 on:
   push:
@@ -7,14 +7,14 @@ on:
 
 jobs:
   build-n-publish:
-    name: Build and publish Python 🐍 distributions 📦 to PyPI
+    name: publish to PyPI
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Set up Python 3.10
+    - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
-        python-version: '3.10'
+        python-version: '3.11'
     - name: Install pypa/setuptools
       run: >-
         python -m
@@ -28,7 +28,7 @@ jobs:
     - name: Build a binary wheel
       run: >-
         python setup.py sdist bdist_wheel
-    - name: Publish distribution 📦 to PyPI
+    - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
         password: ${{ secrets.PYPI_TOKEN }}
