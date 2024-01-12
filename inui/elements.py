@@ -140,115 +140,115 @@ class BaseVoidElement(BaseElement):
 
 
 class Doctype(BaseVoidElement):
-    pass
+    ...
 
 
 class Abbr(BaseElement):
-    pass
+    ...
 
 
 class Acronym(BaseElement):
-    pass
+    ...
 
 
 class Address(BaseElement):
-    pass
+    ...
 
 
 class A(BaseElement):
-    pass
+    ...
 
 
 class Applet(BaseElement):
-    pass
+    ...
 
 
 class Area(BaseVoidElement):
-    pass
+    ...
 
 
 class Article(BaseElement):
-    pass
+    ...
 
 
 class Aside(BaseElement):
-    pass
+    ...
 
 
 class Audio(BaseElement):
-    pass
+    ...
 
 
 class Base(BaseVoidElement):
-    pass
+    ...
 
 
 class Basefont(BaseVoidElement):
-    pass
+    ...
 
 
 class Bdi(BaseElement):
-    pass
+    ...
 
 
 class Bdo(BaseElement):
-    pass
+    ...
 
 
 class Bgsound(BaseVoidElement):
-    pass
+    ...
 
 
 class Big(BaseElement):
-    pass
+    ...
 
 
 class Blockquote(BaseElement):
-    pass
+    ...
 
 
 class Body(BaseElement):
-    pass
+    ...
 
 
 class B(BaseElement):
-    pass
+    ...
 
 
 class Br(BaseVoidElement):
-    pass
+    ...
 
 
 class Button(BaseElement):
-    pass
+    ...
 
 
 class Caption(BaseElement):
-    pass
+    ...
 
 
 class Canvas(BaseElement):
-    pass
+    ...
 
 
 class Center(BaseElement):
-    pass
+    ...
 
 
 class Cite(BaseElement):
-    pass
+    ...
 
 
 class Code(BaseElement):
-    pass
+    ...
 
 
 class Colgroup(BaseElement):
-    pass
+    ...
 
 
 class Col(BaseVoidElement):
-    pass
+    ...
 
 
 class Comment(BaseElement):
@@ -261,383 +261,383 @@ class Comment(BaseElement):
 
 
 class Data(BaseElement):
-    pass
+    ...
 
 
 class Datalist(BaseElement):
-    pass
+    ...
 
 
 class Dd(BaseElement):
-    pass
+    ...
 
 
 class Dfn(BaseElement):
-    pass
+    ...
 
 
 class Del(BaseElement):
-    pass
+    ...
 
 
 class Details(BaseElement):
-    pass
+    ...
 
 
 class Dialog(BaseElement):
-    pass
+    ...
 
 
 class Dir(BaseElement):
-    pass
+    ...
 
 
 class Div(BaseElement):
-    pass
+    ...
 
 
 class Dl(BaseElement):
-    pass
+    ...
 
 
 class Embed(BaseVoidElement):
-    pass
+    ...
 
 
 class Fieldset(BaseElement):
-    pass
+    ...
 
 
 class Figcaption(BaseElement):
-    pass
+    ...
 
 
 class Figure(BaseElement):
-    pass
+    ...
 
 
 class Font(BaseElement):
-    pass
+    ...
 
 
 class Footer(BaseElement):
-    pass
+    ...
 
 
 class Form(BaseElement):
-    pass
+    ...
 
 
 class Frame(BaseVoidElement):
-    pass
+    ...
 
 
 class Frameset(BaseElement):
-    pass
+    ...
 
 
 class Head(BaseElement):
-    pass
+    ...
 
 
 class Header(BaseElement):
-    pass
+    ...
 
 
 class H1(BaseElement):
-    pass
+    ...
 
 
 class H2(BaseElement):
-    pass
+    ...
 
 
 class H3(BaseElement):
-    pass
+    ...
 
 
 class H4(BaseElement):
-    pass
+    ...
 
 
 class H5(BaseElement):
-    pass
+    ...
 
 
 class H6(BaseElement):
-    pass
+    ...
 
 
 class Hgroup(BaseElement):
-    pass
+    ...
 
 
 class Hr(BaseVoidElement):
-    pass
+    ...
 
 
 class Html(BaseElement):
-    pass
+    ...
 
 
 class Iframe(BaseElement):
-    pass
+    ...
 
 
 class Img(BaseElement):
-    pass
+    ...
 
 
 class Input(BaseVoidElement):
-    pass
+    ...
 
 
 class Ins(BaseElement):
-    pass
+    ...
 
 
 class Isindex(BaseVoidElement):
-    pass
+    ...
 
 
 class I(BaseElement):
-    pass
+    ...
 
 
 class Kbd(BaseElement):
-    pass
+    ...
 
 
 class Keygen(BaseVoidElement):
-    pass
+    ...
 
 
 class Label(BaseElement):
-    pass
+    ...
 
 
 class Legend(BaseElement):
-    pass
+    ...
 
 
 class Li(BaseElement):
-    pass
+    ...
 
 
 class Main(BaseElement):
-    pass
+    ...
 
 
 class Mark(BaseElement):
-    pass
+    ...
 
 
 class Marquee(BaseElement):
-    pass
+    ...
 
 
 class Menuitem(BaseElement):
-    pass
+    ...
 
 
 class Meta(BaseVoidElement):
-    pass
+    ...
 
 
 class Meter(BaseElement):
-    pass
+    ...
 
 
 class Nav(BaseElement):
-    pass
+    ...
 
 
 class Nobr(BaseElement):
-    pass
+    ...
 
 
 class Noembed(BaseElement):
-    pass
+    ...
 
 
 class Noscript(BaseElement):
-    pass
+    ...
 
 
 class Object(BaseElement):
-    pass
+    ...
 
 
 class Ol(BaseElement):
-    pass
+    ...
 
 
 class Optgroup(BaseElement):
-    pass
+    ...
 
 
 class Option(BaseElement):
-    pass
+    ...
 
 
 class Output(BaseElement):
-    pass
+    ...
 
 
 class P(BaseElement):
-    pass
+    ...
 
 
 class Pre(BaseElement):
-    pass
+    ...
 
 
 class Progress(BaseElement):
-    pass
+    ...
 
 
 class Q(BaseElement):
-    pass
+    ...
 
 
 class Rp(BaseElement):
-    pass
+    ...
 
 
 class Rt(BaseElement):
-    pass
+    ...
 
 
 class Ruby(BaseElement):
-    pass
+    ...
 
 
 class S(BaseElement):
-    pass
+    ...
 
 
 class Samp(BaseElement):
-    pass
+    ...
 
 
 class Script(BaseElement):
-    pass
+    ...
 
 
 class Section(BaseElement):
-    pass
+    ...
 
 
 class Small(BaseElement):
-    pass
+    ...
 
 
 class Source(BaseElement):
-    pass
+    ...
 
 
 class Spacer(BaseVoidElement):
-    pass
+    ...
 
 
 class Span(BaseElement):
-    pass
+    ...
 
 
 class Strike(BaseElement):
-    pass
+    ...
 
 
 class Strong(BaseElement):
-    pass
+    ...
 
 
 class Style(BaseElement):
-    pass
+    ...
 
 
 class Sub(BaseElement):
-    pass
+    ...
 
 
 class Sup(BaseElement):
-    pass
+    ...
 
 
 class Summary(BaseElement):
-    pass
+    ...
 
 
 class Svg(BaseElement):
-    pass
+    ...
 
 
 class Table(BaseElement):
-    pass
+    ...
 
 
 class Tbody(BaseElement):
-    pass
+    ...
 
 
 class Td(BaseElement):
-    pass
+    ...
 
 
 class Template(BaseElement):
-    pass
+    ...
 
 
 class Tfoot(BaseElement):
-    pass
+    ...
 
 
 class Th(BaseElement):
-    pass
+    ...
 
 
 class Thead(BaseElement):
-    pass
+    ...
 
 
 class Time(BaseElement):
-    pass
+    ...
 
 
 class Title(BaseElement):
-    pass
+    ...
 
 
 class Tr(BaseElement):
-    pass
+    ...
 
 
 class Track(BaseElement):
-    pass
+    ...
 
 
 class Tt(BaseElement):
-    pass
+    ...
 
 
 class U(BaseElement):
-    pass
+    ...
 
 
 class Var(BaseElement):
-    pass
+    ...
 
 
 class Video(BaseElement):
-    pass
+    ...
 
 
 class Wbr(BaseElement):
-    pass
+    ...
 
 
 class Xmp(BaseElement):
-    pass
+    ...
 
 
 if __name__ == "__main__":
