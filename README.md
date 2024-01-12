@@ -110,10 +110,27 @@ In the big picture we have some classes that take some values, first one is data
 like this:
 
 ```python
-output = Html(data=(
-    Comment("this is black door =`) "),
-    Head(
-        (
+from inui.elements import *
+
+
+class Link(BaseElement):
+    class Meta:
+        start_tag = "<man mobina hastam "
+        end_tag = "</man dige mobina nistam, man kharam.>"
+        sep = ">"
+
+
+form = Link(
+    Input(typee="text", placeholder="search wiki", id="search-input"),
+    Button(typee="submit", text="search", id="search-button"),
+    id="search-form",
+)
+
+
+output = Html(
+    data=(
+        Comment("this is black door =`) "),
+        Head(
             Title("Wiki Clone"),
             Meta(charset="utf-8"),
             Meta(
@@ -121,38 +138,24 @@ output = Html(data=(
                 content="width=device-width, initial-scale=1.0",
             ),
             Link(rel="stylesheet", href="./style.css"),
-        )
-    ),
-    Body(
-        (
-
+        ),
+        Body(
             Div(
-                (
-                    Div(
-                        (
-                            H1("search wiki"),
-                            Span("light", id="theme-toggler"),
-                        ),
-                        classs="header-container",
-                    )
+                Div(
+                    (
+                        H1("search wiki"),
+                        Span("light", id="theme-toggler"),
+                    ),
+                    classs="header-container",
                 ),
                 classs="container",
             ),
-            Form(
-                (
-                    Input(
-                        typee="text", placeholder="search wiki", id="search-input"
-                    ),
-                    Button(typee="submit", text="search",
-                           id="search-button"),
-                ),
-                id="search-form",
-            ),
+            *[form for i in range(100)],
             Div(id="search-results"),
             Script(src="./script.js"),
         ),
     ),
-),)
+)
 
 print(output)
 ```
