@@ -133,7 +133,7 @@ class Langs:
     Oriya = "or"
     Oromo_Afaan_Oromo = "om"
     Ossetian = "os"
-    PÄli = "pi"
+    Pali = "pi"
     Pashto_Pushto = "ps"
     Persian = "fa"
     Farsi = "fa"
