@@ -1,8 +1,4 @@
-from .elements import BaseElement
-
-
-class BaseSvgElement(BaseElement):
-    ...
+from inui.base import BaseSvgElement
 
 
 class A(BaseSvgElement):
