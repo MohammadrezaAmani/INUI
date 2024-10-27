@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, NamedTuple, Tuple, Type, Union
 
+from inui.config.replaces import replace
+
 
 class Attributes:
     def __init__(self, **kwargs: Any) -> None:
@@ -14,7 +16,7 @@ class Attributes:
 
     def __str__(self) -> str:
         return " ".join(
-            f'{name}="{value}"'
+            f'{replace(name)}="{value}"'
             for name, value in self.attrs.items()
             if value is not None
         )
@@ -154,13 +156,30 @@ class Base:
     def __getitem__(self, item):
         return self.render()[item]
 
+    def _str(self, data):
+        try:
+            if isinstance(data, type):
+                if isinstance(data(), Base):
+                    data = data()
+        except Exception as _:
+            pass
+        return str(data)
+
 
 class BaseElement(Base): ...
 
 
 class BaseVoidElement(BaseElement):
     def render(self, prettify: bool = False):
-        return f"""<{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}>"""
+        return f"""<{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}> """
 
 
 class BaseSvgElement(Base): ...
+
+
+class Class(Base):
+    def __init__(self, *args) -> None:
+        self.args = args
+
+    def render(self, prettify: bool = False) -> str:
+        return " ".join(list(map(self._str, self.args)))
