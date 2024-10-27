@@ -134,8 +134,7 @@ class Base:
         return self.render()
 
 
-class BaseElement(Base):
-    ...
+class BaseElement(Base): ...
 
 
 class BaseVoidElement(BaseElement):
@@ -143,5 +142,4 @@ class BaseVoidElement(BaseElement):
         return f"""<{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}>"""
 
 
-class BaseSvgElement(Base):
-    ...
+class BaseSvgElement(Base): ...
