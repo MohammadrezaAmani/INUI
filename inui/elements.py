@@ -1,3 +1,5 @@
+from typing import Any
+
 from inui.base import BaseElement, BaseVoidElement
 
 
@@ -378,6 +380,49 @@ class Wbr(BaseElement): ...
 
 
 class Xmp(BaseElement): ...
+"""
+<html>
+    <head>
+        <title>Hot Reload Example</title>
+        <script>
+            var ws = new WebSocket("ws://localhost:8000/ws");
+            ws.onmessage = function(event) {
+                document.body.innerHTML = event.data;
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Hot Reload</h1>
+    </body>
+</html>
+"""
+
+
+class HotReload(BaseVoidElement):
+    def __init__(
+        self, *data: Any, host: str = "localhost", port: int = 8000, **attributes: Any
+    ) -> None:
+        self.host = host
+        self.port = port
+        super().__init__(*data, **attributes)
+
+    def render(self, prettify: bool = False):
+        return Script(
+            """
+            var ws = new WebSocket("ws://%s:%s/ws");
+            ws.onopen = function() {
+                console.log("Connected to WebSocket");
+            };
+            ws.onmessage = function(event) {
+                console.log("Message received:", event.data);
+                document.body.innerHTML = event.data;
+            };
+            ws.onclose = function() {
+                console.log("Disconnected from WebSocket");
+            };
+            """
+            % (self.host, str(self.port))
+        ).render()
 
 
 if __name__ == "__main__":

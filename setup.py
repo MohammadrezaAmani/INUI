@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = "0.4.2"
+VERSION = "0.9"
 
 PACKAGE_NAME = "inui"
 DESCRIPTION = ""
@@ -40,4 +40,9 @@ setup(
     install_requires=REQUIRED_PACKAGES,
     keywords=PROJECT_KEYWORDS,
     classifiers=CLASSIFIERS,
+    entry_points={
+        "console_scripts": [
+            "inui=inui.hotreload:main",
+        ],
+    },
 )

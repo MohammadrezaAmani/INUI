@@ -67,7 +67,16 @@ class _Data:
         self._data: List[Any] = args
 
     def __str__(self) -> str:
-        return "".join(map(str, self._data))
+        return "".join(map(self._str, self._data))
+
+    def _str(self, data):
+        try:
+            if isinstance(data, type):
+                if isinstance(data(), Base):
+                    data = data()
+        except Exception as _:
+            pass
+        return str(data)
 
 
 class Meta(NamedTuple):
@@ -132,6 +141,18 @@ class Base:
 
     def __repr__(self) -> str:
         return self.render()
+
+    def __add__(self, other) -> str:
+        return self.render() + str(other)
+
+    def __radd__(self, other) -> str:
+        return str(other) + self.render()
+
+    def __len__(self):
+        return len(self.render())
+
+    def __getitem__(self, item):
+        return self.render()[item]
 
 
 class BaseElement(Base): ...
