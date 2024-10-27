@@ -1,4 +1,11 @@
-beautifulsoup4==4.12.2
-soupsieve==2.4.1
-lxml
-livereload
+beautifulsoup4==4.12.3
+bs4==0.0.2
+certifi==2024.8.30
+charset-normalizer==3.4.0
+idna==3.10
+livereload==2.7.0
+lxml==5.3.0
+requests==2.32.3
+soupsieve==2.6
+tornado==6.4.1
+urllib3==2.2.3
