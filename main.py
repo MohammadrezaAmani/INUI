@@ -1,10 +1,15 @@
-from inui.base import Class
-from inui.elements import H1, Header, Html, Title
-from inui import tailwind as tw
+from inui.css import CSS, align_content, all, margin
+from inui.css.size import Px
+
+print({margin(): margin.auto() + Px(1) + Px(2)})
+
+print(str("salam" > all.inherit()))
 
 print(
-    Html(
-        Header(Title("Mohammadreza"), tw.TailwindCSS),
-        H1("Man Mohammadreza Hastam", classs=Class(tw.capitalize, tw.align)),
+    CSS(
+        {".h1": align_content + Px(1)},
+        {".h1": align_content + Px(1)},
+        {".h1": align_content.center + Px(1)},
+        h2=align_content + Px(1),
     )
 )

@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = "0.9.2"
+VERSION = "0.9.3"
 
 PACKAGE_NAME = "inui"
 DESCRIPTION = ""

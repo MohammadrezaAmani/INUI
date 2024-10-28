@@ -145,16 +145,16 @@ class Base:
         return self.render()
 
     def __add__(self, other) -> str:
-        return self.render() + str(other)
+        return self.__str__() + " " + self._str(other)
 
     def __radd__(self, other) -> str:
-        return str(other) + self.render()
+        return self._str(other) + " " + self.__str__()
 
     def __len__(self):
-        return len(self.render())
+        return len(self.__str__())
 
     def __getitem__(self, item):
-        return self.render()[item]
+        return self.__str__()[item]
 
     def _str(self, data):
         try:
@@ -164,6 +164,21 @@ class Base:
         except Exception as _:
             pass
         return str(data)
+
+    def __lt__(self, other):
+        return f"{self._str(other)} > {self.__str__()}"
+
+    def __gt__(self, other):
+        return f"{self.__str__()} > {self._str(other)}"
+
+    def __le__(self, other):
+        return f"{self.__str__()} <= {self._str(other)}"
+
+    def __ge__(self, other):
+        return f"{self.__str__()} >= {self._str(other)}"
+
+    def css(self, tag: str = ""):
+        return tag + self.start_tag
 
 
 class BaseElement(Base): ...
