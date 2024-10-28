@@ -1,20 +1,10 @@
-from inui import bootstrap as bs
 from inui.base import Class
-from inui.elements import H1, Body, Header, Hr, Html, Title
+from inui.elements import H1, Header, Html, Title
+from inui import tailwind as tw
 
 print(
     Html(
-        Header(
-            Title("Mohammadreza"),
-            bs.BootStrapCSS,
-        ),
-        Body(
-            H1(
-                "salam Man Mohammadreza Hastam.",
-                class_=Class(bs.AccordionBody, bs.Active),
-            ),
-            Hr,
-            bs.BootStrapJS,
-        ),
+        Header(Title("Mohammadreza"), tw.TailwindCSS),
+        H1("Man Mohammadreza Hastam", classs=Class(tw.capitalize, tw.align)),
     )
 )
