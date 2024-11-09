@@ -1,6 +1,9 @@
 from typing import List
 
-from bs4 import BeautifulSoup, Tag
+try:
+    from bs4 import BeautifulSoup, Tag
+except ImportError:
+    raise "you must install bs4, run `python3 -m pip install bs4"
 
 
 class Pretiffy:

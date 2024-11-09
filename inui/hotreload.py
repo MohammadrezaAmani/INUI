@@ -7,9 +7,15 @@ import os
 import socketserver
 import threading
 
-import websockets
-from watchdog.events import FileSystemEventHandler
-from watchdog.observers import Observer
+try:
+    import websockets
+except ImportError:
+    raise "you must install websockets, run `python3 -m pip install websockets"
+try:
+    from watchdog.events import FileSystemEventHandler
+    from watchdog.observers import Observer
+except ImportError:
+    raise "you must install watchdog, run `python3 -m pip install watchdog"
 
 file_to_watch = ""
 variable_name = ""
