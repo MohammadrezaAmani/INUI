@@ -103,9 +103,7 @@ async def update_html_content(*args):
 def monitor_file(file_to_watch: str, sleep_time: float):
     event_handler = HTMLFileHandler()
     observer = Observer()
-    observer.schedule(
-        event_handler, path=os.path.dirname(file_to_watch), recursive=False
-    )
+    observer.schedule(event_handler, path=os.getcwd(), recursive=False)
     observer.start()
     logging.info("Started monitoring file changes.")
     try:
