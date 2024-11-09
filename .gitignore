@@ -15,3 +15,5 @@ node_modules
 public
 mui/inuireact/.git
 mui/inuireact/.gitignore
+.vscode
+.idea
