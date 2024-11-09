@@ -1,7 +1,7 @@
 # pyproject.toml
 
 [build-system]
-requires      = ["setuptools>=61.0.0", "wheel"]
+requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -16,7 +16,16 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ['ui', 'python', 'html', 'framework','frontend','bootstrap']
+keywords = [
+    'ui',
+    'python',
+    'html',
+    'framework',
+    'frontend',
+    'css',
+    'bootstrap',
+    'tailwind',
+]
 dependencies = []
 requires-python = ">=3.5"
 
@@ -28,3 +37,6 @@ Homepage = "https://github.com/MohammadrezaAmani/"
 
 [tool.setuptools]
 py-modules = ['inui']
+
+[project.scripts]
+inui = "inui.hotreload:main"
