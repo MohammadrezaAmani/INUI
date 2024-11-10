@@ -8,6 +8,9 @@ class e(BaseElement):
     Meta = meta_base("", "", "", "", "", "")
 
 
+_ = e
+
+
 class Doctype(BaseVoidElement): ...
 
 
