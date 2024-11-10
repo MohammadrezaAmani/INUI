@@ -10,7 +10,7 @@ class BaseCSSValue(BaseVoidElement):
     def __init__(self, *values) -> None:
         self.values = values
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         values = ""
         if self.values:
             values += " -"
@@ -26,7 +26,7 @@ class BaseCSSProperty(BaseVoidElement):
         self.values = values
         self.type_ = type_
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         values = ""
         if self.values:
             values += " -"
@@ -41,7 +41,7 @@ class CSS(Base):
         self.attrs = attributes
         self.args = args
 
-    def render(self, inline: bool = True, prettify: bool = False) -> str:
+    def render_to_string(self, inline: bool = True, prettify: bool = False) -> str:
         if inline:
             return f'"{self._css()}"'
         return "{%s}" % self._css()

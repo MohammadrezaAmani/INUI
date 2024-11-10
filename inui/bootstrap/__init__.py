@@ -14,8 +14,8 @@ class BootStrapCSS(BaseVoidElement):
         self.url = url
         super().__init__(*data, **attributes)
 
-    def render(self, prettify: bool = False):
-        return Link(href=self.url).render()
+    def render_to_string(self, prettify: bool = False):
+        return Link(href=self.url).render_to_string()
 
 
 class BootStrapJS(BaseVoidElement):
@@ -26,15 +26,15 @@ class BootStrapJS(BaseVoidElement):
         self.url = url
         super().__init__(*data, **attributes)
 
-    def render(self, prettify: bool = False):
-        return Script(src=self.url).render()
+    def render_to_string(self, prettify: bool = False):
+        return Script(src=self.url).render_to_string()
 
 
 class BaseBS(BaseVoidElement):
     def __init__(self, *values) -> None:
         self.values = values
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         values = ""
         if self.values:
             values += "-"

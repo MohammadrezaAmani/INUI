@@ -22,16 +22,16 @@ class TailwindCSS(BaseVoidElement):
         self.customcss = customcss
         super().__init__(*data, **attributes)
 
-    def render(self, prettify: bool = False):
+    def render_to_string(self, prettify: bool = False):
         return (
-            Script(src=self.url).render()
+            Script(src=self.url).render_to_string()
             + (
-                Script(f"tailwind.config={json.dumps(self.config)}").render()
+                Script(f"tailwind.config={json.dumps(self.config)}").render_to_string()
                 if self.config
                 else ""
             )
             + (
-                Style(self.customcss, type_="text_tailwindcss").render()
+                Style(self.customcss, type_="text_tailwindcss").render_to_string()
                 if self.customcss
                 else ""
             )
@@ -44,7 +44,7 @@ class BaseTW(BaseVoidElement):
     def __init__(self, *values) -> None:
         self.values = values
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         values = ""
         if self.values:
             values += " -"

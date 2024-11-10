@@ -1,6 +1,11 @@
 from typing import Any
 
 from inui.base import BaseElement, BaseVoidElement
+from inui.base import _Meta as meta_base
+
+
+class e(BaseElement):
+    Meta = meta_base("", "", "", "", "", "")
 
 
 class Doctype(BaseVoidElement): ...
@@ -92,7 +97,7 @@ class Comment(BaseElement):
         start_tag = "!--"
         end_tag = "--"
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         return f"<{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)} {str(self.data)}{self.end_tag}>"
 
 
@@ -259,6 +264,9 @@ class Object(BaseElement): ...
 class Ol(BaseElement): ...
 
 
+class Ul(BaseElement): ...
+
+
 class Optgroup(BaseElement): ...
 
 
@@ -409,7 +417,7 @@ class HotReload(BaseVoidElement):
         self.port = port
         super().__init__(*data, **attributes)
 
-    def render(self, prettify: bool = False):
+    def render_to_string(self, prettify: bool = False):
         return Script(
             """
             var ws = new WebSocket("ws://%s:%s/ws");
@@ -425,7 +433,7 @@ class HotReload(BaseVoidElement):
             };
             """
             % (self.host, str(self.port))
-        ).render()
+        ).render_to_string()
 
 
 if __name__ == "__main__":

@@ -14,3 +14,8 @@ TAILWINDCSS_URL = "https://cdn.tailwindcss.com"
 TAILWINDCSS_CONFIG = {}
 
 TAILWINDCSS_CUSTOM_CSS = ""
+
+FOUNDATION_CSS_VERSION = "2.4.0"
+FOUNDATION_CSS_URL = f"https://cdnjs.cloudflare.com/ajax/libs/foundation-emails/{FOUNDATION_CSS_VERSION}/foundation-emails.css"
+
+FOUNDATION_CSS_MIN_URL = f"https://cdnjs.cloudflare.com/ajax/libs/foundation-emails/{FOUNDATION_CSS_VERSION}/foundation-emails.min.css"

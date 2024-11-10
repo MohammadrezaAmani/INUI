@@ -9,7 +9,7 @@ class Size(Base):
     def __init__(self, value=0) -> None:
         self.value = value
 
-    def render(self, prettify: bool = False) -> str:
+    def render_to_string(self, prettify: bool = False) -> str:
         metric = self.metric or self.__class__.__name__.lower()
         return f"{self.value}{metric}"
 

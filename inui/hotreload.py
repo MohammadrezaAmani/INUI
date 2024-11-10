@@ -21,17 +21,22 @@ file_to_watch = ""
 variable_name = ""
 clients = set()
 sleep_time = 1
+static_dir = "."
 
 parser = argparse.ArgumentParser(description="Hot reload HTML content.")
 parser.add_argument("module", type=str, help="Module name in the format main:variable")
 parser.add_argument("--host", type=str, default="localhost", help="Host address")
 parser.add_argument("--port", type=int, default=8000, help="Port number")
 parser.add_argument("--sleep", type=float, default=1, help="Sleep time")
+parser.add_argument(
+    "--static-dir", type=str, default=static_dir, help="Static files directory"
+)
 args = parser.parse_args()
 
 module_name, variable_name = args.module.split(":")
 file_to_watch = f"{module_name.replace('.', '/')}.py"
 sleep_time = args.sleep
+static_dir = args.static_dir
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -43,7 +48,7 @@ def get_file_contents(file_name, variable_name):
         spec = importlib.util.spec_from_file_location(module_name, file_name)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        return getattr(module, variable_name)
+        return str(getattr(module, variable_name))
     except Exception as err:
         logging.error(f"Error getting file contents: {err}")
         return f"<h1>{err}</h1>"
@@ -122,9 +127,15 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             ) + hot_reload_script(host=args.host, port=args.port + 1)
             self.send_response(200)
             self.send_header("Content-type", "text/html")
+            self.send_header(
+                "Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate"
+            )
             self.end_headers()
             self.wfile.write(str(content).encode())
             logging.info("Served HTML content.")
+        else:
+            self.path = f"/{static_dir}{self.path}"
+            super().do_GET()
 
 
 def run_server(host, port):

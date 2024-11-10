@@ -23,4 +23,4 @@ html_content = Html(
         *[INUI_IS_THE_BEST for _ in range(10)],
     ),
     style="background:#000000;",
-).render()
+).render_to_string()
