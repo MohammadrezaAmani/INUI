@@ -145,16 +145,30 @@ def run_server(host, port):
 
 
 def main():
+    def run_async():
+        new_loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(new_loop)
+
+        async def start_websocket_server():
+            start_server = await websockets.serve(
+                websocket_handler, args.host, args.port + 1
+            )
+            await start_server.wait_closed()
+
+        new_loop.run_until_complete(start_websocket_server())
+
     threading.Thread(
         target=monitor_file, args=(file_to_watch, sleep_time), daemon=True
     ).start()
+
     threading.Thread(
         target=run_server, args=(args.host, args.port), daemon=True
     ).start()
 
-    start_server = websockets.serve(websocket_handler, args.host, args.port + 1)
-    asyncio.get_event_loop().run_until_complete(start_server)
-    asyncio.get_event_loop().run_forever()
+    websocket_thread = threading.Thread(target=run_async, daemon=True)
+    websocket_thread.start()
+
+    websocket_thread.join()
 
 
 if __name__ == "__main__":
