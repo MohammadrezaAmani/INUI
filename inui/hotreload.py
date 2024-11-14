@@ -151,7 +151,7 @@ def main():
 
         async def start_websocket_server():
             start_server = await websockets.serve(
-                websocket_handler, args.host, args.port + 1
+                lambda x: websocket_handler(x, file_to_watch), args.host, args.port + 1
             )
             await start_server.wait_closed()
 
