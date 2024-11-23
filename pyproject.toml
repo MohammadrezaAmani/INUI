@@ -1,12 +1,12 @@
 # pyproject.toml
 
 [build-system]
-requires = ["setuptools>=61.0.0", "wheel"]
+requires = ["setuptools>=61.0", "wheel", "uv"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "inui"
-version = "1.0.0.1"
+version = "1.0.0.2"
 description = "Powerful and Highly Customizable Python Library for UI"
 readme = "README.md"
 authors = [{ name = "Mohammadreza Amani", email = "more.amani@yahoo.com" }]
