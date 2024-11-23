@@ -43,3 +43,10 @@ class BaseData:
 
     def __len__(self):
         return len(self._data)
+
+    def delete(self, data: list[Any] | Any):
+        if not isinstance(data, (list, tuple, set)):
+            data = (data,)
+        for value in data:
+            while value in self._data:
+                self._data.remove(value)
