@@ -73,7 +73,7 @@ class BaseAttributes:
             for key, value in data.items():
                 result += f"{self._str(key)}: {self._str(value)};"
             return f"{fill}{result}{fill}"
-        return str(data)
+        return str(data).replace('"', '\\"')  #! we have problem with quotation.
 
     def copy(self):
         return self.attrs.copy()

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inui"
-version = "1.0.0.2"
+version = "1.0.0.3"
 description = "Powerful and Highly Customizable Python Library for UI"
 readme = "README.md"
 authors = [{ name = "Mohammadreza Amani", email = "more.amani@yahoo.com" }]
@@ -39,4 +39,4 @@ Homepage = "https://github.com/MohammadrezaAmani/"
 py-modules = ['inui']
 
 [project.scripts]
-inui = "inui.hotreload:main"
+inui = "inui:main"
