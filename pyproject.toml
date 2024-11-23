@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inui"
-version = "0.9.7.2"
+version = "1.0.0.1"
 description = "Powerful and Highly Customizable Python Library for UI"
 readme = "README.md"
 authors = [{ name = "Mohammadreza Amani", email = "more.amani@yahoo.com" }]
@@ -30,7 +30,7 @@ dependencies = []
 requires-python = ">=3.5"
 
 [project.optional-dependencies]
-dev = []
+full = ["black", "bs4", "lxml", "watchdog", "websockets"]
 
 [project.urls]
 Homepage = "https://github.com/MohammadrezaAmani/"

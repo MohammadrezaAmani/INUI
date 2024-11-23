@@ -1,17 +1,12 @@
-from inui.base import __from_context__, __out__
-from inui.colors import Black
-from inui.css import color
-from inui.elements import H1
+from inui.elements import H2, H3, Html
+from inui.query import select
 
-html = H1()
-a = 12
-result = H1()
-for i in __from_context__("a", "my"):
-    result | i | " "
-
-html | (result | "Mohammadreza Amani") @ {color: Black}
-
-
-__out__(html)
-
-print(html)
+print(
+    select(
+        Html(
+            H2("Mobina", "Mohammadreza", style="black"),
+            H3("Maryam", style="black"),
+        ),
+        "___class_name",
+    )
+)

@@ -52,6 +52,7 @@ replaceDict = {
     "from_": "from",
     "inn": "in",
     "in_": "in",
+    "as_": "as",
 }
 
 

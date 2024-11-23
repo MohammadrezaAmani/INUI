@@ -1,47 +1,30 @@
 from __future__ import annotations
 
-import re
-from typing import Any, Dict, List, NamedTuple, Tuple, Type, TypeVar, Union
+from typing import Any, Dict, List, NamedTuple, Type, TypeVar
 
+from inui.bases.attributes import BaseAttributes
+from inui.bases.base import Base
+from inui.bases.data import BaseData
 from inui.config.replaces import replace
+from inui.query import (
+    AttributeDescribe,
+    Describe,
+    NoneQueryset,
+    Q,
+    Queryset,
+    filter,
+    select,
+)
 
 
-def _fix_quoute(string: str):
-    string = string.replace("\\", "\\\\")
-    if "'" in string and '"' in string:
-        string = string.replace('"', '\\"')
-        string = string.replace("'", "\\'")
-    elif '"' in string:
-        string = string.replace('"', "'")
-    elif "'" in string:
-        string = string.replace("'", '"')
-    return string
-
-
-def _find_quote(string: str):
-    if '"' in string and '"' in string:
-        string = string.replace('"', '\\"')
-        string = string.replace("'", "\\'")
-        return f'"{string}"'
-    elif "'" in string:
-        return f'"{string}"'
-
-    elif '"' in string:
-        return f"'{string}'"
-    else:
-        return f'"{string}"'
-
-
-class Attributes:
+class Attributes(BaseAttributes):
     def __init__(self, **kwargs: Any) -> None:
         self.attrs: Dict[str, Any] = {
             replace(key): value for key, value in kwargs.items()
         }
 
-    # def __getattribute__(self, __name: str) -> Any:
-    #     if __name == "attrs":
-    #         return super().__getattribute__("attrs")
-    #     return self.attrs.get(__name, None)
+    def describe(self):
+        return [AttributeDescribe(key, value) for key, value in self.attrs.items()]
 
     def __str__(self) -> str:
         return " ".join(
@@ -50,58 +33,9 @@ class Attributes:
             if value is not None
         )
 
-    def fix_values(self, value: str | list = ""):
-        if isinstance(value, str):
-            return value
-
-    def __getitem__(self, index: str) -> Any:
-        return self.attrs.get(index, None)
-
-    def __setitem__(self, index: str, value: Any) -> None:
-        self.attrs[index] = value
-
-    def __delitem__(self, index: str) -> None:
-        del self.attrs[index]
-
-    def __iter__(self) -> Any:
-        return iter(self.attrs)
-
-    def __len__(self) -> int:
-        return len(self.attrs)
-
-    def keys(self) -> List[str]:
-        return list(self.attrs.keys())
-
-    def values(self) -> List[Any]:
-        return list(self.attrs.values())
-
-    def items(self) -> List[Tuple[str, Any]]:
-        return list(self.attrs.items())
-
-    def get(self, index: str, default: Any = None) -> Any:
-        return self.attrs.get(index, default)
-
-    def update(self, **kwargs: Any) -> None:
-        self.attrs.update(kwargs)
-
-    def clear(self) -> None:
-        self.attrs.clear()
-
-    def pop(self, index: str, default: Any = None) -> Any:
-        return self.attrs.pop(index, default)
-
-    def popitem(self) -> Tuple[str, Any]:
-        return self.attrs.popitem()
-
     def append(self, key: str = "class", *values):
         key = replace(key).lower()
-        if key not in self.attrs.keys():
-            self.attrs[key] = values
-        else:
-            if isinstance(self.attrs[key], (list, tuple, set)):
-                self.attrs[key] = (*self.attrs[key], *values)
-            else:
-                self.attrs[key] = (self.attrs[key], *values)
+        return super().append(key, *values)
 
     def _str(self, data, seperator=" ", fill=""):
         try:
@@ -110,28 +44,37 @@ class Attributes:
                     data = data()
         except Exception as _:
             pass
+        return super()._str(data, seperator, fill)
 
-        if isinstance(data, (set, tuple, list)):
-            result = seperator.join([self._str(i) for i in data])
-            return f"{fill}{result}{fill}"
+    def select(
+        self,
+        field: str,
+        case_senstive: bool = True,
+        number: int | None = None,
+        as_list: bool = False,
+    ):
+        result = []
+        if number == 0:
+            if as_list:
+                return []
+            else:
+                return NoneQueryset()
 
-        if isinstance(data, dict):
-            result = ""
-            for key, value in data.items():
-                result += f"{self._str(key)}: {self._str(value)};"
-            return f"{fill}{result}{fill}"
-        return str(data)
+        if isinstance(field, str):
+            field = field if case_senstive else field.lower()
+            field = Q.process_field(field)
+        try:
+            if field[0].startswith(tuple("0123456789")):
+                ...
+        except Exception as _:
+            ...
 
-    def copy(self):
-        return self.attrs.copy()
+        return result
 
 
-class _Data:
+class _Data(BaseData):
     def __init__(self, *args) -> None:
         self._data: List[Any] = args
-
-    def __str__(self) -> str:
-        return "".join(map(self._str, self._data))
 
     def _str(self, data):
         try:
@@ -140,13 +83,98 @@ class _Data:
                     data = data()
         except Exception as _:
             pass
-        return str(data)
+        return super()._str(data)
 
-    def append(self, *args):
-        self._data = (*self._data, *args)
+    def describe(self, data: list | None = None):
+        results = []
+        if data is None:
+            data = self._data
+        self._fix_calls()
+        for d in data:
+            if isinstance(d, Base):
+                results.append(d.describe())
+            elif isinstance(d, (set, list, tuple)):
+                results.append(
+                    Describe(attributes=[], data=self.describe(d)), type=type(d)
+                )
+            else:
+                results.append(Describe(attributes=[], data=d, type=type(d)))
+        return results
 
-    def copy(self):
-        return self._data.copy()
+    def _fix_calls(self):
+        for i, d in enumerate(self._data):
+            try:
+                if isinstance(d, type):
+                    self._data[i] = d()
+            except Exception as _:
+                pass
+
+    def select(
+        self,
+        field: str,
+        case_senstive: bool = True,
+        number: int | None = None,
+        as_list: bool = False,
+    ):
+        result = []
+        number = len(self._data) if number is None else number
+        if number == 0:
+            if as_list:
+                return []
+            else:
+                return NoneQueryset()
+        self._fix_calls()
+        if isinstance(field, str):
+            field = field if case_senstive else field.lower()
+            field = Q.process_field(field)
+        try:
+            if field[0].startswith(tuple("0123456789")):
+                if len(field) == 1:
+                    res = [self._data[int(field[0])]]
+                else:
+                    res = select(
+                        self._data[int(field[0])],
+                        field[1:],
+                        case_senstive=case_senstive,
+                        number=number,
+                        as_list=True,
+                    )
+                if as_list:
+                    return res
+                else:
+                    return Queryset(*res)
+        except Exception as _:
+            pass
+
+        for i in self._data:
+            name = ""
+            if isinstance(i, Base):
+                name = i.__class__.__name__
+            if not case_senstive:
+                name = name.lower()
+
+            if name == field[0]:
+                if len(field) == 1:
+                    result.append(i)
+                else:
+                    res = select(
+                        i,
+                        field[1:],
+                        case_senstive=case_senstive,
+                        number=number,
+                        as_list=True,
+                    )
+                    if res != NoneQueryset() and res is not None and res != []:
+                        result = [*result, *res]
+                number != 1
+                if number <= 0:
+                    break
+        if as_list:
+            return result
+        else:
+            return Queryset(*result) if result else NoneQueryset()
+
+    def filter(): ...
 
 
 class _Meta(NamedTuple):
@@ -161,231 +189,54 @@ class _Meta(NamedTuple):
 empty = _Meta("", "", "", "", "", "")
 
 
-class Base:
+class BaseElement(Base):
     _Meta: Type[_Meta] = _Meta()
     _data = _Data()
     _attributes = Attributes()
+    is_deleted = False
+    _data_class = _Data
+    attributes_class = Attributes
 
-    def __init__(
-        self, *data: Any, _meta: Type[_Meta] | None = None, **attributes: Any
-    ) -> None:
-        self.data = data
-        self.attributes = attributes
-        self._Meta = _meta or self._Meta
-
-    @property
-    def data(self) -> list:
-        return self._data
-
-    @data.setter
-    def data(self, value: Any) -> None:
-        self._data = _Data(*value)
-
-    @property
-    def start_tag(self) -> str:
-        return (
-            self._Meta.start_tag
-            if self._Meta.start_tag is not None
-            else self.__class__.__name__.lower()
-        )
-
-    @start_tag.setter
-    def start_tag(self, value: str) -> None:
-        self._Meta.start_tag = value
-
-    @property
-    def end_tag(self) -> str:
-        return (
-            self._Meta.end_tag
-            if self._Meta.end_tag is not None
-            else self.__class__.__name__.lower()
-        )
-
-    @end_tag.setter
-    def end_tag(self, value: str) -> None:
-        self._Meta.end_tag = value
-
-    @property
-    def attributes(self) -> Attributes:
-        return self._attributes
-
-    @attributes.setter
-    def attributes(self, value: Union[Attributes, Dict[str, Any]]) -> None:
-        if not isinstance(value, (Attributes, dict)):
-            raise TypeError("attributes must be an instance of Attributes or dict")
-        self._attributes = (
-            Attributes(**value) if isinstance(value, dict) else value.copy()
-        )
-
-    def render_to_string(self, prettify: bool = False) -> str:
-
-        return f"{self._Meta.start_sign}{self.start_tag}{' ' if len(self.attributes) > 0 else ''}\
-{str(self.attributes)}{self._Meta.end_sign}{str(self.data)}{self._Meta.close_sign}{self.end_tag}{self._Meta.end_sign}"
-
-    def __str__(self) -> str:
-        return self.render_to_string()
-
-    def __repr__(self) -> str:
-        return self.render_to_string()
-
-    def __add__(self, other):
-        return none(self.copy(), other)
-
-    def __radd__(self, other) -> str:
-        return none(other, self.copy())
-
-    def __len__(self):
-        return len(self.__str__())
-
-    def __getitem__(self, item):
-        return self.__str__()[item]
-
-    def _str(self, data):
-        try:
-            if isinstance(data, type):
-                if isinstance(data(), Base):
-                    data = data()
-        except Exception as _:
-            pass
-        return str(data)
-
-    def _compare(self, other, op) -> Base:
-        return none(self.copy(), op, other)
-
-    def __lt__(self, other):
-        return self._compare(other, "<")
-
-    def __gt__(self, other):
-        return self._compare(other, ">")
-
-    def __le__(self, other):
-        return self._compare(other, "<=")
-
-    def __ge__(self, other):
-        return self._compare(other, ">=")
-
-    def __mul__(self, value: int):
-        return none(*[self.copy() for _ in range(int(value))])
-
-    def __rmul__(self, value: int):
-        return self.__mul__(value)
-
-    def __imul__(self, value: int):
-        return self.__mul__(value)
-
-    def css(self, tag: str = ""):
-        return tag + self.start_tag
-
-    def __matmul__(self, other):
-        return self.add_attribute(other, key="style")
-
-    def __and__(self, other):
-        return self.add_attribute(other, key="id")
-
-    def __or__(self, other):
-        return self.add_child(other)
-
-    def __mod__(self, other):
-        return self.add_attribute(other, key="class")
-
-    def __truediv__(self, other):
-        return self.add_attribute(other, key="type")
-
-    def __floordiv__(self, other):
-        return self.add_attribute(other, key="name")
-
-    def __ifloordiv__(self, other):
-        return self.add_attribute(other, key="name")
-
-    def __imatmul__(self, other):
-        return self.__matmul__(other)
-
-    def __iand__(self, other):
-        return self.__and__(other)
-
-    def __ior__(self, other):
-        return self.__or__(other)
-
-    def __imod__(self, other):
-        return self.__mod__(other)
-
-    def __itruediv__(self, other):
-        return self.__truediv__(other)
-
-    def copy(self):
-        return self.__class__(*self._data._data, **self._attributes.copy())
-
-    def add_attribute(self, other, key="class"):
-        if not isinstance(other, (list, set, tuple)):
-            other = (other,)
-        self._attributes.append(
-            key,
-            *other,
-        )
-        return self
-
-    def add_child(self, other):
-        if not isinstance(other, (list, set, tuple)):
-            other = (other,)
-        self._data.append(
-            *other,
-        )
-        return self
-
-    def from_string(
+    def select(
         self,
-        template_name: str = "",
-        context: dict[str, Any] | None = None,
-        request=None,
+        *field,
+        case_senstive: bool = True,
+        number: int | None = None,
+        as_list=False,
     ):
-        context = context or {}
-
-        def replace_from_context(match: re.Match):
-            var_name = match.group(1)
-            default_value = eval(match.group(2))
-            r = context.get(var_name, default_value)
-            if isinstance(r, str):
-                r = _find_quote(r)
-            return str(r)
-
-        def replace_request(match: re.Match):
-            default_value = eval(match.group(1))
-            r = request or default_value
-            if isinstance(r, str):
-                r = _find_quote(r)
-            return str(r)
-
-        template_name = re.sub(
-            r"__from_context__\(\s*['\"](\w+)['\"]\s*,\s*(.*?)\s*\)",
-            replace_from_context,
-            template_name,
+        return select(
+            self, *field, case_senstive=case_senstive, number=number, as_list=as_list
         )
-        template_name = re.sub(r"__request__\((.*?)\)", replace_request, template_name)
 
-        template_name = re.sub(r"__out__\((.*?)\)", r"output = \1", template_name)
-        local_vars = {}
-        exec(template_name, {}, local_vars)
-
-        return local_vars.get("output")
-
-    def render(self, template_name, context=None, request=None, base_path: str = ""):
-        with open(base_path + template_name) as f:
-            text = f.read()
-        return self.from_string(text, context, request)
-
-
-class BaseElement(Base): ...
+    def filter(
+        self,
+        *args,
+        case_senstive: bool = True,
+        number: int | None = None,
+        as_list=False,
+        **queries,
+    ):
+        return filter(
+            self,
+            self,
+            *args,
+            case_senstive=case_senstive,
+            number=number,
+            as_list=as_list,
+            **queries,
+        )
 
 
 class BaseVoidElement(BaseElement):
     def render_to_string(self, prettify: bool = False):
-        return f"""{self._Meta.start_sign}{self.start_tag}{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}{self._Meta.close_sign} """
+        return f"""{self._Meta.start_sign}{self.start_tag}\
+{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}{self._Meta.void_sign} """
 
 
-class BaseSvgElement(Base): ...
+class BaseSvgElement(BaseElement): ...
 
 
-class Class(Base):
+class Class(BaseElement):
     def __init__(self, *args) -> None:
         self.args = args
 
@@ -393,7 +244,7 @@ class Class(Base):
         return " ".join(list(map(self._str, self.args)))
 
 
-class none(Base):
+class none(BaseElement):
     _Meta = empty
 
 
@@ -410,6 +261,3 @@ def __out__(*args: T) -> T:
 
 def __request__(*defualt: T) -> T:
     return (*defualt,)
-
-
-# if "\n" not in
