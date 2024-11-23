@@ -393,7 +393,21 @@ class Video(BaseElement): ...
 class Wbr(BaseElement): ...
 
 
+class Textarea(BaseElement):
+    _Meta = meta_base("Textarea", "Textarea")
+
+
+class Select(BaseElement):
+    _Meta = meta_base("Select", "Select")
+
+
+class Em(BaseElement):
+    _Meta = meta_base("Em", "Em")
+
+
 class Xmp(BaseElement): ...
+
+
 """
 <html>
     <head>
