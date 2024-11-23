@@ -393,37 +393,17 @@ class Video(BaseElement): ...
 class Wbr(BaseElement): ...
 
 
-class Textarea(BaseElement):
+class Textarea(BaseVoidElement):
     _Meta = meta_base("Textarea", "Textarea")
 
 
-class Select(BaseElement):
-    _Meta = meta_base("Select", "Select")
+class Select(BaseElement): ...
 
 
-class Em(BaseElement):
-    _Meta = meta_base("Em", "Em")
+class Em(BaseElement): ...
 
 
 class Xmp(BaseElement): ...
-
-
-"""
-<html>
-    <head>
-        <title>Hot Reload Example</title>
-        <script>
-            var ws = new WebSocket("ws://localhost:8000/ws");
-            ws.onmessage = function(event) {
-                document.body.innerHTML = event.data;
-            };
-        </script>
-    </head>
-    <body>
-        <h1>Hot Reload</h1>
-    </body>
-</html>
-"""
 
 
 class HotReload(BaseVoidElement):
