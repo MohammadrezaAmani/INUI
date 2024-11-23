@@ -4,6 +4,7 @@ from inui.hotreload import hot_reload
 from inui import build
 from inui.toinui import convert
 import logging
+from inui import __version__
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -77,6 +78,7 @@ COMMANDS = {
             },
         ],
     },
+    "version": {"alias": ["v"], "help": "Version of INUI.", "args": []},
 }
 
 
@@ -140,6 +142,8 @@ def main():
             save_to=args.out,
             indent=args.indent,
         )
+    if args.command == "version":
+        print(__version__)
 
 
 if __name__ == "__main__":
