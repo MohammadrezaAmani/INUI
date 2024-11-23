@@ -1,4 +1,3 @@
-import argparse
 import asyncio
 import http.server
 import importlib.util
@@ -17,29 +16,18 @@ try:
 except ImportError:
     raise "you must install watchdog, run `python3 -m pip install watchdog"
 
-file_to_watch = ""
-variable_name = ""
+
+global _host, _port, _file_to_watch, _variable_name, _sleep_time, _static_dir
+
+_host = "localhost"
+_port = 8000
+_file_to_watch = ""
+_variable_name = ""
 clients = set()
-sleep_time = 1
-static_dir = "."
-
-parser = argparse.ArgumentParser(description="Hot reload HTML content.")
-parser.add_argument("module", type=str, help="Module name in the format main:variable")
-parser.add_argument("--host", type=str, default="localhost", help="Host address")
-parser.add_argument("--port", type=int, default=8000, help="Port number")
-parser.add_argument("--sleep", type=float, default=1, help="Sleep time")
-parser.add_argument(
-    "--static-dir", type=str, default=static_dir, help="Static files directory"
-)
-args = parser.parse_args()
-
-module_name, variable_name = args.module.split(":")
-file_to_watch = f"{module_name.replace('.', '/')}.py"
-sleep_time = args.sleep
-static_dir = args.static_dir
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+_sleep_time = 1
+_static_dir = "."
+# module_name, variable_name = module.split(":")
+# file_to_watch = f"{module_name.replace('.', '/')}.py"
 
 
 def get_file_contents(file_name, variable_name):
@@ -99,13 +87,13 @@ async def websocket_handler(websocket, path):
 
 
 async def update_html_content(*args):
-    html_content = get_file_contents(file_to_watch, variable_name)
+    html_content = get_file_contents(_file_to_watch, _variable_name)
     if not isinstance(html_content, str):
         html_content = str(html_content)
     await send_update(html_content)
 
 
-def monitor_file(file_to_watch: str, sleep_time: float):
+def monitor_file(_file_to_watch: str, sleep_time: float):
     event_handler = HTMLFileHandler()
     observer = Observer()
     observer.schedule(event_handler, path=os.getcwd(), recursive=False)
@@ -123,8 +111,8 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             content = get_file_contents(
-                file_to_watch, variable_name
-            ) + hot_reload_script(host=args.host, port=args.port + 1)
+                _file_to_watch, _variable_name
+            ) + hot_reload_script(host=_host, port=_port + 1)
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.send_header(
@@ -134,7 +122,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(str(content).encode())
             logging.info("Served HTML content.")
         else:
-            self.path = f"/{static_dir}{self.path}"
+            self.path = f"/{_static_dir}{self.path}"
             super().do_GET()
 
 
@@ -144,32 +132,45 @@ def run_server(host, port):
         httpd.serve_forever()
 
 
-def main():
+def hot_reload(
+    host: str,
+    port: int,
+    module: str,
+    variable_name: str,
+    sleep_time: float,
+    static_dir: str,
+):
+    global _host, _port, _file_to_watch, _variable_name, _sleep_time, _static_dir
+    file_to_watch = f"{module.replace('.', '/')}.py"
+
+    _host, _port, _file_to_watch, _variable_name, _sleep_time, _static_dir = (
+        host,
+        port,
+        file_to_watch,
+        variable_name,
+        sleep_time,
+        static_dir,
+    )
+
     def run_async():
         new_loop = asyncio.new_event_loop()
         asyncio.set_event_loop(new_loop)
 
         async def start_websocket_server():
             start_server = await websockets.serve(
-                lambda x: websocket_handler(x, file_to_watch), args.host, args.port + 1
+                lambda x: websocket_handler(x, _file_to_watch), host, port + 1
             )
             await start_server.wait_closed()
 
         new_loop.run_until_complete(start_websocket_server())
 
     threading.Thread(
-        target=monitor_file, args=(file_to_watch, sleep_time), daemon=True
+        target=monitor_file, args=(_file_to_watch, _sleep_time), daemon=True
     ).start()
 
-    threading.Thread(
-        target=run_server, args=(args.host, args.port), daemon=True
-    ).start()
+    threading.Thread(target=run_server, args=(host, port), daemon=True).start()
 
     websocket_thread = threading.Thread(target=run_async, daemon=True)
     websocket_thread.start()
 
     websocket_thread.join()
-
-
-if __name__ == "__main__":
-    main()

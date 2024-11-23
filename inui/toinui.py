@@ -1,4 +1,3 @@
-import argparse
 import re
 
 try:
@@ -6,7 +5,6 @@ try:
 except ImportError:
     raise "you must install lxml, run `python3 -m pip install lxml"
 try:
-
     from black import FileMode, format_str
 except ImportError:
     raise "you must install black, run `python3 -m pip install black"
@@ -119,13 +117,13 @@ def create_element_from_etree(element: etree._Element):
     )
 
 
-class HtmlTo_inui:
+class HTML2INUI:
     def __init__(
-        self, html=None, url=None, fileName=None, saveTo=None, indent=4
+        self, html=None, url=None, file_name=None, save_to=None, indent=4
     ) -> None:
         self.html = html
         self.url = url
-        self.filename = fileName
+        self.file_name = file_name
         self.indent = indent
         self.inui = None
         self.imports = []
@@ -136,6 +134,7 @@ class HtmlTo_inui:
         return self.add_imports(self._create_element_from_etree(root))
 
     def add_imports(self, code: str):
+        print("adding import")
         imports = self.manage_imports(self.imports)
         not_imported = self.create_unknown_elements()
         return self.format(
@@ -189,7 +188,9 @@ class HtmlTo_inui:
         return (
             "(" + ", ".join([str(i) for i in data]) + ")"
             if len(data) > 1
-            else str(data[0]) if len(data) > 0 else ""
+            else str(data[0])
+            if len(data) > 0
+            else ""
         )
 
     def _create_element_from_etree(self, element: etree._Element):
@@ -235,54 +236,46 @@ class HtmlTo_inui:
 
     def file(self, path=None):
         if path is not None:
-            self.filename = path
-        with open(self.filename, "r", encoding="utf-8") as f:
+            self.file_name = path
+        with open(self.file_name, "r", encoding="utf-8") as f:
             self.html = f.read()
         return self.to_inui(self.html)
 
-    def save(self, path):
-        if self.inui:
-            self.to_inui(self.html)
+    def save(self, path, content=None):
+        if not content and self.inui:
+            content = self.to_inui(self.html)
+
         with open(path, "w", encoding="utf-8") as f:
-            f.write(str(self.inui))
+            f.write(str(content))
         return True
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Convert HTML to inui format")
-    parser.add_argument("--html", type=str, help="HTML content as a string")
-    parser.add_argument("--url", type=str, help="URL to fetch HTML content from")
-    parser.add_argument("--fileName", type=str, help="Path to the HTML file")
-    parser.add_argument("--saveTo", type=str, help="Path to save the output file")
-    parser.add_argument(
-        "--indent", type=int, default=4, help="Indentation level for output"
+def convert(
+    html: str,
+    url: str,
+    file_name: str,
+    save_to: str,
+    indent: str,
+):
+    converter = HTML2INUI(
+        html=html,
+        url=url,
+        file_name=file_name,
+        save_to=save_to,
+        indent=indent,
     )
 
-    args = parser.parse_args()
-
-    converter = HtmlTo_inui(
-        html=args.html,
-        url=args.url,
-        fileName=args.fileName,
-        saveTo=args.saveTo,
-        indent=args.indent,
-    )
-
-    if args.url:
-        output = converter.from_url(args.url)
-    elif args.fileName:
-        output = converter.file(args.fileName)
-    elif args.html:
-        output = converter.to_inui(args.html)
+    if url:
+        output = converter.from_url(url)
+    elif file_name:
+        output = converter.file(file_name)
+    elif html:
+        output = converter.to_inui(html)
     else:
-        raise ValueError("Either --html, --url or --fileName must be provided")
+        raise ValueError("Either --html, --url or --file_name must be provided")
 
-    if args.saveTo:
-        converter.save(args.saveTo)
-        print(f"Output saved to {args.saveTo}")
+    if save_to:
+        converter.save(save_to, output)
+        print(f"Output saved to {save_to}")
     else:
         print(output)
-
-
-if __name__ == "__main__":
-    main()
