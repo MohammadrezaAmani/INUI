@@ -8,14 +8,13 @@ from inui.tailwind.utils import tw_class_to_lower
 
 
 class TailwindCSS(BaseVoidElement):
-
     def __init__(
         self,
         *data: Any,
         url: str = TAILWINDCSS_URL,
         config: dict = TAILWINDCSS_CONFIG,
         customcss: str = TAILWINDCSS_CUSTOM_CSS,
-        **attributes: Any
+        **attributes: Any,
     ) -> None:
         self.url = url
         self.config = config

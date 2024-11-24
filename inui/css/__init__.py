@@ -1130,7 +1130,6 @@ class flex_flow(BaseCSSProperty):
 
 
 class flex_grow(BaseCSSProperty):
-
     class inherit(BaseCSSValue): ...
 
     class initial(BaseCSSValue): ...
