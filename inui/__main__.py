@@ -4,7 +4,10 @@ from inui.hotreload import hot_reload
 from inui import build
 from inui.toinui import convert
 import logging
-from inui import __version__
+import os
+
+INUI_PATH = os.path.dirname(os.path.realpath(__file__))
+
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -78,7 +81,7 @@ COMMANDS = {
             },
         ],
     },
-    "version": {"alias": ["v"], "help": "Version of INUI.", "args": []},
+    "version": {"aliases": ["v"], "help": "Version of INUI.", "args": []},
 }
 
 
@@ -143,7 +146,14 @@ def main():
             indent=args.indent,
         )
     if args.command == "version":
-        print(__version__)
+        print(__version__())
+
+
+def __version__() -> str:
+    config_path = os.path.join(INUI_PATH, "__version__")
+    with open(config_path, encoding="utf-8") as f:
+        text = f.read()
+    return text.strip()
 
 
 if __name__ == "__main__":
