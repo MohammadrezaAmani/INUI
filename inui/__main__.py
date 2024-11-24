@@ -6,6 +6,7 @@ import sys
 from inui.bases.utils import build
 from inui.hotreload import hot_reload
 from inui.toinui import convert
+from inui import __version__
 
 INUI_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -147,14 +148,7 @@ def main():
             indent=args.indent,
         )
     if args.command == "version":
-        print(__version__())
-
-
-def __version__() -> str:
-    config_path = os.path.join(INUI_PATH, "__version__")
-    with open(config_path, encoding="utf-8") as f:
-        text = f.read()
-    return text.strip()
+        print(__version__)
 
 
 if __name__ == "__main__":
