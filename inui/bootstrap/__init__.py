@@ -7,7 +7,6 @@ from inui.elements import Link, Script
 
 
 class BootStrapCSS(BaseVoidElement):
-
     def __init__(
         self, *data: Any, url: str = BOOTSTRAP_CSS_URL, **attributes: Any
     ) -> None:
@@ -19,7 +18,6 @@ class BootStrapCSS(BaseVoidElement):
 
 
 class BootStrapJS(BaseVoidElement):
-
     def __init__(
         self, *data: Any, url: str = BOOTSTRAP_JS_URL, **attributes: Any
     ) -> None:

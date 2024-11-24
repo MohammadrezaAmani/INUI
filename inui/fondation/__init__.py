@@ -7,7 +7,6 @@ from inui.elements import Button, Html, Link
 
 
 class FoundationEmail(BaseVoidElement):
-
     def __init__(
         self, *data: Any, url: str = FOUNDATION_CSS_URL, **attributes: Any
     ) -> None:
