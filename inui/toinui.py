@@ -58,8 +58,6 @@ class Element:
 
     def __str__(self, indent=0):
         element_str = ""
-        # if indent == 0:
-        #     element_str += self
         attind = " " * (indent + 4)
         attributes_str = "\n".join(
             [
@@ -69,16 +67,13 @@ class Element:
         )
         element_str += f"{' ' * indent}{self.name}(\n"
 
-        # element_str = f"{' ' * indent}"
         if self.data or self.children:
             element_str += "\n" + attind
         if self.data:
             if self.data.strip():
-                # print(self.data)
                 element_str += f"{self.string_quote(self.data)}," if self.data else ""
         for child in self.children:
             if isinstance(child, str):
-                # print(type(child))
                 element_str += "\n'''" + child.__str__(indent + 8) + ", '''"
             else:
                 element_str += "\n" + child.__str__(indent + 8) + ", "
@@ -134,7 +129,6 @@ class HTML2INUI:
         return self.add_imports(self._create_element_from_etree(root))
 
     def add_imports(self, code: str):
-        print("adding import")
         imports = self.manage_imports(self.imports)
         not_imported = self.create_unknown_elements()
         return self.format(
@@ -188,9 +182,7 @@ class HTML2INUI:
         return (
             "(" + ", ".join([str(i) for i in data]) + ")"
             if len(data) > 1
-            else str(data[0])
-            if len(data) > 0
-            else ""
+            else str(data[0]) if len(data) > 0 else ""
         )
 
     def _create_element_from_etree(self, element: etree._Element):
@@ -276,6 +268,5 @@ def convert(
 
     if save_to:
         converter.save(save_to, output)
-        print(f"Output saved to {save_to}")
     else:
         print(output)

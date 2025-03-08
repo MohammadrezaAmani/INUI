@@ -86,17 +86,6 @@ class Q:
                 raise "error"
 
 
-class Tree:
-    def __init__(self, element) -> None:
-        self.element = element
-
-    def show(self):
-        print(self.element.data)
-
-
-class query: ...
-
-
 class Funcs:
     contains = "contains"
     icontains = "icontains"

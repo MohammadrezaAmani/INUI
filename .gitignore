@@ -20,3 +20,4 @@ mui/inuireact/.gitignore
 
 __next_code
 var
+.DS_Store
