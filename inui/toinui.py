@@ -182,7 +182,9 @@ class HTML2INUI:
         return (
             "(" + ", ".join([str(i) for i in data]) + ")"
             if len(data) > 1
-            else str(data[0]) if len(data) > 0 else ""
+            else str(data[0])
+            if len(data) > 0
+            else ""
         )
 
     def _create_element_from_etree(self, element: etree._Element):

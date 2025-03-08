@@ -230,7 +230,7 @@ class BaseElement(Base):
 class BaseVoidElement(BaseElement):
     def render_to_string(self, prettify: bool = False):
         return f"""{self._Meta.start_sign}{self.start_tag}\
-{' ' if len(self.attributes) > 0 else ''}{str(self.attributes)}{self._Meta.void_sign} """
+{" " if len(self.attributes) > 0 else ""}{str(self.attributes)}{self._Meta.void_sign} """
 
 
 class BaseSvgElement(BaseElement): ...

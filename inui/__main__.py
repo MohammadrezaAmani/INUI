@@ -3,10 +3,10 @@ import logging
 import os
 import sys
 
+from inui import __version__
 from inui.bases.utils import build
 from inui.hotreload import hot_reload
 from inui.toinui import convert
-from inui import __version__
 
 INUI_PATH = os.path.dirname(os.path.realpath(__file__))
 
